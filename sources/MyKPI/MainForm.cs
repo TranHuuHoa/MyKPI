@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyKPI.ProjectManagement.GUI;
 
 namespace MyKPI
 {
@@ -15,6 +9,12 @@ namespace MyKPI
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void btnProjectManagement_Click(object sender, EventArgs e)
+        {
+            ProjectManagementForm projectManagementForm = new ProjectManagementForm();
+            projectManagementForm.ShowDialog();
         }
     }
 }
