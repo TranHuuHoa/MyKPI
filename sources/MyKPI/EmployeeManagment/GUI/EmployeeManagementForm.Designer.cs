@@ -28,12 +28,213 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.grcEmployee = new DevExpress.XtraGrid.GridControl();
+            this.grvEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grColID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColEmployeeNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColEmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColAddress = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColDOB = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColIDCard = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColSex = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColJobRankType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColJobRankLevel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColSalaryLevel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColSalarySubLevel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColEmployeeFirstName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColEmployeeLastName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColJobRank = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.grcEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // grcEmployee
+            // 
+            this.grcEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grcEmployee.Location = new System.Drawing.Point(0, 0);
+            this.grcEmployee.MainView = this.grvEmployee;
+            this.grcEmployee.Name = "grcEmployee";
+            this.grcEmployee.Size = new System.Drawing.Size(883, 463);
+            this.grcEmployee.TabIndex = 0;
+            this.grcEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvEmployee});
+            // 
+            // grvEmployee
+            // 
+            this.grvEmployee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grColID,
+            this.grColEmployeeNumber,
+            this.grColEmployeeName,
+            this.grColAddress,
+            this.grColDOB,
+            this.grColIDCard,
+            this.grColSex,
+            this.grColJobRankType,
+            this.grColJobRankLevel,
+            this.grColSalaryLevel,
+            this.grColSalarySubLevel,
+            this.grColEmployeeFirstName,
+            this.grColEmployeeLastName,
+            this.grColJobRank,
+            this.grColSalary});
+            this.grvEmployee.GridControl = this.grcEmployee;
+            this.grvEmployee.Name = "grvEmployee";
+            this.grvEmployee.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.grvEmployee_CustomColumnDisplayText);
+            // 
+            // grColID
+            // 
+            this.grColID.Caption = "ID";
+            this.grColID.FieldName = "ID";
+            this.grColID.Name = "grColID";
+            // 
+            // grColEmployeeNumber
+            // 
+            this.grColEmployeeNumber.Caption = "Employee Number";
+            this.grColEmployeeNumber.FieldName = "EmployeeNumber";
+            this.grColEmployeeNumber.Name = "grColEmployeeNumber";
+            this.grColEmployeeNumber.Visible = true;
+            this.grColEmployeeNumber.VisibleIndex = 0;
+            // 
+            // grColEmployeeName
+            // 
+            this.grColEmployeeName.Caption = "Employee Name";
+            this.grColEmployeeName.FieldName = "EmployeeName";
+            this.grColEmployeeName.Name = "grColEmployeeName";
+            this.grColEmployeeName.Visible = true;
+            this.grColEmployeeName.VisibleIndex = 1;
+            // 
+            // grColAddress
+            // 
+            this.grColAddress.Caption = "Address";
+            this.grColAddress.FieldName = "Address";
+            this.grColAddress.Name = "grColAddress";
+            // 
+            // grColDOB
+            // 
+            this.grColDOB.Caption = "Date Of Birth";
+            this.grColDOB.FieldName = "DOB";
+            this.grColDOB.Name = "grColDOB";
+            this.grColDOB.Visible = true;
+            this.grColDOB.VisibleIndex = 2;
+            // 
+            // grColIDCard
+            // 
+            this.grColIDCard.Caption = "ID Card";
+            this.grColIDCard.FieldName = "IDCard";
+            this.grColIDCard.Name = "grColIDCard";
+            // 
+            // grColSex
+            // 
+            this.grColSex.Caption = "Sex";
+            this.grColSex.FieldName = "Sex";
+            this.grColSex.Name = "grColSex";
+            this.grColSex.Visible = true;
+            this.grColSex.VisibleIndex = 3;
+            // 
+            // grColJobRankType
+            // 
+            this.grColJobRankType.Caption = "Job Rank Type";
+            this.grColJobRankType.FieldName = "JobRankType";
+            this.grColJobRankType.Name = "grColJobRankType";
+            // 
+            // grColJobRankLevel
+            // 
+            this.grColJobRankLevel.Caption = "Job Rank Level";
+            this.grColJobRankLevel.FieldName = "JobRankLevel";
+            this.grColJobRankLevel.Name = "grColJobRankLevel";
+            // 
+            // grColSalaryLevel
+            // 
+            this.grColSalaryLevel.Caption = "Salary Level";
+            this.grColSalaryLevel.FieldName = "SalaryLevel";
+            this.grColSalaryLevel.Name = "grColSalaryLevel";
+            // 
+            // grColSalarySubLevel
+            // 
+            this.grColSalarySubLevel.Caption = "Salary Sub Level";
+            this.grColSalarySubLevel.FieldName = "SalarySubLevel";
+            this.grColSalarySubLevel.Name = "grColSalarySubLevel";
+            // 
+            // grColEmployeeFirstName
+            // 
+            this.grColEmployeeFirstName.Caption = "Employee First Name";
+            this.grColEmployeeFirstName.FieldName = "EmployeeFirstName";
+            this.grColEmployeeFirstName.Name = "grColEmployeeFirstName";
+            // 
+            // grColEmployeeLastName
+            // 
+            this.grColEmployeeLastName.Caption = "Employee Last Name";
+            this.grColEmployeeLastName.FieldName = "EmployeeLastName";
+            this.grColEmployeeLastName.Name = "grColEmployeeLastName";
+            // 
+            // grColJobRank
+            // 
+            this.grColJobRank.Caption = "Job Rank";
+            this.grColJobRank.FieldName = "JobRank";
+            this.grColJobRank.Name = "grColJobRank";
+            this.grColJobRank.Visible = true;
+            this.grColJobRank.VisibleIndex = 4;
+            // 
+            // grColSalary
+            // 
+            this.grColSalary.Caption = "Salary";
+            this.grColSalary.FieldName = "Salary";
+            this.grColSalary.Name = "grColSalary";
+            this.grColSalary.Visible = true;
+            this.grColSalary.VisibleIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.Location = new System.Drawing.Point(77, 470);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // EmployeeManagementForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "EmployeeManagementForm";
+            this.ClientSize = new System.Drawing.Size(884, 505);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.grcEmployee);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "EmployeeManagementForm";
+            this.Text = "Employee Management Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.EmployeeManagementForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grcEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DevExpress.XtraGrid.GridControl grcEmployee;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvEmployee;
+        private DevExpress.XtraGrid.Columns.GridColumn grColID;
+        private DevExpress.XtraGrid.Columns.GridColumn grColEmployeeNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn grColEmployeeName;
+        private DevExpress.XtraGrid.Columns.GridColumn grColAddress;
+        private DevExpress.XtraGrid.Columns.GridColumn grColDOB;
+        private DevExpress.XtraGrid.Columns.GridColumn grColIDCard;
+        private DevExpress.XtraGrid.Columns.GridColumn grColSex;
+        private DevExpress.XtraGrid.Columns.GridColumn grColJobRankType;
+        private DevExpress.XtraGrid.Columns.GridColumn grColJobRankLevel;
+        private DevExpress.XtraGrid.Columns.GridColumn grColSalaryLevel;
+        private DevExpress.XtraGrid.Columns.GridColumn grColSalarySubLevel;
+        private DevExpress.XtraGrid.Columns.GridColumn grColEmployeeFirstName;
+        private DevExpress.XtraGrid.Columns.GridColumn grColEmployeeLastName;
+        private DevExpress.XtraGrid.Columns.GridColumn grColJobRank;
+        private DevExpress.XtraGrid.Columns.GridColumn grColSalary;
+        private System.Windows.Forms.Button button1;
     }
 }
