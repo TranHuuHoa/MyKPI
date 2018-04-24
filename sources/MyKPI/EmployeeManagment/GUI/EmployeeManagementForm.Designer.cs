@@ -32,7 +32,7 @@
             this.grvEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grColID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColEmployeeNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.grColEmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
+ //           this.GrColEmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColDOB = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColIDCard = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,8 +52,8 @@
             // 
             // grcEmployee
             // 
-            this.grcEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grcEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcEmployee.Location = new System.Drawing.Point(0, 0);
             this.grcEmployee.MainView = this.grvEmployee;
@@ -68,7 +68,7 @@
             this.grvEmployee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.grColID,
             this.grColEmployeeNumber,
-            this.grColEmployeeName,
+ //           this.GrColEmployeeName,
             this.grColAddress,
             this.grColDOB,
             this.grColIDCard,
@@ -101,11 +101,11 @@
             // 
             // grColEmployeeName
             // 
-            this.grColEmployeeName.Caption = "Employee Name";
-            this.grColEmployeeName.FieldName = "EmployeeName";
-            this.grColEmployeeName.Name = "grColEmployeeName";
-            this.grColEmployeeName.Visible = true;
-            this.grColEmployeeName.VisibleIndex = 1;
+            //this.GrColEmployeeName.Caption = "Employee Name";
+            //this.GrColEmployeeName.FieldName = "EmployeeName";
+            //this.GrColEmployeeName.Name = "grColEmployeeName";
+            //this.GrColEmployeeName.Visible = true;
+            //this.GrColEmployeeName.VisibleIndex = 1;
             // 
             // grColAddress
             // 
