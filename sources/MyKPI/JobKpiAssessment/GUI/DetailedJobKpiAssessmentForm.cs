@@ -16,5 +16,7 @@ namespace MyKPI.JobKpiAssessment.GUI
         {
             InitializeComponent();
         }
+
+       
     }
 }

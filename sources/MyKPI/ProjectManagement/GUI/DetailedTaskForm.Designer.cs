@@ -50,9 +50,10 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(13, 375);
+            this.btnConfirm.Location = new System.Drawing.Point(9, 244);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(302, 40);
+            this.btnConfirm.Size = new System.Drawing.Size(201, 26);
             this.btnConfirm.TabIndex = 8;
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -61,103 +62,94 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(9, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Task Code:";
             // 
             // txtTaskCode
             // 
-            this.txtTaskCode.Location = new System.Drawing.Point(110, 6);
-            this.txtTaskCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTaskCode.Location = new System.Drawing.Point(73, 4);
             this.txtTaskCode.Name = "txtTaskCode";
-            this.txtTaskCode.Size = new System.Drawing.Size(358, 26);
+            this.txtTaskCode.Size = new System.Drawing.Size(240, 20);
             this.txtTaskCode.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 45);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(6, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 20);
+            this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Task Name:";
             // 
             // txtTaskName
             // 
-            this.txtTaskName.Location = new System.Drawing.Point(110, 42);
-            this.txtTaskName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTaskName.Location = new System.Drawing.Point(73, 27);
             this.txtTaskName.Name = "txtTaskName";
-            this.txtTaskName.Size = new System.Drawing.Size(358, 26);
+            this.txtTaskName.Size = new System.Drawing.Size(240, 20);
             this.txtTaskName.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 81);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Description:";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(110, 78);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDescription.Location = new System.Drawing.Point(73, 51);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(358, 99);
+            this.txtDescription.Size = new System.Drawing.Size(240, 66);
             this.txtDescription.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 190);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(15, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Assignee:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 228);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(17, 148);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
+            this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "Reporter:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 266);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(28, 173);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Status:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 342);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(11, 222);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 20);
+            this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Task Type:";
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(321, 375);
+            this.btnExit.Location = new System.Drawing.Point(214, 244);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(176, 40);
+            this.btnExit.Size = new System.Drawing.Size(117, 26);
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "CANCEL";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -167,29 +159,26 @@
             // 
             this.cbxAssignee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAssignee.FormattingEnabled = true;
-            this.cbxAssignee.Location = new System.Drawing.Point(110, 187);
-            this.cbxAssignee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxAssignee.Location = new System.Drawing.Point(73, 122);
             this.cbxAssignee.Name = "cbxAssignee";
-            this.cbxAssignee.Size = new System.Drawing.Size(358, 28);
+            this.cbxAssignee.Size = new System.Drawing.Size(240, 21);
             this.cbxAssignee.TabIndex = 3;
             // 
             // cbxReporter
             // 
             this.cbxReporter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxReporter.FormattingEnabled = true;
-            this.cbxReporter.Location = new System.Drawing.Point(110, 225);
-            this.cbxReporter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxReporter.Location = new System.Drawing.Point(73, 146);
             this.cbxReporter.Name = "cbxReporter";
-            this.cbxReporter.Size = new System.Drawing.Size(358, 28);
+            this.cbxReporter.Size = new System.Drawing.Size(240, 21);
             this.cbxReporter.TabIndex = 4;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 304);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(28, 198);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 20);
+            this.label8.Size = new System.Drawing.Size(41, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Priority:";
             // 
@@ -197,37 +186,34 @@
             // 
             this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Location = new System.Drawing.Point(110, 263);
-            this.cbxStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxStatus.Location = new System.Drawing.Point(73, 171);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(358, 28);
+            this.cbxStatus.Size = new System.Drawing.Size(240, 21);
             this.cbxStatus.TabIndex = 5;
             // 
             // cbxTaskType
             // 
             this.cbxTaskType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTaskType.FormattingEnabled = true;
-            this.cbxTaskType.Location = new System.Drawing.Point(110, 339);
-            this.cbxTaskType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxTaskType.Location = new System.Drawing.Point(73, 220);
             this.cbxTaskType.Name = "cbxTaskType";
-            this.cbxTaskType.Size = new System.Drawing.Size(358, 28);
+            this.cbxTaskType.Size = new System.Drawing.Size(240, 21);
             this.cbxTaskType.TabIndex = 7;
             // 
             // cbxPriority
             // 
             this.cbxPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPriority.FormattingEnabled = true;
-            this.cbxPriority.Location = new System.Drawing.Point(110, 301);
-            this.cbxPriority.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxPriority.Location = new System.Drawing.Point(73, 196);
             this.cbxPriority.Name = "cbxPriority";
-            this.cbxPriority.Size = new System.Drawing.Size(358, 28);
+            this.cbxPriority.Size = new System.Drawing.Size(240, 21);
             this.cbxPriority.TabIndex = 6;
             // 
             // DetailedTaskForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 428);
+            this.ClientSize = new System.Drawing.Size(348, 278);
             this.Controls.Add(this.cbxPriority);
             this.Controls.Add(this.cbxTaskType);
             this.Controls.Add(this.cbxStatus);
@@ -246,12 +232,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnConfirm);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DetailedTaskForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detailed Task";
+            this.Load += new System.EventHandler(this.DetailedTaskForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
