@@ -1,29 +1,29 @@
 ﻿using System.Data;
-using MyKPI.Entity;
+using MyKPI.Entities;
 using MyKPI.EmployeeManagment.DAL;
 
 namespace MyKPI.EmployeeManagment.BLL
 {
     public class EmployeeBLL
     {
-        EmployeeDAL EmployeeDAL;
+        EmployeeDAL employeeDAL;
         public EmployeeBLL()
         {
-            EmployeeDAL = new EmployeeDAL();
+            employeeDAL = new EmployeeDAL();
         }
         public void AddEmployee(EmployeeEntity _employee)
         {
-            EmployeeDAL.Add(_employee);
+            employeeDAL.Add(_employee);
         }
 
         public void EditEmployee(EmployeeEntity _employee, int ID)
         {
-            EmployeeDAL.Edit(_employee, ID);
+            employeeDAL.Edit(_employee, ID);
         }
 
         public void DeleteEmployee(int ID)
         {
-            EmployeeDAL.Delete(ID);
+            employeeDAL.Delete(ID);
         }
 
         public DataTable LoadAllEmployee()
@@ -31,9 +31,9 @@ namespace MyKPI.EmployeeManagment.BLL
             return EmployeeDAL.LoadAll();
         }
 
-        //public DataTable LoadEmployeeName()
-        //{
-        //    return EmployeeDAL.LoadEmployeeName();
-        //}
+        public DataTable LoadEmployeeName()
+        {
+            return EmployeeDAL.LoadEmployeeName();
+        }
     }
 }

@@ -28,8 +28,9 @@ namespace MyKPI.Common
                 connection.Close();
                 return dt;
             }
-            catch (Exception ex)
+            catch (Exception exp)
             {
+                CommonFunctions.ShowErrorDialog("DBManager Error:" + exp.ToString());
                 return null;
             }
         }
@@ -49,16 +50,18 @@ namespace MyKPI.Common
                 transaction.Commit();
                 connection.Close();
             }
-            catch (Exception ex)
+            catch (Exception exp)
             {
-              //  LogService.LogError("Query Execution With Transaction", ex);
+                CommonFunctions.ShowErrorDialog("DBManager Error:" + exp.ToString());
+                //  LogService.LogError("Query Execution With Transaction", ex);
                 try
                 {
                     transaction.Rollback();
                     connection.Close();
                 }
-                catch (Exception ex1)
+                catch (Exception exp1)
                 {
+                    CommonFunctions.ShowErrorDialog("DBManager Error:" + exp1.ToString());
                     connection.Close();
                     //  LogService.LogError("Query Execution With Transaction roll back", ex1);
                 }

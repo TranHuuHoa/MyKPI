@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using MyKPI.Common;
-using MyKPI.Entity;
+using MyKPI.Entities;
 
 namespace MyKPI.EmployeeManagment.DAL
 {
@@ -53,6 +53,12 @@ namespace MyKPI.EmployeeManagment.DAL
         public static DataTable LoadAll()
         {
             string str = @"select *,concat_ws(' ',EmployeeFirstName,EmployeeLastName) as EmployeeName from tblEmployee";
+            return DBManager.InstantDBManger.GetData(str);
+        }
+
+        public static DataTable LoadEmployeeName()
+        {
+            string str = @"SELECT ID, CONCAT_WS(' ',EmployeeFirstName, EmployeeLastName) as EmployeeName FROM tblemployee";
             return DBManager.InstantDBManger.GetData(str);
         }
     }

@@ -28,92 +28,201 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.grcProject = new DevExpress.XtraGrid.GridControl();
+            this.grvProject = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnAddProject = new System.Windows.Forms.Button();
+            this.btnDUProject = new System.Windows.Forms.Button();
+            this.btnDeleteProject = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.grColID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColProjectCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColProjectName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColStartedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColEndDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColScopeMM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.grcProject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvProject)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl1
+            // grcProject
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 12);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1536, 543);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.grcProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grcProject.Location = new System.Drawing.Point(0, 1);
+            this.grcProject.MainView = this.grvProject;
+            this.grcProject.Name = "grcProject";
+            this.grcProject.Size = new System.Drawing.Size(1543, 554);
+            this.grcProject.TabIndex = 0;
+            this.grcProject.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvProject});
             // 
-            // gridView1
+            // grvProject
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.grvProject.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grColID,
+            this.grColProjectCode,
+            this.grColProjectName,
+            this.grColStartedDate,
+            this.grColEndDate,
+            this.grColScopeMM,
+            this.grColCustomerName,
+            this.grColStatus});
+            this.grvProject.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.grvProject.GridControl = this.grcProject;
+            this.grvProject.Name = "grvProject";
+            this.grvProject.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.grvProject.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.grvProject.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
+            this.grvProject.OptionsBehavior.Editable = false;
+            this.grvProject.OptionsSelection.MultiSelect = true;
+            this.grvProject.OptionsView.ShowGroupPanel = false;
+            this.grvProject.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.grvProject_CustomColumnDisplayText);
             // 
-            // button1
+            // btnAddProject
             // 
-            this.button1.Location = new System.Drawing.Point(64, 575);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddProject.Location = new System.Drawing.Point(208, 575);
+            this.btnAddProject.Name = "btnAddProject";
+            this.btnAddProject.Size = new System.Drawing.Size(259, 42);
+            this.btnAddProject.TabIndex = 1;
+            this.btnAddProject.Text = "ADD";
+            this.btnAddProject.UseVisualStyleBackColor = true;
+            this.btnAddProject.Click += new System.EventHandler(this.btnAddProject_Click);
             // 
-            // button2
+            // btnDUProject
             // 
-            this.button2.Location = new System.Drawing.Point(347, 575);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(259, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDUProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDUProject.Location = new System.Drawing.Point(491, 575);
+            this.btnDUProject.Name = "btnDUProject";
+            this.btnDUProject.Size = new System.Drawing.Size(259, 42);
+            this.btnDUProject.TabIndex = 2;
+            this.btnDUProject.Text = "DETAIL / UPDATE";
+            this.btnDUProject.UseVisualStyleBackColor = true;
+            this.btnDUProject.Click += new System.EventHandler(this.btnDUProject_Click);
             // 
-            // button3
+            // btnDeleteProject
             // 
-            this.button3.Location = new System.Drawing.Point(627, 575);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(259, 42);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDeleteProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeleteProject.Location = new System.Drawing.Point(771, 575);
+            this.btnDeleteProject.Name = "btnDeleteProject";
+            this.btnDeleteProject.Size = new System.Drawing.Size(259, 42);
+            this.btnDeleteProject.TabIndex = 3;
+            this.btnDeleteProject.Text = "DELETE";
+            this.btnDeleteProject.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnExit
             // 
-            this.button4.Location = new System.Drawing.Point(907, 575);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(259, 42);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnExit.Location = new System.Drawing.Point(1051, 575);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(259, 42);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // grColID
+            // 
+            this.grColID.Caption = "ID";
+            this.grColID.FieldName = "ID";
+            this.grColID.Name = "grColID";
+            // 
+            // grColProjectCode
+            // 
+            this.grColProjectCode.Caption = "Project Code";
+            this.grColProjectCode.FieldName = "ProjectCode";
+            this.grColProjectCode.Name = "grColProjectCode";
+            this.grColProjectCode.Visible = true;
+            this.grColProjectCode.VisibleIndex = 0;
+            // 
+            // grColProjectName
+            // 
+            this.grColProjectName.Caption = "Project Name";
+            this.grColProjectName.FieldName = "ProjectName";
+            this.grColProjectName.Name = "grColProjectName";
+            this.grColProjectName.Visible = true;
+            this.grColProjectName.VisibleIndex = 1;
+            // 
+            // grColStartedDate
+            // 
+            this.grColStartedDate.Caption = "Started Date";
+            this.grColStartedDate.FieldName = "StartedDate";
+            this.grColStartedDate.Name = "grColStartedDate";
+            this.grColStartedDate.Visible = true;
+            this.grColStartedDate.VisibleIndex = 2;
+            // 
+            // grColEndDate
+            // 
+            this.grColEndDate.Caption = "End Date";
+            this.grColEndDate.FieldName = "EndDate";
+            this.grColEndDate.Name = "grColEndDate";
+            this.grColEndDate.Visible = true;
+            this.grColEndDate.VisibleIndex = 3;
+            // 
+            // grColScopeMM
+            // 
+            this.grColScopeMM.Caption = "Scope Man-Month";
+            this.grColScopeMM.FieldName = "ScopeMM";
+            this.grColScopeMM.Name = "grColScopeMM";
+            this.grColScopeMM.Visible = true;
+            this.grColScopeMM.VisibleIndex = 4;
+            // 
+            // grColCustomerName
+            // 
+            this.grColCustomerName.Caption = "Customer Name";
+            this.grColCustomerName.FieldName = "CustomerName";
+            this.grColCustomerName.Name = "grColCustomerName";
+            this.grColCustomerName.Visible = true;
+            this.grColCustomerName.VisibleIndex = 5;
+            // 
+            // grColStatus
+            // 
+            this.grColStatus.Caption = "Status";
+            this.grColStatus.FieldName = "Status";
+            this.grColStatus.Name = "grColStatus";
+            this.grColStatus.Visible = true;
+            this.grColStatus.VisibleIndex = 6;
             // 
             // ProjectManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1544, 629);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnDeleteProject);
+            this.Controls.Add(this.btnDUProject);
+            this.Controls.Add(this.btnAddProject);
+            this.Controls.Add(this.grcProject);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ProjectManagementForm";
             this.Text = "ProjectManagementForm";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ProjectManagementForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grcProject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvProject)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private DevExpress.XtraGrid.GridControl grcProject;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvProject;
+        private System.Windows.Forms.Button btnAddProject;
+        private System.Windows.Forms.Button btnDUProject;
+        private System.Windows.Forms.Button btnDeleteProject;
+        private System.Windows.Forms.Button btnExit;
+        private DevExpress.XtraGrid.Columns.GridColumn grColID;
+        private DevExpress.XtraGrid.Columns.GridColumn grColProjectCode;
+        private DevExpress.XtraGrid.Columns.GridColumn grColProjectName;
+        private DevExpress.XtraGrid.Columns.GridColumn grColStartedDate;
+        private DevExpress.XtraGrid.Columns.GridColumn grColEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn grColScopeMM;
+        private DevExpress.XtraGrid.Columns.GridColumn grColCustomerName;
+        private DevExpress.XtraGrid.Columns.GridColumn grColStatus;
     }
 }

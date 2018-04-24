@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyKPI.EmployeeManagment.BLL;
 using MyKPI.Common;
@@ -51,39 +44,37 @@ namespace MyKPI.EmployeeManagment.GUI
                         }
                     }
 
-                if (e.Column.FieldName == "JobRank")
-                    if (e.Value != null)
+                if (e.Column.FieldName == "JobRank")                  
                     {
-                        switch (e.Value)
+                        var datarow = grvEmployee.GetDataRow(e.ListSourceRowIndex);
+                        switch (datarow["JobRankType"])
                         {
                             case 0:
-                                e.DisplayText = PriorityValue.High.ToString();
+                                e.DisplayText = JobRankValue.ProjectManager.ToString() + " " + datarow["JobRankLevel"];
                                 break;
                             case 1:
-                                e.DisplayText = PriorityValue.Medium.ToString();
+                                e.DisplayText = JobRankValue.Developer.ToString() + " " + datarow["JobRankLevel"]; ;
                                 break;
                             case 2:
-                                e.DisplayText = PriorityValue.Low.ToString();
+                                e.DisplayText = JobRankValue.Tester.ToString() + " " + datarow["JobRankLevel"]; ;
                                 break;
-                        }
+                            case 3:
+                                e.DisplayText = JobRankValue.SolutionArchitect.ToString() + " " + datarow["JobRankLevel"]; ;
+                                break;
+                            case 4:
+                                e.DisplayText = JobRankValue.BussinessAnalyst.ToString() + " " + datarow["JobRankLevel"]; ;
+                                break;
                     }
-                if (e.Column.FieldName == "TaskType")
-                    if (e.Value != null)
+                    }
+                if (e.Column.FieldName == "Salary")                   
                     {
-                        switch (e.Value)
-                        {
-                            case 0:
-                                e.DisplayText = TaskTypeValue.UserStory.ToString();
-                                break;
-                            case 1:
-                                e.DisplayText = TaskTypeValue.Bug.ToString();
-                                break;
-                        }
+                        var datarow = grvEmployee.GetDataRow(e.ListSourceRowIndex);
+                        e.DisplayText = datarow["SalaryLevel"].ToString() +"."+ datarow["SalarySubLevel"];
                     }
             }
             catch (Exception exp)
             {
-                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                CommonFunctions.ShowErrorDialog("Error:" + exp.ToString());
                 //  LogService.LogError("Error", ex);
             }
         }

@@ -27,7 +27,8 @@ namespace MyKPI
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            btnEmployeeManagement_Click(sender, e);
+            //  btnEmployeeManagement_Click(sender, e);
+            btnProjectManagement_Click(sender,e);
             this.Close();
         }
     }
