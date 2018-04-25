@@ -9,7 +9,7 @@ namespace MyKPI.Common
     {
         private static readonly Lazy<DBManager> lazyDBManager = new Lazy<DBManager>(() => new DBManager());
         public static DBManager InstantDBManger { get { return lazyDBManager.Value; } }
-        private string ConnectString = "Server=192.168.1.13; database=mykpi; UID=root; password=123456; SslMode=none; charset=utf8";
+        private string ConnectString = "Server=localhost; database=mykpi; UID=root; password=123456; SslMode=none; charset=utf8";
         private MySqlConnection connection = null;
 
         private DBManager()
@@ -28,8 +28,9 @@ namespace MyKPI.Common
                 connection.Close();
                 return dt;
             }
-            catch (Exception ex)
+            catch (Exception exp)
             {
+                CommonFunctions.ShowErrorDialog("DBManager Error:" + exp.ToString());
                 return null;
             }
         }
@@ -49,16 +50,18 @@ namespace MyKPI.Common
                 transaction.Commit();
                 connection.Close();
             }
-            catch (Exception ex)
+            catch (Exception exp)
             {
-              //  LogService.LogError("Query Execution With Transaction", ex);
+                CommonFunctions.ShowErrorDialog("DBManager Error:" + exp.ToString());
+                //  LogService.LogError("Query Execution With Transaction", ex);
                 try
                 {
                     transaction.Rollback();
                     connection.Close();
                 }
-                catch (Exception ex1)
+                catch (Exception exp1)
                 {
+                    CommonFunctions.ShowErrorDialog("DBManager Error:" + exp1.ToString());
                     connection.Close();
                     //  LogService.LogError("Query Execution With Transaction roll back", ex1);
                 }

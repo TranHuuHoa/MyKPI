@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS kpi;
-CREATE DATABASE kpi; 
+DROP DATABASE IF EXISTS mykpi;
+CREATE DATABASE mykpi; 
 
-USE kpi;
+USE mykpi;
 
 create table tblEmployee(
 ID int not null auto_increment,
