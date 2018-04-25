@@ -69,7 +69,7 @@ namespace MyKPI.EmployeeManagment.GUI
                 if (e.Column.FieldName == "Salary")                   
                     {
                         var datarow = grvEmployee.GetDataRow(e.ListSourceRowIndex);
-                    e.DisplayText = datarow["SalaryLevel"].ToString() +"."+ datarow["SalarySubLevel"];
+                        e.DisplayText = datarow["SalaryLevel"].ToString() +"."+ datarow["SalarySubLevel"];
                     }
             }
             catch (Exception exp)

@@ -1,7 +1,7 @@
 ﻿using System;
 using MyKPI.Common;
 
-namespace MyKPI.Entity
+namespace MyKPI.Entities
 {
     public class EmployeeEntity:ICommonEntity
     {

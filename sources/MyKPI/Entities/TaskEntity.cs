@@ -1,7 +1,7 @@
 ﻿using System;
 using MyKPI.Common;
 
-namespace MyKPI.Entity
+namespace MyKPI.Entities
 {
     public class TaskEntity:ICommonEntity
     {
@@ -11,7 +11,7 @@ namespace MyKPI.Entity
         public String Description { get; set; }
         public EmployeeEntity Assignee { get; set; }
         public EmployeeEntity Reporter { get; set; }
-        public StatusValue Status { get; set; }
+        public TaskStatusValue Status { get; set; }
         public PriorityValue Priority { get; set; }
         public TaskTypeValue TaskType { get; set; }
     }
