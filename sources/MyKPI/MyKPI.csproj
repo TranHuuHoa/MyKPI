@@ -133,6 +133,9 @@
       <DependentUpon>ProjectManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EmployeeManagment\GUI\DetailedEmployeeForm.resx">
+      <DependentUpon>DetailedEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeManagment\GUI\EmployeeManagementForm.resx">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
     </EmbeddedResource>

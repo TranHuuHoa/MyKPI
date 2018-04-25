@@ -78,5 +78,17 @@ namespace MyKPI.EmployeeManagment.GUI
                 //  LogService.LogError("Error", ex);
             }
         }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            DetailedEmployeeForm detailedEmployeeForm = new DetailedEmployeeForm();
+            detailedEmployeeForm.ShowDialog();
+            load();
+        }
+
+        private void btnDUEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

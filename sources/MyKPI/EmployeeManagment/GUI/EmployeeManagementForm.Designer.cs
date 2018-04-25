@@ -32,7 +32,6 @@
             this.grvEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grColID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColEmployeeNumber = new DevExpress.XtraGrid.Columns.GridColumn();
- //           this.GrColEmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColDOB = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColIDCard = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,15 +44,18 @@
             this.grColEmployeeLastName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColJobRank = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColSalary = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnDeleteEmployee = new System.Windows.Forms.Button();
+            this.btnDUEmployee = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grcEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // grcEmployee
             // 
-            this.grcEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.grcEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grcEmployee.Location = new System.Drawing.Point(0, 0);
             this.grcEmployee.MainView = this.grvEmployee;
@@ -68,7 +70,6 @@
             this.grvEmployee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.grColID,
             this.grColEmployeeNumber,
- //           this.GrColEmployeeName,
             this.grColAddress,
             this.grColDOB,
             this.grColIDCard,
@@ -81,8 +82,11 @@
             this.grColEmployeeLastName,
             this.grColJobRank,
             this.grColSalary});
+            this.grvEmployee.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.grvEmployee.GridControl = this.grcEmployee;
             this.grvEmployee.Name = "grvEmployee";
+            this.grvEmployee.OptionsBehavior.Editable = false;
+            this.grvEmployee.OptionsView.ShowGroupPanel = false;
             this.grvEmployee.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.grvEmployee_CustomColumnDisplayText);
             // 
             // grColID
@@ -99,14 +103,6 @@
             this.grColEmployeeNumber.Visible = true;
             this.grColEmployeeNumber.VisibleIndex = 0;
             // 
-            // grColEmployeeName
-            // 
-            //this.GrColEmployeeName.Caption = "Employee Name";
-            //this.GrColEmployeeName.FieldName = "EmployeeName";
-            //this.GrColEmployeeName.Name = "grColEmployeeName";
-            //this.GrColEmployeeName.Visible = true;
-            //this.GrColEmployeeName.VisibleIndex = 1;
-            // 
             // grColAddress
             // 
             this.grColAddress.Caption = "Address";
@@ -119,7 +115,7 @@
             this.grColDOB.FieldName = "DOB";
             this.grColDOB.Name = "grColDOB";
             this.grColDOB.Visible = true;
-            this.grColDOB.VisibleIndex = 2;
+            this.grColDOB.VisibleIndex = 1;
             // 
             // grColIDCard
             // 
@@ -133,7 +129,7 @@
             this.grColSex.FieldName = "Sex";
             this.grColSex.Name = "grColSex";
             this.grColSex.Visible = true;
-            this.grColSex.VisibleIndex = 3;
+            this.grColSex.VisibleIndex = 2;
             // 
             // grColJobRankType
             // 
@@ -177,7 +173,7 @@
             this.grColJobRank.FieldName = "JobRank";
             this.grColJobRank.Name = "grColJobRank";
             this.grColJobRank.Visible = true;
-            this.grColJobRank.VisibleIndex = 4;
+            this.grColJobRank.VisibleIndex = 3;
             // 
             // grColSalary
             // 
@@ -185,24 +181,63 @@
             this.grColSalary.FieldName = "Salary";
             this.grColSalary.Name = "grColSalary";
             this.grColSalary.Visible = true;
-            this.grColSalary.VisibleIndex = 5;
+            this.grColSalary.VisibleIndex = 4;
             // 
-            // button1
+            // btnExit
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Location = new System.Drawing.Point(77, 470);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnExit.Location = new System.Drawing.Point(612, 472);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(145, 22);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteEmployee
+            // 
+            this.btnDeleteEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(450, 472);
+            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(145, 22);
+            this.btnDeleteEmployee.TabIndex = 7;
+            this.btnDeleteEmployee.Text = "DELETE EMPLOYEE";
+            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
+            // 
+            // btnDUEmployee
+            // 
+            this.btnDUEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDUEmployee.Location = new System.Drawing.Point(283, 472);
+            this.btnDUEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDUEmployee.Name = "btnDUEmployee";
+            this.btnDUEmployee.Size = new System.Drawing.Size(145, 22);
+            this.btnDUEmployee.TabIndex = 6;
+            this.btnDUEmployee.Text = "DETAILED/UPDATE EMPLOYEE";
+            this.btnDUEmployee.UseVisualStyleBackColor = true;
+            this.btnDUEmployee.Click += new System.EventHandler(this.btnDUEmployee_Click);
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddEmployee.Location = new System.Drawing.Point(112, 472);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(145, 22);
+            this.btnAddEmployee.TabIndex = 5;
+            this.btnAddEmployee.Text = "ADD NEW EMPLOYEE";
+            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // EmployeeManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 505);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnDeleteEmployee);
+            this.Controls.Add(this.btnDUEmployee);
+            this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.grcEmployee);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -235,6 +270,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn grColEmployeeLastName;
         private DevExpress.XtraGrid.Columns.GridColumn grColJobRank;
         private DevExpress.XtraGrid.Columns.GridColumn grColSalary;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnDeleteEmployee;
+        private System.Windows.Forms.Button btnDUEmployee;
+        private System.Windows.Forms.Button btnAddEmployee;
     }
 }

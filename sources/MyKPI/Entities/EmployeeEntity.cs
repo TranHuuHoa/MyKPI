@@ -14,8 +14,8 @@ namespace MyKPI.Entities
         public DateTime DOB { get; set; }
         public SexValue Sex { get; set; }
         public JobRankValue JobRankType { get; set; }
-        public int JobRankLevel { get; set; }
-        public int SalaryLevel { get; set; }
+        public JobRankLevelValue JobRankLevel { get; set; }
+        public SalaryLevelValue SalaryLevel { get; set; }
         public int SalarySubLevel { get; set; }
     }
 }
