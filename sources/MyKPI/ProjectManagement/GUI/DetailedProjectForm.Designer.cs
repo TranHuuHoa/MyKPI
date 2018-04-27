@@ -415,7 +415,7 @@
             // 
             // btnProjectCancel
             // 
-            this.btnProjectCancel.Location = new System.Drawing.Point(883, 120);
+            this.btnProjectCancel.Location = new System.Drawing.Point(898, 120);
             this.btnProjectCancel.Name = "btnProjectCancel";
             this.btnProjectCancel.Size = new System.Drawing.Size(190, 36);
             this.btnProjectCancel.TabIndex = 15;

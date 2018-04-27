@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using MyKPI.ProjectManagement.GUI;
 using MyKPI.EmployeeManagment.GUI;
+using MyKPI.JobKpiAssessment.GUI;
 
 namespace MyKPI
 {
@@ -28,8 +29,14 @@ namespace MyKPI
         private void MainForm_Load(object sender, EventArgs e)
         {
             //  btnEmployeeManagement_Click(sender, e);
-            btnProjectManagement_Click(sender,e);
-            this.Close();
+            //btnProjectManagement_Click(sender,e);
+            //this.Close();
+        }
+
+        private void btnJobKpiAssessment_Click(object sender, EventArgs e)
+        {
+            JobKpiAssessmentManagementForm jobKpiAssessmentManagementForm = new JobKpiAssessmentManagementForm();
+            jobKpiAssessmentManagementForm.ShowDialog();           
         }
     }
 }
