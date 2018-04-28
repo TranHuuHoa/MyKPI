@@ -36,13 +36,46 @@ namespace MyKPI.ProjectManagement.DAL
 
         public bool Delete(int ID)
         {
-            throw new NotImplementedException();
+            string str = string.Empty;
+            try
+            {
+                str = string.Format(@"delete from tblTask where ID = {0}", ID);
+                DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
+                return true;
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                return false;
+            }
         }
 
 
-        public bool Edit(ICommonEntity task, int ID)
+        public bool Edit(ICommonEntity _task, int ID)
         {
-            throw new NotImplementedException();
+            var task = (_task as TaskEntity);
+            string str = string.Empty;
+            try
+            {
+                str = string.Format(@"update tblTask  set TaskCode = '{0}',TaskName= '{1}',Description ='{2}',Assignee = {3},Reporter = {4},Status = {5},Priority={6},TaskType={7} where ID = {8}",
+                task.TaskCode,
+                task.TaskName,
+                task.Description,
+                task.Assignee.ID,
+                task.Reporter.ID,
+                (int)task.Status,
+                (int)task.Priority,
+                (int)task.TaskType,
+                ID
+                );
+                DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
+                return true;
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                return false;
+            }
         }
 
         public static DataTable LoadAll()

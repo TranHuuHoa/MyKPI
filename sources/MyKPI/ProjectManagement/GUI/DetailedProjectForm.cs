@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using MyKPI.ProjectManagement.BLL;
 using MyKPI.Common;
+using MyKPI.Entities;
 
 namespace MyKPI.ProjectManagement.GUI
 {
@@ -17,7 +18,7 @@ namespace MyKPI.ProjectManagement.GUI
 
         private void load()
         {
-            if (detailedFormMode == DetailedFormMode.Update)
+           // if (detailedFormMode == DetailedFormMode.Update)
             {
                 grcTask.DataSource = taskBLL.LoadAllTask();
             }
@@ -112,9 +113,41 @@ namespace MyKPI.ProjectManagement.GUI
             load();
         }
 
-        private void btnConfirmProject_Click(object sender, EventArgs e)
+        private void btnDUTask_Click(object sender, EventArgs e)
         {
-            
+            // lay duoc du lieu cua  selected row vao 1 cai taskentity
+            TaskEntity taskEntity = new TaskEntity();
+            // Object[] a = grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray;
+            taskEntity.ID = (int)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[0];
+            taskEntity.TaskCode = grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[1].ToString();
+            taskEntity.TaskName = grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[2].ToString();
+            taskEntity.Description = grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[3].ToString();
+
+            var assignee = new EmployeeEntity();
+            assignee.ID = (int)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[4];
+            taskEntity.Assignee = assignee;
+            var reporter = new EmployeeEntity();
+            reporter.ID = (int)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[5];
+            taskEntity.Reporter = reporter;
+            taskEntity.Status = (TaskStatusValue)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[6];
+            taskEntity.Priority = (PriorityValue)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[7];
+            taskEntity.TaskType = (TaskTypeValue)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[8];
+
+            DetailedTaskForm detailedTaskForm = new DetailedTaskForm(taskEntity);
+            detailedTaskForm.ShowDialog();
+            load();
+        }
+
+        private void btnDeleteTask_Click(object sender, EventArgs e)
+        {
+            int ID = (int)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[0];
+            DialogResult = MessageBox.Show("Are you sure ?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (DialogResult == DialogResult.OK)
+            {
+                load();
+            }
+            taskBLL.DeleteTask(ID);
+            load();
         }
     }
 }

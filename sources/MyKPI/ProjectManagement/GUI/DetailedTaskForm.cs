@@ -11,6 +11,8 @@ namespace MyKPI.ProjectManagement.GUI
     {
         TaskBLL taskBLL = new TaskBLL();
         EmployeeBLL employeeBLL = new EmployeeBLL();
+        int mode = 0;
+        int ID = 0;
 
         private void InitComboBox()
         {           
@@ -42,33 +44,55 @@ namespace MyKPI.ProjectManagement.GUI
             cbxTaskType.Items.Add(TaskTypeValue.Bug);
 
         }
-
         public DetailedTaskForm()
         {
             InitializeComponent();
             InitComboBox();
+            mode = 0;
+        }
+
+        public DetailedTaskForm(TaskEntity _task)
+        {
+            InitializeComponent();
+            InitComboBox();
+            mode = 1;
+            ID = _task.ID;
+            txtTaskCode.Text = _task.TaskCode;
+            txtTaskName.Text = _task.TaskName;
+            txtDescription.Text = _task.Description;
+            cbxAssignee.SelectedValue = _task.Assignee.ID;
+            cbxPriority.SelectedItem = _task.Priority;
+            cbxStatus.SelectedItem = _task.Status;
+            cbxReporter.SelectedValue = _task.Reporter.ID;
+            cbxTaskType.SelectedItem = _task.TaskType;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            var task = new TaskEntity
-            {
-                TaskCode = "KMF-1",
-                TaskName = "Design software architecture",
-                Description = "Design software architecture"
-            };
-            var reporter = new EmployeeEntity
-            {
-                ID = 1
-            };
-            task.Reporter = reporter;
-            var assignee = new EmployeeEntity
-            {
-                ID = 2
-            };
-            task.Assignee = assignee;
+            TaskEntity taskEntity = new TaskEntity();
+            taskEntity.TaskCode = txtTaskCode.Text;
+            taskEntity.TaskName = txtTaskName.Text;
+            taskEntity.Description = txtDescription.Text;
+            var assignee = new EmployeeEntity();
+            assignee.ID = (int)cbxAssignee.SelectedValue;
+            taskEntity.Assignee = assignee;
+            var reporter = new EmployeeEntity();
+            reporter.ID = (int)cbxReporter.SelectedValue;
+            taskEntity.Reporter = reporter;
+            taskEntity.Status = (TaskStatusValue)cbxStatus.SelectedItem;
+            taskEntity.Priority = (PriorityValue)cbxPriority.SelectedItem;
+            taskEntity.TaskType = (TaskTypeValue)cbxTaskType.SelectedItem;
 
-            taskBLL.AddTask(task);
+            if (mode == 0)
+            {
+                taskBLL.AddTask(taskEntity);
+            }
+            if (mode == 1)
+            {
+                taskBLL.EditTask(taskEntity, ID);
+            }
+
+
             this.Close();
         }
 
