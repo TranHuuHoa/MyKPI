@@ -136,6 +136,12 @@
     <EmbeddedResource Include="EmployeeManagment\GUI\EmployeeManagementForm.resx">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JobKpiAssessment\GUI\DetailedJobKpiAssessmentForm.resx">
+      <DependentUpon>DetailedJobKpiAssessmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobKpiAssessment\GUI\JobKpiAssessmentManagementForm.resx">
+      <DependentUpon>JobKpiAssessmentManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
