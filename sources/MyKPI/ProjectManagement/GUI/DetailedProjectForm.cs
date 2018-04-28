@@ -149,5 +149,10 @@ namespace MyKPI.ProjectManagement.GUI
             taskBLL.DeleteTask(ID);
             load();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

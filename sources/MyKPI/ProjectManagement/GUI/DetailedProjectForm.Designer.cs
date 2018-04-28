@@ -114,7 +114,6 @@
             this.grcTask.TabIndex = 5;
             this.grcTask.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvTask});
-            //this.grcTask.Click += new System.EventHandler(this.grcTask_Click);
             // 
             // grvTask
             // 
@@ -446,6 +445,7 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Project general information:";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnProjectCancel
             // 

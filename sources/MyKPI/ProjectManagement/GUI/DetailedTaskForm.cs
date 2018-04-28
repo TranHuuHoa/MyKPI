@@ -101,6 +101,9 @@ namespace MyKPI.ProjectManagement.GUI
             this.Close();
         }
 
-        
+        private void DetailedTaskForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
