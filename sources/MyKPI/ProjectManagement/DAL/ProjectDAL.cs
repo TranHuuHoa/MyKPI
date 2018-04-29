@@ -7,19 +7,71 @@ namespace MyKPI.ProjectManagement.DAL
 {
     class ProjectDAL : ICommonDAL
     {
-        public bool Add(ICommonEntity commonEntity)
+        public bool Add(ICommonEntity _project)
         {
-            throw new NotImplementedException();
+            var project = (_project as ProjectEntity);
+            string str = string.Empty;
+            try
+            {
+                str = string.Format(@"insert into tblproject (ProjectCode, ProjectName, StartedDate, EndDate, ScopeMM, CustomerName,Status) values ('{0}','{1}','{2}','{3}',{4},'{5}',{6}) ",
+                project.ProjectCode,
+                project.ProjectName,
+                project.StartedDate.ToString("yyyy-MM-dd"),
+                project.EndDate.ToString("yyyy-MM-dd"),
+                project.ScopeMM,
+                project.CustomerName,
+                (int)project.Status             
+                );
+                DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
+                return true;
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                return false;
+            }
         }
 
         public bool Delete(int ID)
         {
-            throw new NotImplementedException();
+            string str = string.Empty;
+            try
+            {
+                str = string.Format(@"delete from tblproject where ID = {0}", ID);
+                DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
+                return true;
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                return false;
+            }
         }
 
-        public bool Edit(ICommonEntity commonEntity, int ID)
+        public bool Edit(ICommonEntity _project, int ID)
         {
-            throw new NotImplementedException();
+            var project = (_project as ProjectEntity);
+            string str = string.Empty;
+            try
+            {
+                str = string.Format(@"update tblproject  set ProjectCode = '{0}',ProjectName= '{1}',StartedDate ='{2}',EndDate = '{3}',ScopeMM = {4},CustomerName = '{5}',Status={6} where ID = {7}",
+                project.ProjectCode,
+                project.ProjectName,
+                project.StartedDate.ToString("yyyy-MM-dd"),
+                project.EndDate.ToString("yyyy-MM-dd"),
+                project.ScopeMM,
+                project.CustomerName,
+                (int)project.Status,     
+                ID
+                );
+                DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
+                return true;
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                return false;
+            }
         }
 
         public static DataTable LoadAll()

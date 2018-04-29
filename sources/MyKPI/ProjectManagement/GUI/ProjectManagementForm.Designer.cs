@@ -30,10 +30,6 @@
         {
             this.grcProject = new DevExpress.XtraGrid.GridControl();
             this.grvProject = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnAddProject = new System.Windows.Forms.Button();
-            this.btnDUProject = new System.Windows.Forms.Button();
-            this.btnDeleteProject = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.grColID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColProjectCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColProjectName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,6 +38,10 @@
             this.grColScopeMM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnAddProject = new System.Windows.Forms.Button();
+            this.btnDUProject = new System.Windows.Forms.Button();
+            this.btnDeleteProject = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grcProject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProject)).BeginInit();
             this.SuspendLayout();
@@ -51,10 +51,12 @@
             this.grcProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grcProject.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grcProject.Location = new System.Drawing.Point(0, 1);
             this.grcProject.MainView = this.grvProject;
+            this.grcProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grcProject.Name = "grcProject";
-            this.grcProject.Size = new System.Drawing.Size(1543, 554);
+            this.grcProject.Size = new System.Drawing.Size(1185, 451);
             this.grcProject.TabIndex = 0;
             this.grcProject.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvProject});
@@ -80,49 +82,6 @@
             this.grvProject.OptionsSelection.MultiSelect = true;
             this.grvProject.OptionsView.ShowGroupPanel = false;
             this.grvProject.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.grvProject_CustomColumnDisplayText);
-            // 
-            // btnAddProject
-            // 
-            this.btnAddProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddProject.Location = new System.Drawing.Point(208, 575);
-            this.btnAddProject.Name = "btnAddProject";
-            this.btnAddProject.Size = new System.Drawing.Size(259, 42);
-            this.btnAddProject.TabIndex = 1;
-            this.btnAddProject.Text = "ADD";
-            this.btnAddProject.UseVisualStyleBackColor = true;
-            this.btnAddProject.Click += new System.EventHandler(this.btnAddProject_Click);
-            // 
-            // btnDUProject
-            // 
-            this.btnDUProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDUProject.Location = new System.Drawing.Point(491, 575);
-            this.btnDUProject.Name = "btnDUProject";
-            this.btnDUProject.Size = new System.Drawing.Size(259, 42);
-            this.btnDUProject.TabIndex = 2;
-            this.btnDUProject.Text = "DETAIL / UPDATE";
-            this.btnDUProject.UseVisualStyleBackColor = true;
-            this.btnDUProject.Click += new System.EventHandler(this.btnDUProject_Click);
-            // 
-            // btnDeleteProject
-            // 
-            this.btnDeleteProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDeleteProject.Location = new System.Drawing.Point(771, 575);
-            this.btnDeleteProject.Name = "btnDeleteProject";
-            this.btnDeleteProject.Size = new System.Drawing.Size(259, 42);
-            this.btnDeleteProject.TabIndex = 3;
-            this.btnDeleteProject.Text = "DELETE";
-            this.btnDeleteProject.UseVisualStyleBackColor = true;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnExit.Location = new System.Drawing.Point(1051, 575);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(259, 42);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "EXIT";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // grColID
             // 
@@ -186,16 +145,65 @@
             this.grColStatus.Visible = true;
             this.grColStatus.VisibleIndex = 6;
             // 
+            // btnAddProject
+            // 
+            this.btnAddProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddProject.Location = new System.Drawing.Point(278, 465);
+            this.btnAddProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddProject.Name = "btnAddProject";
+            this.btnAddProject.Size = new System.Drawing.Size(173, 27);
+            this.btnAddProject.TabIndex = 1;
+            this.btnAddProject.Text = "ADD";
+            this.btnAddProject.UseVisualStyleBackColor = true;
+            this.btnAddProject.Click += new System.EventHandler(this.btnAddProject_Click);
+            // 
+            // btnDUProject
+            // 
+            this.btnDUProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDUProject.Location = new System.Drawing.Point(466, 465);
+            this.btnDUProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDUProject.Name = "btnDUProject";
+            this.btnDUProject.Size = new System.Drawing.Size(173, 27);
+            this.btnDUProject.TabIndex = 2;
+            this.btnDUProject.Text = "DETAIL / UPDATE";
+            this.btnDUProject.UseVisualStyleBackColor = true;
+            this.btnDUProject.Click += new System.EventHandler(this.btnDUProject_Click);
+            // 
+            // btnDeleteProject
+            // 
+            this.btnDeleteProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeleteProject.Location = new System.Drawing.Point(653, 465);
+            this.btnDeleteProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteProject.Name = "btnDeleteProject";
+            this.btnDeleteProject.Size = new System.Drawing.Size(173, 27);
+            this.btnDeleteProject.TabIndex = 3;
+            this.btnDeleteProject.Text = "DELETE";
+            this.btnDeleteProject.UseVisualStyleBackColor = true;
+            this.btnDeleteProject.Click += new System.EventHandler(this.btnDeleteProject_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnExit.Location = new System.Drawing.Point(840, 465);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(173, 27);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // ProjectManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1544, 629);
+            this.ClientSize = new System.Drawing.Size(1186, 500);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDeleteProject);
             this.Controls.Add(this.btnDUProject);
             this.Controls.Add(this.btnAddProject);
             this.Controls.Add(this.grcProject);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProjectManagementForm";
