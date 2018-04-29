@@ -60,22 +60,23 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnProjectCancel = new System.Windows.Forms.Button();
             this.btnConfirmProject = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxProjectStatus = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtmEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtmStartedDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtScopeMM = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtProjectName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProjectCode = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcTask)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvTask)).BeginInit();
@@ -97,7 +98,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(1016, 288);
+            this.groupBox3.Size = new System.Drawing.Size(1156, 288);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Project task managment:";
@@ -110,7 +111,7 @@
             this.grcTask.Location = new System.Drawing.Point(0, 18);
             this.grcTask.MainView = this.grvTask;
             this.grcTask.Name = "grcTask";
-            this.grcTask.Size = new System.Drawing.Size(1016, 235);
+            this.grcTask.Size = new System.Drawing.Size(1156, 235);
             this.grcTask.TabIndex = 5;
             this.grcTask.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvTask});
@@ -207,7 +208,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnExit.Location = new System.Drawing.Point(683, 258);
+            this.btnExit.Location = new System.Drawing.Point(753, 258);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(145, 22);
@@ -219,7 +220,7 @@
             // btnDeleteTask
             // 
             this.btnDeleteTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDeleteTask.Location = new System.Drawing.Point(521, 258);
+            this.btnDeleteTask.Location = new System.Drawing.Point(591, 258);
             this.btnDeleteTask.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteTask.Name = "btnDeleteTask";
             this.btnDeleteTask.Size = new System.Drawing.Size(145, 22);
@@ -231,7 +232,7 @@
             // btnDUTask
             // 
             this.btnDUTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDUTask.Location = new System.Drawing.Point(354, 258);
+            this.btnDUTask.Location = new System.Drawing.Point(424, 258);
             this.btnDUTask.Margin = new System.Windows.Forms.Padding(2);
             this.btnDUTask.Name = "btnDUTask";
             this.btnDUTask.Size = new System.Drawing.Size(145, 22);
@@ -243,7 +244,7 @@
             // btnAddTask
             // 
             this.btnAddTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddTask.Location = new System.Drawing.Point(183, 258);
+            this.btnAddTask.Location = new System.Drawing.Point(253, 258);
             this.btnAddTask.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.Size = new System.Drawing.Size(145, 22);
@@ -271,7 +272,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(1016, 145);
+            this.groupBox2.Size = new System.Drawing.Size(1156, 145);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Project member management";
@@ -280,7 +281,7 @@
             // 
             this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(-46, 101);
+            this.comboBox3.Location = new System.Drawing.Point(94, 101);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(229, 21);
@@ -290,7 +291,7 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(-81, 103);
+            this.label11.Location = new System.Drawing.Point(59, 103);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 13);
@@ -300,7 +301,7 @@
             // dateTimePicker3
             // 
             this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(-46, 80);
+            this.dateTimePicker3.Location = new System.Drawing.Point(94, 80);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(229, 20);
@@ -309,7 +310,7 @@
             // dateTimePicker4
             // 
             this.dateTimePicker4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker4.Location = new System.Drawing.Point(-46, 59);
+            this.dateTimePicker4.Location = new System.Drawing.Point(94, 59);
             this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(229, 20);
@@ -319,7 +320,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(-104, 83);
+            this.label9.Location = new System.Drawing.Point(36, 83);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 13);
@@ -330,7 +331,7 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(-120, 60);
+            this.label10.Location = new System.Drawing.Point(20, 60);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 13);
@@ -341,7 +342,7 @@
             // 
             this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(-46, 37);
+            this.comboBox2.Location = new System.Drawing.Point(94, 37);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(229, 21);
@@ -351,7 +352,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(-128, 39);
+            this.label8.Location = new System.Drawing.Point(12, 39);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 13);
@@ -361,7 +362,7 @@
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(209, 91);
+            this.button5.Location = new System.Drawing.Point(349, 91);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(145, 22);
@@ -372,7 +373,7 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(209, 65);
+            this.button4.Location = new System.Drawing.Point(349, 65);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(145, 22);
@@ -383,7 +384,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(209, 39);
+            this.button3.Location = new System.Drawing.Point(349, 39);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(145, 22);
@@ -395,7 +396,7 @@
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl1.Location = new System.Drawing.Point(385, 15);
+            this.gridControl1.Location = new System.Drawing.Point(525, 15);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Name = "gridControl1";
@@ -420,32 +421,43 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.btnProjectCancel);
             this.groupBox1.Controls.Add(this.btnConfirmProject);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbxProjectStatus);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtmEndDate);
+            this.groupBox1.Controls.Add(this.dtmStartedDate);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtCustomerName);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtScopeMM);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtProjectName);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtProjectCode);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(1016, 117);
+            this.groupBox1.Size = new System.Drawing.Size(1156, 117);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Project general information:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(591, 78);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(152, 23);
+            this.btnCancel.TabIndex = 16;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnProjectCancel
             // 
@@ -465,52 +477,53 @@
             this.btnConfirmProject.TabIndex = 14;
             this.btnConfirmProject.Text = "CONFIRM";
             this.btnConfirmProject.UseVisualStyleBackColor = true;
+            this.btnConfirmProject.Click += new System.EventHandler(this.btnConfirmProject_Click);
             // 
-            // comboBox1
+            // cbxProjectStatus
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(728, 40);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 21);
-            this.comboBox1.TabIndex = 13;
+            this.cbxProjectStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxProjectStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProjectStatus.FormattingEnabled = true;
+            this.cbxProjectStatus.Location = new System.Drawing.Point(798, 40);
+            this.cbxProjectStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxProjectStatus.Name = "cbxProjectStatus";
+            this.cbxProjectStatus.Size = new System.Drawing.Size(145, 21);
+            this.cbxProjectStatus.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(648, 42);
+            this.label7.Location = new System.Drawing.Point(718, 42);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Project Status:";
             // 
-            // dateTimePicker2
+            // dtmEndDate
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker2.Location = new System.Drawing.Point(441, 42);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(185, 20);
-            this.dateTimePicker2.TabIndex = 11;
+            this.dtmEndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtmEndDate.Location = new System.Drawing.Point(511, 42);
+            this.dtmEndDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtmEndDate.Name = "dtmEndDate";
+            this.dtmEndDate.Size = new System.Drawing.Size(185, 20);
+            this.dtmEndDate.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // dtmStartedDate
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker1.Location = new System.Drawing.Point(174, 42);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(185, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dtmStartedDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtmStartedDate.Location = new System.Drawing.Point(244, 42);
+            this.dtmStartedDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtmStartedDate.Name = "dtmStartedDate";
+            this.dtmStartedDate.Size = new System.Drawing.Size(185, 20);
+            this.dtmStartedDate.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(383, 42);
+            this.label6.Location = new System.Drawing.Point(453, 42);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
@@ -521,7 +534,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(100, 42);
+            this.label5.Location = new System.Drawing.Point(170, 43);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 13);
@@ -532,87 +545,87 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(491, 14);
+            this.label4.Location = new System.Drawing.Point(561, 14);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Customer Name:";
             // 
-            // textBox4
+            // txtCustomerName
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.Location = new System.Drawing.Point(581, 12);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(217, 20);
-            this.textBox4.TabIndex = 6;
+            this.txtCustomerName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCustomerName.Location = new System.Drawing.Point(651, 12);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(217, 20);
+            this.txtCustomerName.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(809, 14);
+            this.label3.Location = new System.Drawing.Point(879, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Scope Man-Month:";
             // 
-            // textBox3
+            // txtScopeMM
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Location = new System.Drawing.Point(909, 12);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.txtScopeMM.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtScopeMM.Location = new System.Drawing.Point(979, 12);
+            this.txtScopeMM.Margin = new System.Windows.Forms.Padding(2);
+            this.txtScopeMM.Name = "txtScopeMM";
+            this.txtScopeMM.Size = new System.Drawing.Size(100, 20);
+            this.txtScopeMM.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 14);
+            this.label2.Location = new System.Drawing.Point(254, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Project Name:";
             // 
-            // textBox2
+            // txtProjectName
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Location = new System.Drawing.Point(260, 12);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtProjectName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtProjectName.Location = new System.Drawing.Point(330, 12);
+            this.txtProjectName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProjectName.Name = "txtProjectName";
+            this.txtProjectName.Size = new System.Drawing.Size(217, 20);
+            this.txtProjectName.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 14);
+            this.label1.Location = new System.Drawing.Point(71, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Project Code:";
             // 
-            // textBox1
+            // txtProjectCode
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(74, 12);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtProjectCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtProjectCode.Location = new System.Drawing.Point(144, 12);
+            this.txtProjectCode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProjectCode.Name = "txtProjectCode";
+            this.txtProjectCode.Size = new System.Drawing.Size(97, 20);
+            this.txtProjectCode.TabIndex = 0;
             // 
             // DetailedProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 550);
+            this.ClientSize = new System.Drawing.Size(1156, 550);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -658,20 +671,20 @@
         private DevExpress.XtraGrid.Columns.GridColumn grcolDescription;
         private System.Windows.Forms.Button btnProjectCancel;
         private System.Windows.Forms.Button btnConfirmProject;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxProjectStatus;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtmEndDate;
+        private System.Windows.Forms.DateTimePicker dtmStartedDate;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtScopeMM;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProjectCode;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
@@ -686,5 +699,6 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using MyKPI.ProjectManagement.BLL;
+using MyKPI.EmployeeManagment.BLL;
 using MyKPI.Common;
 using MyKPI.Entities;
 
@@ -9,11 +10,42 @@ namespace MyKPI.ProjectManagement.GUI
     public partial class DetailedProjectForm : Form
     {
         TaskBLL taskBLL = new TaskBLL();
-        DetailedFormMode detailedFormMode;
+        private ProjectBLL projectBLL = new ProjectBLL();
+        DetailedFormMode detailedFormMode = DetailedFormMode.Add;      
+        int ID = 0;
         public DetailedProjectForm()
         {
             InitializeComponent();
+            InitComboBox();
             detailedFormMode = DetailedFormMode.Add;
+        }
+
+        private void InitComboBox()
+        {
+            cbxProjectStatus.Items.Clear();
+            cbxProjectStatus.Items.Add(ProjectStatusValue.NotStart);
+            cbxProjectStatus.Items.Add(ProjectStatusValue.PreProcessing);
+            cbxProjectStatus.Items.Add(ProjectStatusValue.Processing);
+            cbxProjectStatus.Items.Add(ProjectStatusValue.UAT);
+            cbxProjectStatus.Items.Add(ProjectStatusValue.Released);
+            cbxProjectStatus.Items.Add(ProjectStatusValue.Closed);
+            cbxProjectStatus.SelectedIndex = 0;
+        }
+    
+        public DetailedProjectForm(ProjectEntity _project)
+        {
+            InitializeComponent();
+            InitComboBox();
+            detailedFormMode = DetailedFormMode.Update;
+            ID = _project.ID;
+            txtProjectCode.Text = _project.ProjectCode;
+            txtProjectName.Text = _project.ProjectName ;
+            txtScopeMM.Text = _project.ScopeMM.ToString();
+            cbxProjectStatus.SelectedItem = _project.Status;
+            dtmStartedDate.Value = _project.StartedDate;
+            dtmEndDate.Value = _project.EndDate;
+            txtCustomerName.Text = _project.CustomerName;
+
         }
 
         private void load()
@@ -150,9 +182,34 @@ namespace MyKPI.ProjectManagement.GUI
             load();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnConfirmProject_Click(object sender, EventArgs e)
         {
+            // khoi tao entity object
+            ProjectEntity projectEntity = new ProjectEntity();
+            projectEntity.ProjectCode = txtProjectCode.Text;
+            projectEntity.ProjectName = txtProjectName.Text;
+            projectEntity.ScopeMM = Int32.Parse(txtScopeMM.Text);
+            projectEntity.Status = (ProjectStatusValue)cbxProjectStatus.SelectedItem;
+            projectEntity.StartedDate = dtmStartedDate.Value;
+            projectEntity.EndDate = dtmEndDate.Value;
+            projectEntity.CustomerName = txtCustomerName.Text;
+            // luu du lieu xuong database
+            if (detailedFormMode== DetailedFormMode.Add)
+            {
+                projectBLL.AddProject(projectEntity);
+            }
+            if (detailedFormMode==DetailedFormMode.Update)
+            {
+                projectBLL.EditProject(projectEntity,ID);
+            }
+            
+            // close form
+            this.Close();
+        }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
