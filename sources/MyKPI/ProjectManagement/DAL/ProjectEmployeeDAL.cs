@@ -47,5 +47,14 @@ namespace MyKPI.ProjectManagement.DAL
                                 from project_employee pe, tblemployee e where pe.EmployeeID = e.ID and pe.ProjectID = {0}", _projectID);
             return DBManager.InstantDBManger.GetData(str);
         }
+
+        public DataTable LoadEmployeeNameOutSideProject(int _projectID)
+        {
+            string str = string.Format(@"select e.ID, CONCAT_WS(' ',e.EmployeeFirstName, e.EmployeeLastName) as EmployeeName
+                                from tblemployee e where e.ID not in (select EmployeeID from Project_Employee where ProjectID = {0})", _projectID);
+            return DBManager.InstantDBManger.GetData(str);
+        }
+
+        
     }
 }

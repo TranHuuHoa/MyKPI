@@ -13,7 +13,7 @@ namespace MyKPI.ProjectManagement.DAL
             string str = string.Empty;
             try
             {
-                str = string.Format(@"insert into tblTask (TaskCode,TaskName,Description,Assignee,Reporter,Status,Priority,TaskType) values ('{0}','{1}','{2}',{3},{4},{5},{6},{7}) ",
+                str = string.Format(@"insert into tblTask (TaskCode,TaskName,Description,Assignee,Reporter,Status,Priority,TaskType,ProjectID) values ('{0}','{1}','{2}',{3},{4},{5},{6},{7},{8}) ",
                 task.TaskCode,
                 task.TaskName,
                 task.Description,
@@ -21,7 +21,8 @@ namespace MyKPI.ProjectManagement.DAL
                 task.Reporter.ID,
                 (int)task.Status,
                 (int)task.Priority,
-                (int)task.TaskType
+                (int)task.TaskType,
+                task.Project.ID
                 );
                 DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
                 return true;

@@ -30,5 +30,12 @@ namespace MyKPI.ProjectManagement.BLL
         {
             return projectEmployeeDAL.Load( _projectID);
         }
+
+        public DataTable LoadEmployeeNameOutSideProject(int _projectID)
+        {
+            return projectEmployeeDAL.LoadEmployeeNameOutSideProject(_projectID);
+        }
+
+        
     }
 }

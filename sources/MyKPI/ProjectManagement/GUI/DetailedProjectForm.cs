@@ -57,8 +57,18 @@ namespace MyKPI.ProjectManagement.GUI
                 grcTask.DataSource = taskBLL.LoadAllTask();
                 grcProjectMember.DataSource = projectEmployeeBLL.LoadProjectEmployee(projectID);
 
+                cbxProjectMember.DataSource = projectEmployeeBLL.LoadEmployeeNameOutSideProject(projectID);
+                cbxProjectMember.DisplayMember = "EmployeeName";
+                cbxProjectMember.ValueMember = "ID";
 
-                
+                cbxRole.Items.Clear();
+                cbxRole.Items.Add(JobRankValue.ProjectManager);
+                cbxRole.Items.Add(JobRankValue.Developer);
+                cbxRole.Items.Add(JobRankValue.Tester);
+                cbxRole.Items.Add(JobRankValue.SolutionArchitect);
+                cbxRole.Items.Add(JobRankValue.BussinessAnalyst);
+                cbxRole.SelectedIndex = 0;
+
             }
             
 
@@ -146,7 +156,7 @@ namespace MyKPI.ProjectManagement.GUI
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
-            DetailedTaskForm detailedTaskForm = new DetailedTaskForm();
+            DetailedTaskForm detailedTaskForm = new DetailedTaskForm(projectID);
             detailedTaskForm.ShowDialog();
             load();
         }
@@ -171,7 +181,7 @@ namespace MyKPI.ProjectManagement.GUI
             taskEntity.Priority = (PriorityValue)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[7];
             taskEntity.TaskType = (TaskTypeValue)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[8];
 
-            DetailedTaskForm detailedTaskForm = new DetailedTaskForm(taskEntity);
+            DetailedTaskForm detailedTaskForm = new DetailedTaskForm(taskEntity,projectID);
             detailedTaskForm.ShowDialog();
             load();
         }
@@ -261,6 +271,24 @@ namespace MyKPI.ProjectManagement.GUI
                 CommonFunctions.ShowErrorDialog("Error:" + exp.ToString());
                 //  LogService.LogError("Error", ex);
             }
+        }
+
+        private void btnAddNewProjectMember_Click(object sender, EventArgs e)
+        {
+            var projectEmployee = new ProjectEmployeeEntity();
+            ProjectEntity projectEntity = new ProjectEntity();
+            projectEntity.ID = projectID;
+            projectEmployee.Project = projectEntity;
+            EmployeeEntity employeeEntity = new EmployeeEntity();
+            employeeEntity.ID = (int)cbxProjectMember.SelectedValue;
+            projectEmployee.Employee = employeeEntity;
+            projectEmployee.StartedDate = dtmPMStartedDate.Value;
+            projectEmployee.EndDate = dtmPMEndDate.Value;
+            projectEmployee.Role = (JobRankValue)cbxRole.SelectedItem;
+            projectEmployee.Active = ActiveValue.Active;
+        
+            projectEmployeeBLL.AddProjectEmployee(projectEmployee);
+            load();
         }
     }
 }

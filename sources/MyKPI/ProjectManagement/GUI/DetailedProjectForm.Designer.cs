@@ -53,9 +53,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cbxProjectMember = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnChangeActiveProjectMember = new System.Windows.Forms.Button();
+            this.btnEditProjectMemberInformation = new System.Windows.Forms.Button();
+            this.btnAddNewProjectMember = new System.Windows.Forms.Button();
             this.grcProjectMember = new DevExpress.XtraGrid.GridControl();
             this.grvProjectMember = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grColPEID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -266,9 +266,9 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.cbxProjectMember);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnChangeActiveProjectMember);
+            this.groupBox2.Controls.Add(this.btnEditProjectMemberInformation);
+            this.groupBox2.Controls.Add(this.btnAddNewProjectMember);
             this.groupBox2.Controls.Add(this.grcProjectMember);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 180);
@@ -354,35 +354,36 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Member Name:";
             // 
-            // button5
+            // btnChangeActiveProjectMember
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(524, 140);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(218, 34);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "ACTIVE/DEACTIVE";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnChangeActiveProjectMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangeActiveProjectMember.Location = new System.Drawing.Point(524, 140);
+            this.btnChangeActiveProjectMember.Name = "btnChangeActiveProjectMember";
+            this.btnChangeActiveProjectMember.Size = new System.Drawing.Size(218, 34);
+            this.btnChangeActiveProjectMember.TabIndex = 4;
+            this.btnChangeActiveProjectMember.Text = "ACTIVE/DEACTIVE";
+            this.btnChangeActiveProjectMember.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnEditProjectMemberInformation
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(524, 100);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(218, 34);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "EDIT INFORMATION";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnEditProjectMemberInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditProjectMemberInformation.Location = new System.Drawing.Point(524, 100);
+            this.btnEditProjectMemberInformation.Name = "btnEditProjectMemberInformation";
+            this.btnEditProjectMemberInformation.Size = new System.Drawing.Size(218, 34);
+            this.btnEditProjectMemberInformation.TabIndex = 3;
+            this.btnEditProjectMemberInformation.Text = "EDIT INFORMATION";
+            this.btnEditProjectMemberInformation.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAddNewProjectMember
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(524, 60);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(218, 34);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "ADD NEW MEMBER";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAddNewProjectMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNewProjectMember.Location = new System.Drawing.Point(524, 60);
+            this.btnAddNewProjectMember.Name = "btnAddNewProjectMember";
+            this.btnAddNewProjectMember.Size = new System.Drawing.Size(218, 34);
+            this.btnAddNewProjectMember.TabIndex = 2;
+            this.btnAddNewProjectMember.Text = "ADD NEW MEMBER";
+            this.btnAddNewProjectMember.UseVisualStyleBackColor = true;
+            this.btnAddNewProjectMember.Click += new System.EventHandler(this.btnAddNewProjectMember_Click);
             // 
             // grcProjectMember
             // 
@@ -727,9 +728,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbxProjectMember;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnChangeActiveProjectMember;
+        private System.Windows.Forms.Button btnEditProjectMemberInformation;
+        private System.Windows.Forms.Button btnAddNewProjectMember;
         private DevExpress.XtraGrid.GridControl grcProjectMember;
         private DevExpress.XtraGrid.Views.Grid.GridView grvProjectMember;
         private DevExpress.XtraGrid.Columns.GridColumn grColPEID;
