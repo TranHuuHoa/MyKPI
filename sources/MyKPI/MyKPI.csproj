@@ -89,6 +89,7 @@
     </Compile>
     <Compile Include="Entities\EmployeeEntity.cs" />
     <Compile Include="Entities\JobKpiEntity.cs" />
+    <Compile Include="Entities\ProjectEmployeeEntity.cs" />
     <Compile Include="Entities\ProjectEntity.cs" />
     <Compile Include="Entities\TaskEntity.cs" />
     <Compile Include="JobKpiAssessment\GUI\DetailedJobKpiAssessmentForm.cs">
@@ -111,8 +112,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjectManagement\BLL\ProjectBLL.cs" />
+    <Compile Include="ProjectManagement\BLL\ProjectEmployeeBLL.cs" />
     <Compile Include="ProjectManagement\BLL\TaskBLL.cs" />
     <Compile Include="ProjectManagement\DAL\ProjectDAL.cs" />
+    <Compile Include="ProjectManagement\DAL\ProjectEmployeeDAL.cs" />
     <Compile Include="ProjectManagement\DAL\TaskDAL.cs" />
     <Compile Include="ProjectManagement\GUI\DetailedProjectForm.cs">
       <SubType>Form</SubType>

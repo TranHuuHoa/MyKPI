@@ -9,10 +9,12 @@ namespace MyKPI.ProjectManagement.GUI
 {
     public partial class DetailedProjectForm : Form
     {
-        TaskBLL taskBLL = new TaskBLL();
+        private TaskBLL taskBLL = new TaskBLL();
         private ProjectBLL projectBLL = new ProjectBLL();
-        DetailedFormMode detailedFormMode = DetailedFormMode.Add;      
-        int ID = 0;
+        private ProjectEmployeeBLL projectEmployeeBLL = new ProjectEmployeeBLL();
+        private DetailedFormMode detailedFormMode = DetailedFormMode.Add;      
+        private int projectID = 0;
+
         public DetailedProjectForm()
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace MyKPI.ProjectManagement.GUI
             InitializeComponent();
             InitComboBox();
             detailedFormMode = DetailedFormMode.Update;
-            ID = _project.ID;
+            projectID = _project.ID;
             txtProjectCode.Text = _project.ProjectCode;
             txtProjectName.Text = _project.ProjectName ;
             txtScopeMM.Text = _project.ScopeMM.ToString();
@@ -50,9 +52,13 @@ namespace MyKPI.ProjectManagement.GUI
 
         private void load()
         {
-           // if (detailedFormMode == DetailedFormMode.Update)
+            if (detailedFormMode == DetailedFormMode.Update)
             {
                 grcTask.DataSource = taskBLL.LoadAllTask();
+                grcProjectMember.DataSource = projectEmployeeBLL.LoadProjectEmployee(projectID);
+
+
+                
             }
             
 
@@ -183,8 +189,7 @@ namespace MyKPI.ProjectManagement.GUI
         }
 
         private void btnConfirmProject_Click(object sender, EventArgs e)
-        {
-            // khoi tao entity object
+        {           
             ProjectEntity projectEntity = new ProjectEntity();
             projectEntity.ProjectCode = txtProjectCode.Text;
             projectEntity.ProjectName = txtProjectName.Text;
@@ -193,23 +198,69 @@ namespace MyKPI.ProjectManagement.GUI
             projectEntity.StartedDate = dtmStartedDate.Value;
             projectEntity.EndDate = dtmEndDate.Value;
             projectEntity.CustomerName = txtCustomerName.Text;
-            // luu du lieu xuong database
+            
             if (detailedFormMode== DetailedFormMode.Add)
             {
                 projectBLL.AddProject(projectEntity);
             }
             if (detailedFormMode==DetailedFormMode.Update)
             {
-                projectBLL.EditProject(projectEntity,ID);
+                projectBLL.EditProject(projectEntity,projectID);
             }
             
-            // close form
             this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void grvProjectMember_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
+        {
+            try
+            {
+                if (e.Column.FieldName == "Active")
+                    if (e.Value != null)
+                    {
+                        switch (e.Value)
+                        {
+                            case 0:
+                                e.DisplayText = ActiveValue.Active.ToString();
+                                break;
+                            case 1:
+                                e.DisplayText = ActiveValue.DeActive.ToString();
+                                break;                          
+                        }
+                    }
+
+                if (e.Column.FieldName == "Role")
+                {                   
+                    switch (e.Value)
+                    {
+                        case 0:
+                            e.DisplayText = JobRankValue.ProjectManager.ToString();
+                            break;
+                        case 1:
+                            e.DisplayText = JobRankValue.Developer.ToString();
+                            break;
+                        case 2:
+                            e.DisplayText = JobRankValue.Tester.ToString();
+                            break;
+                        case 3:
+                            e.DisplayText = JobRankValue.SolutionArchitect.ToString();
+                            break;
+                        case 4:
+                            e.DisplayText = JobRankValue.BussinessAnalyst.ToString();
+                            break;
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("Error:" + exp.ToString());
+                //  LogService.LogError("Error", ex);
+            }
         }
     }
 }
