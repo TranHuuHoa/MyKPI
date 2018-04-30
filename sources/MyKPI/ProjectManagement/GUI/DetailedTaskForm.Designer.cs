@@ -238,8 +238,7 @@
             this.Name = "DetailedTaskForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Detailed Task";
-            this.Load += new System.EventHandler(this.DetailedTaskForm_Load);
+            this.Text = "Detailed Task";          
             this.ResumeLayout(false);
             this.PerformLayout();
 

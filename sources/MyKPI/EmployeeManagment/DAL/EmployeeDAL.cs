@@ -22,11 +22,11 @@ namespace MyKPI.EmployeeManagment.DAL
                 employee.EmployeeLastName,
                 employee.Address,
                 employee.IDCard,
-                employee.DOB,
+                employee.DOB.ToString("yyyy-MM-dd"),
                 (int)employee.Sex,
                 (int)employee.JobRankType,
-                employee.JobRankLevel,
-                employee.SalaryLevel,
+                (int)employee.JobRankLevel,
+                (int)employee.SalaryLevel,
                 employee.SalarySubLevel
                 );
                 DBManager.InstantDBManger.QueryExecutionWithTransaction(str);

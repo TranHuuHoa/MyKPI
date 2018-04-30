@@ -30,6 +30,16 @@
         ProjectManager = 0, Developer = 1, Tester = 2, SolutionArchitect = 3, BussinessAnalyst = 4
     }
 
+    public enum JobRankLevelValue
+    {
+        Level1 = 1, Level2 = 2, Level3 = 3, Level4 = 4, Level5 = 5, Level6 = 6
+    }
+
+    public enum SalaryLevelValue
+    {
+        Level1 = 1, Level2 = 2, Level3 = 3, Level4 = 4, Level5 = 5, Level6 = 6, Level7 = 7, Level8 = 8, Level9 = 9
+    }
+
     public enum ProjectStatusValue
     {
         NotStart = 0, PreProcessing = 1, Processing = 2, UAT = 3, Released = 4, Closed=5
