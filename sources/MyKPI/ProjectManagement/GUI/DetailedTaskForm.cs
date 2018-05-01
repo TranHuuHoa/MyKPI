@@ -13,14 +13,15 @@ namespace MyKPI.ProjectManagement.GUI
         EmployeeBLL employeeBLL = new EmployeeBLL();
         int mode = 0;
         int ID = 0;
+        int projectID = 0;
 
         private void InitComboBox()
         {           
-            cbxAssignee.DataSource = employeeBLL.LoadEmployeeName();
+            cbxAssignee.DataSource = employeeBLL.LoadEmployeeNameInSideProject(projectID);
             cbxAssignee.DisplayMember = "EmployeeName";
             cbxAssignee.ValueMember = "ID";
 
-            cbxReporter.DataSource = employeeBLL.LoadEmployeeName();
+            cbxReporter.DataSource = employeeBLL.LoadEmployeeNameInSideProject(projectID);
             cbxReporter.DisplayMember = "EmployeeName";
             cbxReporter.ValueMember = "ID";
 
@@ -38,22 +39,26 @@ namespace MyKPI.ProjectManagement.GUI
             cbxPriority.Items.Add(PriorityValue.High);
             cbxPriority.Items.Add(PriorityValue.Medium);
             cbxPriority.Items.Add(PriorityValue.Low);
+            cbxPriority.SelectedIndex = 0;
 
             cbxTaskType.Items.Clear();
             cbxTaskType.Items.Add(TaskTypeValue.UserStory);
             cbxTaskType.Items.Add(TaskTypeValue.Bug);
+            cbxTaskType.SelectedIndex = 0;
 
         }
-        public DetailedTaskForm()
+        public DetailedTaskForm(int _projectID)
         {
             InitializeComponent();
+            projectID = _projectID;
             InitComboBox();
             mode = 0;
         }
 
-        public DetailedTaskForm(TaskEntity _task)
+        public DetailedTaskForm(TaskEntity _task, int _projectID)
         {
             InitializeComponent();
+            projectID = _projectID;
             InitComboBox();
             mode = 1;
             ID = _task.ID;
@@ -82,6 +87,9 @@ namespace MyKPI.ProjectManagement.GUI
             taskEntity.Status = (TaskStatusValue)cbxStatus.SelectedItem;
             taskEntity.Priority = (PriorityValue)cbxPriority.SelectedItem;
             taskEntity.TaskType = (TaskTypeValue)cbxTaskType.SelectedItem;
+            ProjectEntity projectEntity = new ProjectEntity();
+            projectEntity.ID = projectID;
+            taskEntity.Project = projectEntity;
 
             if (mode == 0)
             {

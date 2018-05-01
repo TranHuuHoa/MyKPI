@@ -31,7 +31,7 @@
             this.btnProjectManagement = new System.Windows.Forms.Button();
             this.btnJobKpiAssessment = new System.Windows.Forms.Button();
             this.btnEmployeeManagement = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProjectManagement
@@ -64,21 +64,22 @@
             this.btnEmployeeManagement.UseVisualStyleBackColor = true;
             this.btnEmployeeManagement.Click += new System.EventHandler(this.btnEmployeeManagement_Click);
             // 
-            // button4
+            // btnExit
             // 
-            this.button4.Location = new System.Drawing.Point(58, 509);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(496, 69);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "EXIT";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(58, 509);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(496, 69);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 609);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEmployeeManagement);
             this.Controls.Add(this.btnJobKpiAssessment);
             this.Controls.Add(this.btnProjectManagement);
@@ -97,7 +98,7 @@
         private System.Windows.Forms.Button btnProjectManagement;
         private System.Windows.Forms.Button btnJobKpiAssessment;
         private System.Windows.Forms.Button btnEmployeeManagement;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

@@ -38,5 +38,10 @@ namespace MyKPI
             JobKpiAssessmentManagementForm jobKpiAssessmentManagementForm = new JobKpiAssessmentManagementForm();
             jobKpiAssessmentManagementForm.ShowDialog();           
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

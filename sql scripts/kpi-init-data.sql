@@ -42,17 +42,17 @@ values ('001001','Trinh', 'Hoang Trung','Hanoi','01244456749',"1998-05-03",0,1,1
 insert into tblproject (ProjectCode, ProjectName, StartedDate, EndDate, ScopeMM, CustomerName,Status) 
 values ("KMF", "KPI management of FSOFT", "2018-03-03", "2018-06-28", 9, "FPT Software", 1); 
 
-insert into project_employee (ProjectID, EmployeeID, StartedDate, EndDate, Role)
-values (1,1,"2018-03-03", "2018-06-28",0);
+insert into project_employee (ProjectID, EmployeeID, StartedDate, EndDate, Role, Active)
+values (1,1,"2018-03-03", "2018-06-28",0,0);
 
-insert into project_employee (ProjectID, EmployeeID, StartedDate, EndDate, Role)
-values (1,1,"2018-03-03", "2018-06-28",0);
+insert into project_employee (ProjectID, EmployeeID, StartedDate, EndDate, Role, Active)
+values (1,4,"2018-03-03", "2018-06-28",0,0);
 
-insert into project_employee (ProjectID, EmployeeID, StartedDate, EndDate, Role)
-values (1,2,"2018-03-03", "2018-06-28",1);
+insert into project_employee (ProjectID, EmployeeID, StartedDate, EndDate, Role, Active)
+values (1,2,"2018-03-03", "2018-06-28",1,0);
 
-insert into project_employee (ProjectID, EmployeeID, StartedDate, EndDate, Role)
-values (1,3,"2018-03-03", "2018-06-28",2);
+insert into project_employee (ProjectID, EmployeeID, StartedDate, EndDate, Role, Active)
+values (1,3,"2018-03-03", "2018-06-28",2,0);
 
 /*init data for task*/
 insert into tblTask (TaskCode,TaskName,Description,Assignee,Reporter,Status,Priority,TaskType,ProjectID) 

@@ -45,20 +45,27 @@
             this.btnDUTask = new System.Windows.Forms.Button();
             this.btnAddTask = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbxRole = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.dtmPMEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtmPMStartedDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxProjectMember = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnChangeActiveProjectMember = new System.Windows.Forms.Button();
+            this.btnEditProjectMemberInformation = new System.Windows.Forms.Button();
+            this.btnAddNewProjectMember = new System.Windows.Forms.Button();
+            this.grcProjectMember = new DevExpress.XtraGrid.GridControl();
+            this.grvProjectMember = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grColPEID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColPEProjectID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColPEEmployeeID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColPEEmployeeName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColPEStartedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColPEEndDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColPERole = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColPEActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnProjectCancel = new System.Windows.Forms.Button();
@@ -81,8 +88,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grcTask)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvTask)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcProjectMember)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvProjectMember)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,11 +101,9 @@
             this.groupBox3.Controls.Add(this.btnDUTask);
             this.groupBox3.Controls.Add(this.btnAddTask);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(0, 262);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(0, 403);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(1156, 288);
+            this.groupBox3.Size = new System.Drawing.Size(1734, 443);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Project task managment:";
@@ -108,10 +113,12 @@
             this.grcTask.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grcTask.Location = new System.Drawing.Point(0, 18);
+            this.grcTask.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grcTask.Location = new System.Drawing.Point(0, 28);
             this.grcTask.MainView = this.grvTask;
+            this.grcTask.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grcTask.Name = "grcTask";
-            this.grcTask.Size = new System.Drawing.Size(1156, 235);
+            this.grcTask.Size = new System.Drawing.Size(1734, 362);
             this.grcTask.TabIndex = 5;
             this.grcTask.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvTask});
@@ -208,10 +215,9 @@
             // btnExit
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnExit.Location = new System.Drawing.Point(753, 258);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(1130, 397);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(145, 22);
+            this.btnExit.Size = new System.Drawing.Size(218, 34);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -220,10 +226,9 @@
             // btnDeleteTask
             // 
             this.btnDeleteTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDeleteTask.Location = new System.Drawing.Point(591, 258);
-            this.btnDeleteTask.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteTask.Location = new System.Drawing.Point(886, 397);
             this.btnDeleteTask.Name = "btnDeleteTask";
-            this.btnDeleteTask.Size = new System.Drawing.Size(145, 22);
+            this.btnDeleteTask.Size = new System.Drawing.Size(218, 34);
             this.btnDeleteTask.TabIndex = 3;
             this.btnDeleteTask.Text = "DELETE TASK";
             this.btnDeleteTask.UseVisualStyleBackColor = true;
@@ -232,10 +237,9 @@
             // btnDUTask
             // 
             this.btnDUTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDUTask.Location = new System.Drawing.Point(424, 258);
-            this.btnDUTask.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDUTask.Location = new System.Drawing.Point(636, 397);
             this.btnDUTask.Name = "btnDUTask";
-            this.btnDUTask.Size = new System.Drawing.Size(145, 22);
+            this.btnDUTask.Size = new System.Drawing.Size(218, 34);
             this.btnDUTask.TabIndex = 2;
             this.btnDUTask.Text = "DETAILED/UPDATE TASK";
             this.btnDUTask.UseVisualStyleBackColor = true;
@@ -244,10 +248,9 @@
             // btnAddTask
             // 
             this.btnAddTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddTask.Location = new System.Drawing.Point(253, 258);
-            this.btnAddTask.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddTask.Location = new System.Drawing.Point(380, 397);
             this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(145, 22);
+            this.btnAddTask.Size = new System.Drawing.Size(218, 34);
             this.btnAddTask.TabIndex = 1;
             this.btnAddTask.Text = "ADD NEW TASK";
             this.btnAddTask.UseVisualStyleBackColor = true;
@@ -255,75 +258,69 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.cbxRole);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
-            this.groupBox2.Controls.Add(this.dateTimePicker4);
+            this.groupBox2.Controls.Add(this.dtmPMEndDate);
+            this.groupBox2.Controls.Add(this.dtmPMStartedDate);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.cbxProjectMember);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.gridControl1);
+            this.groupBox2.Controls.Add(this.btnChangeActiveProjectMember);
+            this.groupBox2.Controls.Add(this.btnEditProjectMemberInformation);
+            this.groupBox2.Controls.Add(this.btnAddNewProjectMember);
+            this.groupBox2.Controls.Add(this.grcProjectMember);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 117);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(0, 180);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(1156, 145);
+            this.groupBox2.Size = new System.Drawing.Size(1734, 223);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Project member management";
             // 
-            // comboBox3
+            // cbxRole
             // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(94, 101);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(229, 21);
-            this.comboBox3.TabIndex = 18;
+            this.cbxRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxRole.FormattingEnabled = true;
+            this.cbxRole.Location = new System.Drawing.Point(141, 155);
+            this.cbxRole.Name = "cbxRole";
+            this.cbxRole.Size = new System.Drawing.Size(342, 28);
+            this.cbxRole.TabIndex = 18;
             // 
             // label11
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(59, 103);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(88, 158);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 13);
+            this.label11.Size = new System.Drawing.Size(46, 20);
             this.label11.TabIndex = 17;
             this.label11.Text = "Role:";
             // 
-            // dateTimePicker3
+            // dtmPMEndDate
             // 
-            this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(94, 80);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(229, 20);
-            this.dateTimePicker3.TabIndex = 15;
+            this.dtmPMEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtmPMEndDate.Location = new System.Drawing.Point(141, 123);
+            this.dtmPMEndDate.Name = "dtmPMEndDate";
+            this.dtmPMEndDate.Size = new System.Drawing.Size(342, 26);
+            this.dtmPMEndDate.TabIndex = 15;
             // 
-            // dateTimePicker4
+            // dtmPMStartedDate
             // 
-            this.dateTimePicker4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker4.Location = new System.Drawing.Point(94, 59);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(229, 20);
-            this.dateTimePicker4.TabIndex = 14;
+            this.dtmPMStartedDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtmPMStartedDate.Location = new System.Drawing.Point(141, 91);
+            this.dtmPMStartedDate.Name = "dtmPMStartedDate";
+            this.dtmPMStartedDate.Size = new System.Drawing.Size(342, 26);
+            this.dtmPMStartedDate.TabIndex = 14;
             // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(36, 83);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(54, 128);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.Size = new System.Drawing.Size(81, 20);
             this.label9.TabIndex = 13;
             this.label9.Text = "End Date:";
             // 
@@ -331,93 +328,149 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 60);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(30, 92);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 13);
+            this.label10.Size = new System.Drawing.Size(105, 20);
             this.label10.TabIndex = 12;
             this.label10.Text = "Started Date:";
             // 
-            // comboBox2
+            // cbxProjectMember
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(94, 37);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(229, 21);
-            this.comboBox2.TabIndex = 6;
+            this.cbxProjectMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxProjectMember.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProjectMember.FormattingEnabled = true;
+            this.cbxProjectMember.Location = new System.Drawing.Point(141, 57);
+            this.cbxProjectMember.Name = "cbxProjectMember";
+            this.cbxProjectMember.Size = new System.Drawing.Size(342, 28);
+            this.cbxProjectMember.TabIndex = 6;
             // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 39);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(18, 60);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 13);
+            this.label8.Size = new System.Drawing.Size(117, 20);
             this.label8.TabIndex = 5;
             this.label8.Text = "Member Name:";
             // 
-            // button5
+            // btnChangeActiveProjectMember
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(349, 91);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 22);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "ACTIVE/DEACTIVE";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnChangeActiveProjectMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangeActiveProjectMember.Location = new System.Drawing.Point(524, 140);
+            this.btnChangeActiveProjectMember.Name = "btnChangeActiveProjectMember";
+            this.btnChangeActiveProjectMember.Size = new System.Drawing.Size(218, 34);
+            this.btnChangeActiveProjectMember.TabIndex = 4;
+            this.btnChangeActiveProjectMember.Text = "ACTIVE/DEACTIVE";
+            this.btnChangeActiveProjectMember.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnEditProjectMemberInformation
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(349, 65);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(145, 22);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "EDIT INFORMATION";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnEditProjectMemberInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditProjectMemberInformation.Location = new System.Drawing.Point(524, 100);
+            this.btnEditProjectMemberInformation.Name = "btnEditProjectMemberInformation";
+            this.btnEditProjectMemberInformation.Size = new System.Drawing.Size(218, 34);
+            this.btnEditProjectMemberInformation.TabIndex = 3;
+            this.btnEditProjectMemberInformation.Text = "EDIT INFORMATION";
+            this.btnEditProjectMemberInformation.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAddNewProjectMember
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(349, 39);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 22);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "ADD NEW MEMBER";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAddNewProjectMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNewProjectMember.Location = new System.Drawing.Point(524, 60);
+            this.btnAddNewProjectMember.Name = "btnAddNewProjectMember";
+            this.btnAddNewProjectMember.Size = new System.Drawing.Size(218, 34);
+            this.btnAddNewProjectMember.TabIndex = 2;
+            this.btnAddNewProjectMember.Text = "ADD NEW MEMBER";
+            this.btnAddNewProjectMember.UseVisualStyleBackColor = true;
+            this.btnAddNewProjectMember.Click += new System.EventHandler(this.btnAddNewProjectMember_Click);
             // 
-            // gridControl1
+            // grcProjectMember
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl1.Location = new System.Drawing.Point(525, 15);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(629, 128);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.grcProjectMember.Dock = System.Windows.Forms.DockStyle.Right;
+            this.grcProjectMember.Location = new System.Drawing.Point(787, 22);
+            this.grcProjectMember.MainView = this.grvProjectMember;
+            this.grcProjectMember.Name = "grcProjectMember";
+            this.grcProjectMember.Size = new System.Drawing.Size(944, 198);
+            this.grcProjectMember.TabIndex = 0;
+            this.grcProjectMember.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvProjectMember});
             // 
-            // gridView1
+            // grvProjectMember
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.grvProjectMember.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grColPEID,
+            this.grColPEProjectID,
+            this.grColPEEmployeeID,
+            this.grColPEEmployeeName,
+            this.grColPEStartedDate,
+            this.grColPEEndDate,
+            this.grColPERole,
+            this.grColPEActive});
+            this.grvProjectMember.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.grvProjectMember.GridControl = this.grcProjectMember;
+            this.grvProjectMember.Name = "grvProjectMember";
+            this.grvProjectMember.OptionsBehavior.Editable = false;
+            this.grvProjectMember.OptionsView.ShowGroupPanel = false;
+            this.grvProjectMember.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.grvProjectMember_CustomColumnDisplayText);
             // 
-            // gridColumn1
+            // grColPEID
             // 
-            this.gridColumn1.Caption = "gridColumn1";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.grColPEID.Caption = "ID";
+            this.grColPEID.FieldName = "ID";
+            this.grColPEID.Name = "grColPEID";
+            // 
+            // grColPEProjectID
+            // 
+            this.grColPEProjectID.Caption = "ProjectID";
+            this.grColPEProjectID.FieldName = "ProjectID";
+            this.grColPEProjectID.Name = "grColPEProjectID";
+            // 
+            // grColPEEmployeeID
+            // 
+            this.grColPEEmployeeID.Caption = "EmployeeID";
+            this.grColPEEmployeeID.FieldName = "EmployeeID";
+            this.grColPEEmployeeID.Name = "grColPEEmployeeID";
+            // 
+            // grColPEEmployeeName
+            // 
+            this.grColPEEmployeeName.Caption = "Employee Name";
+            this.grColPEEmployeeName.FieldName = "EmployeeName";
+            this.grColPEEmployeeName.Name = "grColPEEmployeeName";
+            this.grColPEEmployeeName.Visible = true;
+            this.grColPEEmployeeName.VisibleIndex = 0;
+            // 
+            // grColPEStartedDate
+            // 
+            this.grColPEStartedDate.Caption = "Started Date";
+            this.grColPEStartedDate.FieldName = "StartedDate";
+            this.grColPEStartedDate.Name = "grColPEStartedDate";
+            this.grColPEStartedDate.Visible = true;
+            this.grColPEStartedDate.VisibleIndex = 1;
+            // 
+            // grColPEEndDate
+            // 
+            this.grColPEEndDate.Caption = "End Date";
+            this.grColPEEndDate.FieldName = "EndDate";
+            this.grColPEEndDate.Name = "grColPEEndDate";
+            this.grColPEEndDate.Visible = true;
+            this.grColPEEndDate.VisibleIndex = 2;
+            // 
+            // grColPERole
+            // 
+            this.grColPERole.Caption = "Role";
+            this.grColPERole.FieldName = "Role";
+            this.grColPERole.Name = "grColPERole";
+            this.grColPERole.Visible = true;
+            this.grColPERole.VisibleIndex = 3;
+            // 
+            // grColPEActive
+            // 
+            this.grColPEActive.Caption = "Active";
+            this.grColPEActive.FieldName = "Active";
+            this.grColPEActive.Name = "grColPEActive";
+            this.grColPEActive.Visible = true;
+            this.grColPEActive.VisibleIndex = 4;
             // 
             // groupBox1
             // 
@@ -440,20 +493,17 @@
             this.groupBox1.Controls.Add(this.txtProjectCode);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(1156, 117);
+            this.groupBox1.Size = new System.Drawing.Size(1734, 180);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Project general information:";
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(591, 78);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(886, 120);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(152, 23);
+            this.btnCancel.Size = new System.Drawing.Size(228, 35);
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -461,19 +511,19 @@
             // 
             // btnProjectCancel
             // 
-            this.btnProjectCancel.Location = new System.Drawing.Point(898, 120);
+            this.btnProjectCancel.Location = new System.Drawing.Point(1347, 185);
+            this.btnProjectCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProjectCancel.Name = "btnProjectCancel";
-            this.btnProjectCancel.Size = new System.Drawing.Size(127, 23);
+            this.btnProjectCancel.Size = new System.Drawing.Size(190, 35);
             this.btnProjectCancel.TabIndex = 15;
             this.btnProjectCancel.Text = "CANCEL";
             this.btnProjectCancel.UseVisualStyleBackColor = true;
             // 
             // btnConfirmProject
             // 
-            this.btnConfirmProject.Location = new System.Drawing.Point(380, 78);
-            this.btnConfirmProject.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirmProject.Location = new System.Drawing.Point(570, 120);
             this.btnConfirmProject.Name = "btnConfirmProject";
-            this.btnConfirmProject.Size = new System.Drawing.Size(205, 23);
+            this.btnConfirmProject.Size = new System.Drawing.Size(308, 35);
             this.btnConfirmProject.TabIndex = 14;
             this.btnConfirmProject.Text = "CONFIRM";
             this.btnConfirmProject.UseVisualStyleBackColor = true;
@@ -484,49 +534,44 @@
             this.cbxProjectStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxProjectStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProjectStatus.FormattingEnabled = true;
-            this.cbxProjectStatus.Location = new System.Drawing.Point(798, 40);
-            this.cbxProjectStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxProjectStatus.Location = new System.Drawing.Point(1197, 62);
             this.cbxProjectStatus.Name = "cbxProjectStatus";
-            this.cbxProjectStatus.Size = new System.Drawing.Size(145, 21);
+            this.cbxProjectStatus.Size = new System.Drawing.Size(216, 28);
             this.cbxProjectStatus.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(718, 42);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(1077, 65);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.Size = new System.Drawing.Size(113, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Project Status:";
             // 
             // dtmEndDate
             // 
             this.dtmEndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtmEndDate.Location = new System.Drawing.Point(511, 42);
-            this.dtmEndDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtmEndDate.Location = new System.Drawing.Point(766, 65);
             this.dtmEndDate.Name = "dtmEndDate";
-            this.dtmEndDate.Size = new System.Drawing.Size(185, 20);
+            this.dtmEndDate.Size = new System.Drawing.Size(276, 26);
             this.dtmEndDate.TabIndex = 11;
             // 
             // dtmStartedDate
             // 
             this.dtmStartedDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtmStartedDate.Location = new System.Drawing.Point(244, 42);
-            this.dtmStartedDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtmStartedDate.Location = new System.Drawing.Point(366, 65);
             this.dtmStartedDate.Name = "dtmStartedDate";
-            this.dtmStartedDate.Size = new System.Drawing.Size(185, 20);
+            this.dtmStartedDate.Size = new System.Drawing.Size(276, 26);
             this.dtmStartedDate.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(453, 42);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(680, 65);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.Size = new System.Drawing.Size(81, 20);
             this.label6.TabIndex = 9;
             this.label6.Text = "End Date:";
             // 
@@ -534,10 +579,9 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(170, 43);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(255, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.Size = new System.Drawing.Size(105, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Started Date:";
             // 
@@ -545,91 +589,82 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(561, 14);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(842, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.Size = new System.Drawing.Size(128, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Customer Name:";
             // 
             // txtCustomerName
             // 
             this.txtCustomerName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCustomerName.Location = new System.Drawing.Point(651, 12);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomerName.Location = new System.Drawing.Point(976, 18);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(217, 20);
+            this.txtCustomerName.Size = new System.Drawing.Size(324, 26);
             this.txtCustomerName.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(879, 14);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(1318, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.Size = new System.Drawing.Size(144, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Scope Man-Month:";
             // 
             // txtScopeMM
             // 
             this.txtScopeMM.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtScopeMM.Location = new System.Drawing.Point(979, 12);
-            this.txtScopeMM.Margin = new System.Windows.Forms.Padding(2);
+            this.txtScopeMM.Location = new System.Drawing.Point(1468, 18);
             this.txtScopeMM.Name = "txtScopeMM";
-            this.txtScopeMM.Size = new System.Drawing.Size(100, 20);
+            this.txtScopeMM.Size = new System.Drawing.Size(148, 26);
             this.txtScopeMM.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(254, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(381, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(108, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Project Name:";
             // 
             // txtProjectName
             // 
             this.txtProjectName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtProjectName.Location = new System.Drawing.Point(330, 12);
-            this.txtProjectName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProjectName.Location = new System.Drawing.Point(495, 18);
             this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.Size = new System.Drawing.Size(217, 20);
+            this.txtProjectName.Size = new System.Drawing.Size(324, 26);
             this.txtProjectName.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(106, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(104, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Project Code:";
             // 
             // txtProjectCode
             // 
             this.txtProjectCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtProjectCode.Location = new System.Drawing.Point(144, 12);
-            this.txtProjectCode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProjectCode.Location = new System.Drawing.Point(216, 18);
             this.txtProjectCode.Name = "txtProjectCode";
-            this.txtProjectCode.Size = new System.Drawing.Size(97, 20);
+            this.txtProjectCode.Size = new System.Drawing.Size(144, 26);
             this.txtProjectCode.TabIndex = 0;
             // 
             // DetailedProjectForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 550);
+            this.ClientSize = new System.Drawing.Size(1734, 846);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DetailedProjectForm";
@@ -641,8 +676,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvTask)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcProjectMember)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvProjectMember)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -685,20 +720,27 @@
         private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtProjectCode;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbxRole;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dtmPMEndDate;
+        private System.Windows.Forms.DateTimePicker dtmPMStartedDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxProjectMember;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private System.Windows.Forms.Button btnChangeActiveProjectMember;
+        private System.Windows.Forms.Button btnEditProjectMemberInformation;
+        private System.Windows.Forms.Button btnAddNewProjectMember;
+        private DevExpress.XtraGrid.GridControl grcProjectMember;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvProjectMember;
+        private DevExpress.XtraGrid.Columns.GridColumn grColPEID;
         private System.Windows.Forms.Button btnCancel;
+        private DevExpress.XtraGrid.Columns.GridColumn grColPEProjectID;
+        private DevExpress.XtraGrid.Columns.GridColumn grColPEEmployeeID;
+        private DevExpress.XtraGrid.Columns.GridColumn grColPEStartedDate;
+        private DevExpress.XtraGrid.Columns.GridColumn grColPEEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn grColPERole;
+        private DevExpress.XtraGrid.Columns.GridColumn grColPEActive;
+        private DevExpress.XtraGrid.Columns.GridColumn grColPEEmployeeName;
     }
 }

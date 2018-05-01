@@ -45,4 +45,8 @@
         NotStart = 0, PreProcessing = 1, Processing = 2, UAT = 3, Released = 4, Closed=5
     }
 
+    public enum ActiveValue
+    {
+        Active = 0, DeActive = 1
+    }
 }

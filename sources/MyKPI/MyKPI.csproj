@@ -35,7 +35,6 @@
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
@@ -90,6 +89,7 @@
     </Compile>
     <Compile Include="Entities\EmployeeEntity.cs" />
     <Compile Include="Entities\JobKpiEntity.cs" />
+    <Compile Include="Entities\ProjectEmployeeEntity.cs" />
     <Compile Include="Entities\ProjectEntity.cs" />
     <Compile Include="Entities\TaskEntity.cs" />
     <Compile Include="JobKpiAssessment\GUI\DetailedJobKpiAssessmentForm.cs">
@@ -112,8 +112,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjectManagement\BLL\ProjectBLL.cs" />
+    <Compile Include="ProjectManagement\BLL\ProjectEmployeeBLL.cs" />
     <Compile Include="ProjectManagement\BLL\TaskBLL.cs" />
     <Compile Include="ProjectManagement\DAL\ProjectDAL.cs" />
+    <Compile Include="ProjectManagement\DAL\ProjectEmployeeDAL.cs" />
     <Compile Include="ProjectManagement\DAL\TaskDAL.cs" />
     <Compile Include="ProjectManagement\GUI\DetailedProjectForm.cs">
       <SubType>Form</SubType>
