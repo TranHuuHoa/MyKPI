@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using MyKPI.EmployeeManagment.BLL;
 using MyKPI.Common;
+using MyKPI.Entities;
 
 namespace MyKPI.EmployeeManagment.GUI
 {
@@ -88,7 +89,39 @@ namespace MyKPI.EmployeeManagment.GUI
 
         private void btnDUEmployee_Click(object sender, EventArgs e)
         {
+            EmployeeEntity employeeEntity = new EmployeeEntity();
+            employeeEntity.ID = (int)grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[0];
+            employeeEntity.EmployeeNumber = grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[1].ToString();
+            employeeEntity.EmployeeFirstName = grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[2].ToString();
+            employeeEntity.EmployeeLastName = grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[3].ToString();
+            employeeEntity.Address = grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[4].ToString();
+            employeeEntity.IDCard = grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[5].ToString();
+            employeeEntity.DOB = (DateTime)grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[6];
+            employeeEntity.Sex = (SexValue)grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[7];
+            employeeEntity.JobRankType = (JobRankValue) grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[8];
+            employeeEntity.JobRankLevel = (JobRankLevelValue)grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[9];
+            employeeEntity.SalaryLevel = (SalaryLevelValue)grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[10];
+            employeeEntity.SalarySubLevel = (int)grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[11];
+            DetailedEmployeeForm detailedEmployeeForm = new DetailedEmployeeForm(employeeEntity);
+            detailedEmployeeForm.ShowDialog();
+            load();
+        }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            int ID = (int)grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[0];
+         //   DialogResult = MessageBox.Show("Are you sure ?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+          //  if (DialogResult == DialogResult.OK)
+          //  {
+                employeeBLL.DeleteEmployee(ID);
+                load();
+          //  }
+            
         }
     }
 }

@@ -207,7 +207,7 @@
             // 
             // txtSalarySubLevel
             // 
-            this.txtSalarySubLevel.Location = new System.Drawing.Point(117, 289);
+            this.txtSalarySubLevel.Location = new System.Drawing.Point(116, 289);
             this.txtSalarySubLevel.Name = "txtSalarySubLevel";
             this.txtSalarySubLevel.Size = new System.Drawing.Size(240, 20);
             this.txtSalarySubLevel.TabIndex = 31;
@@ -292,6 +292,7 @@
             this.Controls.Add(this.btnConfirm);
             this.Name = "DetailedEmployeeForm";
             this.Text = "DetailedEmployeeForm";
+            this.Load += new System.EventHandler(this.DetailedEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

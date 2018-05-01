@@ -42,12 +42,48 @@ namespace MyKPI.EmployeeManagment.DAL
 
         public bool Delete(int ID)
         {
-            throw new NotImplementedException();
+            string str = string.Empty;
+            try
+            {
+                str = string.Format(@"delete from tblEmployee where ID = {0}", ID);
+                DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
+                return true;
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                return false;
+            }
         }
 
-        public bool Edit(ICommonEntity commonEntity, int ID)
+        public bool Edit(ICommonEntity _employee, int ID)
         {
-            throw new NotImplementedException();
+
+            var employee = (_employee as EmployeeEntity);
+            string str = string.Empty;
+            try
+            {
+                str = string.Format(@"update tblEmployee  set EmployeeNumber = '{0}',EmployeeFirstName= '{1}',EmployeeLastName ='{2}',Address = '{3}',IDCard = '{4}',DOB = '{5}',JobRankType={6},JobRankLevel={7},SalaryLevel={8}, SalarySubLevel={9} where ID = {10}",
+                employee.EmployeeNumber,
+                employee.EmployeeFirstName,
+                employee.EmployeeLastName,
+                employee.Address,
+                employee.IDCard,
+                employee.DOB.ToString("yyyy-MM-dd"),
+                (int)employee.JobRankType,
+                (int)employee.JobRankLevel,
+                (int)employee.SalaryLevel,
+                employee.SalarySubLevel,
+                ID
+                );
+                DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
+                return true;
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                return false;
+            }
         }
 
         public static DataTable LoadAll()

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System;
 using System.Windows.Forms;
-using MyKPI.ProjectManagement.BLL;
 using MyKPI.EmployeeManagment.BLL;
 using MyKPI.Entities;
 using MyKPI.Common;
@@ -14,11 +9,33 @@ namespace MyKPI.EmployeeManagment.GUI
     public partial class DetailedEmployeeForm : Form
     {
         EmployeeBLL employeeBLL = new EmployeeBLL();
+        int mode = 0;
+        int ID = 0;
         public DetailedEmployeeForm()
         {
             InitializeComponent();
             InitComboBox();
+            mode = 0;
             txtSalarySubLevel.Text = "1";
+        }
+
+        public DetailedEmployeeForm(EmployeeEntity _employeeEntity)
+        {
+            InitializeComponent();
+            InitComboBox();
+            mode = 1;
+            ID = _employeeEntity.ID;
+            txtEmployeeNumber.Text = _employeeEntity.EmployeeNumber;
+            txtEmployeeFirstName.Text = _employeeEntity.EmployeeFirstName;
+            txtEmployeeLastName.Text = _employeeEntity.EmployeeLastName;
+            txtAddress.Text = _employeeEntity.Address;
+            txtIdCard.Text = _employeeEntity.IDCard;
+            dtpDOB.Value = _employeeEntity.DOB;
+            cbxJobRankType.SelectedItem = _employeeEntity.JobRankType;
+            cbxJobRankLevel.SelectedItem = _employeeEntity.JobRankLevel;
+            cbxSalaryLevel.SelectedItem = _employeeEntity.SalaryLevel;
+            txtSalarySubLevel.Text = _employeeEntity.SalarySubLevel.ToString();
+
         }
 
         private void InitComboBox()
@@ -79,8 +96,20 @@ namespace MyKPI.EmployeeManagment.GUI
             employeeEntity.SalaryLevel = (SalaryLevelValue)cbxSalaryLevel.SelectedItem;
             employeeEntity.SalarySubLevel = Convert.ToInt32(txtSalarySubLevel.Text);
 
-            employeeBLL.AddEmployee(employeeEntity);
+            if(mode == 0)
+            {
+                employeeBLL.AddEmployee(employeeEntity);
+            }
+            if(mode == 1)
+            {
+                employeeBLL.EditEmployee(employeeEntity, ID);
+            }
             this.Close();
+
+        }
+
+        private void DetailedEmployeeForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

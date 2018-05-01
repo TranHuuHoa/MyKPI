@@ -9,7 +9,7 @@ namespace MyKPI.Common
     {
         private static readonly Lazy<DBManager> lazyDBManager = new Lazy<DBManager>(() => new DBManager());
         public static DBManager InstantDBManger { get { return lazyDBManager.Value; } }
-        private string ConnectString = "Server=192.168.1.219; database=mykpi; UID=root; password=123456; SslMode=none; charset=utf8";
+        private string ConnectString = "Server=172.16.99.122; database=mykpi; UID=root; password=123456; SslMode=none; charset=utf8";
         private MySqlConnection connection = null;
 
         private DBManager()

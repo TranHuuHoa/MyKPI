@@ -32,6 +32,7 @@
             this.grvEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grColID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColEmployeeNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grColEmployeeName1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColDOB = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColIDCard = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -70,6 +71,7 @@
             this.grvEmployee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.grColID,
             this.grColEmployeeNumber,
+            this.grColEmployeeName1,
             this.grColAddress,
             this.grColDOB,
             this.grColIDCard,
@@ -103,6 +105,14 @@
             this.grColEmployeeNumber.Visible = true;
             this.grColEmployeeNumber.VisibleIndex = 0;
             // 
+            // grColEmployeeName1
+            // 
+            this.grColEmployeeName1.Caption = "Employee Name";
+            this.grColEmployeeName1.FieldName = "EmployeeName";
+            this.grColEmployeeName1.Name = "grColEmployeeName1";
+            this.grColEmployeeName1.Visible = true;
+            this.grColEmployeeName1.VisibleIndex = 1;
+            // 
             // grColAddress
             // 
             this.grColAddress.Caption = "Address";
@@ -115,7 +125,7 @@
             this.grColDOB.FieldName = "DOB";
             this.grColDOB.Name = "grColDOB";
             this.grColDOB.Visible = true;
-            this.grColDOB.VisibleIndex = 1;
+            this.grColDOB.VisibleIndex = 2;
             // 
             // grColIDCard
             // 
@@ -129,7 +139,7 @@
             this.grColSex.FieldName = "Sex";
             this.grColSex.Name = "grColSex";
             this.grColSex.Visible = true;
-            this.grColSex.VisibleIndex = 2;
+            this.grColSex.VisibleIndex = 3;
             // 
             // grColJobRankType
             // 
@@ -173,7 +183,7 @@
             this.grColJobRank.FieldName = "JobRank";
             this.grColJobRank.Name = "grColJobRank";
             this.grColJobRank.Visible = true;
-            this.grColJobRank.VisibleIndex = 3;
+            this.grColJobRank.VisibleIndex = 4;
             // 
             // grColSalary
             // 
@@ -181,7 +191,7 @@
             this.grColSalary.FieldName = "Salary";
             this.grColSalary.Name = "grColSalary";
             this.grColSalary.Visible = true;
-            this.grColSalary.VisibleIndex = 4;
+            this.grColSalary.VisibleIndex = 5;
             // 
             // btnExit
             // 
@@ -193,6 +203,7 @@
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnDeleteEmployee
             // 
@@ -204,6 +215,7 @@
             this.btnDeleteEmployee.TabIndex = 7;
             this.btnDeleteEmployee.Text = "DELETE EMPLOYEE";
             this.btnDeleteEmployee.UseVisualStyleBackColor = true;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
             // 
             // btnDUEmployee
             // 
@@ -274,5 +286,6 @@
         private System.Windows.Forms.Button btnDeleteEmployee;
         private System.Windows.Forms.Button btnDUEmployee;
         private System.Windows.Forms.Button btnAddEmployee;
+        private DevExpress.XtraGrid.Columns.GridColumn grColEmployeeName1;
     }
 }
