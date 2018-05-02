@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbxProjectTaskManagement = new System.Windows.Forms.GroupBox();
             this.grcTask = new DevExpress.XtraGrid.GridControl();
             this.grvTask = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grcolID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -44,7 +44,7 @@
             this.btnDeleteTask = new System.Windows.Forms.Button();
             this.btnDUTask = new System.Windows.Forms.Button();
             this.btnAddTask = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbxProjectMemberManagement = new System.Windows.Forms.GroupBox();
             this.cbxRole = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dtmPMEndDate = new System.Windows.Forms.DateTimePicker();
@@ -54,7 +54,7 @@
             this.cbxProjectMember = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnChangeActiveProjectMember = new System.Windows.Forms.Button();
-            this.btnEditProjectMemberInformation = new System.Windows.Forms.Button();
+            this.btnUpdateProjectMemberInformation = new System.Windows.Forms.Button();
             this.btnAddNewProjectMember = new System.Windows.Forms.Button();
             this.grcProjectMember = new DevExpress.XtraGrid.GridControl();
             this.grvProjectMember = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -66,7 +66,7 @@
             this.grColPEEndDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColPERole = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColPEActive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxProjectGeneralnformation = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnProjectCancel = new System.Windows.Forms.Button();
             this.btnConfirmProject = new System.Windows.Forms.Button();
@@ -84,29 +84,29 @@
             this.txtProjectName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtProjectCode = new System.Windows.Forms.TextBox();
-            this.groupBox3.SuspendLayout();
+            this.gbxProjectTaskManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcTask)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvTask)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.gbxProjectMemberManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcProjectMember)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProjectMember)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gbxProjectGeneralnformation.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox3
+            // gbxProjectTaskManagement
             // 
-            this.groupBox3.Controls.Add(this.grcTask);
-            this.groupBox3.Controls.Add(this.btnExit);
-            this.groupBox3.Controls.Add(this.btnDeleteTask);
-            this.groupBox3.Controls.Add(this.btnDUTask);
-            this.groupBox3.Controls.Add(this.btnAddTask);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(0, 403);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1734, 443);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Project task managment:";
+            this.gbxProjectTaskManagement.Controls.Add(this.grcTask);
+            this.gbxProjectTaskManagement.Controls.Add(this.btnExit);
+            this.gbxProjectTaskManagement.Controls.Add(this.btnDeleteTask);
+            this.gbxProjectTaskManagement.Controls.Add(this.btnDUTask);
+            this.gbxProjectTaskManagement.Controls.Add(this.btnAddTask);
+            this.gbxProjectTaskManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbxProjectTaskManagement.Location = new System.Drawing.Point(0, 403);
+            this.gbxProjectTaskManagement.Name = "gbxProjectTaskManagement";
+            this.gbxProjectTaskManagement.Size = new System.Drawing.Size(1734, 443);
+            this.gbxProjectTaskManagement.TabIndex = 5;
+            this.gbxProjectTaskManagement.TabStop = false;
+            this.gbxProjectTaskManagement.Text = "Project task managment:";
             // 
             // grcTask
             // 
@@ -256,27 +256,27 @@
             this.btnAddTask.UseVisualStyleBackColor = true;
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
-            // groupBox2
+            // gbxProjectMemberManagement
             // 
-            this.groupBox2.Controls.Add(this.cbxRole);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.dtmPMEndDate);
-            this.groupBox2.Controls.Add(this.dtmPMStartedDate);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.cbxProjectMember);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.btnChangeActiveProjectMember);
-            this.groupBox2.Controls.Add(this.btnEditProjectMemberInformation);
-            this.groupBox2.Controls.Add(this.btnAddNewProjectMember);
-            this.groupBox2.Controls.Add(this.grcProjectMember);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 180);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1734, 223);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Project member management";
+            this.gbxProjectMemberManagement.Controls.Add(this.cbxRole);
+            this.gbxProjectMemberManagement.Controls.Add(this.label11);
+            this.gbxProjectMemberManagement.Controls.Add(this.dtmPMEndDate);
+            this.gbxProjectMemberManagement.Controls.Add(this.dtmPMStartedDate);
+            this.gbxProjectMemberManagement.Controls.Add(this.label9);
+            this.gbxProjectMemberManagement.Controls.Add(this.label10);
+            this.gbxProjectMemberManagement.Controls.Add(this.cbxProjectMember);
+            this.gbxProjectMemberManagement.Controls.Add(this.label8);
+            this.gbxProjectMemberManagement.Controls.Add(this.btnChangeActiveProjectMember);
+            this.gbxProjectMemberManagement.Controls.Add(this.btnUpdateProjectMemberInformation);
+            this.gbxProjectMemberManagement.Controls.Add(this.btnAddNewProjectMember);
+            this.gbxProjectMemberManagement.Controls.Add(this.grcProjectMember);
+            this.gbxProjectMemberManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbxProjectMemberManagement.Location = new System.Drawing.Point(0, 180);
+            this.gbxProjectMemberManagement.Name = "gbxProjectMemberManagement";
+            this.gbxProjectMemberManagement.Size = new System.Drawing.Size(1734, 223);
+            this.gbxProjectMemberManagement.TabIndex = 4;
+            this.gbxProjectMemberManagement.TabStop = false;
+            this.gbxProjectMemberManagement.Text = "Project member management";
             // 
             // cbxRole
             // 
@@ -364,15 +364,15 @@
             this.btnChangeActiveProjectMember.Text = "ACTIVE/DEACTIVE";
             this.btnChangeActiveProjectMember.UseVisualStyleBackColor = true;
             // 
-            // btnEditProjectMemberInformation
+            // btnUpdateProjectMemberInformation
             // 
-            this.btnEditProjectMemberInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditProjectMemberInformation.Location = new System.Drawing.Point(524, 100);
-            this.btnEditProjectMemberInformation.Name = "btnEditProjectMemberInformation";
-            this.btnEditProjectMemberInformation.Size = new System.Drawing.Size(218, 34);
-            this.btnEditProjectMemberInformation.TabIndex = 3;
-            this.btnEditProjectMemberInformation.Text = "EDIT INFORMATION";
-            this.btnEditProjectMemberInformation.UseVisualStyleBackColor = true;
+            this.btnUpdateProjectMemberInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateProjectMemberInformation.Location = new System.Drawing.Point(524, 100);
+            this.btnUpdateProjectMemberInformation.Name = "btnUpdateProjectMemberInformation";
+            this.btnUpdateProjectMemberInformation.Size = new System.Drawing.Size(218, 34);
+            this.btnUpdateProjectMemberInformation.TabIndex = 3;
+            this.btnUpdateProjectMemberInformation.Text = "UPDATE INFORMATION";
+            this.btnUpdateProjectMemberInformation.UseVisualStyleBackColor = true;
             // 
             // btnAddNewProjectMember
             // 
@@ -412,6 +412,7 @@
             this.grvProjectMember.Name = "grvProjectMember";
             this.grvProjectMember.OptionsBehavior.Editable = false;
             this.grvProjectMember.OptionsView.ShowGroupPanel = false;
+            this.grvProjectMember.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grvProjectMember_FocusedRowChanged);
             this.grvProjectMember.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.grvProjectMember_CustomColumnDisplayText);
             // 
             // grColPEID
@@ -472,32 +473,32 @@
             this.grColPEActive.Visible = true;
             this.grColPEActive.VisibleIndex = 4;
             // 
-            // groupBox1
+            // gbxProjectGeneralnformation
             // 
-            this.groupBox1.Controls.Add(this.btnCancel);
-            this.groupBox1.Controls.Add(this.btnProjectCancel);
-            this.groupBox1.Controls.Add(this.btnConfirmProject);
-            this.groupBox1.Controls.Add(this.cbxProjectStatus);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.dtmEndDate);
-            this.groupBox1.Controls.Add(this.dtmStartedDate);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtCustomerName);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtScopeMM);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtProjectName);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtProjectCode);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1734, 180);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Project general information:";
+            this.gbxProjectGeneralnformation.Controls.Add(this.btnCancel);
+            this.gbxProjectGeneralnformation.Controls.Add(this.btnProjectCancel);
+            this.gbxProjectGeneralnformation.Controls.Add(this.btnConfirmProject);
+            this.gbxProjectGeneralnformation.Controls.Add(this.cbxProjectStatus);
+            this.gbxProjectGeneralnformation.Controls.Add(this.label7);
+            this.gbxProjectGeneralnformation.Controls.Add(this.dtmEndDate);
+            this.gbxProjectGeneralnformation.Controls.Add(this.dtmStartedDate);
+            this.gbxProjectGeneralnformation.Controls.Add(this.label6);
+            this.gbxProjectGeneralnformation.Controls.Add(this.label5);
+            this.gbxProjectGeneralnformation.Controls.Add(this.label4);
+            this.gbxProjectGeneralnformation.Controls.Add(this.txtCustomerName);
+            this.gbxProjectGeneralnformation.Controls.Add(this.label3);
+            this.gbxProjectGeneralnformation.Controls.Add(this.txtScopeMM);
+            this.gbxProjectGeneralnformation.Controls.Add(this.label2);
+            this.gbxProjectGeneralnformation.Controls.Add(this.txtProjectName);
+            this.gbxProjectGeneralnformation.Controls.Add(this.label1);
+            this.gbxProjectGeneralnformation.Controls.Add(this.txtProjectCode);
+            this.gbxProjectGeneralnformation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbxProjectGeneralnformation.Location = new System.Drawing.Point(0, 0);
+            this.gbxProjectGeneralnformation.Name = "gbxProjectGeneralnformation";
+            this.gbxProjectGeneralnformation.Size = new System.Drawing.Size(1734, 180);
+            this.gbxProjectGeneralnformation.TabIndex = 3;
+            this.gbxProjectGeneralnformation.TabStop = false;
+            this.gbxProjectGeneralnformation.Text = "Project general information:";
             // 
             // btnCancel
             // 
@@ -662,33 +663,33 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1734, 846);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbxProjectTaskManagement);
+            this.Controls.Add(this.gbxProjectMemberManagement);
+            this.Controls.Add(this.gbxProjectGeneralnformation);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DetailedProjectForm";
             this.Text = "Detailed Project Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DetailedProjectForm_Load);
-            this.groupBox3.ResumeLayout(false);
+            this.gbxProjectTaskManagement.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grcTask)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvTask)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbxProjectMemberManagement.ResumeLayout(false);
+            this.gbxProjectMemberManagement.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcProjectMember)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvProjectMember)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbxProjectGeneralnformation.ResumeLayout(false);
+            this.gbxProjectGeneralnformation.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxProjectTaskManagement;
+        private System.Windows.Forms.GroupBox gbxProjectMemberManagement;
+        private System.Windows.Forms.GroupBox gbxProjectGeneralnformation;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDeleteTask;
         private System.Windows.Forms.Button btnDUTask;
@@ -729,7 +730,7 @@
         private System.Windows.Forms.ComboBox cbxProjectMember;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnChangeActiveProjectMember;
-        private System.Windows.Forms.Button btnEditProjectMemberInformation;
+        private System.Windows.Forms.Button btnUpdateProjectMemberInformation;
         private System.Windows.Forms.Button btnAddNewProjectMember;
         private DevExpress.XtraGrid.GridControl grcProjectMember;
         private DevExpress.XtraGrid.Views.Grid.GridView grvProjectMember;

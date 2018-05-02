@@ -118,10 +118,5 @@ namespace MyKPI.EmployeeManagment.GUI
             employeeBLL.DeleteEmployee(ID);
             load();  
         }
-
-        private void btnDeleteEmployee_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
