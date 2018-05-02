@@ -34,7 +34,6 @@ namespace MyKPI.ProjectManagement.DAL
             }
         }
 
-
         public bool Delete(int ID)
         {
             string str = string.Empty;
@@ -50,7 +49,6 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
-
 
         public bool Edit(ICommonEntity _task, int ID)
         {
@@ -84,6 +82,14 @@ namespace MyKPI.ProjectManagement.DAL
             string str = @"select t.*, CONCAT_WS(' ',e1.EmployeeFirstName, e1.EmployeeLastName) as AssigneeName, 
                             CONCAT_WS(' ', e2.EmployeeFirstName, e2.EmployeeLastName) as ReporterName 
                             from tbltask t, tblemployee e1, tblemployee e2 where t.Assignee = e1.ID and t.Reporter = e2.ID";
+            return DBManager.InstantDBManger.GetData(str);
+        }
+
+        public DataTable LoadAllPerProject(int _projectID)
+        {
+            string str = @"select t.*, CONCAT_WS(' ',e1.EmployeeFirstName, e1.EmployeeLastName) as AssigneeName, 
+                            CONCAT_WS(' ', e2.EmployeeFirstName, e2.EmployeeLastName) as ReporterName 
+                            from tbltask t, tblemployee e1, tblemployee e2 where t.Assignee = e1.ID and t.Reporter = e2.ID and t.projectID = "+_projectID;
             return DBManager.InstantDBManger.GetData(str);
         }
     }

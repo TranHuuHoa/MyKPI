@@ -1,35 +1,49 @@
-﻿using System;
+﻿//========================================================================================================
+//  MyKPI - Project management form
+// Change logs:
+// May 2 2018 - HoaTH - init pages 
+//
+//
+//=========================================================================================================
+#region using
+using System;
 using System.Windows.Forms;
 using MyKPI.ProjectManagement.BLL;
 using MyKPI.Common;
 using MyKPI.Entities;
+#endregion
 
 namespace MyKPI.ProjectManagement.GUI
 {
     public partial class ProjectManagementForm : Form
     {
+        #region class parameters
         ProjectBLL projectBLL = new ProjectBLL();
         ProjectEntity projectEntity = new ProjectEntity();
-        DetailedFormMode detailedFormMode;
+        DetailedFormMode detailedFormMode = DetailedFormMode.Add;
+        #endregion
+
+        #region private methods
+        private void load()
+        {
+            grcProject.DataSource = projectBLL.LoadAllProject();
+        }
+        #endregion
+
+        #region Form methods
         public ProjectManagementForm()
         {
             InitializeComponent();
             detailedFormMode = DetailedFormMode.Add;
         }
 
-        private void load()
-        {
-            grcProject.DataSource = projectBLL.LoadAllProject();
-        }
-       
         private void ProjectManagementForm_Load(object sender, System.EventArgs e)
         {
             load();
-            //   btnAddProject_Click(sender,e);
-            //   this.Close();
-
         }
+        #endregion
 
+        #region Buttons method
         private void btnDUProject_Click(object sender, System.EventArgs e)
         {
             // lay duoc du lieu cua  selected row vao 1 cai projectEntity
@@ -48,6 +62,32 @@ namespace MyKPI.ProjectManagement.GUI
             load();
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAddProject_Click(object sender, EventArgs e)
+        {
+            DetailedProjectForm detailedProjectForm = new DetailedProjectForm();
+            detailedProjectForm.ShowDialog();
+            load();
+        }
+
+        private void btnDeleteProject_Click(object sender, EventArgs e)
+        {
+            int ID = (int)grvProject.GetDataRow(grvProject.GetSelectedRows()[0]).ItemArray[0];
+            DialogResult = MessageBox.Show("Are you sure ?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (DialogResult == DialogResult.OK)
+            {
+                load();
+            }
+            projectBLL.DeleteProject(ID);
+            load();
+        }
+        #endregion
+
+        #region gridview methods
         private void grvProject_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
         {
             try
@@ -74,9 +114,9 @@ namespace MyKPI.ProjectManagement.GUI
                                 break;
                             case 5:
                                 e.DisplayText = ProjectStatusValue.Closed.ToString();
-                                break;                            
+                                break;
                         }
-                    }                               
+                    }
             }
             catch (Exception exp)
             {
@@ -84,29 +124,6 @@ namespace MyKPI.ProjectManagement.GUI
                 //  LogService.LogError("Error", ex);
             }
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnAddProject_Click(object sender, EventArgs e)
-        {
-            DetailedProjectForm detailedProjectForm = new DetailedProjectForm();
-            detailedProjectForm.ShowDialog();
-            load();
-        }
-
-        private void btnDeleteProject_Click(object sender, EventArgs e)
-        {
-            int ID = (int)grvProject.GetDataRow(grvProject.GetSelectedRows()[0]).ItemArray[0];
-            DialogResult = MessageBox.Show("Are you sure ?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (DialogResult == DialogResult.OK)
-            {
-                load();
-            }
-            projectBLL.DeleteProject(ID);
-            load();
-        }
+        #endregion
     }
 }

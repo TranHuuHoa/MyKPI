@@ -118,7 +118,5 @@ namespace MyKPI.EmployeeManagment.GUI
             employeeBLL.DeleteEmployee(ID);
             load();  
         }
-
-        
     }
 }

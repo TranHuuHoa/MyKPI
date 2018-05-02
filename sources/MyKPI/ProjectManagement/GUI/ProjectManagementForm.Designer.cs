@@ -51,10 +51,10 @@
             this.grcProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grcProject.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grcProject.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.grcProject.Location = new System.Drawing.Point(0, 1);
             this.grcProject.MainView = this.grvProject;
-            this.grcProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grcProject.Margin = new System.Windows.Forms.Padding(2);
             this.grcProject.Name = "grcProject";
             this.grcProject.Size = new System.Drawing.Size(1185, 451);
             this.grcProject.TabIndex = 0;
@@ -149,7 +149,7 @@
             // 
             this.btnAddProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAddProject.Location = new System.Drawing.Point(278, 465);
-            this.btnAddProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProject.Name = "btnAddProject";
             this.btnAddProject.Size = new System.Drawing.Size(173, 27);
             this.btnAddProject.TabIndex = 1;
@@ -161,7 +161,7 @@
             // 
             this.btnDUProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDUProject.Location = new System.Drawing.Point(466, 465);
-            this.btnDUProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDUProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnDUProject.Name = "btnDUProject";
             this.btnDUProject.Size = new System.Drawing.Size(173, 27);
             this.btnDUProject.TabIndex = 2;
@@ -172,8 +172,9 @@
             // btnDeleteProject
             // 
             this.btnDeleteProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeleteProject.Enabled = false;
             this.btnDeleteProject.Location = new System.Drawing.Point(653, 465);
-            this.btnDeleteProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteProject.Name = "btnDeleteProject";
             this.btnDeleteProject.Size = new System.Drawing.Size(173, 27);
             this.btnDeleteProject.TabIndex = 3;
@@ -185,7 +186,7 @@
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnExit.Location = new System.Drawing.Point(840, 465);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(173, 27);
             this.btnExit.TabIndex = 4;
@@ -203,7 +204,7 @@
             this.Controls.Add(this.btnDUProject);
             this.Controls.Add(this.btnAddProject);
             this.Controls.Add(this.grcProject);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProjectManagementForm";

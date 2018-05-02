@@ -6,5 +6,6 @@ namespace MyKPI.Entities.Assessment
     class DeveloperProjectContribution:IProjectContribution
     {
         ProjectEntity Project { get; set; }
+
     }
 }

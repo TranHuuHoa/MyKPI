@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using MyKPI.Entities;
 using MyKPI.ProjectManagement.DAL;
+using MyKPI.Common;
 
 namespace MyKPI.ProjectManagement.BLL
 {
@@ -21,6 +22,11 @@ namespace MyKPI.ProjectManagement.BLL
             projectEmployeeDAL.Edit(_projectEmployee, ID);
         }
 
+        public void ChangeProjectMemberActive(ActiveValue active ,int ID)
+        {
+            projectEmployeeDAL.ChangeProjectMemberActive(active, ID);
+        }
+
         public void DeleteProjectEmployee(int ID)
         {
             projectEmployeeDAL.Delete(ID);
@@ -29,6 +35,11 @@ namespace MyKPI.ProjectManagement.BLL
         public DataTable LoadProjectEmployee(int _projectID)
         {
             return projectEmployeeDAL.Load( _projectID);
+        }
+
+        public DataTable LoadActiveProjectEmployee(int _projectID)
+        {
+            return projectEmployeeDAL.LoadActive(_projectID);
         }
 
         public DataTable LoadEmployeeNameOutSideProject(int _projectID)

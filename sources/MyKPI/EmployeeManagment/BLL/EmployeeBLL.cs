@@ -30,10 +30,5 @@ namespace MyKPI.EmployeeManagment.BLL
         {
             return EmployeeDAL.LoadAll();
         }
-
-        public DataTable LoadEmployeeNameInSideProject(int _projectID)
-        {
-            return EmployeeDAL.LoadEmployeeNameInSideProject(_projectID);
-        }
     }
 }
