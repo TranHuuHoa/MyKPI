@@ -53,8 +53,6 @@ namespace MyKPI.ProjectManagement.DAL
             string str = string.Format(@"select e.ID, CONCAT_WS(' ',e.EmployeeFirstName, e.EmployeeLastName) as EmployeeName
                                 from tblemployee e where e.ID not in (select EmployeeID from Project_Employee where ProjectID = {0})", _projectID);
             return DBManager.InstantDBManger.GetData(str);
-        }
-
-        
+        }        
     }
 }
