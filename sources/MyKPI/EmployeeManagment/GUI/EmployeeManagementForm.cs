@@ -115,13 +115,8 @@ namespace MyKPI.EmployeeManagment.GUI
         private void btnDeleteEmployee_Click(object sender, EventArgs e)
         {
             int ID = (int)grvEmployee.GetDataRow(grvEmployee.GetSelectedRows()[0]).ItemArray[0];
-         //   DialogResult = MessageBox.Show("Are you sure ?", "Notification", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-          //  if (DialogResult == DialogResult.OK)
-          //  {
-                employeeBLL.DeleteEmployee(ID);
-                load();
-          //  }
-            
+            employeeBLL.DeleteEmployee(ID);
+            load();  
         }
     }
 }
