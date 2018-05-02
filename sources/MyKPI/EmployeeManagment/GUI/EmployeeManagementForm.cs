@@ -90,5 +90,10 @@ namespace MyKPI.EmployeeManagment.GUI
         {
 
         }
+
+        private void btnDeleteEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

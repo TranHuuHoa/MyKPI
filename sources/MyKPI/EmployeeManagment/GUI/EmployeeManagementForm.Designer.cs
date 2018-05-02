@@ -57,10 +57,12 @@
             this.grcEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grcEmployee.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grcEmployee.Location = new System.Drawing.Point(0, 0);
             this.grcEmployee.MainView = this.grvEmployee;
+            this.grcEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grcEmployee.Name = "grcEmployee";
-            this.grcEmployee.Size = new System.Drawing.Size(883, 463);
+            this.grcEmployee.Size = new System.Drawing.Size(1324, 712);
             this.grcEmployee.TabIndex = 0;
             this.grcEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvEmployee});
@@ -186,10 +188,9 @@
             // btnExit
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnExit.Location = new System.Drawing.Point(612, 472);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(918, 726);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(145, 22);
+            this.btnExit.Size = new System.Drawing.Size(218, 34);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -197,21 +198,20 @@
             // btnDeleteEmployee
             // 
             this.btnDeleteEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(450, 472);
-            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(675, 726);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(145, 22);
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(218, 34);
             this.btnDeleteEmployee.TabIndex = 7;
             this.btnDeleteEmployee.Text = "DELETE EMPLOYEE";
             this.btnDeleteEmployee.UseVisualStyleBackColor = true;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
             // 
             // btnDUEmployee
             // 
             this.btnDUEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDUEmployee.Location = new System.Drawing.Point(283, 472);
-            this.btnDUEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDUEmployee.Location = new System.Drawing.Point(424, 726);
             this.btnDUEmployee.Name = "btnDUEmployee";
-            this.btnDUEmployee.Size = new System.Drawing.Size(145, 22);
+            this.btnDUEmployee.Size = new System.Drawing.Size(218, 34);
             this.btnDUEmployee.TabIndex = 6;
             this.btnDUEmployee.Text = "DETAILED/UPDATE EMPLOYEE";
             this.btnDUEmployee.UseVisualStyleBackColor = true;
@@ -220,10 +220,9 @@
             // btnAddEmployee
             // 
             this.btnAddEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddEmployee.Location = new System.Drawing.Point(112, 472);
-            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddEmployee.Location = new System.Drawing.Point(168, 726);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(145, 22);
+            this.btnAddEmployee.Size = new System.Drawing.Size(218, 34);
             this.btnAddEmployee.TabIndex = 5;
             this.btnAddEmployee.Text = "ADD NEW EMPLOYEE";
             this.btnAddEmployee.UseVisualStyleBackColor = true;
@@ -231,14 +230,15 @@
             // 
             // EmployeeManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 505);
+            this.ClientSize = new System.Drawing.Size(1326, 777);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDeleteEmployee);
             this.Controls.Add(this.btnDUEmployee);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.grcEmployee);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EmployeeManagementForm";
