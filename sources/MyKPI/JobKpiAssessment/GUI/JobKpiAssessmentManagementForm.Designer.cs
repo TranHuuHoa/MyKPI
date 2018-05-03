@@ -43,10 +43,12 @@
             this.grcJobKpiAssessment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grcJobKpiAssessment.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grcJobKpiAssessment.Location = new System.Drawing.Point(1, -1);
             this.grcJobKpiAssessment.MainView = this.grvJobKpiAssessment;
+            this.grcJobKpiAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grcJobKpiAssessment.Name = "grcJobKpiAssessment";
-            this.grcJobKpiAssessment.Size = new System.Drawing.Size(1743, 642);
+            this.grcJobKpiAssessment.Size = new System.Drawing.Size(1194, 417);
             this.grcJobKpiAssessment.TabIndex = 0;
             this.grcJobKpiAssessment.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvJobKpiAssessment});
@@ -63,9 +65,10 @@
             // btnExit
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnExit.Location = new System.Drawing.Point(1146, 659);
+            this.btnExit.Location = new System.Drawing.Point(772, 425);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(259, 42);
+            this.btnExit.Size = new System.Drawing.Size(173, 27);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@
             // btnDeleteJobKpiAssessment
             // 
             this.btnDeleteJobKpiAssessment.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDeleteJobKpiAssessment.Location = new System.Drawing.Point(866, 659);
+            this.btnDeleteJobKpiAssessment.Location = new System.Drawing.Point(585, 425);
+            this.btnDeleteJobKpiAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteJobKpiAssessment.Name = "btnDeleteJobKpiAssessment";
-            this.btnDeleteJobKpiAssessment.Size = new System.Drawing.Size(259, 42);
+            this.btnDeleteJobKpiAssessment.Size = new System.Drawing.Size(173, 27);
             this.btnDeleteJobKpiAssessment.TabIndex = 7;
             this.btnDeleteJobKpiAssessment.Text = "DELETE";
             this.btnDeleteJobKpiAssessment.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
             // btnDUJobKpiAssessment
             // 
             this.btnDUJobKpiAssessment.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDUJobKpiAssessment.Location = new System.Drawing.Point(586, 659);
+            this.btnDUJobKpiAssessment.Location = new System.Drawing.Point(399, 425);
+            this.btnDUJobKpiAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDUJobKpiAssessment.Name = "btnDUJobKpiAssessment";
-            this.btnDUJobKpiAssessment.Size = new System.Drawing.Size(259, 42);
+            this.btnDUJobKpiAssessment.Size = new System.Drawing.Size(173, 27);
             this.btnDUJobKpiAssessment.TabIndex = 6;
             this.btnDUJobKpiAssessment.Text = "DETAIL / UPDATE";
             this.btnDUJobKpiAssessment.UseVisualStyleBackColor = true;
@@ -94,9 +99,10 @@
             // btnAddJobKpiAssessment
             // 
             this.btnAddJobKpiAssessment.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddJobKpiAssessment.Location = new System.Drawing.Point(303, 659);
+            this.btnAddJobKpiAssessment.Location = new System.Drawing.Point(210, 425);
+            this.btnAddJobKpiAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddJobKpiAssessment.Name = "btnAddJobKpiAssessment";
-            this.btnAddJobKpiAssessment.Size = new System.Drawing.Size(259, 42);
+            this.btnAddJobKpiAssessment.Size = new System.Drawing.Size(173, 27);
             this.btnAddJobKpiAssessment.TabIndex = 5;
             this.btnAddJobKpiAssessment.Text = "ADD";
             this.btnAddJobKpiAssessment.UseVisualStyleBackColor = true;
@@ -104,14 +110,15 @@
             // 
             // JobKpiAssessmentManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1744, 713);
+            this.ClientSize = new System.Drawing.Size(1195, 463);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDeleteJobKpiAssessment);
             this.Controls.Add(this.btnDUJobKpiAssessment);
             this.Controls.Add(this.btnAddJobKpiAssessment);
             this.Controls.Add(this.grcJobKpiAssessment);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "JobKpiAssessmentManagementForm";

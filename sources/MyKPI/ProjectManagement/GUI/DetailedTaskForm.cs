@@ -10,18 +10,18 @@ namespace MyKPI.ProjectManagement.GUI
     public partial class DetailedTaskForm : Form
     {
         TaskBLL taskBLL = new TaskBLL();
-        EmployeeBLL employeeBLL = new EmployeeBLL();
+        ProjectEmployeeBLL projectEmployeeBLL = new ProjectEmployeeBLL();
         int mode = 0;
         int ID = 0;
         int projectID = 0;
 
         private void InitComboBox()
-        {           
-            cbxAssignee.DataSource = employeeBLL.LoadEmployeeNameInSideProject(projectID);
+        {
+            cbxAssignee.DataSource = projectEmployeeBLL.LoadActiveProjectEmployee(projectID);
             cbxAssignee.DisplayMember = "EmployeeName";
             cbxAssignee.ValueMember = "ID";
 
-            cbxReporter.DataSource = employeeBLL.LoadEmployeeNameInSideProject(projectID);
+            cbxReporter.DataSource = projectEmployeeBLL.LoadActiveProjectEmployee(projectID);
             cbxReporter.DisplayMember = "EmployeeName";
             cbxReporter.ValueMember = "ID";
 

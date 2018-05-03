@@ -36,15 +36,62 @@ namespace MyKPI.ProjectManagement.DAL
             throw new NotImplementedException();
         }
 
-        public bool Edit(ICommonEntity commonEntity, int ID)
+        public bool Edit(ICommonEntity _projectEmployee, int ID)
         {
-            throw new NotImplementedException();
+
+            var projectEmployee = (_projectEmployee as ProjectEmployeeEntity);
+            string str = string.Empty;
+            try
+            {
+                str = string.Format(@"update project_employee  set ProjectID = {0},EmployeeID= {1},StartedDate ='{2}',EndDate = '{3}',Role = {4},Active = {5} where ID = {6}",
+                projectEmployee.Project.ID,
+                projectEmployee.Employee.ID,
+                projectEmployee.StartedDate.ToString("yyyy-MM-dd"),
+                projectEmployee.EndDate.ToString("yyyy-MM-dd"),
+                (int)projectEmployee.Role,
+                (int)projectEmployee.Active,
+                ID
+                );
+                DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
+                return true;
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                return false;
+            }
+        }
+
+        public bool ChangeProjectMemberActive(ActiveValue active, int ID)
+        {          
+            string str = string.Empty;
+            try
+            {
+                str = string.Format(@"update project_employee  set Active = {0} where ID = {1}",
+                (int)active,
+                ID
+                );
+                DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
+                return true;
+            }
+            catch (Exception exp)
+            {
+                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                return false;
+            }
         }
 
         public DataTable Load(int _projectID)
         {
             string str = string.Format(@"select pe.*, CONCAT_WS(' ',e.EmployeeFirstName, e.EmployeeLastName) as EmployeeName
                                 from project_employee pe, tblemployee e where pe.EmployeeID = e.ID and pe.ProjectID = {0}", _projectID);
+            return DBManager.InstantDBManger.GetData(str);
+        }
+
+        public DataTable LoadActive(int _projectID)
+        {
+            string str = string.Format(@"select pe.*, CONCAT_WS(' ',e.EmployeeFirstName, e.EmployeeLastName) as EmployeeName
+                                from project_employee pe, tblemployee e where pe.EmployeeID = e.ID and pe.Active = 0 and pe.ProjectID = {0}", _projectID);
             return DBManager.InstantDBManger.GetData(str);
         }
 

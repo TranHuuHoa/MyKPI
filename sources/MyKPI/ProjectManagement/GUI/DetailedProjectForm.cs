@@ -2,14 +2,13 @@
 //  MyKPI - Detailed Project Form
 // Change logs:
 // May 2 2018 - HoaTH - init pages 
-//
+// May 3 2018 - TrungTH - update functions
 //
 //=========================================================================================================
 #region using
 using System;
 using System.Windows.Forms;
 using MyKPI.ProjectManagement.BLL;
-using MyKPI.EmployeeManagment.BLL;
 using MyKPI.Common;
 using MyKPI.Entities;
 #endregion
@@ -22,7 +21,9 @@ namespace MyKPI.ProjectManagement.GUI
         private TaskBLL taskBLL = new TaskBLL();
         private ProjectBLL projectBLL = new ProjectBLL();
         private ProjectEmployeeBLL projectEmployeeBLL = new ProjectEmployeeBLL();
-        private DetailedFormMode detailedFormMode = DetailedFormMode.Add;      
+        private DetailedFormMode detailedFormMode = DetailedFormMode.Add;
+        private FormState AddProjectMemberState = FormState.preProcess;
+        private FormState UpdateProjectMemberState = FormState.preProcess;
         private int projectID = 0;
         private int ProjectEmployeeID = 0;
         #endregion
@@ -42,7 +43,7 @@ namespace MyKPI.ProjectManagement.GUI
 
         private void updateDetailedProjectMember()
         {
-            if (grcProjectMember.DataSource != null)
+            if ((grcProjectMember.DataSource != null) && (grvProjectMember.GetSelectedRows().Length>0))
             {
                 ProjectEmployeeID = (int)grvProjectMember.GetDataRow(grvProjectMember.GetSelectedRows()[0]).ItemArray[0];
                 cbxProjectMember.SelectedValue = ProjectEmployeeID;
@@ -64,7 +65,7 @@ namespace MyKPI.ProjectManagement.GUI
                 gbxProjectMemberManagement.Enabled = true;
                 gbxProjectTaskManagement.Enabled = true;
 
-                grcTask.DataSource = taskBLL.LoadAllTask();
+                grcTask.DataSource = taskBLL.LoadAllTaskPerProject(projectID);
                 grcProjectMember.DataSource = projectEmployeeBLL.LoadProjectEmployee(projectID);
                 if (grcProjectMember.DataSource != null)
                 {
@@ -83,6 +84,17 @@ namespace MyKPI.ProjectManagement.GUI
                 cbxRole.Items.Add(JobRankValue.BussinessAnalyst);
 
                 updateDetailedProjectMember();
+
+                AddProjectMemberState = FormState.preProcess;
+                UpdateProjectMemberState = FormState.preProcess;
+                btnAddNewProjectMember.Enabled = true;
+                btnAddNewProjectMember.Text = "ADD NEW MEMBER";
+                btnUpdateProjectMemberInformation.Enabled = true;
+                btnUpdateProjectMemberInformation.Text = "UPDATE INFORMATION";
+                btnChangeActiveProjectMember.Enabled = true;
+                btnPECancel.Enabled = false;
+                grcProjectMember.Enabled = true;
+                cbxProjectMember.Enabled = true;
             }
         }
         #endregion
@@ -210,19 +222,87 @@ namespace MyKPI.ProjectManagement.GUI
 
         private void btnAddNewProjectMember_Click(object sender, EventArgs e)
         {
-            var projectEmployee = new ProjectEmployeeEntity();
-            ProjectEntity projectEntity = new ProjectEntity();
-            projectEntity.ID = projectID;
-            projectEmployee.Project = projectEntity;
-            EmployeeEntity employeeEntity = new EmployeeEntity();
-            employeeEntity.ID = (int)cbxProjectMember.SelectedValue;
-            projectEmployee.Employee = employeeEntity;
-            projectEmployee.StartedDate = dtmPMStartedDate.Value;
-            projectEmployee.EndDate = dtmPMEndDate.Value;
-            projectEmployee.Role = (JobRankValue)cbxRole.SelectedItem;
-            projectEmployee.Active = ActiveValue.Active;
+            if (AddProjectMemberState == FormState.preProcess)
+            {
+                AddProjectMemberState = FormState.Process;
+                btnAddNewProjectMember.Text = "CONFIRM";
+                btnUpdateProjectMemberInformation.Enabled = false;
+                btnChangeActiveProjectMember.Enabled = false;
+                btnPECancel.Enabled = true;
+                grcProjectMember.Enabled = false;
 
-            projectEmployeeBLL.AddProjectEmployee(projectEmployee);
+                cbxProjectMember.DataSource = projectEmployeeBLL.LoadEmployeeNameOutSideProject(projectID);
+                cbxProjectMember.DisplayMember = "EmployeeName";
+                cbxProjectMember.ValueMember = "ID";
+            }
+            else
+            if (AddProjectMemberState == FormState.Process)
+            {
+                var projectEmployee = new ProjectEmployeeEntity();
+                ProjectEntity projectEntity = new ProjectEntity();
+                projectEntity.ID = projectID;
+                projectEmployee.Project = projectEntity;
+                EmployeeEntity employeeEntity = new EmployeeEntity();
+                employeeEntity.ID = (int)cbxProjectMember.SelectedValue;
+                projectEmployee.Employee = employeeEntity;
+                projectEmployee.StartedDate = dtmPMStartedDate.Value;
+                projectEmployee.EndDate = dtmPMEndDate.Value;
+                projectEmployee.Role = (JobRankValue)cbxRole.SelectedItem;
+                projectEmployee.Active = ActiveValue.Active;
+
+                projectEmployeeBLL.AddProjectEmployee(projectEmployee);
+                load();
+            }                     
+        }
+
+        private void btnUpdateProjectMemberInformation_Click(object sender, EventArgs e)
+        {
+            if (UpdateProjectMemberState == FormState.preProcess)
+            {
+                UpdateProjectMemberState = FormState.Process;
+                btnUpdateProjectMemberInformation.Text = "CONFIRM";
+                btnAddNewProjectMember.Enabled = false;
+                btnChangeActiveProjectMember.Enabled = false;
+                btnPECancel.Enabled = true;
+                cbxProjectMember.Enabled = false;
+                grcProjectMember.Enabled = false;
+                ProjectEmployeeID = (int)grvProjectMember.GetDataRow(grvProjectMember.GetSelectedRows()[0]).ItemArray[0];
+            }
+            else
+            if (UpdateProjectMemberState == FormState.Process)
+            {
+                var projectEmployee = new ProjectEmployeeEntity();
+                ProjectEntity projectEntity = new ProjectEntity();
+                projectEntity.ID = projectID;
+                projectEmployee.Project = projectEntity;
+                EmployeeEntity employeeEntity = new EmployeeEntity();
+                employeeEntity.ID = (int)cbxProjectMember.SelectedValue;
+                projectEmployee.Employee = employeeEntity;
+                projectEmployee.StartedDate = dtmPMStartedDate.Value;
+                projectEmployee.EndDate = dtmPMEndDate.Value;
+                projectEmployee.Role = (JobRankValue)cbxRole.SelectedItem;
+                projectEmployee.Active = ActiveValue.Active;
+
+                projectEmployeeBLL.EditProjectEmployee(projectEmployee, ProjectEmployeeID);
+                load();
+            }
+
+        }
+
+        private void btnChangeActiveProjectMember_Click(object sender, EventArgs e)
+        {
+            ProjectEmployeeID = (int)grvProjectMember.GetDataRow(grvProjectMember.GetSelectedRows()[0]).ItemArray[0];
+            ActiveValue active = (ActiveValue)grvProjectMember.GetDataRow(grvProjectMember.GetSelectedRows()[0]).ItemArray[6];
+            if (active == ActiveValue.Active) active = ActiveValue.DeActive;
+            else active = ActiveValue.Active;
+
+            projectEmployeeBLL.ChangeProjectMemberActive(active, ProjectEmployeeID);
+            load();
+
+        }
+
+        private void btnPECancel_Click(object sender, EventArgs e)
+        {
             load();
         }
         #endregion
@@ -311,10 +391,9 @@ namespace MyKPI.ProjectManagement.GUI
         }
 
         private void btnDUTask_Click(object sender, EventArgs e)
-        {
-            // lay duoc du lieu cua  selected row vao 1 cai taskentity
+        {        
             TaskEntity taskEntity = new TaskEntity();
-            // Object[] a = grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray;
+           
             taskEntity.ID = (int)grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[0];
             taskEntity.TaskCode = grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[1].ToString();
             taskEntity.TaskName = grvTask.GetDataRow(grvTask.GetSelectedRows()[0]).ItemArray[2].ToString();
@@ -345,6 +424,8 @@ namespace MyKPI.ProjectManagement.GUI
                 load();
             }          
         }
+
+
         #endregion
 
         

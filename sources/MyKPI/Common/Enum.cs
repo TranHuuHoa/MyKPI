@@ -49,4 +49,9 @@
     {
         Active = 0, DeActive = 1
     }
+
+    public enum FormState
+    {
+        preProcess= 0, Process=1
+    }
 }

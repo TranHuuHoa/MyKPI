@@ -31,5 +31,10 @@ namespace MyKPI.ProjectManagement.BLL
             return TaskDAL.LoadAll();
         }
 
+        public DataTable LoadAllTaskPerProject(int _projectID)
+        {
+            return taskDAL.LoadAllPerProject(_projectID);
+        }
+
     }
 }
