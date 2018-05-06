@@ -16,5 +16,10 @@ namespace MyKPI.EmployeeManagment.GUI
         {
             InitializeComponent();
         }
+
+        private void EmployeeDashboardForm_Load(object sender, EventArgs e)
+        {
+            chartControl1.DataSource = 
+        }
     }
 }

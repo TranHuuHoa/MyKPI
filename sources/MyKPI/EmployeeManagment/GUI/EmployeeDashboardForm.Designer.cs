@@ -29,11 +29,54 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.DataBindings = null;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl1.Location = new System.Drawing.Point(69, 51);
+            this.chartControl1.Name = "chartControl1";
+            series1.Name = "Series 1";
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(300, 200);
+            this.chartControl1.TabIndex = 0;
+            // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.Name = "sqlDataSource1";
+            // 
+            // EmployeeDashboardForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chartControl1);
+            this.Name = "EmployeeDashboardForm";
             this.Text = "EmployeeDashboardForm";
+            this.Load += new System.EventHandler(this.EmployeeDashboardForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }
