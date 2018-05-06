@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Windows.Forms;
+using MyKPI.JobKpiAssessment.BLL;
 
 namespace MyKPI.JobKpiAssessment.GUI
 {
     public partial class JobKpiAssessmentManagementForm : Form
     {
+        JobKpiAssessmentBLL jobKpiAssessmentBLL = new JobKpiAssessmentBLL();
         public JobKpiAssessmentManagementForm()
         {
             InitializeComponent();
+        }
+
+        private void load()
+        {
+            grcJobKpiAssessment.DataSource = jobKpiAssessmentBLL.LoadAllProject();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -19,6 +26,11 @@ namespace MyKPI.JobKpiAssessment.GUI
         {
             DetailedJobKpiAssessmentForm detailedJobKpiAssessmentForm = new DetailedJobKpiAssessmentForm();
             detailedJobKpiAssessmentForm.ShowDialog();
+        }
+
+        private void JobKpiAssessmentManagementForm_Load(object sender, EventArgs e)
+        {
+            load();
         }
     }
 }

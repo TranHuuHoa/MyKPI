@@ -96,6 +96,8 @@
     <Compile Include="Entities\ProjectEmployeeEntity.cs" />
     <Compile Include="Entities\ProjectEntity.cs" />
     <Compile Include="Entities\TaskEntity.cs" />
+    <Compile Include="JobKpiAssessment\BLL\JobKpiAssessmentBLL.cs" />
+    <Compile Include="JobKpiAssessment\DAL\JobKpiAssessmentDAL.cs" />
     <Compile Include="JobKpiAssessment\GUI\DetailedJobKpiAssessmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,9 +190,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="JobKpiAssessment\BLL\" />
-    <Folder Include="JobKpiAssessment\DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

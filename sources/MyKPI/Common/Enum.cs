@@ -54,4 +54,9 @@
     {
         preProcess= 0, Process=1
     }
+
+    public enum AssessmentStatusValue
+    {
+        Started= 0, Processing= 1, Commit= 2, Approving= 3, Approved= 4
+    }
 }
