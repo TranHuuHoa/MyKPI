@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using MyKPI.EmployeeManagment.BLL;
 using MyKPI.Entities;
 using MyKPI.Common;
+using System.Text.RegularExpressions;
 
 namespace MyKPI.EmployeeManagment.GUI
 {
@@ -11,6 +12,7 @@ namespace MyKPI.EmployeeManagment.GUI
         EmployeeBLL employeeBLL = new EmployeeBLL();
         int mode = 0;
         int ID = 0;
+
         public DetailedEmployeeForm()
         {
             InitializeComponent();
@@ -76,6 +78,62 @@ namespace MyKPI.EmployeeManagment.GUI
             cbxSalaryLevel.SelectedIndex = 0;
         }
 
+        private bool InputValidation()
+        {
+            Boolean Result = true;
+            if (txtEmployeeNumber.Text == String.Empty)
+            {
+                lblEmployeeNumberNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblEmployeeNumberNotification.Visible = false;
+            }
+
+            if (txtEmployeeFirstName.Text == String.Empty)
+            {
+                lblEmployeeFirstNameNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblEmployeeLastNameNotification.Visible = false;
+            }
+
+            if (txtEmployeeLastName.Text == String.Empty)
+            {
+                lblEmployeeLastNameNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblEmployeeLastNameNotification.Visible = false;
+            }
+
+            if (txtAddress.Text == String.Empty)
+            {
+                lblAddressNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblAddressNotification.Visible = false;
+            }
+
+            if (txtIdCard.Text == String.Empty)
+            {
+                lblIDCardNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblIDCardNotification.Visible = false;
+            }
+            return Result;
+
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -83,6 +141,7 @@ namespace MyKPI.EmployeeManagment.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            if (!InputValidation()) return;
             EmployeeEntity employeeEntity = new EmployeeEntity();
             employeeEntity.EmployeeNumber = txtEmployeeNumber.Text;
             employeeEntity.EmployeeFirstName = txtEmployeeFirstName.Text;
@@ -110,6 +169,18 @@ namespace MyKPI.EmployeeManagment.GUI
 
         private void DetailedEmployeeForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtEmployeeNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+            e.Handled = false;
+            return;
 
         }
     }
