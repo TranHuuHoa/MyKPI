@@ -59,6 +59,7 @@ CREATE TABLE tblTask (
     FOREIGN KEY (Assignee) REFERENCES tblEmployee(ID),
     FOREIGN KEY (Reporter) REFERENCES tblEmployee(ID),
     FOREIGN KEY (ProjectID) REFERENCES tblProject(ID)
+
 );
 
 

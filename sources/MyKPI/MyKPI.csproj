@@ -143,6 +143,8 @@
     <Compile Include="Entities\ProjectEmployeeEntity.cs" />
     <Compile Include="Entities\ProjectEntity.cs" />
     <Compile Include="Entities\TaskEntity.cs" />
+    <Compile Include="JobKpiAssessment\BLL\JobKpiAssessmentBLL.cs" />
+    <Compile Include="JobKpiAssessment\DAL\JobKpiAssessmentDAL.cs" />
     <Compile Include="JobKpiAssessment\GUI\DetailedJobKpiAssessmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
