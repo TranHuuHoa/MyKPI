@@ -51,7 +51,7 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-
+           
 
         }
     }
