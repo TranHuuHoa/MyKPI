@@ -1,12 +1,21 @@
-﻿using System;
+﻿//========================================================================================================
+//  MyKPI - Project DAL
+// Change logs:
+// May 6 2018 - TrungTH - update 
+//
+//=========================================================================================================
+#region
+using System;
 using System.Data;
 using MyKPI.Common;
 using MyKPI.Entities;
+#endregion
 
 namespace MyKPI.ProjectManagement.DAL
 {
     class ProjectDAL : ICommonDAL
     {
+        #region Add
         public bool Add(ICommonEntity _project)
         {
             var project = (_project as ProjectEntity);
@@ -31,7 +40,9 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
+        #endregion
 
+        #region Delete
         public bool Delete(int ID)
         {
             string str = string.Empty;
@@ -47,7 +58,9 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
+        #endregion
 
+        #region Edit
         public bool Edit(ICommonEntity _project, int ID)
         {
             var project = (_project as ProjectEntity);
@@ -73,11 +86,14 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
+        #endregion
 
+        #region Load
         public static DataTable LoadAll()
         {
             string str = @"select * from tblProject";
             return DBManager.InstantDBManger.GetData(str);
         }
+        #endregion
     }
 }

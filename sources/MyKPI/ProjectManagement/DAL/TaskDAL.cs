@@ -1,12 +1,21 @@
-﻿using System;
+﻿//========================================================================================================
+//  MyKPI - Task DAL
+// Change logs:
+// May 6 2018 - TrungTH - update 
+//
+//=========================================================================================================
+#region using
+using System;
 using System.Data;
 using MyKPI.Common;
 using MyKPI.Entities;
+#endregion
 
 namespace MyKPI.ProjectManagement.DAL
 {
     public class TaskDAL : ICommonDAL
     {
+        #region Add
         public bool Add(ICommonEntity _task)
         {
             var task = (_task as TaskEntity);
@@ -33,7 +42,9 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
+        #endregion
 
+        #region Delete
         public bool Delete(int ID)
         {
             string str = string.Empty;
@@ -49,7 +60,9 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
+        #endregion
 
+        #region Edit
         public bool Edit(ICommonEntity _task, int ID)
         {
             var task = (_task as TaskEntity);
@@ -76,7 +89,9 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
+        #endregion
 
+        #region Load
         public static DataTable LoadAll()
         {
             string str = @"select t.*, CONCAT_WS(' ',e1.EmployeeFirstName, e1.EmployeeLastName) as AssigneeName, 
@@ -92,5 +107,6 @@ namespace MyKPI.ProjectManagement.DAL
                             from tbltask t, tblemployee e1, tblemployee e2 where t.Assignee = e1.ID and t.Reporter = e2.ID and t.projectID = "+_projectID;
             return DBManager.InstantDBManger.GetData(str);
         }
+        #endregion
     }
 }

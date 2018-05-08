@@ -4,12 +4,12 @@ using MyKPI.Entities.Assessment;
 
 namespace MyKPI.Entities
 {
-    class JobKpiEntity
+    public class JobKpiEntity
     {
-        EmployeeEntity Employee { get; set; }
-        JobRankValue RoleInAssessment { get; set; }
-        DateTime CreatedDate { get; set; }
-        AssessmentStatusValue Status { get; set; }
+        public EmployeeEntity Employee { get; set; }
+        public JobRankValue RoleInAssessment { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public AssessmentStatusValue Status { get; set; }
         IProjectContribution ProjectContribution1 { get; set; }
         IProjectContribution ProjectContribution2 { get; set; }
         IProjectContribution ProjectContribution3 { get; set; }

@@ -1,20 +1,31 @@
-﻿using System;
+﻿//========================================================================================================
+//  MyKPI - Detail Task Form
+// Change logs:
+// May 6 2018 - TrungTH - update 
+//
+//=========================================================================================================
+#region using
+using System;
 using System.Windows.Forms;
 using MyKPI.ProjectManagement.BLL;
 using MyKPI.EmployeeManagment.BLL;
 using MyKPI.Entities;
 using MyKPI.Common;
+#endregion
 
 namespace MyKPI.ProjectManagement.GUI
 {
     public partial class DetailedTaskForm : Form
     {
+        #region class parameters
         TaskBLL taskBLL = new TaskBLL();
         ProjectEmployeeBLL projectEmployeeBLL = new ProjectEmployeeBLL();
         int mode = 0;
         int ID = 0;
         int projectID = 0;
+        #endregion
 
+        #region Init ComboBox
         private void InitComboBox()
         {
             cbxAssignee.DataSource = projectEmployeeBLL.LoadActiveProjectEmployee(projectID);
@@ -45,8 +56,10 @@ namespace MyKPI.ProjectManagement.GUI
             cbxTaskType.Items.Add(TaskTypeValue.UserStory);
             cbxTaskType.Items.Add(TaskTypeValue.Bug);
             cbxTaskType.SelectedIndex = 0;
-
         }
+        #endregion
+
+        #region Methods
         public DetailedTaskForm(int _projectID)
         {
             InitializeComponent();
@@ -108,7 +121,7 @@ namespace MyKPI.ProjectManagement.GUI
         {
             this.Close();
         }
+        #endregion
 
-       
     }
 }

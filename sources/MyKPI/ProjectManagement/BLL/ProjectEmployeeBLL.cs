@@ -1,7 +1,15 @@
-﻿using System.Data;
+﻿//========================================================================================================
+//  MyKPI - Project Employee BLL
+// Change logs:
+// May 6 2018 - TrungTH - update 
+//
+//=========================================================================================================
+#region using
+using System.Data;
 using MyKPI.Entities;
 using MyKPI.ProjectManagement.DAL;
 using MyKPI.Common;
+#endregion
 
 namespace MyKPI.ProjectManagement.BLL
 {

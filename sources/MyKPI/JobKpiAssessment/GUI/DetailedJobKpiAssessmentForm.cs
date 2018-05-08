@@ -51,7 +51,12 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-           
+            JobKpiEntity jobKpiEntity = new JobKpiEntity();
+            jobKpiEntity.Employee = (EmployeeEntity)cbxEmployee.SelectedItem;
+            jobKpiEntity.RoleInAssessment = (JobRankValue)cbxRoleInAssessment.SelectedItem;
+            jobKpiEntity.CreatedDate = dtmCreatedDate.Value;
+            jobKpiEntity.Status = (AssessmentStatusValue)cbxStatus.SelectedItem;
+            
 
         }
     }

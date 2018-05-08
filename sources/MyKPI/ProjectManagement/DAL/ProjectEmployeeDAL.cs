@@ -1,12 +1,21 @@
-﻿using System;
+﻿//========================================================================================================
+//  MyKPI - Project Employee DAL
+// Change logs:
+// May 6 2018 - TrungTH - update 
+//
+//=========================================================================================================
+#region using
+using System;
 using System.Data;
 using MyKPI.Common;
 using MyKPI.Entities;
+#endregion
 
 namespace MyKPI.ProjectManagement.DAL
 {
     class ProjectEmployeeDAL : ICommonDAL
     {
+        #region Add
         public bool Add(ICommonEntity _projectEmployee)
         {
             var projectEmployee = (_projectEmployee as ProjectEmployeeEntity);
@@ -30,7 +39,9 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
+        #endregion
 
+        #region Delete
         public bool Delete(int ID)
         {
             throw new NotImplementedException();
@@ -61,7 +72,9 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
+        #endregion
 
+        #region Active/Deactive
         public bool ChangeProjectMemberActive(ActiveValue active, int ID)
         {          
             string str = string.Empty;
@@ -80,7 +93,9 @@ namespace MyKPI.ProjectManagement.DAL
                 return false;
             }
         }
+        #endregion
 
+        #region Load
         public DataTable Load(int _projectID)
         {
             string str = string.Format(@"select pe.*, CONCAT_WS(' ',e.EmployeeFirstName, e.EmployeeLastName) as EmployeeName
@@ -100,6 +115,7 @@ namespace MyKPI.ProjectManagement.DAL
             string str = string.Format(@"select e.ID, CONCAT_WS(' ',e.EmployeeFirstName, e.EmployeeLastName) as EmployeeName
                                 from tblemployee e where e.ID not in (select EmployeeID from Project_Employee where ProjectID = {0})", _projectID);
             return DBManager.InstantDBManger.GetData(str);
-        }        
+        }
+        #endregion
     }
 }

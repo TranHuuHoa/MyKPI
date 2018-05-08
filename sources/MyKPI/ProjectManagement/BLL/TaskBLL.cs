@@ -1,4 +1,10 @@
-﻿using System.Data;
+﻿//========================================================================================================
+//  MyKPI - Task BLL
+// Change logs:
+// May 6 2018 - TrungTH - update 
+//
+//=========================================================================================================
+using System.Data;
 using MyKPI.Entities;
 using MyKPI.ProjectManagement.DAL;
 
