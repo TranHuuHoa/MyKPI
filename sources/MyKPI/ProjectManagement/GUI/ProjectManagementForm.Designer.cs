@@ -60,6 +60,7 @@
             this.grcProject.TabIndex = 0;
             this.grcProject.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvProject});
+//            this.grcProject.Click += new System.EventHandler(this.grcProject_Click);
             // 
             // grvProject
             // 

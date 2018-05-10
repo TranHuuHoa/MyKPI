@@ -15,26 +15,28 @@ namespace MyKPI.JobKpiAssessment.BLL
     public class JobKpiAssessmentBLL
     {
         JobKpiAssessmentDAL jobKpiAssessmentDAL;
+
         public JobKpiAssessmentBLL()
         {
             jobKpiAssessmentDAL = new JobKpiAssessmentDAL();
         }
-        public void AddProject(ProjectEntity _Project)
+
+        public void AddJobKpiAssessment(JobKpiEntity _jobKpiAssessment)
         {
-            jobKpiAssessmentDAL.Add(_Project);
+            jobKpiAssessmentDAL.Add(_jobKpiAssessment);
         }
 
-        public void EditProject(ProjectEntity _Project, int ID)
+        public void EditJobKpiAssessment(JobKpiEntity _jobKpiAssessment, int ID)
         {
-            jobKpiAssessmentDAL.Edit(_Project, ID);
+            jobKpiAssessmentDAL.Edit(_jobKpiAssessment, ID);
         }
 
-        public void DeleteProject(int ID)
+        public void DeleteJobKpiAssessment(int ID)
         {
             jobKpiAssessmentDAL.Delete(ID);
         }
 
-        public DataTable LoadAllProject()
+        public DataTable LoadAllJobKpiAssessment()
         {
             return JobKpiAssessmentDAL.LoadAll();
         }

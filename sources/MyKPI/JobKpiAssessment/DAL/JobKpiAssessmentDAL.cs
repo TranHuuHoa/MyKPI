@@ -21,9 +21,9 @@ namespace MyKPI.JobKpiAssessment.DAL
             try
             {
                 str = string.Format(@"insert into tblJobKpiAssessment (EmployeeID, CreatedDate, RoleInAssessment, Status) values ({0},'{1}',{2},{3}) ",
-                jobKpiAssessment.Employee,      
+                jobKpiAssessment.Employee.ID,      
                 jobKpiAssessment.CreatedDate.ToString("yyyy-MM-dd"),
-                jobKpiAssessment.RoleInAssessment,
+                (int)jobKpiAssessment.RoleInAssessment,
                 (int)jobKpiAssessment.Status
                 );
                 DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
@@ -63,9 +63,9 @@ namespace MyKPI.JobKpiAssessment.DAL
             try
             {
                 str = string.Format(@"update tblJobKpiAssessment  set EmployeeID = {0},CreatedDate= '{1}',RoleInAssessment ={2},Status = {3} where ID = {4}",
-                jobKpiAssessment.Employee,
+                jobKpiAssessment.Employee.ID,
                 jobKpiAssessment.CreatedDate.ToString("yyyy-MM-dd"),
-                jobKpiAssessment.RoleInAssessment,
+                (int)jobKpiAssessment.RoleInAssessment,
                 (int)jobKpiAssessment.Status,
                 ID
                 );
@@ -83,8 +83,8 @@ namespace MyKPI.JobKpiAssessment.DAL
         #region Load
         public static DataTable LoadAll()
         {
-            string str = string.Format(@"select k.*,  concat_ws(' ',e.EmployeeFirstName,e.EmployeeLastName) as EmployeeName, e.EmployeeNumber 
-                            from  tbljobkpiassessment k, tblemployee e where k.EmployeeID = e.ID") ;
+            string str = @"select k.*,  concat_ws(' ',e.EmployeeFirstName,e.EmployeeLastName) as EmployeeName, e.EmployeeNumber 
+                            from  tbljobkpiassessment k, tblemployee e where k.EmployeeID = e.ID";
             return DBManager.InstantDBManger.GetData(str);
         }
         #endregion

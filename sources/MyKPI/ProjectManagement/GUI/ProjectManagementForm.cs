@@ -20,7 +20,7 @@ namespace MyKPI.ProjectManagement.GUI
         #region class parameters
         ProjectBLL projectBLL = new ProjectBLL();
         ProjectEntity projectEntity = new ProjectEntity();
-        DetailedFormMode detailedFormMode = DetailedFormMode.Add;
+       
         #endregion
 
         #region private methods
@@ -33,8 +33,7 @@ namespace MyKPI.ProjectManagement.GUI
         #region Form methods
         public ProjectManagementForm()
         {
-            InitializeComponent();
-            detailedFormMode = DetailedFormMode.Add;
+            InitializeComponent();           
         }
 
         private void ProjectManagementForm_Load(object sender, System.EventArgs e)
@@ -45,10 +44,8 @@ namespace MyKPI.ProjectManagement.GUI
 
         #region Buttons method
         private void btnDUProject_Click(object sender, System.EventArgs e)
-        {
-            // lay duoc du lieu cua  selected row vao 1 cai projectEntity
+        {            
             ProjectEntity projectEntity = new ProjectEntity();
-            // Object[] a = grvProject.GetDataRow(grvProject.GetSelectedRows()[0]).ItemArray;
             projectEntity.ID = (int)grvProject.GetDataRow(grvProject.GetSelectedRows()[0]).ItemArray[0];
             projectEntity.ProjectCode = grvProject.GetDataRow(grvProject.GetSelectedRows()[0]).ItemArray[1].ToString();
             projectEntity.ProjectName = grvProject.GetDataRow(grvProject.GetSelectedRows()[0]).ItemArray[2].ToString();
@@ -57,8 +54,10 @@ namespace MyKPI.ProjectManagement.GUI
             projectEntity.ScopeMM = (int)grvProject.GetDataRow(grvProject.GetSelectedRows()[0]).ItemArray[5];
             projectEntity.CustomerName = grvProject.GetDataRow(grvProject.GetSelectedRows()[0]).ItemArray[6].ToString();
             projectEntity.Status = (ProjectStatusValue)grvProject.GetDataRow(grvProject.GetSelectedRows()[0]).ItemArray[7];
+
             DetailedProjectForm detailedProjectForm = new DetailedProjectForm(projectEntity);
             detailedProjectForm.ShowDialog();
+
             load();
         }
 
@@ -120,10 +119,12 @@ namespace MyKPI.ProjectManagement.GUI
             }
             catch (Exception exp)
             {
-                CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
+                CommonFunctions.ShowErrorDialog("Display error:" + exp.ToString());
                 //  LogService.LogError("Error", ex);
             }
         }
         #endregion
+
+       
     }
 }

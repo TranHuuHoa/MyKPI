@@ -72,6 +72,7 @@
             this.grvJobKpiAssessment.OptionsBehavior.Editable = false;
             this.grvJobKpiAssessment.OptionsView.ShowDetailButtons = false;
             this.grvJobKpiAssessment.OptionsView.ShowGroupPanel = false;
+            this.grvJobKpiAssessment.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.grvJobKpiAssessment_CustomColumnDisplayText);
             // 
             // grcolEmployeeNumber
             // 
@@ -92,6 +93,7 @@
             // grcolRoleInAssessment
             // 
             this.grcolRoleInAssessment.Caption = "Role In Assessment";
+            this.grcolRoleInAssessment.FieldName = "RoleInAssessment";
             this.grcolRoleInAssessment.Name = "grcolRoleInAssessment";
             this.grcolRoleInAssessment.Visible = true;
             this.grcolRoleInAssessment.VisibleIndex = 2;
@@ -99,6 +101,7 @@
             // grcolCreatedDate
             // 
             this.grcolCreatedDate.Caption = "Created Date";
+            this.grcolCreatedDate.FieldName = "CreatedDate";
             this.grcolCreatedDate.Name = "grcolCreatedDate";
             this.grcolCreatedDate.Visible = true;
             this.grcolCreatedDate.VisibleIndex = 3;
@@ -106,6 +109,7 @@
             // grcolStatus
             // 
             this.grcolStatus.Caption = "Status";
+            this.grcolStatus.FieldName = "Status";
             this.grcolStatus.Name = "grcolStatus";
             this.grcolStatus.Visible = true;
             this.grcolStatus.VisibleIndex = 4;
@@ -125,6 +129,7 @@
             // btnDeleteJobKpiAssessment
             // 
             this.btnDeleteJobKpiAssessment.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeleteJobKpiAssessment.Enabled = false;
             this.btnDeleteJobKpiAssessment.Location = new System.Drawing.Point(585, 425);
             this.btnDeleteJobKpiAssessment.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteJobKpiAssessment.Name = "btnDeleteJobKpiAssessment";
@@ -143,6 +148,7 @@
             this.btnDUJobKpiAssessment.TabIndex = 6;
             this.btnDUJobKpiAssessment.Text = "DETAIL / UPDATE";
             this.btnDUJobKpiAssessment.UseVisualStyleBackColor = true;
+            this.btnDUJobKpiAssessment.Click += new System.EventHandler(this.btnDUJobKpiAssessment_Click);
             // 
             // btnAddJobKpiAssessment
             // 
