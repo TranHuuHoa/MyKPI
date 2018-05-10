@@ -39,7 +39,6 @@ namespace MyKPI.EmployeeManagment.DAL
             }
         }
        
-
         public bool Delete(int ID)
         {
             string str = string.Empty;
@@ -84,6 +83,19 @@ namespace MyKPI.EmployeeManagment.DAL
                 CommonFunctions.ShowErrorDialog("SQL error:" + exp.ToString());
                 return false;
             }
+        }
+
+        public EmployeeEntity LoadOnePerID(int ID)
+        {
+            EmployeeEntity employeeEntity = new EmployeeEntity();
+            string str = @"select EmployeeNumber,concat_ws(' ',EmployeeFirstName,EmployeeLastName) as EmployeeName from tblEmployee where ID = " + ID.ToString();
+            DataTable dataTable = DBManager.InstantDBManger.GetData(str);
+
+            employeeEntity.ID = ID;
+            employeeEntity.EmployeeNumber = dataTable.Rows[0].ItemArray[0].ToString();
+            employeeEntity.EmployeeName = dataTable.Rows[0].ItemArray[12].ToString();
+
+            return employeeEntity;
         }
 
         public static DataTable LoadAll()

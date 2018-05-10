@@ -14,7 +14,7 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         private void load()
         {
-            grcJobKpiAssessment.DataSource = jobKpiAssessmentBLL.LoadAllProject();
+            grcJobKpiAssessment.DataSource = jobKpiAssessmentBLL.LoadAllJobKpiAssessmentDataTable();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -9,6 +9,7 @@ namespace MyKPI.Entities
         public String EmployeeNumber { get; set; }
         public String EmployeeFirstName { get; set; }
         public String EmployeeLastName { get; set; }
+        public String EmployeeName { get; set; }
         public String Address { get; set; }
         public String IDCard { get; set; }
         public DateTime DOB { get; set; }
