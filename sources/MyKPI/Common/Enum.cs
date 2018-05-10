@@ -59,4 +59,10 @@
     {
         Started= 0, Processing= 1, Commit= 2, Approving= 3, Approved= 4
     }
+
+    public enum RankValue
+    {
+        NotWork = 0, Normal =1, Good = 2, Exelent= 4
+    }
+
 }

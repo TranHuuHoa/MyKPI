@@ -4,7 +4,7 @@ using MyKPI.Entities.Assessment;
 
 namespace MyKPI.Entities
 {
-    public class JobKpiEntity
+    public class JobKpiEntity: ICommonEntity
     {
         public int ID { get; set; }
         public EmployeeEntity Employee { get; set; }

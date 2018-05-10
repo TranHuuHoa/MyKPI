@@ -19,9 +19,9 @@ namespace MyKPI.ProjectManagement.BLL
         {
             projectDAL = new ProjectDAL();
         }
-        public void AddProject(ProjectEntity _Project)
+        public void AddProject(ProjectEntity _jobKpiAssessment)
         {
-            projectDAL.Add(_Project);
+            projectDAL.Add(_jobKpiAssessment);
         }
 
         public void EditProject(ProjectEntity _Project, int ID)

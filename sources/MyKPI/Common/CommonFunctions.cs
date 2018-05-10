@@ -12,7 +12,7 @@ namespace MyKPI.Common
 
         public static DialogResult ShowQuestionDialog(string message, string title)
         {
-            return MessageBox.Show(message, title, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            return MessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
     }
 }
