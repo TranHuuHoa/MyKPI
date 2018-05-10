@@ -62,7 +62,7 @@
 
     public enum RankValue
     {
-        NotWork = 0, Normal =1, Good = 2, Exelent= 4  
+        NotWork = 0, Normal =1, Good = 2, Exelent= 4
     }
 
 }
