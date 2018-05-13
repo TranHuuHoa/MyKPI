@@ -1,6 +1,15 @@
-﻿using System;
+﻿//========================================================================================================
+//  MyKPI - Job KPI Entity BLL
+// Change logs:
+// May 10 2018 - TrungTH - update 
+//
+//=========================================================================================================
+
+#region using
+using System;
 using MyKPI.Common;
 using MyKPI.Entities.Assessment;
+#endregion
 
 namespace MyKPI.Entities
 {

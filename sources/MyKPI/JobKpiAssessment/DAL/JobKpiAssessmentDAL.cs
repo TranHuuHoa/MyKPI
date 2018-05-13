@@ -4,10 +4,13 @@
 // May 7 2018 - TrungTH - update 
 //
 //=========================================================================================================
+
+#region using
 using System;
 using System.Data;
 using MyKPI.Common;
 using MyKPI.Entities;
+#endregion
 
 namespace MyKPI.JobKpiAssessment.DAL
 {

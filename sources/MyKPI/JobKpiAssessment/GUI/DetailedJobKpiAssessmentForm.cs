@@ -1,23 +1,56 @@
 ﻿//========================================================================================================
 //  MyKPI - Detailed Job KPI Assessment  Form
 // Change logs:
-// May 6 2018 - TrungTH - init pages 
+// May 12 2018 - TrungTH - update 
 // 
 //
 //=========================================================================================================
 #region using
 using System;
+using System.Data;
 using System.Windows.Forms;
 using MyKPI.EmployeeManagment.BLL;
+using MyKPI.ProjectManagement.BLL;
 using MyKPI.JobKpiAssessment.BLL;
+using MyKPI.DeveloperProjectContribution.BLL;
 using MyKPI.Common;
 using MyKPI.Entities;
+using MyKPI.Entities.Assessment;
 #endregion
 
 namespace MyKPI.JobKpiAssessment.GUI
 {
     public partial class DetailedJobKpiAssessmentForm : Form
     {
+
+        #region common
+        private void load()
+        {
+            InitCombobox();
+            projectInitComboBox();
+        }
+
+        public DetailedJobKpiAssessmentForm()
+        {
+            InitializeComponent();          
+            detailedFormMode = DetailedFormMode.Add;
+            load();
+        }
+
+        public DetailedJobKpiAssessmentForm(JobKpiEntity _jobKpiEntity)
+        {
+            InitializeComponent();
+            detailedFormMode = DetailedFormMode.Update;
+            load();
+            jobKpiAssessmentID = _jobKpiEntity.ID;
+            cbxEmployee.SelectedValue = _jobKpiEntity.Employee.ID;
+            cbxRoleInAssessment.SelectedItem = _jobKpiEntity.RoleInAssessment;
+            cbxStatus.SelectedItem = _jobKpiEntity.Status;
+            dtmCreatedDate.Value = _jobKpiEntity.CreatedDate;
+        }
+        #endregion
+
+        #region general information group box
         private JobKpiAssessmentBLL jobKpiAssessmentBLL = new JobKpiAssessmentBLL();
         private DetailedFormMode detailedFormMode = DetailedFormMode.Add;
         private int jobKpiAssessmentID = 0;
@@ -46,24 +79,7 @@ namespace MyKPI.JobKpiAssessment.GUI
             cbxStatus.SelectedIndex = 0;
         }
 
-        public DetailedJobKpiAssessmentForm()
-        {
-            InitializeComponent();
-            InitCombobox();
-            detailedFormMode = DetailedFormMode.Add;
-        }
-
-        public DetailedJobKpiAssessmentForm(JobKpiEntity _jobKpiEntity)
-        {
-            InitializeComponent();
-            InitCombobox();
-            detailedFormMode = DetailedFormMode.Update;
-            jobKpiAssessmentID = _jobKpiEntity.ID;
-            cbxEmployee.SelectedValue = _jobKpiEntity.Employee.ID;
-            cbxRoleInAssessment.SelectedItem = _jobKpiEntity.RoleInAssessment;
-            cbxStatus.SelectedItem = _jobKpiEntity.Status;
-            dtmCreatedDate.Value = _jobKpiEntity.CreatedDate;
-        }
+       
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
@@ -101,12 +117,79 @@ namespace MyKPI.JobKpiAssessment.GUI
         {
             this.Close();
         }
-        
+        #endregion
 
-        #region Assessment in Details
+        #region Assessment in Details group box
+
+        #region project global parameters
+        DeveloperProjectContributionBLL developerProjectContributionBLL = new DeveloperProjectContributionBLL();
+        private DetailedFormMode project1DetailedFormMode = DetailedFormMode.Add;
+        private int developerProjectContributionID = 0;
+        #endregion
+
+        private void projectInitComboBox()
+        {
+            var projectBLL = new ProjectBLL();
+            cbxProject.DataSource = projectBLL.LoadAllProject();
+            cbxProject.DisplayMember = "ProjectName";
+            cbxProject.ValueMember = "ID";
+
+            cbxTeamRole.Items.Clear();
+            cbxTeamRole.Items.Add(TeamRoleValue.Member);
+            cbxTeamRole.Items.Add(TeamRoleValue.TechnicalExpert);
+            cbxTeamRole.Items.Add(TeamRoleValue.TechnicalLead);
+            cbxTeamRole.Items.Add(TeamRoleValue.TeamLead);
+            cbxTeamRole.SelectedIndex = 0;
+
+            cbxImplementDesign.Items.Clear();
+            cbxImplementDesign.Items.Add(WorkingResultValue.NotWork);
+            cbxImplementDesign.Items.Add(WorkingResultValue.Normal);
+            cbxImplementDesign.Items.Add(WorkingResultValue.Good);
+            cbxImplementDesign.Items.Add(WorkingResultValue.Exelent);
+            cbxImplementDesign.SelectedIndex = 0;
+
+            cbxImplementCode.Items.Clear();
+            cbxImplementCode.Items.Add(WorkingResultValue.NotWork);
+            cbxImplementCode.Items.Add(WorkingResultValue.Normal);
+            cbxImplementCode.Items.Add(WorkingResultValue.Good);
+            cbxImplementCode.Items.Add(WorkingResultValue.Exelent);
+            cbxImplementCode.SelectedIndex = 0;
+
+            cbxImplementUnitTest.Items.Clear();
+            cbxImplementUnitTest.Items.Add(WorkingResultValue.NotWork);
+            cbxImplementUnitTest.Items.Add(WorkingResultValue.Normal);
+            cbxImplementUnitTest.Items.Add(WorkingResultValue.Good);
+            cbxImplementUnitTest.Items.Add(WorkingResultValue.Exelent);
+            cbxImplementUnitTest.SelectedIndex = 0;
+
+        }
         private void btnConfirmProject_Click(object sender, EventArgs e)
         {
+            DeveloperProjectContributionEntity developerProjectContributionEntity = new DeveloperProjectContributionEntity();
 
+            // developerProjectContributionEntity.ID = ;
+            ProjectEntity projectEntity = new ProjectEntity();
+            projectEntity.ID = (int)cbxProject.SelectedValue;
+            developerProjectContributionEntity.Project = projectEntity;
+            
+            developerProjectContributionEntity.ProjectSeq = tclProject.SelectedIndex + 1;
+            developerProjectContributionEntity.TeamRole = (TeamRoleValue)cbxTeamRole.SelectedItem;
+            developerProjectContributionEntity.ImplementCode = (WorkingResultValue)cbxImplementCode.SelectedItem;
+            developerProjectContributionEntity.ImplementDesign = (WorkingResultValue)cbxImplementDesign.SelectedItem;
+            developerProjectContributionEntity.ImplementUnitTest = (WorkingResultValue)cbxImplementUnitTest.SelectedItem;
+
+            JobKpiEntity jobKpiEntity = new JobKpiEntity();
+            jobKpiEntity.ID = jobKpiAssessmentID;
+            developerProjectContributionEntity.JobKpiAssessment = jobKpiEntity;
+
+            if (project1DetailedFormMode == DetailedFormMode.Add)
+            {
+                developerProjectContributionBLL.AddDeveloperProjectContribution(developerProjectContributionEntity);
+            }
+            if (project1DetailedFormMode == DetailedFormMode.Update)
+            {
+                developerProjectContributionBLL.EditDeveloperProjectContribution(developerProjectContributionEntity, developerProjectContributionID);
+            }
         }
 
         private void btnProjectCancel_Click(object sender, EventArgs e)
@@ -114,8 +197,14 @@ namespace MyKPI.JobKpiAssessment.GUI
             this.Close();
         }
 
+
+
         #endregion
 
-        
+        private void cbxProject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var row = (DataRowView)cbxProject.SelectedItem;
+            txtProjectCode.Text =  row[1].ToString();
+        }
     }
 }

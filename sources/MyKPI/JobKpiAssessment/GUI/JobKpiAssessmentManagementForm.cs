@@ -1,8 +1,17 @@
-﻿using System;
+﻿//========================================================================================================
+//  MyKPI - Detailed Job KPI Assessment  Form
+// Change logs:
+// May 10 2018 - TrungTH - init pages 
+// 
+//
+//=========================================================================================================
+#region using
+using System;
 using System.Windows.Forms;
 using MyKPI.JobKpiAssessment.BLL;
 using MyKPI.Common;
 using MyKPI.Entities;
+#endregion
 
 namespace MyKPI.JobKpiAssessment.GUI
 {

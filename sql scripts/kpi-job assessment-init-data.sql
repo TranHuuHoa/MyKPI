@@ -12,3 +12,8 @@ insert into tblJobKpiAssessment (EmployeeID,CreatedDate,RoleInAssessment, Status
 values (3,"2018-05-03",3,1);
 insert into tblJobKpiAssessment (EmployeeID,CreatedDate,RoleInAssessment, Status)
 values (4,"2018-05-03",4,1);
+
+
+select k.*,  concat_ws(' ',e.EmployeeFirstName,e.EmployeeLastName) as EmployeeName, e.EmployeeNumber 
+                            from  tbljobkpiassessment k, tblemployee e where k.EmployeeID = e.ID;
+                            

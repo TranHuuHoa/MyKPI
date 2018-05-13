@@ -1,6 +1,13 @@
-﻿using System;
+﻿//========================================================================================================
+//  MyKPI - Project Employee Entity 
+// Change logs:
+// May 10 2018 - TrungTH - update 
+//
+//=========================================================================================================
+#region using
+using System;
 using MyKPI.Common;
-
+#endregion
 namespace MyKPI.Entities
 {
     public class ProjectEmployeeEntity: ICommonEntity

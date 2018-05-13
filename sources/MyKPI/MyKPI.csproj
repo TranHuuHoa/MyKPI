@@ -134,16 +134,18 @@
     <Compile Include="EmployeeManagment\GUI\EmployeeManagementForm.Designer.cs">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Assessment\DeveloperProjectContribution.cs" />
     <Compile Include="Entities\Assessment\IProfessionalContribution.cs" />
     <Compile Include="Entities\Assessment\IProjectContribution.cs" />
     <Compile Include="Entities\Assessment\ISkillAssessment.cs" />
+    <Compile Include="Entities\Assessment\DeveloperProjectContributionEntity.cs" />
     <Compile Include="Entities\EmployeeEntity.cs" />
     <Compile Include="Entities\JobKpiEntity.cs" />
     <Compile Include="Entities\ProjectEmployeeEntity.cs" />
     <Compile Include="Entities\ProjectEntity.cs" />
     <Compile Include="Entities\TaskEntity.cs" />
+    <Compile Include="JobKpiAssessment\BLL\DeveloperProjectContributionBLL.cs" />
     <Compile Include="JobKpiAssessment\BLL\JobKpiAssessmentBLL.cs" />
+    <Compile Include="JobKpiAssessment\DAL\DeveloperProjectContributionDAL.cs" />
     <Compile Include="JobKpiAssessment\DAL\JobKpiAssessmentDAL.cs" />
     <Compile Include="JobKpiAssessment\GUI\DetailedJobKpiAssessmentForm.cs">
       <SubType>Form</SubType>
@@ -216,7 +218,6 @@
     <EmbeddedResource Include="ProjectManagement\GUI\ProjectManagementForm.resx">
       <DependentUpon>ProjectManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -240,10 +241,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="JobKpiAssessment\BLL\" />
-    <Folder Include="JobKpiAssessment\DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
       <Visible>False</Visible>
