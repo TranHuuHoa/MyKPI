@@ -1,8 +1,8 @@
 ﻿//========================================================================================================
 //  MyKPI - Detailed Job KPI Assessment  Form
 // Change logs:
-// May 12 2018 - TrungTH - update 
-// 
+// May 12 2018 - TrungTH - init pages 
+// May 13 2018 - HoaTH - update
 //
 //=========================================================================================================
 #region using
@@ -27,7 +27,19 @@ namespace MyKPI.JobKpiAssessment.GUI
         private void load()
         {
             InitCombobox();
-            projectInitComboBox();
+
+            if (detailedFormMode == DetailedFormMode.Add)
+            {
+                gbxAssessmentinDetails.Enabled = false;
+            }
+
+            if (detailedFormMode == DetailedFormMode.Update)
+            {
+                gbxAssessmentinDetails.Enabled = true;
+                projectInitComboBox();
+                loadProjectContributionInDetails();
+            }
+            
         }
 
         public DetailedJobKpiAssessmentForm()
@@ -104,7 +116,7 @@ namespace MyKPI.JobKpiAssessment.GUI
             if (CommonFunctions.ShowQuestionDialog("Do you want continue to work with this kpi assessment?", "Question") == DialogResult.OK)
             {
                 detailedFormMode = DetailedFormMode.Update;
-               // load();
+                load();
             }
             else
             {
@@ -125,11 +137,12 @@ namespace MyKPI.JobKpiAssessment.GUI
         DeveloperProjectContributionBLL developerProjectContributionBLL = new DeveloperProjectContributionBLL();
         private DetailedFormMode project1DetailedFormMode = DetailedFormMode.Add;
         private int developerProjectContributionID = 0;
+        
         #endregion
 
         private void projectInitComboBox()
         {
-            var projectBLL = new ProjectBLL();
+            ProjectBLL projectBLL = new ProjectBLL();
             cbxProject.DataSource = projectBLL.LoadAllProject();
             cbxProject.DisplayMember = "ProjectName";
             cbxProject.ValueMember = "ID";
@@ -162,6 +175,21 @@ namespace MyKPI.JobKpiAssessment.GUI
             cbxImplementUnitTest.Items.Add(WorkingResultValue.Exelent);
             cbxImplementUnitTest.SelectedIndex = 0;
 
+        }
+
+        private void loadProjectContributionInDetails()
+        {
+            DeveloperProjectContributionEntity developerProjectContributionEntity1 = developerProjectContributionBLL.LoadDeveloperProjectContributionPerKpiAssessmentAndProjectSeq(jobKpiAssessmentID, 1);
+            if (developerProjectContributionEntity1 == null)
+            {
+                btnConfirmProject.Text = "ADD NEW PROJECT 1'S CONTRIBUTION";
+                grbProject1.Enabled = false;
+            }
+            else
+            {
+                btnConfirmProject.Text = "UPDATE NEW PROJECT 1'S CONTRIBUTION";
+                grbProject1.Enabled = true;
+            }
         }
         private void btnConfirmProject_Click(object sender, EventArgs e)
         {
@@ -197,14 +225,14 @@ namespace MyKPI.JobKpiAssessment.GUI
             this.Close();
         }
 
-
-
-        #endregion
-
         private void cbxProject_SelectedIndexChanged(object sender, EventArgs e)
         {
             var row = (DataRowView)cbxProject.SelectedItem;
-            txtProjectCode.Text =  row[1].ToString();
+            txtProjectCode.Text = row[1].ToString();
         }
+
+        #endregion
+
+
     }
 }

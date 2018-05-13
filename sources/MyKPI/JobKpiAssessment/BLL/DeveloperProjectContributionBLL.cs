@@ -5,13 +5,11 @@
 //
 //=========================================================================================================
 #region using
-using System.Collections.Generic;
 using System.Data;
 using MyKPI.Entities.Assessment;
 using MyKPI.DeveloperProjectContribution.DAL;
-using MyKPI.EmployeeManagment.BLL;
-using System;
 using MyKPI.Common;
+using MyKPI.Entities;
 #endregion
 
 namespace MyKPI.DeveloperProjectContribution.BLL
@@ -38,10 +36,26 @@ namespace MyKPI.DeveloperProjectContribution.BLL
             developerProjectContributionDAL.Delete(ID);
         }
 
-        public DataTable LoadDeveloperProjectContributionPerKpiAssessment()
+        public DeveloperProjectContributionEntity LoadDeveloperProjectContributionPerKpiAssessmentAndProjectSeq(int JobKpiAssessmentID, int ProjectSeq)
         {
-            return DeveloperProjectContributionDAL.LoadPerKpiAssessment();
-        }
+            DataTable dataTable = developerProjectContributionDAL.LoadPerKpiAssessmentAndSeq(JobKpiAssessmentID, ProjectSeq);
+            if (dataTable.Rows.Count == 0) return null;
 
+            DeveloperProjectContributionEntity developerProjectContributionEntity = new DeveloperProjectContributionEntity();
+            developerProjectContributionEntity.ID = (int)dataTable.Rows[0].ItemArray[0];
+            developerProjectContributionEntity.ProjectSeq = (int)dataTable.Rows[0].ItemArray[1];
+            ProjectEntity projectEntity = new ProjectEntity();
+            projectEntity.ID = (int)dataTable.Rows[0].ItemArray[2];
+            developerProjectContributionEntity.Project = projectEntity;       
+            developerProjectContributionEntity.TeamRole = (TeamRoleValue)dataTable.Rows[0].ItemArray[3];
+            developerProjectContributionEntity.ImplementCode = (WorkingResultValue)dataTable.Rows[0].ItemArray[4];
+            developerProjectContributionEntity.ImplementDesign = (WorkingResultValue)dataTable.Rows[0].ItemArray[5];
+            developerProjectContributionEntity.ImplementUnitTest = (WorkingResultValue)dataTable.Rows[0].ItemArray[6];
+            JobKpiEntity jobKpiEntity = new JobKpiEntity();
+            jobKpiEntity.ID = (int)dataTable.Rows[0].ItemArray[7];
+            developerProjectContributionEntity.JobKpiAssessment = jobKpiEntity;
+
+            return developerProjectContributionEntity;
+        }
     }
 }

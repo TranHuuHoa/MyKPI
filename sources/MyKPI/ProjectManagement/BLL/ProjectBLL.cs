@@ -37,7 +37,7 @@ namespace MyKPI.ProjectManagement.BLL
         public DataTable LoadAllProject()
         {
             return ProjectDAL.LoadAll();
-        }
+        }        
 
     }
 }

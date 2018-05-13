@@ -91,10 +91,12 @@ namespace MyKPI.DeveloperProjectContribution.DAL
             #endregion
 
             #region Load
-            public static DataTable LoadPerKpiAssessment()
+            public DataTable LoadPerKpiAssessmentAndSeq(int JobKpiAssessmentID, int ProjectSeq)
             {
-                string str = @"select k.*,  concat_ws(' ',e.EmployeeFirstName,e.EmployeeLastName) as EmployeeName, e.EmployeeNumber 
-                            from  tbljobkpiassessment k, tblemployee e where k.EmployeeID = e.ID";
+                string str = string.Format(@"SELECT * FROM mykpi.tbldeveloperprojectcontribution where JobKpiAssessmentID = {0} and ProjectSeq = {1}",
+                                            JobKpiAssessmentID,
+                                            ProjectSeq
+                                            );
                 return DBManager.InstantDBManger.GetData(str);
             }
             #endregion
