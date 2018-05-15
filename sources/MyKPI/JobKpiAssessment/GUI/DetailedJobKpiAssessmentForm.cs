@@ -133,11 +133,11 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         #region Assessment in Details group box
 
-        #region project global parameters
+        #region project class parameters
         DeveloperProjectContributionBLL developerProjectContributionBLL = new DeveloperProjectContributionBLL();
         private DetailedFormMode project1DetailedFormMode = DetailedFormMode.Add;
         private int developerProjectContributionID = 0;
-        
+        private FormState addDeveloperProjectContributionState = FormState.preProcess;
         #endregion
 
         private void projectInitComboBox()
@@ -184,6 +184,7 @@ namespace MyKPI.JobKpiAssessment.GUI
             {
                 btnConfirmProject.Text = "ADD NEW PROJECT 1'S CONTRIBUTION";
                 grbProject1.Enabled = false;
+                addDeveloperProjectContributionState = FormState.preProcess;
             }
             else
             {
@@ -195,17 +196,15 @@ namespace MyKPI.JobKpiAssessment.GUI
         {
             DeveloperProjectContributionEntity developerProjectContributionEntity = new DeveloperProjectContributionEntity();
 
-            // developerProjectContributionEntity.ID = ;
+            developerProjectContributionEntity.ID = developerProjectContributionID;
             ProjectEntity projectEntity = new ProjectEntity();
             projectEntity.ID = (int)cbxProject.SelectedValue;
-            developerProjectContributionEntity.Project = projectEntity;
-            
+            developerProjectContributionEntity.Project = projectEntity;          
             developerProjectContributionEntity.ProjectSeq = tclProject.SelectedIndex + 1;
             developerProjectContributionEntity.TeamRole = (TeamRoleValue)cbxTeamRole.SelectedItem;
             developerProjectContributionEntity.ImplementCode = (WorkingResultValue)cbxImplementCode.SelectedItem;
             developerProjectContributionEntity.ImplementDesign = (WorkingResultValue)cbxImplementDesign.SelectedItem;
             developerProjectContributionEntity.ImplementUnitTest = (WorkingResultValue)cbxImplementUnitTest.SelectedItem;
-
             JobKpiEntity jobKpiEntity = new JobKpiEntity();
             jobKpiEntity.ID = jobKpiAssessmentID;
             developerProjectContributionEntity.JobKpiAssessment = jobKpiEntity;
