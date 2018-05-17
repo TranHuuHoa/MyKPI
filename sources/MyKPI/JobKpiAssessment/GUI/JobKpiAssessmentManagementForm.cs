@@ -108,6 +108,7 @@ namespace MyKPI.JobKpiAssessment.GUI
             jobKpiEntity.ID= (int)grvJobKpiAssessment.GetDataRow(grvJobKpiAssessment.GetSelectedRows()[0]).ItemArray[0];
             jobKpiEntity.Employee = new EmployeeEntity();
             jobKpiEntity.Employee.ID = (int)grvJobKpiAssessment.GetDataRow(grvJobKpiAssessment.GetSelectedRows()[0]).ItemArray[1];
+            jobKpiEntity.Employee.EmployeeName = grvJobKpiAssessment.GetDataRow(grvJobKpiAssessment.GetSelectedRows()[0]).ItemArray[5].ToString();
             jobKpiEntity.CreatedDate=(DateTime)grvJobKpiAssessment.GetDataRow(grvJobKpiAssessment.GetSelectedRows()[0]).ItemArray[2];
             jobKpiEntity.RoleInAssessment=(JobRankValue)grvJobKpiAssessment.GetDataRow(grvJobKpiAssessment.GetSelectedRows()[0]).ItemArray[3];
             jobKpiEntity.Status=(AssessmentStatusValue)grvJobKpiAssessment.GetDataRow(grvJobKpiAssessment.GetSelectedRows()[0]).ItemArray[4];

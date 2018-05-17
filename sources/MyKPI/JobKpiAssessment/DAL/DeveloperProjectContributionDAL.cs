@@ -15,10 +15,10 @@ using MyKPI.Entities.Assessment;
 
 namespace MyKPI.DeveloperProjectContribution.DAL
 {
-        public class DeveloperProjectContributionDAL : ICommonDAL
+        public class DeveloperProjectContributionDAL
         {
             #region Add
-            public bool Add(ICommonEntity _developerProjectContribution)
+            public bool Add(IProjectContribution _developerProjectContribution)
             {
                 var developerProjectContribution = (_developerProjectContribution as DeveloperProjectContributionEntity);
                 string str = string.Empty;
@@ -63,7 +63,7 @@ namespace MyKPI.DeveloperProjectContribution.DAL
             #endregion
 
             #region Edit
-            public bool Edit(ICommonEntity _developerProjectContribution, int ID)
+            public bool Edit(IProjectContribution _developerProjectContribution, int ID)
             {
                 var developerProjectContribution = (_developerProjectContribution as DeveloperProjectContributionEntity);
                 string str = string.Empty;

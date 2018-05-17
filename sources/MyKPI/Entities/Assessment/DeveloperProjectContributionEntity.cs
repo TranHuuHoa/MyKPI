@@ -11,7 +11,7 @@ using MyKPI.Common;
 
 namespace MyKPI.Entities.Assessment
 {
-    public class DeveloperProjectContributionEntity : ICommonEntity
+    public class DeveloperProjectContributionEntity : IProjectContribution
     {
         public int ID { get; set; }
         public int ProjectSeq { get; set; }
