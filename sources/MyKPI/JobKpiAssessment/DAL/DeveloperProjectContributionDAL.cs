@@ -69,7 +69,7 @@ namespace MyKPI.DeveloperProjectContribution.DAL
                 string str = string.Empty;
                 try
                 {
-                    str = string.Format(@"update tblJobKpiAssessment  set ProjectSeq = {0},ProjectID= '{1}',TeamRole ={2},ImplementDesign = {3},ImplementCode ={4},,ImplementUnitTest ={5},,JobKpiAssessmentID ={6}, where ID = {7}",
+                    str = string.Format(@"update tbldeveloperprojectcontribution  set ProjectSeq = {0},ProjectID= {1},TeamRole ={2},ImplementDesign = {3},ImplementCode ={4},ImplementUnitTest ={5},JobKpiAssessmentID ={6} where ID = {7}",
                     developerProjectContribution.ProjectSeq,
                     developerProjectContribution.Project.ID,
                     (int)developerProjectContribution.TeamRole,

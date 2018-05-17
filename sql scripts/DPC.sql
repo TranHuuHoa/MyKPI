@@ -20,7 +20,8 @@ values (3,3,2,1,2,3,1);
 
 
 
-select * from tbldeveloperprojectcontribution where ProjectID=1;
+select k.*,  concat_ws(' ',e.EmployeeFirstName,e.EmployeeLastName) as EmployeeName, e.EmployeeNumber 
+                            from  tbljobkpiassessment k, tblemployee e where k.EmployeeID = e.ID;
                             
 
-SELECT * FROM mykpi.tbldeveloperprojectcontribution;
+SELECT * FROM mykpi.tbldeveloperprojectcontribution where JobKpiAssessmentID = 1;
