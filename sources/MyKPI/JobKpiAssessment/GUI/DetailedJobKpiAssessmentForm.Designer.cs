@@ -219,7 +219,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancel.Location = new System.Drawing.Point(898, 92);
+            this.btnCancel.Location = new System.Drawing.Point(1079, 92);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(190, 35);
             this.btnCancel.TabIndex = 19;
@@ -230,9 +230,9 @@
             // btnConfirm
             // 
             this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnConfirm.Location = new System.Drawing.Point(540, 92);
+            this.btnConfirm.Location = new System.Drawing.Point(585, 92);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(308, 35);
+            this.btnConfirm.Size = new System.Drawing.Size(466, 35);
             this.btnConfirm.TabIndex = 18;
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = true;
