@@ -25,9 +25,10 @@ namespace MyKPI.JobKpiAssessment.BLL
             jobKpiAssessmentDAL = new JobKpiAssessmentDAL();
         }
 
-        public void AddJobKpiAssessment(JobKpiEntity _jobKpiAssessment)
+        public int AddJobKpiAssessment(JobKpiEntity _jobKpiAssessment)
         {
             jobKpiAssessmentDAL.Add(_jobKpiAssessment);
+            return jobKpiAssessmentDAL.GetLatestID();
         }
 
         public void EditJobKpiAssessment(JobKpiEntity _jobKpiAssessment, int ID)

@@ -68,5 +68,9 @@
     {
         Member = 0, TechnicalExpert = 1, TechnicalLead = 2, TeamLead = 3
     }
+     public enum ProfessionalValue
+    {
+        NoKnowledge = 0, Junior = 1 , Senior = 2 , Expert = 3, Master = 4 
+    }
 
 }

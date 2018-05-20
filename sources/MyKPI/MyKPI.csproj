@@ -134,9 +134,10 @@
     <Compile Include="EmployeeManagment\GUI\EmployeeManagementForm.Designer.cs">
       <DependentUpon>EmployeeManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Assessment\DeveloperProfessionalContributionEntity.cs" />
     <Compile Include="Entities\Assessment\IProfessionalContribution.cs" />
     <Compile Include="Entities\Assessment\IProjectContribution.cs" />
-    <Compile Include="Entities\Assessment\ISkillAssessment.cs" />
+    <Compile Include="Entities\Assessment\IPersonalSkill.cs" />
     <Compile Include="Entities\Assessment\DeveloperProjectContributionEntity.cs" />
     <Compile Include="Entities\EmployeeEntity.cs" />
     <Compile Include="Entities\JobKpiEntity.cs" />

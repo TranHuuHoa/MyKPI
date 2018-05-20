@@ -321,11 +321,11 @@ namespace MyKPI.JobKpiAssessment.GUI
          
             if (detailedFormMode == DetailedFormMode.Add)
             {
-                jobKpiAssessmentBLL.AddJobKpiAssessment(jobKpiEntity);
+                jobKpiAssessmentID = jobKpiAssessmentBLL.AddJobKpiAssessment(jobKpiEntity);
                 if (CommonFunctions.ShowQuestionDialog("Do you want continue to work with this kpi assessment?", "Question") == DialogResult.Yes)
                 {
                     detailedFormMode = DetailedFormMode.Update;
-                    UpdateJobKpiAssessmentState = FormState.preProcess;
+                    UpdateJobKpiAssessmentState = FormState.preProcess;                  
                 }
                 else
                 {
@@ -450,8 +450,10 @@ namespace MyKPI.JobKpiAssessment.GUI
             }
 
         }
+
+
         #endregion
 
-
+       
     }
 }

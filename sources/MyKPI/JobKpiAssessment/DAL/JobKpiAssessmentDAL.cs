@@ -91,5 +91,12 @@ namespace MyKPI.JobKpiAssessment.DAL
             return DBManager.InstantDBManger.GetData(str);
         }
         #endregion
+
+        public int GetLatestID()
+        {
+            string str = @"select max(ID) from tblJobKpiAssessment";
+            var datatable = DBManager.InstantDBManger.GetData(str);
+            return (int)datatable.Rows[0].ItemArray[0];
+        }
     }
 }
