@@ -72,4 +72,32 @@ PRIMARY KEY (ID),
 FOREIGN KEY (EmployeeID) REFERENCES tblEmployee(ID)
 );
 
+CREATE TABLE tblDeveloperProjectContribution (
+ID int not null auto_increment,
+ProjectSeq int,
+ProjectID int,
+TeamRole int,
+ImplementDesign int,
+ImplementCode int,
+ImplementUnitTest int,
+JobKpiAssessmentID int,
+PRIMARY KEY (ID),
+FOREIGN KEY (JobKpiAssessmentID) REFERENCES tblJobKpiAssessment(ID) 
+);
 
+CREATE TABLE tblDeveloperProfessionalContribution(
+ID int not null auto_increment,
+MasterProgrammingLanguages int,
+MasterUnitTesting int,
+MasterClientFramework int,
+MasterSofwareDevelopmentFramework int,
+IntructorAtCompany int,
+SharingAtWorkshop int,
+DevelopTrainningCourse int,
+SubmissionImprovementProposal int,
+ActivitesInComunity int,
+DevelopsSubordinates int,
+JobKpiAssessment int,
+PRIMARY KEY (ID),
+FOREIGN KEY (JobKpiAssessmentID) REFERENCES tblJobKpiAssessment(ID) 
+);
