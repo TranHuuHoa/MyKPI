@@ -9,6 +9,7 @@
 #region using
 using MyKPI.Common;
 using MyKPI.DeveloperProjectContribution.BLL;
+using MyKPI.DeveloperProfessionalContribution.BLL;
 using MyKPI.EmployeeManagment.BLL;
 using MyKPI.Entities;
 using MyKPI.Entities.Assessment;
@@ -36,6 +37,7 @@ namespace MyKPI.JobKpiAssessment.GUI
         private JobKpiEntity jobKpiEntity = new JobKpiEntity();
         private JobKpiAssessmentBLL jobKpiAssessmentBLL = new JobKpiAssessmentBLL();                                 
         private DeveloperProjectContributionBLL developerProjectContributionBLL = new DeveloperProjectContributionBLL();
+        private DeveloperProfessionalContributionBLL developerProfessionalContributionBLL = new DeveloperProfessionalContributionBLL();
         #endregion
 
         #region private functions
@@ -61,24 +63,44 @@ namespace MyKPI.JobKpiAssessment.GUI
                     btnCancel.Text = "EXIT";
                     gbxAssessmentinDetails.Enabled = true;
 
-                    switch (tclProject.SelectedIndex)
+
+                    switch (tclAssessmentInDetails.SelectedIndex)
                     {
                         case 0:
-                            jobKpiEntity.ProjectContribution1 = developerProjectContributionBLL.LoadDeveloperProjectContributionPerKpiAssessmentAndProjectSeq(jobKpiAssessmentID, 1);
-                            var developerProjectContribution = (jobKpiEntity.ProjectContribution1 as DeveloperProjectContributionEntity);
-                            loadPerProjectContributionTab(developerProjectContribution, grbProject1, cbxProject1, cbxTeamRole1, cbxImplementDesign1, cbxImplementCode1, cbxImplementUnitTest1,txtProjectCode1,txtStartedEnd1,txtScopeMM1);
+                            switch (tclProject.SelectedIndex)
+                            {
+                                case 0:
+                                    jobKpiEntity.ProjectContribution1 = developerProjectContributionBLL.LoadDeveloperProjectContributionPerKpiAssessmentAndProjectSeq(jobKpiAssessmentID, 1);
+                                    var developerProjectContribution = (jobKpiEntity.ProjectContribution1 as DeveloperProjectContributionEntity);
+                                    loadPerProjectContributionTab(developerProjectContribution, grbProject1, cbxProject1, cbxTeamRole1, cbxImplementDesign1, cbxImplementCode1, cbxImplementUnitTest1, txtProjectCode1, txtStartedEnd1, txtScopeMM1);
+                                    break;
+                                case 1:
+                                    jobKpiEntity.ProjectContribution2 = developerProjectContributionBLL.LoadDeveloperProjectContributionPerKpiAssessmentAndProjectSeq(jobKpiAssessmentID, 2);
+                                    developerProjectContribution = (jobKpiEntity.ProjectContribution2 as DeveloperProjectContributionEntity);
+                                    loadPerProjectContributionTab(developerProjectContribution, grbProject2, cbxProject2, cbxTeamRole2, cbxImplementDesign2, cbxImplementCode2, cbxImplementUnitTest2, txtProjectCode2, txtStartedEnd2, txtScopeMM2);
+                                    break;
+                                case 2:
+                                    jobKpiEntity.ProjectContribution3 = developerProjectContributionBLL.LoadDeveloperProjectContributionPerKpiAssessmentAndProjectSeq(jobKpiAssessmentID, 3);
+                                    developerProjectContribution = (jobKpiEntity.ProjectContribution3 as DeveloperProjectContributionEntity);
+                                    loadPerProjectContributionTab(developerProjectContribution, grbProject3, cbxProject3, cbxTeamRole3, cbxImplementDesign3, cbxImplementCode3, cbxImplementUnitTest3, txtProjectCode3, txtStartedEnd3, txtScopeMM3);
+                                    break;
+                            }
                             break;
                         case 1:
-                            jobKpiEntity.ProjectContribution2 = developerProjectContributionBLL.LoadDeveloperProjectContributionPerKpiAssessmentAndProjectSeq(jobKpiAssessmentID, 2);
-                            developerProjectContribution = (jobKpiEntity.ProjectContribution2 as DeveloperProjectContributionEntity);
-                            loadPerProjectContributionTab(developerProjectContribution, grbProject2, cbxProject2, cbxTeamRole2, cbxImplementDesign2, cbxImplementCode2, cbxImplementUnitTest2, txtProjectCode2, txtStartedEnd2, txtScopeMM2);
+                            jobKpiEntity.ProfessionalContribution = developerProfessionalContributionBLL.LoadPerJobKpiAssessmentID(jobKpiAssessmentID);
+                            if (jobKpiEntity.ProfessionalContribution != null)
+                            {
+                                var developerProfessionalContribution = (jobKpiEntity.ProfessionalContribution as DeveloperProfessionalContributionEntity);
+                                cbxMasterProgrammingLanguages.SelectedItem = developerProfessionalContribution.MasterProgrammingLanguages;
+                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.IntructorAtCompany);
+                                chkDevelopsSubordinates.Checked = developerProfessionalContribution.DevelopsSubordinates;
+                            }
                             break;
                         case 2:
-                            jobKpiEntity.ProjectContribution3 = developerProjectContributionBLL.LoadDeveloperProjectContributionPerKpiAssessmentAndProjectSeq(jobKpiAssessmentID, 3);
-                            developerProjectContribution = (jobKpiEntity.ProjectContribution3 as DeveloperProjectContributionEntity);
-                            loadPerProjectContributionTab(developerProjectContribution, grbProject3, cbxProject3, cbxTeamRole3, cbxImplementDesign3, cbxImplementCode3, cbxImplementUnitTest3, txtProjectCode3, txtStartedEnd3, txtScopeMM3);
                             break;
                     }
+
+                    
                 }
                 else
                 {
@@ -490,7 +512,7 @@ namespace MyKPI.JobKpiAssessment.GUI
             cbxMasterSofwareDevelopmentFramework.Items.Add(ProfessionalValue.Master);
             cbxMasterSofwareDevelopmentFramework.SelectedIndex = 0;
         }
-        private void btnConfirmProfessional_Click_1(object sender, EventArgs e)
+        private void btnConfirmProfessional_Click(object sender, EventArgs e)
         {
 
             DeveloperProfessionalContributionEntity developerProfessionalContributionEntity = new DeveloperProfessionalContributionEntity();
@@ -499,7 +521,8 @@ namespace MyKPI.JobKpiAssessment.GUI
             developerProfessionalContributionEntity.MasterUnitTesting = (ProfessionalValue)cbxMasterUnitTesting.SelectedItem;
             developerProfessionalContributionEntity.MasterClientFramework = (ProfessionalValue)cbxMasterClientFramework.SelectedItem;
             developerProfessionalContributionEntity.MasterSofwareDevelopmentFramework = (ProfessionalValue)cbxMasterSofwareDevelopmentFramework.SelectedItem;
-            developerProfessionalContributionEntity.IntructorAtCompany = (bool)lstSoftwareDevelopment.SelectedItem;
+            developerProfessionalContributionEntity.IntructorAtCompany =  Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(0));
+          
             developerProfessionalContributionEntity.SharingAtWorkshop = (bool)lstSoftwareDevelopment.SelectedItem;
             developerProfessionalContributionEntity.DevelopTrainningCourse = (bool)lstSoftwareDevelopment.SelectedItem;
             developerProfessionalContributionEntity.SubmissionImprovementProposal = (bool)lstSoftwareDevelopment.SelectedItem;
@@ -508,31 +531,7 @@ namespace MyKPI.JobKpiAssessment.GUI
             var jobKpiEntity = new JobKpiEntity();
             jobKpiEntity.ID = jobKpiAssessmentID;
             developerProfessionalContributionEntity.JobKpiAssessment = jobKpiEntity;
-            try
-
-            {
-
-                lstSoftwareDevelopment.Items.Add(lstSoftwareDevelopment.SelectedItem);
-
-                lstSoftwareDevelopment.Items.Remove(lstSoftwareDevelopment.SelectedItem);
-
-            }
-
-            catch (ArgumentNullException nex)
-
-            {
-
-                MessageBox.Show("Ban chua chon");
-
-            }
-
-            catch (Exception ex)
-
-            {
-
-                MessageBox.Show(ex.Message);
-
-            }
+            
             
         }
 
@@ -553,8 +552,12 @@ namespace MyKPI.JobKpiAssessment.GUI
         {
             this.Close();
         }
+
         #endregion
 
-       
+        private void tclAssessmentInDetails_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            load();
+        }
     }
 }

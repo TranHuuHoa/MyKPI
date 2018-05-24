@@ -7,6 +7,7 @@ truncate table tblEmployee;
 truncate table tblProject;
 truncate table tblJobKpiAssessment;
 truncate table tblDeveloperProjectContribution;
+truncate table tblDeveloperProfessionalContribution;
 SET FOREIGN_KEY_CHECKS = 1;
 
 /*init data for employee*/
@@ -35,7 +36,7 @@ insert into tblEmployee (EmployeeNumber,EmployeeFirstName,EmployeeLastName, Addr
 values ('001008','Nguyen', 'Hien Thanh','Hanoi','0125456789',"1998-05-03",0,1,1,1,1);
 
 insert into tblEmployee (EmployeeNumber,EmployeeFirstName,EmployeeLastName, Address, IDCard, DOB, Sex, JobRankType, JobRankLevel, SalaryLevel, SalarySubLevel)
-values ('001001','Dang', 'Hoang Trung','Hanoi','0123434389',"1998-05-03",0,1,1,1,1);
+values ('001001','Dang', 'g Trung','Hanoi','0123434389',"1998-05-03",0,1,1,1,1);
 
 insert into tblEmployee (EmployeeNumber,EmployeeFirstName,EmployeeLastName, Address, IDCard, DOB, Sex, JobRankType, JobRankLevel, SalaryLevel, SalarySubLevel)
 values ('001001','Trinh', 'Hoang Trung','Hanoi','01244456749',"1998-05-03",0,1,1,1,1);
@@ -67,7 +68,7 @@ values (1,3,"2018-03-03", "2018-06-28",2,0);
 insert into tblTask (TaskCode,TaskName,Description,Assignee,Reporter,Status,Priority,TaskType,ProjectID) 
 values ("KMF-1","Design software architecture","Design software architecture",1,2,0,0,0,1); 
 
-/*init data for JobKpiAssessment */
+/*init data for JobKpiAssessmentn */
 insert into tblJobKpiAssessment (EmployeeID,CreatedDate,RoleInAssessment, Status)
 values (1,"2018-05-03",1,1);
 
@@ -89,19 +90,16 @@ values (2,2,2,1,2,2,1);
 
 insert into tblDeveloperProjectContribution (ProjectSeq, ProjectID, TeamRole, ImplementDesign, ImplementCode, ImplementUnitTest, JobKpiAssessmentID)
 values (3,3,2,1,2,3,1);
-
-select k.*,  concat_ws(' ',e.EmployeeFirstName,e.EmployeeLastName) as EmployeeName, e.EmployeeNumber 
-                            from  tbljobkpiassessment k, tblemployee e where k.EmployeeID = e.ID;
-
                             
 /*init data for DeveloperProfessionalContribution */                            
-insert into tblDeveloperProfessionalContribution (MasterProgrammingLanguages,MasterUnitTesting,MasterClientFramework, MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTrainningCourse,SubmissionImprovementProposal,ActivitesInComunity,DevelopsSubordinates,JobKpiAssessment)
-values (1,1,1,1,1,1,1,1,1,1,1);
-insert into tblDeveloperProfessionalContribution (MasterProgrammingLanguages,MasterUnitTesting,MasterClientFramework, MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTrainningCourse,SubmissionImprovementProposal,ActivitesInComunity,DevelopsSubordinates,JobKpiAssessment)
-values (2,2,2,2,2,2,2,2,2,2,2);
-insert into tblDeveloperProfessionalContribution (MasterProgrammingLanguages,MasterUnitTesting,MasterClientFramework, MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTrainningCourse,SubmissionImprovementProposal,ActivitesInComunity,DevelopsSubordinates,JobKpiAssessment)
-values (3,3,3,3,3,3,3,3,3,3,3);
-
-
-select k.*,  concat_ws(' ',e.EmployeeFirstName,e.EmployeeLastName) as EmployeeName, e.EmployeeNumber 
-                            from  tbljobkpiassessment k, tblemployee e where k.EmployeeID = e.ID;
+insert into tblDeveloperProfessionalContribution (MasterProgrammingLanguages,MasterUnitTesting,MasterClientFramework, 
+MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTrainningCourse,SubmissionImprovementProposal,
+ActivitesInComunity,DevelopsSubordinates,JobKpiAssessmentID) values (1,1,1,1,1,1,1,1,1,1,1);
+insert into tblDeveloperProfessionalContribution (MasterProgrammingLanguages,MasterUnitTesting,MasterClientFramework,
+MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTrainningCourse,SubmissionImprovementProposal,
+ActivitesInComunity,DevelopsSubordinates,JobKpiAssessmentID)
+values (2,2,2,2,0,0,0,0,0,0,2);
+insert into tblDeveloperProfessionalContribution (MasterProgrammingLanguages,MasterUnitTesting,MasterClientFramework,
+MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTrainningCourse,SubmissionImprovementProposal,
+ActivitesInComunity,DevelopsSubordinates,JobKpiAssessmentID)
+values (3,3,3,3,0,0,0,0,0,0,3);

@@ -36,7 +36,7 @@ namespace MyKPI.DeveloperProfessionalContribution.BLL
             developerProfessionalContributionDAL.Delete(ID);
         }
 
-        public DeveloperProfessionalContributionEntity LoadAll(int JobKpiAssessmentID)
+        public DeveloperProfessionalContributionEntity LoadPerJobKpiAssessmentID(int JobKpiAssessmentID)
         {
             DataTable dataTable = developerProfessionalContributionDAL.Load(JobKpiAssessmentID);
             if (dataTable.Rows.Count == 0) return null;
@@ -47,7 +47,7 @@ namespace MyKPI.DeveloperProfessionalContribution.BLL
             developerProfessionalContributionEntity.MasterUnitTesting = (ProfessionalValue)dataTable.Rows[0].ItemArray[2];
             developerProfessionalContributionEntity.MasterClientFramework = (ProfessionalValue)dataTable.Rows[0].ItemArray[3];
             developerProfessionalContributionEntity.MasterSofwareDevelopmentFramework = (ProfessionalValue)dataTable.Rows[0].ItemArray[4];
-            developerProfessionalContributionEntity.IntructorAtCompany = (bool)dataTable.Rows[0].ItemArray[5];
+            developerProfessionalContributionEntity.IntructorAtCompany =    (bool)dataTable.Rows[0].ItemArray[5];
             developerProfessionalContributionEntity.SharingAtWorkshop = (bool)dataTable.Rows[0].ItemArray[6];
             developerProfessionalContributionEntity.DevelopTrainningCourse = (bool)dataTable.Rows[0].ItemArray[7];
             developerProfessionalContributionEntity.SubmissionImprovementProposal = (bool)dataTable.Rows[0].ItemArray[8];

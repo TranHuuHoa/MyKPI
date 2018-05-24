@@ -103,7 +103,7 @@ namespace MyKPI.DeveloperProfessionalContribution.DAL
         #region Load
         public DataTable Load(int JobKpiAssessmentID)
         {
-            string str = string.Format(@"SELECT * FROM mykpi.tbldeveloperprojectcontribution where JobKpiAssessmentID = {0}",
+            string str = string.Format(@"SELECT * FROM mykpi.tbldeveloperprofessionalcontribution where JobKpiAssessmentID = {0}",
                                         JobKpiAssessmentID                            
                                         );
             return DBManager.InstantDBManger.GetData(str);
