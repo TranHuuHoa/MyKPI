@@ -100,8 +100,8 @@
             this.label28 = new System.Windows.Forms.Label();
             this.cbxTeamRole3 = new System.Windows.Forms.ComboBox();
             this.tpgProfessionalContribution = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancelProfessional = new System.Windows.Forms.Button();
+            this.btnConfirmProfessional = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grbBusinessDomains = new System.Windows.Forms.GroupBox();
             this.chkDevelopsSubordinates = new System.Windows.Forms.CheckBox();
@@ -117,30 +117,32 @@
             this.cbxMasterProgrammingLanguages = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tpgPersonalSkills = new System.Windows.Forms.TabPage();
+            this.btnCancelPersonalSkills = new System.Windows.Forms.Button();
+            this.btnConfirmPersonalSkills = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.btnDetailedDesign = new System.Windows.Forms.ComboBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.cbxApplication = new System.Windows.Forms.ComboBox();
+            this.cbxExternalDesign = new System.Windows.Forms.ComboBox();
             this.label44 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.cbxObjectOriented = new System.Windows.Forms.ComboBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbxUml = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbxArchitecturalPattern = new System.Windows.Forms.ComboBox();
+            this.cbxDesignPattern = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxStructuredDesign = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxObjectOrientedDesign = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label38 = new System.Windows.Forms.Label();
             this.cbxLeadership = new System.Windows.Forms.ComboBox();
@@ -152,8 +154,6 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.cbxTimeManagement = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.gbxGeneralInformation.SuspendLayout();
             this.gbxAssessmentinDetails.SuspendLayout();
             this.tclAssessmentInDetails.SuspendLayout();
@@ -343,7 +343,7 @@
             this.tpgProjectsContribution.Margin = new System.Windows.Forms.Padding(2);
             this.tpgProjectsContribution.Name = "tpgProjectsContribution";
             this.tpgProjectsContribution.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgProjectsContribution.Size = new System.Drawing.Size(1088, 381);
+            this.tpgProjectsContribution.Size = new System.Drawing.Size(1088, 428);
             this.tpgProjectsContribution.TabIndex = 0;
             this.tpgProjectsContribution.Text = "Projects\' contributions";
             this.tpgProjectsContribution.UseVisualStyleBackColor = true;
@@ -959,8 +959,8 @@
             // 
             // tpgProfessionalContribution
             // 
-            this.tpgProfessionalContribution.Controls.Add(this.button1);
-            this.tpgProfessionalContribution.Controls.Add(this.button2);
+            this.tpgProfessionalContribution.Controls.Add(this.btnCancelProfessional);
+            this.tpgProfessionalContribution.Controls.Add(this.btnConfirmProfessional);
             this.tpgProfessionalContribution.Controls.Add(this.groupBox1);
             this.tpgProfessionalContribution.Location = new System.Drawing.Point(4, 22);
             this.tpgProfessionalContribution.Margin = new System.Windows.Forms.Padding(2);
@@ -971,27 +971,29 @@
             this.tpgProfessionalContribution.Text = "Professional contribution";
             this.tpgProfessionalContribution.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCancelProfessional
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Location = new System.Drawing.Point(640, 386);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 23);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "CANCEL";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancelProfessional.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCancelProfessional.Location = new System.Drawing.Point(640, 386);
+            this.btnCancelProfessional.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelProfessional.Name = "btnCancelProfessional";
+            this.btnCancelProfessional.Size = new System.Drawing.Size(127, 23);
+            this.btnCancelProfessional.TabIndex = 65;
+            this.btnCancelProfessional.Text = "CANCEL";
+            this.btnCancelProfessional.UseVisualStyleBackColor = true;
+            this.btnCancelProfessional.Click += new System.EventHandler(this.btnCancelProfessional_Click);
             // 
-            // button2
+            // btnConfirmProfessional
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Location = new System.Drawing.Point(310, 386);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(311, 23);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "CONFIRM";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnConfirmProfessional.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConfirmProfessional.Location = new System.Drawing.Point(310, 386);
+            this.btnConfirmProfessional.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirmProfessional.Name = "btnConfirmProfessional";
+            this.btnConfirmProfessional.Size = new System.Drawing.Size(311, 23);
+            this.btnConfirmProfessional.TabIndex = 64;
+            this.btnConfirmProfessional.Text = "CONFIRM";
+            this.btnConfirmProfessional.UseVisualStyleBackColor = true;
+            this.btnConfirmProfessional.Click += new System.EventHandler(this.btnConfirmProfessional_Click_1);
             // 
             // groupBox1
             // 
@@ -1161,8 +1163,8 @@
             // 
             // tpgPersonalSkills
             // 
-            this.tpgPersonalSkills.Controls.Add(this.button3);
-            this.tpgPersonalSkills.Controls.Add(this.button4);
+            this.tpgPersonalSkills.Controls.Add(this.btnCancelPersonalSkills);
+            this.tpgPersonalSkills.Controls.Add(this.btnConfirmPersonalSkills);
             this.tpgPersonalSkills.Controls.Add(this.groupBox6);
             this.tpgPersonalSkills.Controls.Add(this.groupBox5);
             this.tpgPersonalSkills.Location = new System.Drawing.Point(4, 22);
@@ -1173,6 +1175,30 @@
             this.tpgPersonalSkills.TabIndex = 2;
             this.tpgPersonalSkills.Text = "Personal skills";
             this.tpgPersonalSkills.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelPersonalSkills
+            // 
+            this.btnCancelPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCancelPersonalSkills.Location = new System.Drawing.Point(640, 385);
+            this.btnCancelPersonalSkills.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelPersonalSkills.Name = "btnCancelPersonalSkills";
+            this.btnCancelPersonalSkills.Size = new System.Drawing.Size(127, 23);
+            this.btnCancelPersonalSkills.TabIndex = 67;
+            this.btnCancelPersonalSkills.Text = "CANCEL";
+            this.btnCancelPersonalSkills.UseVisualStyleBackColor = true;
+            this.btnCancelPersonalSkills.Click += new System.EventHandler(this.btnCancelPersonalSkills_Click);
+            // 
+            // btnConfirmPersonalSkills
+            // 
+            this.btnConfirmPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConfirmPersonalSkills.Location = new System.Drawing.Point(310, 385);
+            this.btnConfirmPersonalSkills.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirmPersonalSkills.Name = "btnConfirmPersonalSkills";
+            this.btnConfirmPersonalSkills.Size = new System.Drawing.Size(311, 23);
+            this.btnConfirmPersonalSkills.TabIndex = 66;
+            this.btnConfirmPersonalSkills.Text = "CONFIRM";
+            this.btnConfirmPersonalSkills.UseVisualStyleBackColor = true;
+            this.btnConfirmPersonalSkills.Click += new System.EventHandler(this.btnConfirmPersonalSkills_Click);
             // 
             // groupBox6
             // 
@@ -1191,7 +1217,7 @@
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.label46);
-            this.groupBox11.Controls.Add(this.comboBox14);
+            this.groupBox11.Controls.Add(this.btnDetailedDesign);
             this.groupBox11.Location = new System.Drawing.Point(19, 308);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(652, 60);
@@ -1210,21 +1236,21 @@
             this.label46.TabIndex = 48;
             this.label46.Text = "Detailed Design";
             // 
-            // comboBox14
+            // btnDetailedDesign
             // 
-            this.comboBox14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(139, 27);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(98, 21);
-            this.comboBox14.TabIndex = 47;
+            this.btnDetailedDesign.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDetailedDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.btnDetailedDesign.FormattingEnabled = true;
+            this.btnDetailedDesign.Location = new System.Drawing.Point(139, 27);
+            this.btnDetailedDesign.Name = "btnDetailedDesign";
+            this.btnDetailedDesign.Size = new System.Drawing.Size(98, 21);
+            this.btnDetailedDesign.TabIndex = 47;
             // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.label45);
-            this.groupBox10.Controls.Add(this.comboBox13);
-            this.groupBox10.Controls.Add(this.comboBox12);
+            this.groupBox10.Controls.Add(this.cbxApplication);
+            this.groupBox10.Controls.Add(this.cbxExternalDesign);
             this.groupBox10.Controls.Add(this.label44);
             this.groupBox10.Location = new System.Drawing.Point(19, 227);
             this.groupBox10.Name = "groupBox10";
@@ -1244,25 +1270,25 @@
             this.label45.TabIndex = 48;
             this.label45.Text = "External Design/High \r\nLevel Design\r\n(in Japanese process)";
             // 
-            // comboBox13
+            // cbxApplication
             // 
-            this.comboBox13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(144, 27);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(98, 21);
-            this.comboBox13.TabIndex = 47;
+            this.cbxApplication.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxApplication.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxApplication.FormattingEnabled = true;
+            this.cbxApplication.Location = new System.Drawing.Point(158, 32);
+            this.cbxApplication.Name = "cbxApplication";
+            this.cbxApplication.Size = new System.Drawing.Size(98, 21);
+            this.cbxApplication.TabIndex = 47;
             // 
-            // comboBox12
+            // cbxExternalDesign
             // 
-            this.comboBox12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(436, 27);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(98, 21);
-            this.comboBox12.TabIndex = 47;
+            this.cbxExternalDesign.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxExternalDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxExternalDesign.FormattingEnabled = true;
+            this.cbxExternalDesign.Location = new System.Drawing.Point(436, 27);
+            this.cbxExternalDesign.Name = "cbxExternalDesign";
+            this.cbxExternalDesign.Size = new System.Drawing.Size(98, 21);
+            this.cbxExternalDesign.TabIndex = 47;
             // 
             // label44
             // 
@@ -1278,9 +1304,9 @@
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.label42);
-            this.groupBox9.Controls.Add(this.comboBox11);
+            this.groupBox9.Controls.Add(this.cbxObjectOriented);
             this.groupBox9.Controls.Add(this.label40);
-            this.groupBox9.Controls.Add(this.comboBox5);
+            this.groupBox9.Controls.Add(this.cbxUml);
             this.groupBox9.Location = new System.Drawing.Point(19, 148);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(655, 73);
@@ -1299,15 +1325,15 @@
             this.label42.TabIndex = 48;
             this.label42.Text = "UML";
             // 
-            // comboBox11
+            // cbxObjectOriented
             // 
-            this.comboBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(143, 29);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(98, 21);
-            this.comboBox11.TabIndex = 47;
+            this.cbxObjectOriented.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxObjectOriented.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxObjectOriented.FormattingEnabled = true;
+            this.cbxObjectOriented.Location = new System.Drawing.Point(143, 29);
+            this.cbxObjectOriented.Name = "cbxObjectOriented";
+            this.cbxObjectOriented.Size = new System.Drawing.Size(98, 21);
+            this.cbxObjectOriented.TabIndex = 47;
             // 
             // label40
             // 
@@ -1320,21 +1346,21 @@
             this.label40.TabIndex = 48;
             this.label40.Text = "Object Oriented \r\nAnalysis and Design";
             // 
-            // comboBox5
+            // cbxUml
             // 
-            this.comboBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(436, 26);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(98, 21);
-            this.comboBox5.TabIndex = 47;
+            this.cbxUml.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxUml.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxUml.FormattingEnabled = true;
+            this.cbxUml.Location = new System.Drawing.Point(436, 26);
+            this.cbxUml.Name = "cbxUml";
+            this.cbxUml.Size = new System.Drawing.Size(98, 21);
+            this.cbxUml.TabIndex = 47;
             // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.label36);
-            this.groupBox8.Controls.Add(this.comboBox3);
-            this.groupBox8.Controls.Add(this.comboBox4);
+            this.groupBox8.Controls.Add(this.cbxArchitecturalPattern);
+            this.groupBox8.Controls.Add(this.cbxDesignPattern);
             this.groupBox8.Controls.Add(this.label35);
             this.groupBox8.Location = new System.Drawing.Point(19, 82);
             this.groupBox8.Name = "groupBox8";
@@ -1354,25 +1380,25 @@
             this.label36.TabIndex = 48;
             this.label36.Text = "Design Pattern";
             // 
-            // comboBox3
+            // cbxArchitecturalPattern
             // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(145, 30);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(98, 21);
-            this.comboBox3.TabIndex = 47;
+            this.cbxArchitecturalPattern.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxArchitecturalPattern.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxArchitecturalPattern.FormattingEnabled = true;
+            this.cbxArchitecturalPattern.Location = new System.Drawing.Point(145, 30);
+            this.cbxArchitecturalPattern.Name = "cbxArchitecturalPattern";
+            this.cbxArchitecturalPattern.Size = new System.Drawing.Size(98, 21);
+            this.cbxArchitecturalPattern.TabIndex = 47;
             // 
-            // comboBox4
+            // cbxDesignPattern
             // 
-            this.comboBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(437, 30);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(98, 21);
-            this.comboBox4.TabIndex = 47;
+            this.cbxDesignPattern.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxDesignPattern.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxDesignPattern.FormattingEnabled = true;
+            this.cbxDesignPattern.Location = new System.Drawing.Point(437, 30);
+            this.cbxDesignPattern.Name = "cbxDesignPattern";
+            this.cbxDesignPattern.Size = new System.Drawing.Size(98, 21);
+            this.cbxDesignPattern.TabIndex = 47;
             // 
             // label35
             // 
@@ -1388,9 +1414,9 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.label34);
-            this.groupBox7.Controls.Add(this.comboBox2);
+            this.groupBox7.Controls.Add(this.cbxStructuredDesign);
             this.groupBox7.Controls.Add(this.label33);
-            this.groupBox7.Controls.Add(this.comboBox1);
+            this.groupBox7.Controls.Add(this.cbxObjectOrientedDesign);
             this.groupBox7.Location = new System.Drawing.Point(19, 16);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(655, 60);
@@ -1409,15 +1435,15 @@
             this.label34.TabIndex = 48;
             this.label34.Text = "Structured Design";
             // 
-            // comboBox2
+            // cbxStructuredDesign
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(436, 31);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(98, 21);
-            this.comboBox2.TabIndex = 47;
+            this.cbxStructuredDesign.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxStructuredDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxStructuredDesign.FormattingEnabled = true;
+            this.cbxStructuredDesign.Location = new System.Drawing.Point(436, 31);
+            this.cbxStructuredDesign.Name = "cbxStructuredDesign";
+            this.cbxStructuredDesign.Size = new System.Drawing.Size(98, 21);
+            this.cbxStructuredDesign.TabIndex = 47;
             // 
             // label33
             // 
@@ -1430,15 +1456,15 @@
             this.label33.TabIndex = 48;
             this.label33.Text = "Object Oriented Design";
             // 
-            // comboBox1
+            // cbxObjectOrientedDesign
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(143, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(98, 21);
-            this.comboBox1.TabIndex = 47;
+            this.cbxObjectOrientedDesign.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxObjectOrientedDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxObjectOrientedDesign.FormattingEnabled = true;
+            this.cbxObjectOrientedDesign.Location = new System.Drawing.Point(143, 31);
+            this.cbxObjectOrientedDesign.Name = "cbxObjectOrientedDesign";
+            this.cbxObjectOrientedDesign.Size = new System.Drawing.Size(98, 21);
+            this.cbxObjectOrientedDesign.TabIndex = 47;
             // 
             // groupBox5
             // 
@@ -1563,28 +1589,6 @@
             this.cbxTimeManagement.Name = "cbxTimeManagement";
             this.cbxTimeManagement.Size = new System.Drawing.Size(224, 21);
             this.cbxTimeManagement.TabIndex = 60;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button3.Location = new System.Drawing.Point(640, 385);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 23);
-            this.button3.TabIndex = 67;
-            this.button3.Text = "CANCEL";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button4.Location = new System.Drawing.Point(310, 385);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(311, 23);
-            this.button4.TabIndex = 66;
-            this.button4.Text = "CONFIRM";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // DetailedJobKpiAssessmentForm
             // 
@@ -1725,8 +1729,8 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.ComboBox cbxCommunication;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancelProfessional;
+        private System.Windows.Forms.Button btnConfirmProfessional;
         private System.Windows.Forms.GroupBox grbBusinessDomains;
         private System.Windows.Forms.GroupBox grbSoftwareDevelopment;
         private System.Windows.Forms.GroupBox grbHighSpecialty;
@@ -1748,24 +1752,24 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.ComboBox btnDetailedDesign;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.ComboBox comboBox13;
-        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox cbxApplication;
+        private System.Windows.Forms.ComboBox cbxExternalDesign;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox cbxObjectOriented;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbxUml;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbxArchitecturalPattern;
+        private System.Windows.Forms.ComboBox cbxDesignPattern;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxStructuredDesign;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox cbxObjectOrientedDesign;
+        private System.Windows.Forms.Button btnCancelPersonalSkills;
+        private System.Windows.Forms.Button btnConfirmPersonalSkills;
     }
 }

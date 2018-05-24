@@ -43,7 +43,8 @@ namespace MyKPI.JobKpiAssessment.GUI
         private void init()
         {
             InitializeComponent();
-            InitCombobox();           
+            InitCombobox();
+            professionalContributionInitComboBox();
         }
         private void load()
         {
@@ -455,6 +456,103 @@ namespace MyKPI.JobKpiAssessment.GUI
 
 
 
+
+        #endregion
+
+        #region Professional Contribution
+        private void professionalContributionInitComboBox()
+        {
+            cbxMasterProgrammingLanguages.Items.Add(ProfessionalValue.NoKnowledge);
+            cbxMasterProgrammingLanguages.Items.Add(ProfessionalValue.Junior);
+            cbxMasterProgrammingLanguages.Items.Add(ProfessionalValue.Senior);
+            cbxMasterProgrammingLanguages.Items.Add(ProfessionalValue.Expert);
+            cbxMasterProgrammingLanguages.Items.Add(ProfessionalValue.Master);
+            cbxMasterProgrammingLanguages.SelectedIndex = 0;
+
+            cbxMasterUnitTesting.Items.Add(ProfessionalValue.NoKnowledge);
+            cbxMasterUnitTesting.Items.Add(ProfessionalValue.Junior);
+            cbxMasterUnitTesting.Items.Add(ProfessionalValue.Senior);
+            cbxMasterUnitTesting.Items.Add(ProfessionalValue.Expert);
+            cbxMasterUnitTesting.Items.Add(ProfessionalValue.Master);
+            cbxMasterUnitTesting.SelectedIndex = 0;
+
+            cbxMasterClientFramework.Items.Add(ProfessionalValue.NoKnowledge);
+            cbxMasterClientFramework.Items.Add(ProfessionalValue.Junior);
+            cbxMasterClientFramework.Items.Add(ProfessionalValue.Senior);
+            cbxMasterClientFramework.Items.Add(ProfessionalValue.Expert);
+            cbxMasterClientFramework.Items.Add(ProfessionalValue.Master);
+            cbxMasterClientFramework.SelectedIndex = 0;
+
+            cbxMasterSofwareDevelopmentFramework.Items.Add(ProfessionalValue.NoKnowledge);
+            cbxMasterSofwareDevelopmentFramework.Items.Add(ProfessionalValue.Junior);
+            cbxMasterSofwareDevelopmentFramework.Items.Add(ProfessionalValue.Senior);
+            cbxMasterSofwareDevelopmentFramework.Items.Add(ProfessionalValue.Expert);
+            cbxMasterSofwareDevelopmentFramework.Items.Add(ProfessionalValue.Master);
+            cbxMasterSofwareDevelopmentFramework.SelectedIndex = 0;
+        }
+        private void btnConfirmProfessional_Click_1(object sender, EventArgs e)
+        {
+
+            DeveloperProfessionalContributionEntity developerProfessionalContributionEntity = new DeveloperProfessionalContributionEntity();
+
+            developerProfessionalContributionEntity.MasterProgrammingLanguages = (ProfessionalValue)cbxMasterProgrammingLanguages.SelectedItem;
+            developerProfessionalContributionEntity.MasterUnitTesting = (ProfessionalValue)cbxMasterUnitTesting.SelectedItem;
+            developerProfessionalContributionEntity.MasterClientFramework = (ProfessionalValue)cbxMasterClientFramework.SelectedItem;
+            developerProfessionalContributionEntity.MasterSofwareDevelopmentFramework = (ProfessionalValue)cbxMasterSofwareDevelopmentFramework.SelectedItem;
+            developerProfessionalContributionEntity.IntructorAtCompany = (bool)lstSoftwareDevelopment.SelectedItem;
+            developerProfessionalContributionEntity.SharingAtWorkshop = (bool)lstSoftwareDevelopment.SelectedItem;
+            developerProfessionalContributionEntity.DevelopTrainningCourse = (bool)lstSoftwareDevelopment.SelectedItem;
+            developerProfessionalContributionEntity.SubmissionImprovementProposal = (bool)lstSoftwareDevelopment.SelectedItem;
+            developerProfessionalContributionEntity.ActivitesInComunity = (bool)lstSoftwareDevelopment.SelectedItem;
+            developerProfessionalContributionEntity.DevelopsSubordinates = (bool)lstSoftwareDevelopment.SelectedItem;
+            var jobKpiEntity = new JobKpiEntity();
+            jobKpiEntity.ID = jobKpiAssessmentID;
+            developerProfessionalContributionEntity.JobKpiAssessment = jobKpiEntity;
+            try
+
+            {
+
+                lstSoftwareDevelopment.Items.Add(lstSoftwareDevelopment.SelectedItem);
+
+                lstSoftwareDevelopment.Items.Remove(lstSoftwareDevelopment.SelectedItem);
+
+            }
+
+            catch (ArgumentNullException nex)
+
+            {
+
+                MessageBox.Show("Ban chua chon");
+
+            }
+
+            catch (Exception ex)
+
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+            
+        }
+
+        private void btnCancelProfessional_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #endregion
+
+        #region Persional Skill
+        private void btnConfirmPersonalSkills_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelPersonalSkills_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
 
        
