@@ -97,7 +97,7 @@ DevelopTrainningCourse int,
 SubmissionImprovementProposal int,
 ActivitesInComunity int,
 DevelopsSubordinates int,
-JobKpiAssessment int,
+JobKpiAssessmentID int,
 PRIMARY KEY (ID),
 FOREIGN KEY (JobKpiAssessmentID) REFERENCES tblJobKpiAssessment(ID) 
 );
