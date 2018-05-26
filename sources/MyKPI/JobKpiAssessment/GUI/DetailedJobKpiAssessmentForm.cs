@@ -92,7 +92,14 @@ namespace MyKPI.JobKpiAssessment.GUI
                             {
                                 var developerProfessionalContribution = (jobKpiEntity.ProfessionalContribution as DeveloperProfessionalContributionEntity);
                                 cbxMasterProgrammingLanguages.SelectedItem = developerProfessionalContribution.MasterProgrammingLanguages;
+                                cbxMasterUnitTesting.SelectedItem = developerProfessionalContribution.MasterUnitTesting;
+                                cbxMasterClientFramework.SelectedItem = developerProfessionalContribution.MasterClientFramework;
+                                cbxMasterSofwareDevelopmentFramework.SelectedItem = developerProfessionalContribution.MasterSofwareDevelopmentFramework;
                                 lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.IntructorAtCompany);
+                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.SharingAtWorkshop);
+                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.DevelopTrainningCourse);
+                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.SubmissionImprovementProposal);
+                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.ActivitesInComunity);
                                 chkDevelopsSubordinates.Checked = developerProfessionalContribution.DevelopsSubordinates;
                             }
                             break;
@@ -473,12 +480,6 @@ namespace MyKPI.JobKpiAssessment.GUI
             }
 
         }
-
-
-
-
-
-
         #endregion
 
         #region Professional Contribution
@@ -521,13 +522,12 @@ namespace MyKPI.JobKpiAssessment.GUI
             developerProfessionalContributionEntity.MasterUnitTesting = (ProfessionalValue)cbxMasterUnitTesting.SelectedItem;
             developerProfessionalContributionEntity.MasterClientFramework = (ProfessionalValue)cbxMasterClientFramework.SelectedItem;
             developerProfessionalContributionEntity.MasterSofwareDevelopmentFramework = (ProfessionalValue)cbxMasterSofwareDevelopmentFramework.SelectedItem;
-            developerProfessionalContributionEntity.IntructorAtCompany =  Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(0));
-          
-            developerProfessionalContributionEntity.SharingAtWorkshop = (bool)lstSoftwareDevelopment.SelectedItem;
-            developerProfessionalContributionEntity.DevelopTrainningCourse = (bool)lstSoftwareDevelopment.SelectedItem;
-            developerProfessionalContributionEntity.SubmissionImprovementProposal = (bool)lstSoftwareDevelopment.SelectedItem;
-            developerProfessionalContributionEntity.ActivitesInComunity = (bool)lstSoftwareDevelopment.SelectedItem;
-            developerProfessionalContributionEntity.DevelopsSubordinates = (bool)lstSoftwareDevelopment.SelectedItem;
+            developerProfessionalContributionEntity.IntructorAtCompany = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(0));
+            developerProfessionalContributionEntity.SharingAtWorkshop = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(1));
+            developerProfessionalContributionEntity.DevelopTrainningCourse = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(2));
+            developerProfessionalContributionEntity.SubmissionImprovementProposal = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(3));
+            developerProfessionalContributionEntity.ActivitesInComunity = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(4));
+            developerProfessionalContributionEntity.DevelopsSubordinates = Convert.ToBoolean(chkDevelopsSubordinates.Checked);
             var jobKpiEntity = new JobKpiEntity();
             jobKpiEntity.ID = jobKpiAssessmentID;
             developerProfessionalContributionEntity.JobKpiAssessment = jobKpiEntity;
