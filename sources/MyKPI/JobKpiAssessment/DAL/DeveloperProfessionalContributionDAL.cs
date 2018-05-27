@@ -24,8 +24,9 @@ namespace MyKPI.DeveloperProfessionalContribution.DAL
             string str = string.Empty;
             try
             {
-                str = string.Format(@"insert into tblDeveloperProfessionalContribution (MasterProgrammingLanguages,MasterUnitTesting,MasterClientFramework, MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTrainningCourse,SubmissionImprovementProposal,ActivitesInComunity,DevelopsSubordinates,JobKpiAssessment) values ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10})",
-                developerProfessionalContribution.ID,
+                str = string.Format(@"insert into tblDeveloperProfessionalContribution (MasterProgrammingLanguages,MasterUnitTesting,MasterClientFramework,
+                                    MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTrainningCourse,SubmissionImprovementProposal,ActivitesInComunity,DevelopsSubordinates,JobKpiAssessmentID)
+                                    values ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10})",
                 (int)developerProfessionalContribution.MasterProgrammingLanguages,
                 (int)developerProfessionalContribution.MasterUnitTesting,
                 (int)developerProfessionalContribution.MasterClientFramework,
@@ -74,8 +75,9 @@ namespace MyKPI.DeveloperProfessionalContribution.DAL
             string str = string.Empty;
             try
             {
-                str = string.Format(@"update tbldeveloperprojectcontribution  set MasterProgrammingLanguages = {0},MasterUnitTesting= {1},MasterClientFramework ={2},MasterSofwareDevelopmentFramework = {3},IntructorAtCompany ={4},SharingAtWorkshop ={5},DevelopTrainningCourse ={6},SubmissionImprovementProposal ={7},ActivitesInComunity ={8},DevelopsSubordinates ={9},JobKpiAssessment ={10},, where ID = {11}",
-                developerProfessionalContribution.ID,
+                str = string.Format(@"update tblDeveloperProfessionalContribution  set MasterProgrammingLanguages = {0},MasterUnitTesting= {1},MasterClientFramework ={2},
+                                MasterSofwareDevelopmentFramework = {3},IntructorAtCompany ={4},SharingAtWorkshop ={5},DevelopTrainningCourse ={6},SubmissionImprovementProposal ={7},
+                                ActivitesInComunity ={8},DevelopsSubordinates ={9},JobKpiAssessmentID ={10} where ID = {11}",
                 (int)developerProfessionalContribution.MasterProgrammingLanguages,
                 (int)developerProfessionalContribution.MasterUnitTesting,
                 (int)developerProfessionalContribution.MasterClientFramework,

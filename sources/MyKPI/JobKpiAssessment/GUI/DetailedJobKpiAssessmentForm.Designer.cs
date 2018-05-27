@@ -102,7 +102,7 @@
             this.tpgProfessionalContribution = new System.Windows.Forms.TabPage();
             this.btnCancelProfessional = new System.Windows.Forms.Button();
             this.btnConfirmProfessional = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grbProfessionalContribution = new System.Windows.Forms.GroupBox();
             this.grbBusinessDomains = new System.Windows.Forms.GroupBox();
             this.chkDevelopsSubordinates = new System.Windows.Forms.CheckBox();
             this.grbSoftwareDevelopment = new System.Windows.Forms.GroupBox();
@@ -118,7 +118,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.tpgPersonalSkills = new System.Windows.Forms.TabPage();
             this.btnCancelPersonalSkills = new System.Windows.Forms.Button();
-            this.btnConfirmPersonalSkills = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -154,6 +153,7 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.cbxTimeManagement = new System.Windows.Forms.ComboBox();
+            this.btnConfirmPersonalSkills = new System.Windows.Forms.Button();
             this.gbxGeneralInformation.SuspendLayout();
             this.gbxAssessmentinDetails.SuspendLayout();
             this.tclAssessmentInDetails.SuspendLayout();
@@ -166,7 +166,7 @@
             this.tpgProject3.SuspendLayout();
             this.grbProject3.SuspendLayout();
             this.tpgProfessionalContribution.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grbProfessionalContribution.SuspendLayout();
             this.grbBusinessDomains.SuspendLayout();
             this.grbSoftwareDevelopment.SuspendLayout();
             this.grbHighSpecialty.SuspendLayout();
@@ -194,9 +194,9 @@
             this.gbxGeneralInformation.Controls.Add(this.btnConfirm);
             this.gbxGeneralInformation.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbxGeneralInformation.Location = new System.Drawing.Point(0, 0);
-            this.gbxGeneralInformation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxGeneralInformation.Margin = new System.Windows.Forms.Padding(2);
             this.gbxGeneralInformation.Name = "gbxGeneralInformation";
-            this.gbxGeneralInformation.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxGeneralInformation.Padding = new System.Windows.Forms.Padding(2);
             this.gbxGeneralInformation.Size = new System.Drawing.Size(1238, 101);
             this.gbxGeneralInformation.TabIndex = 0;
             this.gbxGeneralInformation.TabStop = false;
@@ -288,7 +288,7 @@
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCancel.Location = new System.Drawing.Point(714, 60);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(127, 23);
             this.btnCancel.TabIndex = 19;
@@ -300,7 +300,7 @@
             // 
             this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnConfirm.Location = new System.Drawing.Point(385, 60);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(311, 23);
             this.btnConfirm.TabIndex = 18;
@@ -313,9 +313,9 @@
             this.gbxAssessmentinDetails.Controls.Add(this.tclAssessmentInDetails);
             this.gbxAssessmentinDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbxAssessmentinDetails.Location = new System.Drawing.Point(0, 101);
-            this.gbxAssessmentinDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxAssessmentinDetails.Margin = new System.Windows.Forms.Padding(2);
             this.gbxAssessmentinDetails.Name = "gbxAssessmentinDetails";
-            this.gbxAssessmentinDetails.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxAssessmentinDetails.Padding = new System.Windows.Forms.Padding(2);
             this.gbxAssessmentinDetails.Size = new System.Drawing.Size(1238, 463);
             this.gbxAssessmentinDetails.TabIndex = 1;
             this.gbxAssessmentinDetails.TabStop = false;
@@ -328,7 +328,7 @@
             this.tclAssessmentInDetails.Controls.Add(this.tpgPersonalSkills);
             this.tclAssessmentInDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tclAssessmentInDetails.Location = new System.Drawing.Point(2, 15);
-            this.tclAssessmentInDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tclAssessmentInDetails.Margin = new System.Windows.Forms.Padding(2);
             this.tclAssessmentInDetails.Name = "tclAssessmentInDetails";
             this.tclAssessmentInDetails.SelectedIndex = 0;
             this.tclAssessmentInDetails.Size = new System.Drawing.Size(1234, 446);
@@ -341,9 +341,9 @@
             this.tpgProjectsContribution.Controls.Add(this.btnConfirmProject);
             this.tpgProjectsContribution.Controls.Add(this.tclProject);
             this.tpgProjectsContribution.Location = new System.Drawing.Point(4, 22);
-            this.tpgProjectsContribution.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgProjectsContribution.Margin = new System.Windows.Forms.Padding(2);
             this.tpgProjectsContribution.Name = "tpgProjectsContribution";
-            this.tpgProjectsContribution.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tpgProjectsContribution.Padding = new System.Windows.Forms.Padding(1);
             this.tpgProjectsContribution.Size = new System.Drawing.Size(1226, 420);
             this.tpgProjectsContribution.TabIndex = 0;
             this.tpgProjectsContribution.Text = "Projects\' contributions";
@@ -353,7 +353,7 @@
             // 
             this.btnProjectCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnProjectCancel.Location = new System.Drawing.Point(582, 340);
-            this.btnProjectCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProjectCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnProjectCancel.Name = "btnProjectCancel";
             this.btnProjectCancel.Size = new System.Drawing.Size(127, 23);
             this.btnProjectCancel.TabIndex = 17;
@@ -365,7 +365,7 @@
             // 
             this.btnConfirmProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnConfirmProject.Location = new System.Drawing.Point(252, 340);
-            this.btnConfirmProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmProject.Name = "btnConfirmProject";
             this.btnConfirmProject.Size = new System.Drawing.Size(311, 23);
             this.btnConfirmProject.TabIndex = 16;
@@ -382,7 +382,7 @@
             this.tclProject.Controls.Add(this.tpgProject2);
             this.tclProject.Controls.Add(this.tpgProject3);
             this.tclProject.Location = new System.Drawing.Point(0, 4);
-            this.tclProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tclProject.Margin = new System.Windows.Forms.Padding(2);
             this.tclProject.Name = "tclProject";
             this.tclProject.SelectedIndex = 0;
             this.tclProject.Size = new System.Drawing.Size(1226, 334);
@@ -393,9 +393,9 @@
             // 
             this.tpgProject1.Controls.Add(this.grbProject1);
             this.tpgProject1.Location = new System.Drawing.Point(4, 22);
-            this.tpgProject1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgProject1.Margin = new System.Windows.Forms.Padding(2);
             this.tpgProject1.Name = "tpgProject1";
-            this.tpgProject1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgProject1.Padding = new System.Windows.Forms.Padding(2);
             this.tpgProject1.Size = new System.Drawing.Size(1218, 308);
             this.tpgProject1.TabIndex = 0;
             this.tpgProject1.Text = "Project 1";
@@ -422,9 +422,9 @@
             this.grbProject1.Controls.Add(this.label8);
             this.grbProject1.Controls.Add(this.cbxTeamRole1);
             this.grbProject1.Location = new System.Drawing.Point(2, 2);
-            this.grbProject1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbProject1.Margin = new System.Windows.Forms.Padding(2);
             this.grbProject1.Name = "grbProject1";
-            this.grbProject1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbProject1.Padding = new System.Windows.Forms.Padding(2);
             this.grbProject1.Size = new System.Drawing.Size(1216, 222);
             this.grbProject1.TabIndex = 47;
             this.grbProject1.TabStop = false;
@@ -583,9 +583,9 @@
             // 
             this.tpgProject2.Controls.Add(this.grbProject2);
             this.tpgProject2.Location = new System.Drawing.Point(4, 22);
-            this.tpgProject2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgProject2.Margin = new System.Windows.Forms.Padding(2);
             this.tpgProject2.Name = "tpgProject2";
-            this.tpgProject2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgProject2.Padding = new System.Windows.Forms.Padding(2);
             this.tpgProject2.Size = new System.Drawing.Size(1218, 308);
             this.tpgProject2.TabIndex = 1;
             this.tpgProject2.Text = "Project 2";
@@ -612,9 +612,9 @@
             this.grbProject2.Controls.Add(this.label20);
             this.grbProject2.Controls.Add(this.cbxTeamRole2);
             this.grbProject2.Location = new System.Drawing.Point(2, 2);
-            this.grbProject2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbProject2.Margin = new System.Windows.Forms.Padding(2);
             this.grbProject2.Name = "grbProject2";
-            this.grbProject2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbProject2.Padding = new System.Windows.Forms.Padding(2);
             this.grbProject2.Size = new System.Drawing.Size(1215, 197);
             this.grbProject2.TabIndex = 63;
             this.grbProject2.TabStop = false;
@@ -773,10 +773,10 @@
             // 
             this.tpgProject3.Controls.Add(this.grbProject3);
             this.tpgProject3.Location = new System.Drawing.Point(4, 22);
-            this.tpgProject3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgProject3.Margin = new System.Windows.Forms.Padding(2);
             this.tpgProject3.Name = "tpgProject3";
-            this.tpgProject3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tpgProject3.Size = new System.Drawing.Size(1080, 317);
+            this.tpgProject3.Padding = new System.Windows.Forms.Padding(2);
+            this.tpgProject3.Size = new System.Drawing.Size(1218, 308);
             this.tpgProject3.TabIndex = 2;
             this.tpgProject3.Text = "Project 3";
             this.tpgProject3.UseVisualStyleBackColor = true;
@@ -801,10 +801,10 @@
             this.grbProject3.Controls.Add(this.cbxTeamRole3);
             this.grbProject3.Dock = System.Windows.Forms.DockStyle.Top;
             this.grbProject3.Location = new System.Drawing.Point(2, 2);
-            this.grbProject3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbProject3.Margin = new System.Windows.Forms.Padding(2);
             this.grbProject3.Name = "grbProject3";
-            this.grbProject3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grbProject3.Size = new System.Drawing.Size(1076, 200);
+            this.grbProject3.Padding = new System.Windows.Forms.Padding(2);
+            this.grbProject3.Size = new System.Drawing.Size(1214, 200);
             this.grbProject3.TabIndex = 79;
             this.grbProject3.TabStop = false;
             // 
@@ -962,11 +962,11 @@
             // 
             this.tpgProfessionalContribution.Controls.Add(this.btnCancelProfessional);
             this.tpgProfessionalContribution.Controls.Add(this.btnConfirmProfessional);
-            this.tpgProfessionalContribution.Controls.Add(this.groupBox1);
+            this.tpgProfessionalContribution.Controls.Add(this.grbProfessionalContribution);
             this.tpgProfessionalContribution.Location = new System.Drawing.Point(4, 22);
-            this.tpgProfessionalContribution.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgProfessionalContribution.Margin = new System.Windows.Forms.Padding(2);
             this.tpgProfessionalContribution.Name = "tpgProfessionalContribution";
-            this.tpgProfessionalContribution.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgProfessionalContribution.Padding = new System.Windows.Forms.Padding(2);
             this.tpgProfessionalContribution.Size = new System.Drawing.Size(1226, 420);
             this.tpgProfessionalContribution.TabIndex = 1;
             this.tpgProfessionalContribution.Text = "Professional contribution";
@@ -976,7 +976,7 @@
             // 
             this.btnCancelProfessional.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCancelProfessional.Location = new System.Drawing.Point(708, 364);
-            this.btnCancelProfessional.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCancelProfessional.Margin = new System.Windows.Forms.Padding(1);
             this.btnCancelProfessional.Name = "btnCancelProfessional";
             this.btnCancelProfessional.Size = new System.Drawing.Size(127, 31);
             this.btnCancelProfessional.TabIndex = 65;
@@ -988,7 +988,7 @@
             // 
             this.btnConfirmProfessional.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnConfirmProfessional.Location = new System.Drawing.Point(379, 364);
-            this.btnConfirmProfessional.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnConfirmProfessional.Margin = new System.Windows.Forms.Padding(1);
             this.btnConfirmProfessional.Name = "btnConfirmProfessional";
             this.btnConfirmProfessional.Size = new System.Drawing.Size(311, 31);
             this.btnConfirmProfessional.TabIndex = 64;
@@ -996,20 +996,20 @@
             this.btnConfirmProfessional.UseVisualStyleBackColor = true;
             this.btnConfirmProfessional.Click += new System.EventHandler(this.btnConfirmProfessional_Click);
             // 
-            // groupBox1
+            // grbProfessionalContribution
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grbProfessionalContribution.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.grbBusinessDomains);
-            this.groupBox1.Controls.Add(this.grbSoftwareDevelopment);
-            this.groupBox1.Controls.Add(this.grbHighSpecialty);
-            this.groupBox1.Location = new System.Drawing.Point(2, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1211, 269);
-            this.groupBox1.TabIndex = 63;
-            this.groupBox1.TabStop = false;
+            this.grbProfessionalContribution.Controls.Add(this.grbBusinessDomains);
+            this.grbProfessionalContribution.Controls.Add(this.grbSoftwareDevelopment);
+            this.grbProfessionalContribution.Controls.Add(this.grbHighSpecialty);
+            this.grbProfessionalContribution.Location = new System.Drawing.Point(2, 2);
+            this.grbProfessionalContribution.Margin = new System.Windows.Forms.Padding(2);
+            this.grbProfessionalContribution.Name = "grbProfessionalContribution";
+            this.grbProfessionalContribution.Padding = new System.Windows.Forms.Padding(2);
+            this.grbProfessionalContribution.Size = new System.Drawing.Size(1211, 269);
+            this.grbProfessionalContribution.TabIndex = 63;
+            this.grbProfessionalContribution.TabStop = false;
             // 
             // grbBusinessDomains
             // 
@@ -1018,7 +1018,7 @@
             this.grbBusinessDomains.Controls.Add(this.chkDevelopsSubordinates);
             this.grbBusinessDomains.Location = new System.Drawing.Point(2, 187);
             this.grbBusinessDomains.Name = "grbBusinessDomains";
-            this.grbBusinessDomains.Size = new System.Drawing.Size(1223, 80);
+            this.grbBusinessDomains.Size = new System.Drawing.Size(1223, 55);
             this.grbBusinessDomains.TabIndex = 2;
             this.grbBusinessDomains.TabStop = false;
             this.grbBusinessDomains.Text = "Business Domains";
@@ -1087,9 +1087,9 @@
             this.cbxMasterSofwareDevelopmentFramework.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxMasterSofwareDevelopmentFramework.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMasterSofwareDevelopmentFramework.FormattingEnabled = true;
-            this.cbxMasterSofwareDevelopmentFramework.Location = new System.Drawing.Point(1020, 24);
+            this.cbxMasterSofwareDevelopmentFramework.Location = new System.Drawing.Point(1049, 24);
             this.cbxMasterSofwareDevelopmentFramework.Name = "cbxMasterSofwareDevelopmentFramework";
-            this.cbxMasterSofwareDevelopmentFramework.Size = new System.Drawing.Size(77, 21);
+            this.cbxMasterSofwareDevelopmentFramework.Size = new System.Drawing.Size(123, 21);
             this.cbxMasterSofwareDevelopmentFramework.TabIndex = 33;
             // 
             // cbxMasterClientFramework
@@ -1099,14 +1099,14 @@
             this.cbxMasterClientFramework.FormattingEnabled = true;
             this.cbxMasterClientFramework.Location = new System.Drawing.Point(697, 23);
             this.cbxMasterClientFramework.Name = "cbxMasterClientFramework";
-            this.cbxMasterClientFramework.Size = new System.Drawing.Size(77, 21);
+            this.cbxMasterClientFramework.Size = new System.Drawing.Size(116, 21);
             this.cbxMasterClientFramework.TabIndex = 33;
             // 
             // label32
             // 
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(819, 29);
+            this.label32.Location = new System.Drawing.Point(841, 27);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(202, 13);
             this.label32.TabIndex = 0;
@@ -1127,16 +1127,16 @@
             this.cbxMasterUnitTesting.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxMasterUnitTesting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMasterUnitTesting.FormattingEnabled = true;
-            this.cbxMasterUnitTesting.Location = new System.Drawing.Point(448, 23);
+            this.cbxMasterUnitTesting.Location = new System.Drawing.Point(431, 23);
             this.cbxMasterUnitTesting.Name = "cbxMasterUnitTesting";
-            this.cbxMasterUnitTesting.Size = new System.Drawing.Size(77, 21);
+            this.cbxMasterUnitTesting.Size = new System.Drawing.Size(111, 21);
             this.cbxMasterUnitTesting.TabIndex = 33;
             // 
             // label30
             // 
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(349, 26);
+            this.label30.Location = new System.Drawing.Point(326, 27);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(99, 13);
             this.label30.TabIndex = 0;
@@ -1169,9 +1169,9 @@
             this.tpgPersonalSkills.Controls.Add(this.groupBox5);
             this.tpgPersonalSkills.Controls.Add(this.btnConfirmPersonalSkills);
             this.tpgPersonalSkills.Location = new System.Drawing.Point(4, 22);
-            this.tpgPersonalSkills.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgPersonalSkills.Margin = new System.Windows.Forms.Padding(2);
             this.tpgPersonalSkills.Name = "tpgPersonalSkills";
-            this.tpgPersonalSkills.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgPersonalSkills.Padding = new System.Windows.Forms.Padding(2);
             this.tpgPersonalSkills.Size = new System.Drawing.Size(1226, 420);
             this.tpgPersonalSkills.TabIndex = 2;
             this.tpgPersonalSkills.Text = "Personal skills";
@@ -1181,25 +1181,13 @@
             // 
             this.btnCancelPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCancelPersonalSkills.Location = new System.Drawing.Point(629, 384);
-            this.btnCancelPersonalSkills.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCancelPersonalSkills.Margin = new System.Windows.Forms.Padding(1);
             this.btnCancelPersonalSkills.Name = "btnCancelPersonalSkills";
             this.btnCancelPersonalSkills.Size = new System.Drawing.Size(85, 32);
             this.btnCancelPersonalSkills.TabIndex = 67;
             this.btnCancelPersonalSkills.Text = "CANCEL";
             this.btnCancelPersonalSkills.UseVisualStyleBackColor = true;
             this.btnCancelPersonalSkills.Click += new System.EventHandler(this.btnCancelPersonalSkills_Click);
-            // 
-            // btnConfirmPersonalSkills
-            // 
-            this.btnConfirmPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnConfirmPersonalSkills.Location = new System.Drawing.Point(409, 384);
-            this.btnConfirmPersonalSkills.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.btnConfirmPersonalSkills.Name = "btnConfirmPersonalSkills";
-            this.btnConfirmPersonalSkills.Size = new System.Drawing.Size(207, 32);
-            this.btnConfirmPersonalSkills.TabIndex = 66;
-            this.btnConfirmPersonalSkills.Text = "CONFIRM";
-            this.btnConfirmPersonalSkills.UseVisualStyleBackColor = true;
-            this.btnConfirmPersonalSkills.Click += new System.EventHandler(this.btnConfirmPersonalSkills_Click);
             // 
             // groupBox6
             // 
@@ -1221,7 +1209,7 @@
             this.groupBox11.Controls.Add(this.btnDetailedDesign);
             this.groupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox11.Location = new System.Drawing.Point(3, 284);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(659, 87);
             this.groupBox11.TabIndex = 4;
@@ -1245,7 +1233,7 @@
             this.btnDetailedDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.btnDetailedDesign.FormattingEnabled = true;
             this.btnDetailedDesign.Location = new System.Drawing.Point(158, 19);
-            this.btnDetailedDesign.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDetailedDesign.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetailedDesign.Name = "btnDetailedDesign";
             this.btnDetailedDesign.Size = new System.Drawing.Size(67, 21);
             this.btnDetailedDesign.TabIndex = 47;
@@ -1281,7 +1269,7 @@
             this.cbxApplication.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxApplication.FormattingEnabled = true;
             this.cbxApplication.Location = new System.Drawing.Point(158, 32);
-            this.cbxApplication.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxApplication.Margin = new System.Windows.Forms.Padding(2);
             this.cbxApplication.Name = "cbxApplication";
             this.cbxApplication.Size = new System.Drawing.Size(67, 21);
             this.cbxApplication.TabIndex = 47;
@@ -1292,7 +1280,7 @@
             this.cbxExternalDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxExternalDesign.FormattingEnabled = true;
             this.cbxExternalDesign.Location = new System.Drawing.Point(363, 24);
-            this.cbxExternalDesign.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxExternalDesign.Margin = new System.Windows.Forms.Padding(2);
             this.cbxExternalDesign.Name = "cbxExternalDesign";
             this.cbxExternalDesign.Size = new System.Drawing.Size(67, 21);
             this.cbxExternalDesign.TabIndex = 47;
@@ -1316,7 +1304,7 @@
             this.groupBox9.Controls.Add(this.cbxUml);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox9.Location = new System.Drawing.Point(3, 136);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(659, 73);
             this.groupBox9.TabIndex = 2;
@@ -1340,7 +1328,7 @@
             this.cbxObjectOriented.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxObjectOriented.FormattingEnabled = true;
             this.cbxObjectOriented.Location = new System.Drawing.Point(158, 31);
-            this.cbxObjectOriented.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxObjectOriented.Margin = new System.Windows.Forms.Padding(2);
             this.cbxObjectOriented.Name = "cbxObjectOriented";
             this.cbxObjectOriented.Size = new System.Drawing.Size(67, 21);
             this.cbxObjectOriented.TabIndex = 47;
@@ -1362,7 +1350,7 @@
             this.cbxUml.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxUml.FormattingEnabled = true;
             this.cbxUml.Location = new System.Drawing.Point(366, 31);
-            this.cbxUml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxUml.Margin = new System.Windows.Forms.Padding(2);
             this.cbxUml.Name = "cbxUml";
             this.cbxUml.Size = new System.Drawing.Size(67, 21);
             this.cbxUml.TabIndex = 47;
@@ -1398,7 +1386,7 @@
             this.cbxArchitecturalPattern.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxArchitecturalPattern.FormattingEnabled = true;
             this.cbxArchitecturalPattern.Location = new System.Drawing.Point(158, 25);
-            this.cbxArchitecturalPattern.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxArchitecturalPattern.Margin = new System.Windows.Forms.Padding(2);
             this.cbxArchitecturalPattern.Name = "cbxArchitecturalPattern";
             this.cbxArchitecturalPattern.Size = new System.Drawing.Size(67, 21);
             this.cbxArchitecturalPattern.TabIndex = 47;
@@ -1409,7 +1397,7 @@
             this.cbxDesignPattern.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDesignPattern.FormattingEnabled = true;
             this.cbxDesignPattern.Location = new System.Drawing.Point(366, 25);
-            this.cbxDesignPattern.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxDesignPattern.Margin = new System.Windows.Forms.Padding(2);
             this.cbxDesignPattern.Name = "cbxDesignPattern";
             this.cbxDesignPattern.Size = new System.Drawing.Size(67, 21);
             this.cbxDesignPattern.TabIndex = 47;
@@ -1433,7 +1421,7 @@
             this.groupBox7.Controls.Add(this.cbxObjectOrientedDesign);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox7.Location = new System.Drawing.Point(3, 16);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(659, 60);
             this.groupBox7.TabIndex = 0;
@@ -1457,7 +1445,7 @@
             this.cbxStructuredDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStructuredDesign.FormattingEnabled = true;
             this.cbxStructuredDesign.Location = new System.Drawing.Point(366, 20);
-            this.cbxStructuredDesign.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxStructuredDesign.Margin = new System.Windows.Forms.Padding(2);
             this.cbxStructuredDesign.Name = "cbxStructuredDesign";
             this.cbxStructuredDesign.Size = new System.Drawing.Size(67, 21);
             this.cbxStructuredDesign.TabIndex = 47;
@@ -1479,7 +1467,7 @@
             this.cbxObjectOrientedDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxObjectOrientedDesign.FormattingEnabled = true;
             this.cbxObjectOrientedDesign.Location = new System.Drawing.Point(158, 18);
-            this.cbxObjectOrientedDesign.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxObjectOrientedDesign.Margin = new System.Windows.Forms.Padding(2);
             this.cbxObjectOrientedDesign.Name = "cbxObjectOrientedDesign";
             this.cbxObjectOrientedDesign.Size = new System.Drawing.Size(67, 21);
             this.cbxObjectOrientedDesign.TabIndex = 47;
@@ -1608,6 +1596,18 @@
             this.cbxTimeManagement.Size = new System.Drawing.Size(224, 21);
             this.cbxTimeManagement.TabIndex = 60;
             // 
+            // btnConfirmPersonalSkills
+            // 
+            this.btnConfirmPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConfirmPersonalSkills.Location = new System.Drawing.Point(409, 384);
+            this.btnConfirmPersonalSkills.Margin = new System.Windows.Forms.Padding(1);
+            this.btnConfirmPersonalSkills.Name = "btnConfirmPersonalSkills";
+            this.btnConfirmPersonalSkills.Size = new System.Drawing.Size(207, 32);
+            this.btnConfirmPersonalSkills.TabIndex = 66;
+            this.btnConfirmPersonalSkills.Text = "CONFIRM";
+            this.btnConfirmPersonalSkills.UseVisualStyleBackColor = true;
+            this.btnConfirmPersonalSkills.Click += new System.EventHandler(this.btnConfirmPersonalSkills_Click);
+            // 
             // DetailedJobKpiAssessmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1615,7 +1615,7 @@
             this.ClientSize = new System.Drawing.Size(1238, 564);
             this.Controls.Add(this.gbxAssessmentinDetails);
             this.Controls.Add(this.gbxGeneralInformation);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DetailedJobKpiAssessmentForm";
@@ -1637,7 +1637,7 @@
             this.grbProject3.ResumeLayout(false);
             this.grbProject3.PerformLayout();
             this.tpgProfessionalContribution.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.grbProfessionalContribution.ResumeLayout(false);
             this.grbBusinessDomains.ResumeLayout(false);
             this.grbBusinessDomains.PerformLayout();
             this.grbSoftwareDevelopment.ResumeLayout(false);
@@ -1746,7 +1746,7 @@
         private System.Windows.Forms.ComboBox cbxCounselling;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.ComboBox cbxCommunication;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbProfessionalContribution;
         private System.Windows.Forms.Button btnCancelProfessional;
         private System.Windows.Forms.Button btnConfirmProfessional;
         private System.Windows.Forms.GroupBox grbBusinessDomains;

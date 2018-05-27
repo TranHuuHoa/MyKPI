@@ -27,12 +27,15 @@ namespace MyKPI.JobKpiAssessment.GUI
         #region class parameters
         private int jobKpiAssessmentID = 0;
         private int developerProjectContributionID = 0;
+        private int developerProfessionalContributionID = 0;
 
         private DetailedFormMode detailedFormMode = DetailedFormMode.Add;
         private DetailedFormMode projectDetailedFormMode = DetailedFormMode.Add;
-        
+        private DetailedFormMode professionalDetailedFormMode = DetailedFormMode.Add;
+
         private FormState UpdateJobKpiAssessmentState = FormState.preProcess;
         private FormState developerProjectContributionState = FormState.preProcess;
+        private FormState developerProfessionalContributionState = FormState.preProcess;
 
         private JobKpiEntity jobKpiEntity = new JobKpiEntity();
         private JobKpiAssessmentBLL jobKpiAssessmentBLL = new JobKpiAssessmentBLL();                                 
@@ -88,20 +91,9 @@ namespace MyKPI.JobKpiAssessment.GUI
                             break;
                         case 1:
                             jobKpiEntity.ProfessionalContribution = developerProfessionalContributionBLL.LoadPerJobKpiAssessmentID(jobKpiAssessmentID);
-                            if (jobKpiEntity.ProfessionalContribution != null)
-                            {
-                                var developerProfessionalContribution = (jobKpiEntity.ProfessionalContribution as DeveloperProfessionalContributionEntity);
-                                cbxMasterProgrammingLanguages.SelectedItem = developerProfessionalContribution.MasterProgrammingLanguages;
-                                cbxMasterUnitTesting.SelectedItem = developerProfessionalContribution.MasterUnitTesting;
-                                cbxMasterClientFramework.SelectedItem = developerProfessionalContribution.MasterClientFramework;
-                                cbxMasterSofwareDevelopmentFramework.SelectedItem = developerProfessionalContribution.MasterSofwareDevelopmentFramework;
-                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.IntructorAtCompany);
-                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.SharingAtWorkshop);
-                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.DevelopTrainningCourse);
-                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.SubmissionImprovementProposal);
-                                lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContribution.ActivitesInComunity);
-                                chkDevelopsSubordinates.Checked = developerProfessionalContribution.DevelopsSubordinates;
-                            }
+                            var developerProfessionalContribution = (jobKpiEntity.ProfessionalContribution as DeveloperProfessionalContributionEntity);
+                            
+                            loadPerProfessionalContributionTab(developerProfessionalContribution);
                             break;
                         case 2:
                             break;
@@ -159,6 +151,72 @@ namespace MyKPI.JobKpiAssessment.GUI
                 gbxGeneralInformation.Enabled = false;
             }
             loadTextOfButtonsAssessmentInDetails();
+        }
+
+        private void loadPerProfessionalContributionTab(DeveloperProfessionalContributionEntity developerProfessionalContributionEntity)
+        {
+            if (developerProfessionalContributionState == FormState.preProcess)
+            {
+                grbProfessionalContribution.Enabled = false;
+
+                if (developerProfessionalContributionEntity != null)
+                {
+                    professionalDetailedFormMode = DetailedFormMode.Update;
+                    professionalContributionInitComboBox();
+                    developerProfessionalContributionID = developerProfessionalContributionEntity.ID;
+                    cbxMasterProgrammingLanguages.SelectedItem = developerProfessionalContributionEntity.MasterProgrammingLanguages;
+                    cbxMasterUnitTesting.SelectedItem = developerProfessionalContributionEntity.MasterUnitTesting;
+                    cbxMasterClientFramework.SelectedItem = developerProfessionalContributionEntity.MasterClientFramework;
+                    cbxMasterSofwareDevelopmentFramework.SelectedItem = developerProfessionalContributionEntity.MasterSofwareDevelopmentFramework;
+                    lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContributionEntity.IntructorAtCompany);
+                    lstSoftwareDevelopment.SetItemChecked(1, developerProfessionalContributionEntity.SharingAtWorkshop);
+                    lstSoftwareDevelopment.SetItemChecked(2, developerProfessionalContributionEntity.DevelopTrainningCourse);
+                    lstSoftwareDevelopment.SetItemChecked(3, developerProfessionalContributionEntity.SubmissionImprovementProposal);
+                    lstSoftwareDevelopment.SetItemChecked(4, developerProfessionalContributionEntity.ActivitesInComunity);
+                    chkDevelopsSubordinates.Checked = developerProfessionalContributionEntity.DevelopsSubordinates;
+                    btnConfirmProfessional.Text = "EDIT";
+                    btnCancelProfessional.Text = "EXIT";
+                    
+                }
+                else
+                {
+                    professionalDetailedFormMode = DetailedFormMode.Add;
+                    professionalClearCommboBox();
+                    btnConfirmProfessional.Text = "ADD";
+                    btnCancelProfessional.Text = "EXIT";
+                }
+                gbxGeneralInformation.Enabled = true;
+            }
+            else
+            {
+                grbProfessionalContribution.Enabled = true;
+                professionalContributionInitComboBox();
+
+                if (developerProfessionalContributionEntity != null)
+                {
+                    professionalDetailedFormMode = DetailedFormMode.Update;
+                    professionalContributionInitComboBox();
+                    developerProfessionalContributionID = developerProfessionalContributionEntity.ID;
+                    cbxMasterProgrammingLanguages.SelectedItem = developerProfessionalContributionEntity.MasterProgrammingLanguages;
+                    cbxMasterUnitTesting.SelectedItem = developerProfessionalContributionEntity.MasterUnitTesting;
+                    cbxMasterClientFramework.SelectedItem = developerProfessionalContributionEntity.MasterClientFramework;
+                    cbxMasterSofwareDevelopmentFramework.SelectedItem = developerProfessionalContributionEntity.MasterSofwareDevelopmentFramework;
+                    lstSoftwareDevelopment.SetItemChecked(0, developerProfessionalContributionEntity.IntructorAtCompany);
+                    lstSoftwareDevelopment.SetItemChecked(1, developerProfessionalContributionEntity.SharingAtWorkshop);
+                    lstSoftwareDevelopment.SetItemChecked(2, developerProfessionalContributionEntity.DevelopTrainningCourse);
+                    lstSoftwareDevelopment.SetItemChecked(3, developerProfessionalContributionEntity.SubmissionImprovementProposal);
+                    lstSoftwareDevelopment.SetItemChecked(4, developerProfessionalContributionEntity.ActivitesInComunity);
+                    chkDevelopsSubordinates.Checked = developerProfessionalContributionEntity.DevelopsSubordinates;
+                }
+                else
+                {
+                    projectDetailedFormMode = DetailedFormMode.Add;
+                }
+
+                gbxGeneralInformation.Enabled = false;
+                btnConfirmProfessional.Text = "COMFIRM";
+                btnCancelProfessional.Text = "CANCEL";
+            }          
         }
         // general information
         private void InitCombobox()
@@ -483,8 +541,18 @@ namespace MyKPI.JobKpiAssessment.GUI
         #endregion
 
         #region Professional Contribution
+        private void professionalClearCommboBox()
+        {
+            cbxMasterProgrammingLanguages.Items.Clear();
+            cbxMasterUnitTesting.Items.Clear();
+            cbxMasterClientFramework.Items.Clear();
+            cbxMasterSofwareDevelopmentFramework.Items.Clear();
+        }
+
         private void professionalContributionInitComboBox()
         {
+            professionalClearCommboBox();
+
             cbxMasterProgrammingLanguages.Items.Add(ProfessionalValue.NoKnowledge);
             cbxMasterProgrammingLanguages.Items.Add(ProfessionalValue.Junior);
             cbxMasterProgrammingLanguages.Items.Add(ProfessionalValue.Senior);
@@ -513,31 +581,55 @@ namespace MyKPI.JobKpiAssessment.GUI
             cbxMasterSofwareDevelopmentFramework.Items.Add(ProfessionalValue.Master);
             cbxMasterSofwareDevelopmentFramework.SelectedIndex = 0;
         }
+
         private void btnConfirmProfessional_Click(object sender, EventArgs e)
         {
+            if (developerProfessionalContributionState == FormState.preProcess)
+            {
+                developerProfessionalContributionState = FormState.Process;              
+            }
+            else
+            {
+                DeveloperProfessionalContributionEntity developerProfessionalContributionEntity = new DeveloperProfessionalContributionEntity();
 
-            DeveloperProfessionalContributionEntity developerProfessionalContributionEntity = new DeveloperProfessionalContributionEntity();
-
-            developerProfessionalContributionEntity.MasterProgrammingLanguages = (ProfessionalValue)cbxMasterProgrammingLanguages.SelectedItem;
-            developerProfessionalContributionEntity.MasterUnitTesting = (ProfessionalValue)cbxMasterUnitTesting.SelectedItem;
-            developerProfessionalContributionEntity.MasterClientFramework = (ProfessionalValue)cbxMasterClientFramework.SelectedItem;
-            developerProfessionalContributionEntity.MasterSofwareDevelopmentFramework = (ProfessionalValue)cbxMasterSofwareDevelopmentFramework.SelectedItem;
-            developerProfessionalContributionEntity.IntructorAtCompany = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(0));
-            developerProfessionalContributionEntity.SharingAtWorkshop = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(1));
-            developerProfessionalContributionEntity.DevelopTrainningCourse = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(2));
-            developerProfessionalContributionEntity.SubmissionImprovementProposal = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(3));
-            developerProfessionalContributionEntity.ActivitesInComunity = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(4));
-            developerProfessionalContributionEntity.DevelopsSubordinates = Convert.ToBoolean(chkDevelopsSubordinates.Checked);
-            var jobKpiEntity = new JobKpiEntity();
-            jobKpiEntity.ID = jobKpiAssessmentID;
-            developerProfessionalContributionEntity.JobKpiAssessment = jobKpiEntity;
-            
-            
+                developerProfessionalContributionEntity.MasterProgrammingLanguages = (ProfessionalValue)cbxMasterProgrammingLanguages.SelectedItem;
+                developerProfessionalContributionEntity.MasterUnitTesting = (ProfessionalValue)cbxMasterUnitTesting.SelectedItem;
+                developerProfessionalContributionEntity.MasterClientFramework = (ProfessionalValue)cbxMasterClientFramework.SelectedItem;
+                developerProfessionalContributionEntity.MasterSofwareDevelopmentFramework = (ProfessionalValue)cbxMasterSofwareDevelopmentFramework.SelectedItem;
+                developerProfessionalContributionEntity.IntructorAtCompany = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(0));
+                developerProfessionalContributionEntity.SharingAtWorkshop = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(1));
+                developerProfessionalContributionEntity.DevelopTrainningCourse = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(2));
+                developerProfessionalContributionEntity.SubmissionImprovementProposal = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(3));
+                developerProfessionalContributionEntity.ActivitesInComunity = Convert.ToBoolean(lstSoftwareDevelopment.GetItemCheckState(4));
+                developerProfessionalContributionEntity.DevelopsSubordinates = Convert.ToBoolean(chkDevelopsSubordinates.Checked);
+                var jobKpiEntity = new JobKpiEntity();
+                jobKpiEntity.ID = jobKpiAssessmentID;
+                developerProfessionalContributionEntity.JobKpiAssessment = jobKpiEntity;
+                if (professionalDetailedFormMode == DetailedFormMode.Add)
+                {
+                    developerProfessionalContributionBLL.AddDeveloperProfessionalContribution(developerProfessionalContributionEntity);
+                }
+                else
+                {
+                    developerProfessionalContributionBLL.EditDeveloperProfessionalContribution(developerProfessionalContributionEntity,developerProfessionalContributionID);
+                }
+                developerProfessionalContributionState = FormState.preProcess;
+            }
+            load();
         }
 
+       
         private void btnCancelProfessional_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (developerProfessionalContributionState == FormState.preProcess)
+            {
+                this.Close();
+            }
+            else
+            {
+                developerProfessionalContributionState = FormState.preProcess;
+                load();
+            }
         }
 
         #endregion
