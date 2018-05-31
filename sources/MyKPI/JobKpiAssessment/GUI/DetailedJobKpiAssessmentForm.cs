@@ -254,7 +254,7 @@ namespace MyKPI.JobKpiAssessment.GUI
                     cbxApplicationArchitectureDesign.SelectedItem = personalSkillsEntity.ApplicationArchitectureDesign;
                     cbxExternalDesignJP.SelectedItem = personalSkillsEntity.ExternalDesignJP;
                     cbxDetailedDesign.SelectedItem = personalSkillsEntity.DetailedDesign;                   
-                    btnConfirmPersonalSkills.Text = "ADD";
+                    btnConfirmPersonalSkills.Text = "EDIT";
                     btnCancelPersonalSkills.Text = "EXIT";
                 }
                 else
@@ -869,20 +869,20 @@ namespace MyKPI.JobKpiAssessment.GUI
             {
                 PersonalSkillsEntity personalSkillsEntity = new PersonalSkillsEntity();
 
-                personalSkillsEntity.Leadership = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.Communication = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.TimeManagement = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.Counselling = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.Teamwork = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.ObjectOrientedDesign = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.StructuredDesign = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.ArchitecturalPattern = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.DesignPattern = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.ObjectOrientedAnalysis = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.UML = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.ApplicationArchitectureDesign = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.ExternalDesignJP = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
-                personalSkillsEntity.DetailedDesign = (PersonalSkillsValue)cbxMasterProgrammingLanguages.SelectedItem;
+                personalSkillsEntity.Leadership = (PersonalSkillsValue)cbxLeadership.SelectedItem;
+                personalSkillsEntity.Communication = (PersonalSkillsValue)cbxCommunication.SelectedItem;
+                personalSkillsEntity.TimeManagement = (PersonalSkillsValue)cbxTimeManagement.SelectedItem;
+                personalSkillsEntity.Counselling = (PersonalSkillsValue)cbxCounselling.SelectedItem;
+                personalSkillsEntity.Teamwork = (PersonalSkillsValue)cbxTeamwork.SelectedItem;
+                personalSkillsEntity.ObjectOrientedDesign = (PersonalSkillsValue)cbxObjectOrientedDesign.SelectedItem;
+                personalSkillsEntity.StructuredDesign = (PersonalSkillsValue)cbxStructuredDesign.SelectedItem;
+                personalSkillsEntity.ArchitecturalPattern = (PersonalSkillsValue)cbxArchitecturalPattern.SelectedItem;
+                personalSkillsEntity.DesignPattern = (PersonalSkillsValue)cbxDesignPattern.SelectedItem;
+                personalSkillsEntity.ObjectOrientedAnalysis = (PersonalSkillsValue)cbxObjectOrientedAnalysis.SelectedItem;
+                personalSkillsEntity.UML = (PersonalSkillsValue)cbxUml.SelectedItem;
+                personalSkillsEntity.ApplicationArchitectureDesign = (PersonalSkillsValue)cbxApplicationArchitectureDesign.SelectedItem;
+                personalSkillsEntity.ExternalDesignJP = (PersonalSkillsValue)cbxExternalDesignJP.SelectedItem;
+                personalSkillsEntity.DetailedDesign = (PersonalSkillsValue)cbxDetailedDesign.SelectedItem;
 
 
                 var jobKpiEntity = new JobKpiEntity();

@@ -37,7 +37,7 @@ insert into tblEmployee (EmployeeNumber,EmployeeFirstName,EmployeeLastName, Addr
 values ('001008','Nguyen', 'Hien Thanh','Hanoi','0125456789',"1998-05-03",0,1,1,1,1);
 
 insert into tblEmployee (EmployeeNumber,EmployeeFirstName,EmployeeLastName, Address, IDCard, DOB, Sex, JobRankType, JobRankLevel, SalaryLevel, SalarySubLevel)
-values ('001001','Dang', 'g Trung','Hanoi','0123434389',"1998-05-03",0,1,1,1,1);
+values ('001001','Dang', 'Quang Trung','Hanoi','0123434389',"1998-05-03",0,1,1,1,1);
 
 insert into tblEmployee (EmployeeNumber,EmployeeFirstName,EmployeeLastName, Address, IDCard, DOB, Sex, JobRankType, JobRankLevel, SalaryLevel, SalarySubLevel)
 values ('001001','Trinh', 'Hoang Trung','Hanoi','01244456749',"1998-05-03",0,1,1,1,1);
