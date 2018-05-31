@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbxGeneralInformation = new System.Windows.Forms.GroupBox();
+            this.grbGeneralInformation = new System.Windows.Forms.GroupBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.cbxRoleInAssessment = new System.Windows.Forms.ComboBox();
             this.cbxEmployee = new System.Windows.Forms.ComboBox();
@@ -39,7 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.gbxAssessmentinDetails = new System.Windows.Forms.GroupBox();
+            this.grbAssessmentinDetails = new System.Windows.Forms.GroupBox();
             this.tclAssessmentInDetails = new System.Windows.Forms.TabControl();
             this.tpgProjectsContribution = new System.Windows.Forms.TabPage();
             this.btnProjectCancel = new System.Windows.Forms.Button();
@@ -117,20 +117,7 @@
             this.cbxMasterProgrammingLanguages = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tpgPersonalSkills = new System.Windows.Forms.TabPage();
-            this.btnCancelPersonalSkills = new System.Windows.Forms.Button();
-            this.btnConfirmPersonalSkills = new System.Windows.Forms.Button();
             this.grbPersonalSkills = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.cbxLeadership = new System.Windows.Forms.ComboBox();
-            this.cbxCommunication = new System.Windows.Forms.ComboBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.cbxCounselling = new System.Windows.Forms.ComboBox();
-            this.cbxTeamwork = new System.Windows.Forms.ComboBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.cbxTimeManagement = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -155,8 +142,21 @@
             this.cbxStructuredDesign = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
             this.cbxObjectOrientedDesign = new System.Windows.Forms.ComboBox();
-            this.gbxGeneralInformation.SuspendLayout();
-            this.gbxAssessmentinDetails.SuspendLayout();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.cbxLeadership = new System.Windows.Forms.ComboBox();
+            this.cbxCommunication = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.cbxCounselling = new System.Windows.Forms.ComboBox();
+            this.cbxTeamwork = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.cbxTimeManagement = new System.Windows.Forms.ComboBox();
+            this.btnCancelPersonalSkills = new System.Windows.Forms.Button();
+            this.btnConfirmPersonalSkills = new System.Windows.Forms.Button();
+            this.grbGeneralInformation.SuspendLayout();
+            this.grbAssessmentinDetails.SuspendLayout();
             this.tclAssessmentInDetails.SuspendLayout();
             this.tpgProjectsContribution.SuspendLayout();
             this.tclProject.SuspendLayout();
@@ -173,36 +173,36 @@
             this.grbHighSpecialty.SuspendLayout();
             this.tpgPersonalSkills.SuspendLayout();
             this.grbPersonalSkills.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbxGeneralInformation
+            // grbGeneralInformation
             // 
-            this.gbxGeneralInformation.Controls.Add(this.cbxStatus);
-            this.gbxGeneralInformation.Controls.Add(this.cbxRoleInAssessment);
-            this.gbxGeneralInformation.Controls.Add(this.cbxEmployee);
-            this.gbxGeneralInformation.Controls.Add(this.dtmCreatedDate);
-            this.gbxGeneralInformation.Controls.Add(this.label5);
-            this.gbxGeneralInformation.Controls.Add(this.label4);
-            this.gbxGeneralInformation.Controls.Add(this.label3);
-            this.gbxGeneralInformation.Controls.Add(this.label2);
-            this.gbxGeneralInformation.Controls.Add(this.btnCancel);
-            this.gbxGeneralInformation.Controls.Add(this.btnConfirm);
-            this.gbxGeneralInformation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbxGeneralInformation.Location = new System.Drawing.Point(0, 0);
-            this.gbxGeneralInformation.Margin = new System.Windows.Forms.Padding(2);
-            this.gbxGeneralInformation.Name = "gbxGeneralInformation";
-            this.gbxGeneralInformation.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxGeneralInformation.Size = new System.Drawing.Size(1238, 101);
-            this.gbxGeneralInformation.TabIndex = 0;
-            this.gbxGeneralInformation.TabStop = false;
-            this.gbxGeneralInformation.Text = "General Information";
+            this.grbGeneralInformation.Controls.Add(this.cbxStatus);
+            this.grbGeneralInformation.Controls.Add(this.cbxRoleInAssessment);
+            this.grbGeneralInformation.Controls.Add(this.cbxEmployee);
+            this.grbGeneralInformation.Controls.Add(this.dtmCreatedDate);
+            this.grbGeneralInformation.Controls.Add(this.label5);
+            this.grbGeneralInformation.Controls.Add(this.label4);
+            this.grbGeneralInformation.Controls.Add(this.label3);
+            this.grbGeneralInformation.Controls.Add(this.label2);
+            this.grbGeneralInformation.Controls.Add(this.btnCancel);
+            this.grbGeneralInformation.Controls.Add(this.btnConfirm);
+            this.grbGeneralInformation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grbGeneralInformation.Location = new System.Drawing.Point(0, 0);
+            this.grbGeneralInformation.Margin = new System.Windows.Forms.Padding(2);
+            this.grbGeneralInformation.Name = "grbGeneralInformation";
+            this.grbGeneralInformation.Padding = new System.Windows.Forms.Padding(2);
+            this.grbGeneralInformation.Size = new System.Drawing.Size(1238, 101);
+            this.grbGeneralInformation.TabIndex = 0;
+            this.grbGeneralInformation.TabStop = false;
+            this.grbGeneralInformation.Text = "General Information";
             // 
             // cbxStatus
             // 
@@ -310,18 +310,18 @@
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // gbxAssessmentinDetails
+            // grbAssessmentinDetails
             // 
-            this.gbxAssessmentinDetails.Controls.Add(this.tclAssessmentInDetails);
-            this.gbxAssessmentinDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbxAssessmentinDetails.Location = new System.Drawing.Point(0, 101);
-            this.gbxAssessmentinDetails.Margin = new System.Windows.Forms.Padding(2);
-            this.gbxAssessmentinDetails.Name = "gbxAssessmentinDetails";
-            this.gbxAssessmentinDetails.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxAssessmentinDetails.Size = new System.Drawing.Size(1238, 463);
-            this.gbxAssessmentinDetails.TabIndex = 1;
-            this.gbxAssessmentinDetails.TabStop = false;
-            this.gbxAssessmentinDetails.Text = "Assessment in Details";
+            this.grbAssessmentinDetails.Controls.Add(this.tclAssessmentInDetails);
+            this.grbAssessmentinDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grbAssessmentinDetails.Location = new System.Drawing.Point(0, 101);
+            this.grbAssessmentinDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.grbAssessmentinDetails.Name = "grbAssessmentinDetails";
+            this.grbAssessmentinDetails.Padding = new System.Windows.Forms.Padding(2);
+            this.grbAssessmentinDetails.Size = new System.Drawing.Size(1238, 463);
+            this.grbAssessmentinDetails.TabIndex = 1;
+            this.grbAssessmentinDetails.TabStop = false;
+            this.grbAssessmentinDetails.Text = "Assessment in Details";
             // 
             // tclAssessmentInDetails
             // 
@@ -1178,30 +1178,6 @@
             this.tpgPersonalSkills.Text = "Personal skills";
             this.tpgPersonalSkills.UseVisualStyleBackColor = true;
             // 
-            // btnCancelPersonalSkills
-            // 
-            this.btnCancelPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCancelPersonalSkills.Location = new System.Drawing.Point(629, 384);
-            this.btnCancelPersonalSkills.Margin = new System.Windows.Forms.Padding(1);
-            this.btnCancelPersonalSkills.Name = "btnCancelPersonalSkills";
-            this.btnCancelPersonalSkills.Size = new System.Drawing.Size(85, 32);
-            this.btnCancelPersonalSkills.TabIndex = 67;
-            this.btnCancelPersonalSkills.Text = "CANCEL";
-            this.btnCancelPersonalSkills.UseVisualStyleBackColor = true;
-            this.btnCancelPersonalSkills.Click += new System.EventHandler(this.btnCancelPersonalSkills_Click);
-            // 
-            // btnConfirmPersonalSkills
-            // 
-            this.btnConfirmPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnConfirmPersonalSkills.Location = new System.Drawing.Point(409, 384);
-            this.btnConfirmPersonalSkills.Margin = new System.Windows.Forms.Padding(1);
-            this.btnConfirmPersonalSkills.Name = "btnConfirmPersonalSkills";
-            this.btnConfirmPersonalSkills.Size = new System.Drawing.Size(207, 32);
-            this.btnConfirmPersonalSkills.TabIndex = 66;
-            this.btnConfirmPersonalSkills.Text = "CONFIRM";
-            this.btnConfirmPersonalSkills.UseVisualStyleBackColor = true;
-            this.btnConfirmPersonalSkills.Click += new System.EventHandler(this.btnConfirmPersonalSkills_Click);
-            // 
             // grbPersonalSkills
             // 
             this.grbPersonalSkills.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1214,132 +1190,6 @@
             this.grbPersonalSkills.Size = new System.Drawing.Size(1221, 372);
             this.grbPersonalSkills.TabIndex = 68;
             this.grbPersonalSkills.TabStop = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox5.Controls.Add(this.label38);
-            this.groupBox5.Controls.Add(this.cbxLeadership);
-            this.groupBox5.Controls.Add(this.cbxCommunication);
-            this.groupBox5.Controls.Add(this.label37);
-            this.groupBox5.Controls.Add(this.label43);
-            this.groupBox5.Controls.Add(this.cbxCounselling);
-            this.groupBox5.Controls.Add(this.cbxTeamwork);
-            this.groupBox5.Controls.Add(this.label41);
-            this.groupBox5.Controls.Add(this.label39);
-            this.groupBox5.Controls.Add(this.cbxTimeManagement);
-            this.groupBox5.Location = new System.Drawing.Point(5, 0);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(366, 344);
-            this.groupBox5.TabIndex = 64;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Skill Group: Personal Skills";
-            // 
-            // label38
-            // 
-            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(55, 53);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(62, 13);
-            this.label38.TabIndex = 48;
-            this.label38.Text = "Leadership:";
-            // 
-            // cbxLeadership
-            // 
-            this.cbxLeadership.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxLeadership.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxLeadership.FormattingEnabled = true;
-            this.cbxLeadership.Location = new System.Drawing.Point(122, 50);
-            this.cbxLeadership.Name = "cbxLeadership";
-            this.cbxLeadership.Size = new System.Drawing.Size(224, 21);
-            this.cbxLeadership.TabIndex = 47;
-            // 
-            // cbxCommunication
-            // 
-            this.cbxCommunication.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxCommunication.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCommunication.FormattingEnabled = true;
-            this.cbxCommunication.Location = new System.Drawing.Point(122, 87);
-            this.cbxCommunication.Name = "cbxCommunication";
-            this.cbxCommunication.Size = new System.Drawing.Size(224, 21);
-            this.cbxCommunication.TabIndex = 56;
-            // 
-            // label37
-            // 
-            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(57, 227);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(60, 13);
-            this.label37.TabIndex = 61;
-            this.label37.Text = "Teamwork:";
-            // 
-            // label43
-            // 
-            this.label43.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(35, 90);
-            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(82, 13);
-            this.label43.TabIndex = 55;
-            this.label43.Text = "Communication:";
-            // 
-            // cbxCounselling
-            // 
-            this.cbxCounselling.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxCounselling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCounselling.FormattingEnabled = true;
-            this.cbxCounselling.Location = new System.Drawing.Point(122, 174);
-            this.cbxCounselling.Name = "cbxCounselling";
-            this.cbxCounselling.Size = new System.Drawing.Size(224, 21);
-            this.cbxCounselling.TabIndex = 58;
-            // 
-            // cbxTeamwork
-            // 
-            this.cbxTeamwork.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxTeamwork.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTeamwork.FormattingEnabled = true;
-            this.cbxTeamwork.Location = new System.Drawing.Point(122, 224);
-            this.cbxTeamwork.Name = "cbxTeamwork";
-            this.cbxTeamwork.Size = new System.Drawing.Size(224, 21);
-            this.cbxTeamwork.TabIndex = 62;
-            // 
-            // label41
-            // 
-            this.label41.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(53, 177);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(64, 13);
-            this.label41.TabIndex = 57;
-            this.label41.Text = "Counselling:";
-            // 
-            // label39
-            // 
-            this.label39.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(17, 131);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(98, 13);
-            this.label39.TabIndex = 59;
-            this.label39.Text = "Time Management:";
-            // 
-            // cbxTimeManagement
-            // 
-            this.cbxTimeManagement.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxTimeManagement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTimeManagement.FormattingEnabled = true;
-            this.cbxTimeManagement.Location = new System.Drawing.Point(122, 128);
-            this.cbxTimeManagement.Name = "cbxTimeManagement";
-            this.cbxTimeManagement.Size = new System.Drawing.Size(224, 21);
-            this.cbxTimeManagement.TabIndex = 60;
             // 
             // groupBox6
             // 
@@ -1627,22 +1477,172 @@
             this.cbxObjectOrientedDesign.Size = new System.Drawing.Size(158, 21);
             this.cbxObjectOrientedDesign.TabIndex = 47;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox5.Controls.Add(this.label38);
+            this.groupBox5.Controls.Add(this.cbxLeadership);
+            this.groupBox5.Controls.Add(this.cbxCommunication);
+            this.groupBox5.Controls.Add(this.label37);
+            this.groupBox5.Controls.Add(this.label43);
+            this.groupBox5.Controls.Add(this.cbxCounselling);
+            this.groupBox5.Controls.Add(this.cbxTeamwork);
+            this.groupBox5.Controls.Add(this.label41);
+            this.groupBox5.Controls.Add(this.label39);
+            this.groupBox5.Controls.Add(this.cbxTimeManagement);
+            this.groupBox5.Location = new System.Drawing.Point(5, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(366, 344);
+            this.groupBox5.TabIndex = 64;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Skill Group: Personal Skills";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(55, 53);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(62, 13);
+            this.label38.TabIndex = 48;
+            this.label38.Text = "Leadership:";
+            // 
+            // cbxLeadership
+            // 
+            this.cbxLeadership.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxLeadership.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxLeadership.FormattingEnabled = true;
+            this.cbxLeadership.Location = new System.Drawing.Point(122, 50);
+            this.cbxLeadership.Name = "cbxLeadership";
+            this.cbxLeadership.Size = new System.Drawing.Size(224, 21);
+            this.cbxLeadership.TabIndex = 47;
+            // 
+            // cbxCommunication
+            // 
+            this.cbxCommunication.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxCommunication.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCommunication.FormattingEnabled = true;
+            this.cbxCommunication.Location = new System.Drawing.Point(122, 87);
+            this.cbxCommunication.Name = "cbxCommunication";
+            this.cbxCommunication.Size = new System.Drawing.Size(224, 21);
+            this.cbxCommunication.TabIndex = 56;
+            // 
+            // label37
+            // 
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(57, 227);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(60, 13);
+            this.label37.TabIndex = 61;
+            this.label37.Text = "Teamwork:";
+            // 
+            // label43
+            // 
+            this.label43.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(35, 90);
+            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(82, 13);
+            this.label43.TabIndex = 55;
+            this.label43.Text = "Communication:";
+            // 
+            // cbxCounselling
+            // 
+            this.cbxCounselling.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxCounselling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCounselling.FormattingEnabled = true;
+            this.cbxCounselling.Location = new System.Drawing.Point(122, 174);
+            this.cbxCounselling.Name = "cbxCounselling";
+            this.cbxCounselling.Size = new System.Drawing.Size(224, 21);
+            this.cbxCounselling.TabIndex = 58;
+            // 
+            // cbxTeamwork
+            // 
+            this.cbxTeamwork.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxTeamwork.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTeamwork.FormattingEnabled = true;
+            this.cbxTeamwork.Location = new System.Drawing.Point(122, 224);
+            this.cbxTeamwork.Name = "cbxTeamwork";
+            this.cbxTeamwork.Size = new System.Drawing.Size(224, 21);
+            this.cbxTeamwork.TabIndex = 62;
+            // 
+            // label41
+            // 
+            this.label41.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(53, 177);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(64, 13);
+            this.label41.TabIndex = 57;
+            this.label41.Text = "Counselling:";
+            // 
+            // label39
+            // 
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(17, 131);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(98, 13);
+            this.label39.TabIndex = 59;
+            this.label39.Text = "Time Management:";
+            // 
+            // cbxTimeManagement
+            // 
+            this.cbxTimeManagement.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxTimeManagement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTimeManagement.FormattingEnabled = true;
+            this.cbxTimeManagement.Location = new System.Drawing.Point(122, 128);
+            this.cbxTimeManagement.Name = "cbxTimeManagement";
+            this.cbxTimeManagement.Size = new System.Drawing.Size(224, 21);
+            this.cbxTimeManagement.TabIndex = 60;
+            // 
+            // btnCancelPersonalSkills
+            // 
+            this.btnCancelPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCancelPersonalSkills.Location = new System.Drawing.Point(629, 384);
+            this.btnCancelPersonalSkills.Margin = new System.Windows.Forms.Padding(1);
+            this.btnCancelPersonalSkills.Name = "btnCancelPersonalSkills";
+            this.btnCancelPersonalSkills.Size = new System.Drawing.Size(85, 32);
+            this.btnCancelPersonalSkills.TabIndex = 67;
+            this.btnCancelPersonalSkills.Text = "CANCEL";
+            this.btnCancelPersonalSkills.UseVisualStyleBackColor = true;
+            this.btnCancelPersonalSkills.Click += new System.EventHandler(this.btnCancelPersonalSkills_Click);
+            // 
+            // btnConfirmPersonalSkills
+            // 
+            this.btnConfirmPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConfirmPersonalSkills.Location = new System.Drawing.Point(409, 384);
+            this.btnConfirmPersonalSkills.Margin = new System.Windows.Forms.Padding(1);
+            this.btnConfirmPersonalSkills.Name = "btnConfirmPersonalSkills";
+            this.btnConfirmPersonalSkills.Size = new System.Drawing.Size(207, 32);
+            this.btnConfirmPersonalSkills.TabIndex = 66;
+            this.btnConfirmPersonalSkills.Text = "CONFIRM";
+            this.btnConfirmPersonalSkills.UseVisualStyleBackColor = true;
+            this.btnConfirmPersonalSkills.Click += new System.EventHandler(this.btnConfirmPersonalSkills_Click);
+            // 
             // DetailedJobKpiAssessmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1238, 564);
-            this.Controls.Add(this.gbxAssessmentinDetails);
-            this.Controls.Add(this.gbxGeneralInformation);
+            this.Controls.Add(this.grbAssessmentinDetails);
+            this.Controls.Add(this.grbGeneralInformation);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DetailedJobKpiAssessmentForm";
             this.Text = "Detailed Job KPI Assessment Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.gbxGeneralInformation.ResumeLayout(false);
-            this.gbxGeneralInformation.PerformLayout();
-            this.gbxAssessmentinDetails.ResumeLayout(false);
+            this.grbGeneralInformation.ResumeLayout(false);
+            this.grbGeneralInformation.PerformLayout();
+            this.grbAssessmentinDetails.ResumeLayout(false);
             this.tclAssessmentInDetails.ResumeLayout(false);
             this.tpgProjectsContribution.ResumeLayout(false);
             this.tclProject.ResumeLayout(false);
@@ -1664,8 +1664,6 @@
             this.grbHighSpecialty.PerformLayout();
             this.tpgPersonalSkills.ResumeLayout(false);
             this.grbPersonalSkills.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
@@ -1677,14 +1675,16 @@
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbxGeneralInformation;
-        private System.Windows.Forms.GroupBox gbxAssessmentinDetails;
+        private System.Windows.Forms.GroupBox grbGeneralInformation;
+        private System.Windows.Forms.GroupBox grbAssessmentinDetails;
         private System.Windows.Forms.TabControl tclAssessmentInDetails;
         private System.Windows.Forms.TabPage tpgProjectsContribution;
         private System.Windows.Forms.TabPage tpgProfessionalContribution;
