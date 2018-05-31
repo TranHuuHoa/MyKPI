@@ -24,7 +24,7 @@ namespace MyKPI.Entities
         public IProjectContribution ProjectContribution2 { get; set; }
         public IProjectContribution ProjectContribution3 { get; set; }
         public IProfessionalContribution ProfessionalContribution { get; set; }
-        public IPersonalSkill SkillAssessment { get; set; }
+        public IPersonalSkills PersonalSkills { get; set; }
 
     }
 }

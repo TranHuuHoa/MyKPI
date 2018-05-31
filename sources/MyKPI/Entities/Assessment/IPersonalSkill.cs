@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyKPI.Entities.Assessment
 {
-    public interface IPersonalSkill
+    public interface IPersonalSkills
     {
     }
 }

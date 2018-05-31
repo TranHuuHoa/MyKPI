@@ -139,6 +139,7 @@
     <Compile Include="Entities\Assessment\IProjectContribution.cs" />
     <Compile Include="Entities\Assessment\IPersonalSkill.cs" />
     <Compile Include="Entities\Assessment\DeveloperProjectContributionEntity.cs" />
+    <Compile Include="Entities\PersonalSkillEntity.cs" />
     <Compile Include="Entities\EmployeeEntity.cs" />
     <Compile Include="Entities\JobKpiEntity.cs" />
     <Compile Include="Entities\ProjectEmployeeEntity.cs" />
@@ -147,9 +148,11 @@
     <Compile Include="JobKpiAssessment\BLL\DeveloperProfessionalContributionBLL.cs" />
     <Compile Include="JobKpiAssessment\BLL\DeveloperProjectContributionBLL.cs" />
     <Compile Include="JobKpiAssessment\BLL\JobKpiAssessmentBLL.cs" />
+    <Compile Include="JobKpiAssessment\BLL\PersonalSkillsBLL.cs" />
     <Compile Include="JobKpiAssessment\DAL\DeveloperProfessionalContributionDAL.cs" />
     <Compile Include="JobKpiAssessment\DAL\DeveloperProjectContributionDAL.cs" />
     <Compile Include="JobKpiAssessment\DAL\JobKpiAssessmentDAL.cs" />
+    <Compile Include="JobKpiAssessment\DAL\PersonalSkillsDAL.cs" />
     <Compile Include="JobKpiAssessment\GUI\DetailedJobKpiAssessmentForm.cs">
       <SubType>Form</SubType>
     </Compile>

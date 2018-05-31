@@ -15,6 +15,7 @@ using MyKPI.Entities;
 using MyKPI.Entities.Assessment;
 using MyKPI.JobKpiAssessment.BLL;
 using MyKPI.ProjectManagement.BLL;
+using MyKPI.PersonalSkills.BLL;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -28,19 +29,23 @@ namespace MyKPI.JobKpiAssessment.GUI
         private int jobKpiAssessmentID = 0;
         private int developerProjectContributionID = 0;
         private int developerProfessionalContributionID = 0;
+        private int personalSkillsID = 0;
 
         private DetailedFormMode detailedFormMode = DetailedFormMode.Add;
         private DetailedFormMode projectDetailedFormMode = DetailedFormMode.Add;
         private DetailedFormMode professionalDetailedFormMode = DetailedFormMode.Add;
+        private DetailedFormMode personalSkillsDDetailedFormMode = DetailedFormMode.Add;
 
         private FormState UpdateJobKpiAssessmentState = FormState.preProcess;
         private FormState developerProjectContributionState = FormState.preProcess;
         private FormState developerProfessionalContributionState = FormState.preProcess;
+        private FormState personalSkillsState = FormState.preProcess;
 
         private JobKpiEntity jobKpiEntity = new JobKpiEntity();
         private JobKpiAssessmentBLL jobKpiAssessmentBLL = new JobKpiAssessmentBLL();                                 
         private DeveloperProjectContributionBLL developerProjectContributionBLL = new DeveloperProjectContributionBLL();
         private DeveloperProfessionalContributionBLL developerProfessionalContributionBLL = new DeveloperProfessionalContributionBLL();
+        private PersonalSkillsBLL personalSkillsBLL = new PersonalSkillsBLL();
         #endregion
 
         #region private functions
@@ -50,6 +55,7 @@ namespace MyKPI.JobKpiAssessment.GUI
             InitializeComponent();
             InitCombobox();
             professionalContributionInitComboBox();
+            PersonalSkillsInitComboBox();
         }
         private void load()
         {
@@ -96,6 +102,10 @@ namespace MyKPI.JobKpiAssessment.GUI
                             loadPerProfessionalContributionTab(developerProfessionalContribution);
                             break;
                         case 2:
+                            jobKpiEntity.PersonalSkills = personalSkillsBLL.LoadPerJobKpiAssessmentID(jobKpiAssessmentID);
+                            var personalSkills = (jobKpiEntity.PersonalSkills as PersonalSkillsEntity);
+
+                            loadPersonalSkillsTab(personalSkills);
                             break;
                     }
 
@@ -218,6 +228,30 @@ namespace MyKPI.JobKpiAssessment.GUI
                 btnCancelProfessional.Text = "CANCEL";
             }          
         }
+
+        private void loadPersonalSkillsTab(PersonalSkillsEntity personalSkillsEntity)
+        {
+            if(personalSkillsState== FormState.preProcess)
+            {
+                
+            }
+            cbxLeadership.SelectedItem = personalSkillsEntity.Leadership;
+            cbxCommunication.SelectedItem = personalSkillsEntity.Communication;
+            cbxTimeManagement.SelectedItem = personalSkillsEntity.TimeManagement;
+            cbxCounselling.SelectedItem = personalSkillsEntity.Counselling;
+            cbxTeamwork.SelectedItem = personalSkillsEntity.Teamwork;
+            cbxObjectOrientedDesign.SelectedItem = personalSkillsEntity.ObjectOrientedDesign;
+            cbxStructuredDesign.SelectedItem = personalSkillsEntity.StructuredDesign;
+            cbxArchitecturalPattern.SelectedItem = personalSkillsEntity.ArchitecturalPattern;
+            cbxDesignPattern.SelectedItem = personalSkillsEntity.DesignPattern;
+            cbxObjectOrientedAnalysis.SelectedItem = personalSkillsEntity.ObjectOrientedAnalysis;
+            cbxUml.SelectedItem = personalSkillsEntity.UML;
+            cbxApplicationArchitectureDesign.SelectedItem = personalSkillsEntity.ApplicationArchitectureDesign;
+            cbxExternalDesignJP.SelectedItem = personalSkillsEntity.ExternalDesignJP;
+            cbxDetailedDesign.SelectedItem = personalSkillsEntity.DetailedDesign;
+
+
+        }
         // general information
         private void InitCombobox()
         {
@@ -255,6 +289,10 @@ namespace MyKPI.JobKpiAssessment.GUI
         }
 
         // Assessments in details
+        private void tclAssessmentInDetails_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            load();
+        }
         private void loadProjectContributionInDetails(DeveloperProjectContributionEntity developerProjectContributionEntity, DataRowView row, TextBox txtProjectCode, TextBox txtStartedEnd, TextBox txtScopeMM,ComboBox cbxTeamRole, ComboBox cbxImplementCode, ComboBox cbxImplementDesign, ComboBox cbxImplementUnitTest)
         {
             developerProjectContributionID = developerProjectContributionEntity.ID;
@@ -634,7 +672,123 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         #endregion
 
-        #region Persional Skill
+        #region Personal Skill
+        private void PersonalSkillsInitComboBox()
+        {
+            cbxLeadership.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxLeadership.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxLeadership.Items.Add(PersonalSkillsValue.Limited);
+            cbxLeadership.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxLeadership.Items.Add(PersonalSkillsValue.Advance);
+            cbxLeadership.Items.Add(PersonalSkillsValue.Expert);
+            cbxLeadership.SelectedIndex = 0;
+
+            cbxCommunication.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxCommunication.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxCommunication.Items.Add(PersonalSkillsValue.Limited);
+            cbxCommunication.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxCommunication.Items.Add(PersonalSkillsValue.Advance);
+            cbxCommunication.Items.Add(PersonalSkillsValue.Expert);
+            cbxCommunication.SelectedIndex = 0;
+
+            cbxTimeManagement.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxTimeManagement.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxTimeManagement.Items.Add(PersonalSkillsValue.Limited);
+            cbxTimeManagement.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxTimeManagement.Items.Add(PersonalSkillsValue.Advance);
+            cbxTimeManagement.Items.Add(PersonalSkillsValue.Expert);
+            cbxTimeManagement.SelectedIndex = 0;
+
+            cbxCounselling.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxCounselling.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxCounselling.Items.Add(PersonalSkillsValue.Limited);
+            cbxCounselling.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxCounselling.Items.Add(PersonalSkillsValue.Advance);
+            cbxCounselling.Items.Add(PersonalSkillsValue.Expert);
+            cbxCounselling.SelectedIndex = 0;
+
+            cbxTeamwork.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxTeamwork.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxTeamwork.Items.Add(PersonalSkillsValue.Limited);
+            cbxTeamwork.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxTeamwork.Items.Add(PersonalSkillsValue.Advance);
+            cbxTeamwork.Items.Add(PersonalSkillsValue.Expert);
+            cbxTeamwork.SelectedIndex = 0;
+
+            cbxObjectOrientedDesign.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxObjectOrientedDesign.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxObjectOrientedDesign.Items.Add(PersonalSkillsValue.Limited);
+            cbxObjectOrientedDesign.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxObjectOrientedDesign.Items.Add(PersonalSkillsValue.Advance);
+            cbxObjectOrientedDesign.Items.Add(PersonalSkillsValue.Expert);
+            cbxObjectOrientedDesign.SelectedIndex = 0;
+
+            cbxStructuredDesign.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxStructuredDesign.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxStructuredDesign.Items.Add(PersonalSkillsValue.Limited);
+            cbxStructuredDesign.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxStructuredDesign.Items.Add(PersonalSkillsValue.Advance);
+            cbxStructuredDesign.Items.Add(PersonalSkillsValue.Expert);
+            cbxStructuredDesign.SelectedIndex = 0;
+
+            cbxArchitecturalPattern.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxArchitecturalPattern.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxArchitecturalPattern.Items.Add(PersonalSkillsValue.Limited);
+            cbxArchitecturalPattern.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxArchitecturalPattern.Items.Add(PersonalSkillsValue.Advance);
+            cbxArchitecturalPattern.Items.Add(PersonalSkillsValue.Expert);
+            cbxArchitecturalPattern.SelectedIndex = 0;
+
+            cbxDesignPattern.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxDesignPattern.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxDesignPattern.Items.Add(PersonalSkillsValue.Limited);
+            cbxDesignPattern.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxDesignPattern.Items.Add(PersonalSkillsValue.Advance);
+            cbxDesignPattern.Items.Add(PersonalSkillsValue.Expert);
+            cbxDesignPattern.SelectedIndex = 0;
+
+            cbxObjectOrientedAnalysis.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxObjectOrientedAnalysis.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxObjectOrientedAnalysis.Items.Add(PersonalSkillsValue.Limited);
+            cbxObjectOrientedAnalysis.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxObjectOrientedAnalysis.Items.Add(PersonalSkillsValue.Advance);
+            cbxObjectOrientedAnalysis.Items.Add(PersonalSkillsValue.Expert);
+            cbxObjectOrientedAnalysis.SelectedIndex = 0;
+
+            cbxUml.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxUml.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxUml.Items.Add(PersonalSkillsValue.Limited);
+            cbxUml.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxUml.Items.Add(PersonalSkillsValue.Advance);
+            cbxUml.Items.Add(PersonalSkillsValue.Expert);
+            cbxUml.SelectedIndex = 0;
+
+            cbxApplicationArchitectureDesign.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxApplicationArchitectureDesign.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxApplicationArchitectureDesign.Items.Add(PersonalSkillsValue.Limited);
+            cbxApplicationArchitectureDesign.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxApplicationArchitectureDesign.Items.Add(PersonalSkillsValue.Advance);
+            cbxApplicationArchitectureDesign.Items.Add(PersonalSkillsValue.Expert);
+            cbxApplicationArchitectureDesign.SelectedIndex = 0;
+
+            cbxExternalDesignJP.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxExternalDesignJP.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxExternalDesignJP.Items.Add(PersonalSkillsValue.Limited);
+            cbxExternalDesignJP.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxExternalDesignJP.Items.Add(PersonalSkillsValue.Advance);
+            cbxExternalDesignJP.Items.Add(PersonalSkillsValue.Expert);
+            cbxExternalDesignJP.SelectedIndex = 0;
+
+            cbxDetailedDesign.Items.Add(PersonalSkillsValue.NoExperience);
+            cbxDetailedDesign.Items.Add(PersonalSkillsValue.Fundamental);
+            cbxDetailedDesign.Items.Add(PersonalSkillsValue.Limited);
+            cbxDetailedDesign.Items.Add(PersonalSkillsValue.Intermediate);
+            cbxDetailedDesign.Items.Add(PersonalSkillsValue.Advance);
+            cbxDetailedDesign.Items.Add(PersonalSkillsValue.Expert);
+            cbxDetailedDesign.SelectedIndex = 0;
+
+        }
+
         private void btnConfirmPersonalSkills_Click(object sender, EventArgs e)
         {
 
@@ -647,9 +801,6 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         #endregion
 
-        private void tclAssessmentInDetails_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            load();
-        }
+       
     }
 }

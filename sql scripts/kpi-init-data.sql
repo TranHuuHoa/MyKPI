@@ -8,6 +8,7 @@ truncate table tblProject;
 truncate table tblJobKpiAssessment;
 truncate table tblDeveloperProjectContribution;
 truncate table tblDeveloperProfessionalContribution;
+truncate table tblpersonalskills;
 SET FOREIGN_KEY_CHECKS = 1;
 
 /*init data for employee*/
@@ -103,3 +104,11 @@ insert into tblDeveloperProfessionalContribution (MasterProgrammingLanguages,Mas
 MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTrainningCourse,SubmissionImprovementProposal,
 ActivitesInComunity,DevelopsSubordinates,JobKpiAssessmentID)
 values (3,3,3,3,0,0,0,0,0,0,3);
+
+/*init data for Personal Skills */ 
+insert into tblPersonalSkills (Leadership,Communication,TimeManagement,
+                                    Counselling,Teamwork,ObjectOrientedDesign,StructuredDesign,ArchitecturalPattern,
+                                    DesignPattern,ObjectOrientedAnalysis,UML,ApplicationArchitectureDesign,ExternalDesignJP,DetailedDesign,JobKpiAssessmentID)
+                                    values (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);
+
+

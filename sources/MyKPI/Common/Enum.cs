@@ -72,5 +72,8 @@
     {
         NoKnowledge = 0, Junior = 1 , Senior = 2 , Expert = 3, Master = 4 
     }
-
+    public enum PersonalSkillsValue
+    {
+        NoExperience = 0,Fundamental = 1,Limited = 2 ,Intermediate = 3,Advance = 4,Expert = 5
+    }
 }

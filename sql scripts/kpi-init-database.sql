@@ -101,3 +101,24 @@ JobKpiAssessmentID int,
 PRIMARY KEY (ID),
 FOREIGN KEY (JobKpiAssessmentID) REFERENCES tblJobKpiAssessment(ID) 
 );
+
+CREATE TABLE tblPersonalSkills(
+ID int not null auto_increment,
+Leadership int,
+Communication int,
+TimeManagement int,
+Counselling int,
+Teamwork int,
+ObjectOrientedDesign int,
+StructuredDesign int,
+ArchitecturalPattern int,
+DesignPattern int,
+ObjectOrientedAnalysis int,
+UML int,
+ApplicationArchitectureDesign int,
+ExternalDesignJP int,
+DetailedDesign int,
+JobKpiAssessmentID int,
+PRIMARY KEY (ID),
+FOREIGN KEY (JobKpiAssessmentID) REFERENCES tblJobKpiAssessment(ID) 
+);
