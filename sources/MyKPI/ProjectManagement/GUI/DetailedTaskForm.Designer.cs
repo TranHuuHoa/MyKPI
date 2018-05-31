@@ -46,12 +46,15 @@
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.cbxTaskType = new System.Windows.Forms.ComboBox();
             this.cbxPriority = new System.Windows.Forms.ComboBox();
+            this.lblTaskCodeNotification = new System.Windows.Forms.Label();
+            this.lblTaskNameNotification = new System.Windows.Forms.Label();
+            this.lblDescriptionNotification = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(9, 244);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(201, 26);
             this.btnConfirm.TabIndex = 8;
@@ -147,7 +150,7 @@
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(214, 244);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(117, 26);
             this.btnExit.TabIndex = 9;
@@ -209,11 +212,47 @@
             this.cbxPriority.Size = new System.Drawing.Size(240, 21);
             this.cbxPriority.TabIndex = 6;
             // 
+            // lblTaskCodeNotification
+            // 
+            this.lblTaskCodeNotification.AutoSize = true;
+            this.lblTaskCodeNotification.ForeColor = System.Drawing.Color.Red;
+            this.lblTaskCodeNotification.Location = new System.Drawing.Point(329, 7);
+            this.lblTaskCodeNotification.Name = "lblTaskCodeNotification";
+            this.lblTaskCodeNotification.Size = new System.Drawing.Size(70, 13);
+            this.lblTaskCodeNotification.TabIndex = 39;
+            this.lblTaskCodeNotification.Text = "*Please Input";
+            this.lblTaskCodeNotification.Visible = false;
+            // 
+            // lblTaskNameNotification
+            // 
+            this.lblTaskNameNotification.AutoSize = true;
+            this.lblTaskNameNotification.ForeColor = System.Drawing.Color.Red;
+            this.lblTaskNameNotification.Location = new System.Drawing.Point(329, 30);
+            this.lblTaskNameNotification.Name = "lblTaskNameNotification";
+            this.lblTaskNameNotification.Size = new System.Drawing.Size(70, 13);
+            this.lblTaskNameNotification.TabIndex = 39;
+            this.lblTaskNameNotification.Text = "*Please Input";
+            this.lblTaskNameNotification.Visible = false;
+            // 
+            // lblDescriptionNotification
+            // 
+            this.lblDescriptionNotification.AutoSize = true;
+            this.lblDescriptionNotification.ForeColor = System.Drawing.Color.Red;
+            this.lblDescriptionNotification.Location = new System.Drawing.Point(329, 54);
+            this.lblDescriptionNotification.Name = "lblDescriptionNotification";
+            this.lblDescriptionNotification.Size = new System.Drawing.Size(70, 13);
+            this.lblDescriptionNotification.TabIndex = 39;
+            this.lblDescriptionNotification.Text = "*Please Input";
+            this.lblDescriptionNotification.Visible = false;
+            // 
             // DetailedTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 278);
+            this.ClientSize = new System.Drawing.Size(411, 273);
+            this.Controls.Add(this.lblDescriptionNotification);
+            this.Controls.Add(this.lblTaskNameNotification);
+            this.Controls.Add(this.lblTaskCodeNotification);
             this.Controls.Add(this.cbxPriority);
             this.Controls.Add(this.cbxTaskType);
             this.Controls.Add(this.cbxStatus);
@@ -232,13 +271,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnConfirm);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DetailedTaskForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Detailed Task";          
+            this.Text = "Detailed Task";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +303,8 @@
         private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.ComboBox cbxTaskType;
         private System.Windows.Forms.ComboBox cbxPriority;
+        private System.Windows.Forms.Label lblTaskCodeNotification;
+        private System.Windows.Forms.Label lblTaskNameNotification;
+        private System.Windows.Forms.Label lblDescriptionNotification;
     }
 }

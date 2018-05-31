@@ -68,8 +68,8 @@
             this.grColPERole = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grColPEActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gbxProjectGeneralnformation = new System.Windows.Forms.GroupBox();
+            this.lblProjectCodeNotification = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnProjectCancel = new System.Windows.Forms.Button();
             this.btnConfirmProject = new System.Windows.Forms.Button();
             this.cbxProjectStatus = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -79,12 +79,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblScopeMM = new System.Windows.Forms.Label();
             this.txtScopeMM = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtProjectName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtProjectCode = new System.Windows.Forms.TextBox();
+            this.lblProjectNameNotification = new System.Windows.Forms.Label();
+            this.lblCustomerNameNotification = new System.Windows.Forms.Label();
+            this.lblScopeMMNotification = new System.Windows.Forms.Label();
             this.gbxProjectTaskManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcTask)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvTask)).BeginInit();
@@ -102,11 +105,11 @@
             this.gbxProjectTaskManagement.Controls.Add(this.btnDUTask);
             this.gbxProjectTaskManagement.Controls.Add(this.btnAddTask);
             this.gbxProjectTaskManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbxProjectTaskManagement.Location = new System.Drawing.Point(0, 262);
+            this.gbxProjectTaskManagement.Location = new System.Drawing.Point(0, 334);
             this.gbxProjectTaskManagement.Margin = new System.Windows.Forms.Padding(2);
             this.gbxProjectTaskManagement.Name = "gbxProjectTaskManagement";
             this.gbxProjectTaskManagement.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxProjectTaskManagement.Size = new System.Drawing.Size(1185, 225);
+            this.gbxProjectTaskManagement.Size = new System.Drawing.Size(1185, 181);
             this.gbxProjectTaskManagement.TabIndex = 5;
             this.gbxProjectTaskManagement.TabStop = false;
             this.gbxProjectTaskManagement.Text = "Project task managment:";
@@ -116,10 +119,10 @@
             this.grcTask.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grcTask.Location = new System.Drawing.Point(0, 18);
+            this.grcTask.Location = new System.Drawing.Point(0, 32);
             this.grcTask.MainView = this.grvTask;
             this.grcTask.Name = "grcTask";
-            this.grcTask.Size = new System.Drawing.Size(1185, 172);
+            this.grcTask.Size = new System.Drawing.Size(1185, 114);
             this.grcTask.TabIndex = 5;
             this.grcTask.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvTask});
@@ -216,7 +219,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnExit.Location = new System.Drawing.Point(767, 195);
+            this.btnExit.Location = new System.Drawing.Point(767, 151);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(145, 22);
@@ -228,7 +231,7 @@
             // btnDeleteTask
             // 
             this.btnDeleteTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDeleteTask.Location = new System.Drawing.Point(605, 195);
+            this.btnDeleteTask.Location = new System.Drawing.Point(605, 151);
             this.btnDeleteTask.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteTask.Name = "btnDeleteTask";
             this.btnDeleteTask.Size = new System.Drawing.Size(145, 22);
@@ -240,7 +243,7 @@
             // btnDUTask
             // 
             this.btnDUTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDUTask.Location = new System.Drawing.Point(438, 195);
+            this.btnDUTask.Location = new System.Drawing.Point(438, 151);
             this.btnDUTask.Margin = new System.Windows.Forms.Padding(2);
             this.btnDUTask.Name = "btnDUTask";
             this.btnDUTask.Size = new System.Drawing.Size(145, 22);
@@ -252,7 +255,7 @@
             // btnAddTask
             // 
             this.btnAddTask.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddTask.Location = new System.Drawing.Point(267, 195);
+            this.btnAddTask.Location = new System.Drawing.Point(267, 151);
             this.btnAddTask.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.Size = new System.Drawing.Size(145, 22);
@@ -277,11 +280,11 @@
             this.gbxProjectMemberManagement.Controls.Add(this.btnAddNewProjectMember);
             this.gbxProjectMemberManagement.Controls.Add(this.grcProjectMember);
             this.gbxProjectMemberManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbxProjectMemberManagement.Location = new System.Drawing.Point(0, 117);
+            this.gbxProjectMemberManagement.Location = new System.Drawing.Point(0, 146);
             this.gbxProjectMemberManagement.Margin = new System.Windows.Forms.Padding(2);
             this.gbxProjectMemberManagement.Name = "gbxProjectMemberManagement";
             this.gbxProjectMemberManagement.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxProjectMemberManagement.Size = new System.Drawing.Size(1185, 145);
+            this.gbxProjectMemberManagement.Size = new System.Drawing.Size(1185, 188);
             this.gbxProjectMemberManagement.TabIndex = 4;
             this.gbxProjectMemberManagement.TabStop = false;
             this.gbxProjectMemberManagement.Text = "Project member management";
@@ -426,7 +429,7 @@
             this.grcProjectMember.MainView = this.grvProjectMember;
             this.grcProjectMember.Margin = new System.Windows.Forms.Padding(2);
             this.grcProjectMember.Name = "grcProjectMember";
-            this.grcProjectMember.Size = new System.Drawing.Size(629, 128);
+            this.grcProjectMember.Size = new System.Drawing.Size(629, 171);
             this.grcProjectMember.TabIndex = 0;
             this.grcProjectMember.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvProjectMember});
@@ -510,8 +513,11 @@
             // 
             // gbxProjectGeneralnformation
             // 
+            this.gbxProjectGeneralnformation.Controls.Add(this.lblScopeMMNotification);
+            this.gbxProjectGeneralnformation.Controls.Add(this.lblCustomerNameNotification);
+            this.gbxProjectGeneralnformation.Controls.Add(this.lblProjectNameNotification);
+            this.gbxProjectGeneralnformation.Controls.Add(this.lblProjectCodeNotification);
             this.gbxProjectGeneralnformation.Controls.Add(this.btnCancel);
-            this.gbxProjectGeneralnformation.Controls.Add(this.btnProjectCancel);
             this.gbxProjectGeneralnformation.Controls.Add(this.btnConfirmProject);
             this.gbxProjectGeneralnformation.Controls.Add(this.cbxProjectStatus);
             this.gbxProjectGeneralnformation.Controls.Add(this.label7);
@@ -521,7 +527,7 @@
             this.gbxProjectGeneralnformation.Controls.Add(this.label5);
             this.gbxProjectGeneralnformation.Controls.Add(this.label4);
             this.gbxProjectGeneralnformation.Controls.Add(this.txtCustomerName);
-            this.gbxProjectGeneralnformation.Controls.Add(this.label3);
+            this.gbxProjectGeneralnformation.Controls.Add(this.lblScopeMM);
             this.gbxProjectGeneralnformation.Controls.Add(this.txtScopeMM);
             this.gbxProjectGeneralnformation.Controls.Add(this.label2);
             this.gbxProjectGeneralnformation.Controls.Add(this.txtProjectName);
@@ -532,14 +538,26 @@
             this.gbxProjectGeneralnformation.Margin = new System.Windows.Forms.Padding(2);
             this.gbxProjectGeneralnformation.Name = "gbxProjectGeneralnformation";
             this.gbxProjectGeneralnformation.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxProjectGeneralnformation.Size = new System.Drawing.Size(1185, 117);
+            this.gbxProjectGeneralnformation.Size = new System.Drawing.Size(1185, 146);
             this.gbxProjectGeneralnformation.TabIndex = 3;
             this.gbxProjectGeneralnformation.TabStop = false;
             this.gbxProjectGeneralnformation.Text = "Project general information:";
             // 
+            // lblProjectCodeNotification
+            // 
+            this.lblProjectCodeNotification.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblProjectCodeNotification.AutoSize = true;
+            this.lblProjectCodeNotification.ForeColor = System.Drawing.Color.Red;
+            this.lblProjectCodeNotification.Location = new System.Drawing.Point(168, 34);
+            this.lblProjectCodeNotification.Name = "lblProjectCodeNotification";
+            this.lblProjectCodeNotification.Size = new System.Drawing.Size(70, 13);
+            this.lblProjectCodeNotification.TabIndex = 39;
+            this.lblProjectCodeNotification.Text = "*Please Input";
+            this.lblProjectCodeNotification.Visible = false;
+            // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(591, 78);
+            this.btnCancel.Location = new System.Drawing.Point(589, 96);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(152, 23);
@@ -548,18 +566,9 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnProjectCancel
-            // 
-            this.btnProjectCancel.Location = new System.Drawing.Point(898, 120);
-            this.btnProjectCancel.Name = "btnProjectCancel";
-            this.btnProjectCancel.Size = new System.Drawing.Size(127, 23);
-            this.btnProjectCancel.TabIndex = 15;
-            this.btnProjectCancel.Text = "CANCEL";
-            this.btnProjectCancel.UseVisualStyleBackColor = true;
-            // 
             // btnConfirmProject
             // 
-            this.btnConfirmProject.Location = new System.Drawing.Point(380, 78);
+            this.btnConfirmProject.Location = new System.Drawing.Point(378, 96);
             this.btnConfirmProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmProject.Name = "btnConfirmProject";
             this.btnConfirmProject.Size = new System.Drawing.Size(205, 23);
@@ -573,7 +582,7 @@
             this.cbxProjectStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxProjectStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProjectStatus.FormattingEnabled = true;
-            this.cbxProjectStatus.Location = new System.Drawing.Point(812, 40);
+            this.cbxProjectStatus.Location = new System.Drawing.Point(810, 58);
             this.cbxProjectStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbxProjectStatus.Name = "cbxProjectStatus";
             this.cbxProjectStatus.Size = new System.Drawing.Size(145, 21);
@@ -583,7 +592,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(732, 42);
+            this.label7.Location = new System.Drawing.Point(730, 60);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 13);
@@ -593,7 +602,7 @@
             // dtmEndDate
             // 
             this.dtmEndDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtmEndDate.Location = new System.Drawing.Point(525, 42);
+            this.dtmEndDate.Location = new System.Drawing.Point(523, 60);
             this.dtmEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtmEndDate.Name = "dtmEndDate";
             this.dtmEndDate.Size = new System.Drawing.Size(185, 20);
@@ -602,7 +611,7 @@
             // dtmStartedDate
             // 
             this.dtmStartedDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtmStartedDate.Location = new System.Drawing.Point(258, 42);
+            this.dtmStartedDate.Location = new System.Drawing.Point(256, 60);
             this.dtmStartedDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtmStartedDate.Name = "dtmStartedDate";
             this.dtmStartedDate.Size = new System.Drawing.Size(185, 20);
@@ -612,7 +621,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(467, 42);
+            this.label6.Location = new System.Drawing.Point(465, 60);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
@@ -623,7 +632,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(184, 43);
+            this.label5.Location = new System.Drawing.Point(182, 61);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 13);
@@ -650,16 +659,16 @@
             this.txtCustomerName.Size = new System.Drawing.Size(217, 20);
             this.txtCustomerName.TabIndex = 6;
             // 
-            // label3
+            // lblScopeMM
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(893, 14);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Scope Man-Month:";
+            this.lblScopeMM.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblScopeMM.AutoSize = true;
+            this.lblScopeMM.Location = new System.Drawing.Point(893, 14);
+            this.lblScopeMM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblScopeMM.Name = "lblScopeMM";
+            this.lblScopeMM.Size = new System.Drawing.Size(98, 13);
+            this.lblScopeMM.TabIndex = 5;
+            this.lblScopeMM.Text = "Scope Man-Month:";
             // 
             // txtScopeMM
             // 
@@ -710,11 +719,47 @@
             this.txtProjectCode.Size = new System.Drawing.Size(97, 20);
             this.txtProjectCode.TabIndex = 0;
             // 
+            // lblProjectNameNotification
+            // 
+            this.lblProjectNameNotification.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblProjectNameNotification.AutoSize = true;
+            this.lblProjectNameNotification.ForeColor = System.Drawing.Color.Red;
+            this.lblProjectNameNotification.Location = new System.Drawing.Point(411, 34);
+            this.lblProjectNameNotification.Name = "lblProjectNameNotification";
+            this.lblProjectNameNotification.Size = new System.Drawing.Size(70, 13);
+            this.lblProjectNameNotification.TabIndex = 39;
+            this.lblProjectNameNotification.Text = "*Please Input";
+            this.lblProjectNameNotification.Visible = false;
+            // 
+            // lblCustomerNameNotification
+            // 
+            this.lblCustomerNameNotification.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCustomerNameNotification.AutoSize = true;
+            this.lblCustomerNameNotification.ForeColor = System.Drawing.Color.Red;
+            this.lblCustomerNameNotification.Location = new System.Drawing.Point(730, 34);
+            this.lblCustomerNameNotification.Name = "lblCustomerNameNotification";
+            this.lblCustomerNameNotification.Size = new System.Drawing.Size(70, 13);
+            this.lblCustomerNameNotification.TabIndex = 39;
+            this.lblCustomerNameNotification.Text = "*Please Input";
+            this.lblCustomerNameNotification.Visible = false;
+            // 
+            // lblScopeMMNotification
+            // 
+            this.lblScopeMMNotification.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblScopeMMNotification.AutoSize = true;
+            this.lblScopeMMNotification.ForeColor = System.Drawing.Color.Red;
+            this.lblScopeMMNotification.Location = new System.Drawing.Point(1007, 34);
+            this.lblScopeMMNotification.Name = "lblScopeMMNotification";
+            this.lblScopeMMNotification.Size = new System.Drawing.Size(70, 13);
+            this.lblScopeMMNotification.TabIndex = 39;
+            this.lblScopeMMNotification.Text = "*Please Input";
+            this.lblScopeMMNotification.Visible = false;
+            // 
             // DetailedProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1185, 487);
+            this.ClientSize = new System.Drawing.Size(1185, 515);
             this.Controls.Add(this.gbxProjectTaskManagement);
             this.Controls.Add(this.gbxProjectMemberManagement);
             this.Controls.Add(this.gbxProjectGeneralnformation);
@@ -758,7 +803,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn grcolPriority;
         private DevExpress.XtraGrid.Columns.GridColumn grcolTaskType;
         private DevExpress.XtraGrid.Columns.GridColumn grcolDescription;
-        private System.Windows.Forms.Button btnProjectCancel;
         private System.Windows.Forms.Button btnConfirmProject;
         private System.Windows.Forms.ComboBox cbxProjectStatus;
         private System.Windows.Forms.Label label7;
@@ -768,7 +812,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblScopeMM;
         private System.Windows.Forms.TextBox txtScopeMM;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtProjectName;
@@ -797,5 +841,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn grColPEActive;
         private DevExpress.XtraGrid.Columns.GridColumn grColPEEmployeeName;
         private System.Windows.Forms.Button btnPECancel;
+        private System.Windows.Forms.Label lblProjectCodeNotification;
+        private System.Windows.Forms.Label lblScopeMMNotification;
+        private System.Windows.Forms.Label lblCustomerNameNotification;
+        private System.Windows.Forms.Label lblProjectNameNotification;
     }
 }

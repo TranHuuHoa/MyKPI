@@ -40,6 +40,51 @@ namespace MyKPI.ProjectManagement.GUI
             cbxProjectStatus.Items.Add(ProjectStatusValue.Closed);
             cbxProjectStatus.SelectedIndex = 0;
         }
+        private bool InputValidation()
+        {
+            Boolean Result = true;
+            if (txtProjectCode.Text == String.Empty)
+            {
+                lblProjectCodeNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblProjectCodeNotification.Visible = false;
+            }
+
+            if (txtCustomerName.Text == String.Empty)
+            {
+                lblProjectNameNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblProjectNameNotification.Visible = false;
+            }
+
+            if (txtCustomerName.Text == String.Empty)
+            {
+                lblCustomerNameNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblCustomerNameNotification.Visible = false;
+            }
+
+            if (txtScopeMM.Text == String.Empty)
+            {
+                lblScopeMMNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblScopeMMNotification.Visible = false;
+            }
+            return Result;
+
+        }
 
         private void updateDetailedProjectMember()
         {
@@ -132,6 +177,7 @@ namespace MyKPI.ProjectManagement.GUI
         #region project general information group
         private void btnConfirmProject_Click(object sender, EventArgs e)
         {
+            if (!InputValidation()) return;
             ProjectEntity projectEntity = new ProjectEntity();
             projectEntity.ProjectCode = txtProjectCode.Text;
             projectEntity.ProjectName = txtProjectName.Text;
@@ -424,12 +470,8 @@ namespace MyKPI.ProjectManagement.GUI
                 load();
             }          
         }
-
-
-
-
         #endregion
 
-       
+        
     }
 }

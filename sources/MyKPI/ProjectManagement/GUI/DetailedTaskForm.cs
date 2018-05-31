@@ -57,6 +57,41 @@ namespace MyKPI.ProjectManagement.GUI
             cbxTaskType.Items.Add(TaskTypeValue.Bug);
             cbxTaskType.SelectedIndex = 0;
         }
+        private bool InputValidation()
+        {
+            Boolean Result = true;
+            if (txtTaskCode.Text == String.Empty)
+            {
+                lblTaskCodeNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblTaskCodeNotification.Visible = false;
+            }
+
+            if (txtTaskName.Text == String.Empty)
+            {
+                lblTaskNameNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblTaskNameNotification.Visible = false;
+            }
+
+            if (txtDescription.Text == String.Empty)
+            {
+                lblDescriptionNotification.Visible = true;
+                Result = false;
+            }
+            else
+            {
+                lblDescriptionNotification.Visible = false;
+            }
+            return Result;
+
+        }
         #endregion
 
         #region Methods
@@ -87,6 +122,7 @@ namespace MyKPI.ProjectManagement.GUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            if (!InputValidation()) return;
             TaskEntity taskEntity = new TaskEntity();
             taskEntity.TaskCode = txtTaskCode.Text;
             taskEntity.TaskName = txtTaskName.Text;
