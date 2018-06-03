@@ -61,10 +61,16 @@ namespace MyKPI.JobKpiAssessment.GUI
         {
             if (detailedFormMode == DetailedFormMode.Add)
             {
-                grbAssessmentinDetails.Enabled = false;               
+                grbAssessmentinDetails.Enabled = false;
+                grbAssessmentinDetails.Visible = false;
             }
             else
             {
+                grbAssessmentinDetails.Visible = true;
+               
+
+                
+
                 if (UpdateJobKpiAssessmentState == FormState.preProcess)
                 {
                     enableGeneralInformation(false);
@@ -914,8 +920,34 @@ namespace MyKPI.JobKpiAssessment.GUI
             }
         }
 
+
         #endregion
 
-       
+        private void cbxRoleInAssessment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tclAssessmentInDetails.TabPages.Clear();
+            switch (cbxRoleInAssessment.SelectedIndex)
+            {
+                case (int)JobRankValue.ProjectManager:
+                    tclAssessmentInDetails.TabPages.Add(tabPage4);
+                    tclAssessmentInDetails.TabPages.Add(tabPage5);
+                    tclAssessmentInDetails.TabPages.Add(tabPage6);
+                    break;
+                case (int)JobRankValue.Tester:
+                    tclAssessmentInDetails.TabPages.Add(tabPage1);
+                    tclAssessmentInDetails.TabPages.Add(tabPage2);
+                    tclAssessmentInDetails.TabPages.Add(tabPage3);
+                    break;
+                case (int)JobRankValue.Developer:
+                    tclAssessmentInDetails.TabPages.Add(tpgDeveloperProjectsContribution);
+                    tclAssessmentInDetails.TabPages.Add(tpgDeveloperProfessionalContribution);
+                    tclAssessmentInDetails.TabPages.Add(tpgDeveloperPersonalSkills);
+                    break;
+                default:
+                    tclAssessmentInDetails.TabPages.Add(tabPage7);
+                    break;
+
+            }
+        }
     }
 }

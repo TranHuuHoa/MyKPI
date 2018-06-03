@@ -106,7 +106,7 @@ ActivitesInComunity,DevelopsSubordinates,JobKpiAssessmentID)
 values (3,3,3,3,0,0,0,0,0,0,3);
 
 /*init data for Personal Skills */ 
-insert into tblPersonalSkills (Leadership,Communication,TimeManagement,
+insert into tblDeveloperPersonalSkills (Leadership,Communication,TimeManagement,
                                     Counselling,Teamwork,ObjectOrientedDesign,StructuredDesign,ArchitecturalPattern,
                                     DesignPattern,ObjectOrientedAnalysis,UML,ApplicationArchitectureDesign,ExternalDesignJP,DetailedDesign,JobKpiAssessmentID)
                                     values (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);

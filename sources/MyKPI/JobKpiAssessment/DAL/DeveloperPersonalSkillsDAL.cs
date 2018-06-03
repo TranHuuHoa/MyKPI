@@ -24,7 +24,7 @@ namespace MyKPI.PersonalSkills.DAL
             string str = string.Empty;
             try
             {
-                str = string.Format(@"insert into tblPersonalSkills (Leadership,Communication,TimeManagement,
+                str = string.Format(@"insert into tblDeveloperPersonalSkills (Leadership,Communication,TimeManagement,
                                     Counselling,Teamwork,ObjectOrientedDesign,StructuredDesign,ArchitecturalPattern,
                                     DesignPattern,ObjectOrientedAnalysis,UML,ApplicationArchitectureDesign,ExternalDesignJP,DetailedDesign,JobKpiAssessmentID)
                                     values ({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14})",
@@ -61,7 +61,7 @@ namespace MyKPI.PersonalSkills.DAL
             string str = string.Empty;
             try
             {
-                str = string.Format(@"delete from tblPersonalSkills where ID = {0}", ID);
+                str = string.Format(@"delete from tblDeveloperPersonalSkills where ID = {0}", ID);
                 DBManager.InstantDBManger.QueryExecutionWithTransaction(str);
                 return true;
             }
@@ -80,7 +80,7 @@ namespace MyKPI.PersonalSkills.DAL
             string str = string.Empty;
             try
             {
-                str = string.Format(@"update tblPersonalSkills  set Leadership = {0},Communication= {1},TimeManagement ={2},
+                str = string.Format(@"update tblDeveloperPersonalSkills  set Leadership = {0},Communication= {1},TimeManagement ={2},
                                 Counselling = {3},Teamwork ={4},ObjectOrientedDesign ={5},StructuredDesign ={6},ArchitecturalPattern ={7},
                                 DesignPattern ={8},ObjectOrientedAnalysis ={9},ObjectOrientedAnalysis ={9},UML ={10},ApplicationArchitectureDesign ={11},
                                 ExternalDesignJP ={12},DetailedDesign ={12},JobKpiAssessmentID ={13} where ID = {14}",
@@ -115,7 +115,7 @@ namespace MyKPI.PersonalSkills.DAL
         #region Load
         public DataTable Load(int JobKpiAssessmentID)
         {
-            string str = string.Format(@"SELECT * FROM mykpi.tblPersonalSkills where JobKpiAssessmentID = {0}",
+            string str = string.Format(@"SELECT * FROM mykpi.tblDeveloperPersonalSkills where JobKpiAssessmentID = {0}",
                                         JobKpiAssessmentID
                                         );
             return DBManager.InstantDBManger.GetData(str);

@@ -102,7 +102,7 @@ PRIMARY KEY (ID),
 FOREIGN KEY (JobKpiAssessmentID) REFERENCES tblJobKpiAssessment(ID) 
 );
 
-CREATE TABLE tblPersonalSkills(
+CREATE TABLE tblDeveloperPersonalSkills(
 ID int not null auto_increment,
 Leadership int,
 Communication int,
