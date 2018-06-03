@@ -41,7 +41,7 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.grbAssessmentinDetails = new System.Windows.Forms.GroupBox();
             this.tclAssessmentInDetails = new System.Windows.Forms.TabControl();
-            this.tpgProjectsContribution = new System.Windows.Forms.TabPage();
+            this.tpgDeveloperProjectsContribution = new System.Windows.Forms.TabPage();
             this.btnProjectCancel = new System.Windows.Forms.Button();
             this.btnConfirmProject = new System.Windows.Forms.Button();
             this.tclProject = new System.Windows.Forms.TabControl();
@@ -99,7 +99,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.cbxTeamRole3 = new System.Windows.Forms.ComboBox();
-            this.tpgProfessionalContribution = new System.Windows.Forms.TabPage();
+            this.tpgDeveloperProfessionalContribution = new System.Windows.Forms.TabPage();
             this.btnCancelProfessional = new System.Windows.Forms.Button();
             this.btnConfirmProfessional = new System.Windows.Forms.Button();
             this.grbProfessionalContribution = new System.Windows.Forms.GroupBox();
@@ -116,7 +116,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.cbxMasterProgrammingLanguages = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.tpgPersonalSkills = new System.Windows.Forms.TabPage();
+            this.tpgDeveloperPersonalSkills = new System.Windows.Forms.TabPage();
             this.grbPersonalSkills = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -155,10 +155,16 @@
             this.cbxTimeManagement = new System.Windows.Forms.ComboBox();
             this.btnCancelPersonalSkills = new System.Windows.Forms.Button();
             this.btnConfirmPersonalSkills = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.grbGeneralInformation.SuspendLayout();
             this.grbAssessmentinDetails.SuspendLayout();
             this.tclAssessmentInDetails.SuspendLayout();
-            this.tpgProjectsContribution.SuspendLayout();
+            this.tpgDeveloperProjectsContribution.SuspendLayout();
             this.tclProject.SuspendLayout();
             this.tpgProject1.SuspendLayout();
             this.grbProject1.SuspendLayout();
@@ -166,12 +172,12 @@
             this.grbProject2.SuspendLayout();
             this.tpgProject3.SuspendLayout();
             this.grbProject3.SuspendLayout();
-            this.tpgProfessionalContribution.SuspendLayout();
+            this.tpgDeveloperProfessionalContribution.SuspendLayout();
             this.grbProfessionalContribution.SuspendLayout();
             this.grbBusinessDomains.SuspendLayout();
             this.grbSoftwareDevelopment.SuspendLayout();
             this.grbHighSpecialty.SuspendLayout();
-            this.tpgPersonalSkills.SuspendLayout();
+            this.tpgDeveloperPersonalSkills.SuspendLayout();
             this.grbPersonalSkills.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -319,9 +325,15 @@
             // 
             // tclAssessmentInDetails
             // 
-            this.tclAssessmentInDetails.Controls.Add(this.tpgProjectsContribution);
-            this.tclAssessmentInDetails.Controls.Add(this.tpgProfessionalContribution);
-            this.tclAssessmentInDetails.Controls.Add(this.tpgPersonalSkills);
+            this.tclAssessmentInDetails.Controls.Add(this.tpgDeveloperProjectsContribution);
+            this.tclAssessmentInDetails.Controls.Add(this.tpgDeveloperProfessionalContribution);
+            this.tclAssessmentInDetails.Controls.Add(this.tpgDeveloperPersonalSkills);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage1);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage2);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage3);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage4);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage5);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage6);
             this.tclAssessmentInDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tclAssessmentInDetails.Location = new System.Drawing.Point(3, 22);
             this.tclAssessmentInDetails.Name = "tclAssessmentInDetails";
@@ -330,18 +342,18 @@
             this.tclAssessmentInDetails.TabIndex = 0;
             this.tclAssessmentInDetails.SelectedIndexChanged += new System.EventHandler(this.tclAssessmentInDetails_SelectedIndexChanged);
             // 
-            // tpgProjectsContribution
+            // tpgDeveloperProjectsContribution
             // 
-            this.tpgProjectsContribution.Controls.Add(this.btnProjectCancel);
-            this.tpgProjectsContribution.Controls.Add(this.btnConfirmProject);
-            this.tpgProjectsContribution.Controls.Add(this.tclProject);
-            this.tpgProjectsContribution.Location = new System.Drawing.Point(4, 29);
-            this.tpgProjectsContribution.Name = "tpgProjectsContribution";
-            this.tpgProjectsContribution.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tpgProjectsContribution.Size = new System.Drawing.Size(1843, 655);
-            this.tpgProjectsContribution.TabIndex = 0;
-            this.tpgProjectsContribution.Text = "Projects\' contributions";
-            this.tpgProjectsContribution.UseVisualStyleBackColor = true;
+            this.tpgDeveloperProjectsContribution.Controls.Add(this.btnProjectCancel);
+            this.tpgDeveloperProjectsContribution.Controls.Add(this.btnConfirmProject);
+            this.tpgDeveloperProjectsContribution.Controls.Add(this.tclProject);
+            this.tpgDeveloperProjectsContribution.Location = new System.Drawing.Point(4, 29);
+            this.tpgDeveloperProjectsContribution.Name = "tpgDeveloperProjectsContribution";
+            this.tpgDeveloperProjectsContribution.Padding = new System.Windows.Forms.Padding(2);
+            this.tpgDeveloperProjectsContribution.Size = new System.Drawing.Size(1843, 655);
+            this.tpgDeveloperProjectsContribution.TabIndex = 0;
+            this.tpgDeveloperProjectsContribution.Text = "Developer projects\' contributions";
+            this.tpgDeveloperProjectsContribution.UseVisualStyleBackColor = true;
             // 
             // btnProjectCancel
             // 
@@ -385,7 +397,7 @@
             this.tpgProject1.Controls.Add(this.grbProject1);
             this.tpgProject1.Location = new System.Drawing.Point(4, 29);
             this.tpgProject1.Name = "tpgProject1";
-            this.tpgProject1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpgProject1.Padding = new System.Windows.Forms.Padding(3);
             this.tpgProject1.Size = new System.Drawing.Size(1831, 483);
             this.tpgProject1.TabIndex = 0;
             this.tpgProject1.Text = "Project 1";
@@ -572,7 +584,7 @@
             this.tpgProject2.Controls.Add(this.grbProject2);
             this.tpgProject2.Location = new System.Drawing.Point(4, 29);
             this.tpgProject2.Name = "tpgProject2";
-            this.tpgProject2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpgProject2.Padding = new System.Windows.Forms.Padding(3);
             this.tpgProject2.Size = new System.Drawing.Size(1831, 483);
             this.tpgProject2.TabIndex = 1;
             this.tpgProject2.Text = "Project 2";
@@ -759,7 +771,7 @@
             this.tpgProject3.Controls.Add(this.grbProject3);
             this.tpgProject3.Location = new System.Drawing.Point(4, 29);
             this.tpgProject3.Name = "tpgProject3";
-            this.tpgProject3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpgProject3.Padding = new System.Windows.Forms.Padding(3);
             this.tpgProject3.Size = new System.Drawing.Size(1831, 483);
             this.tpgProject3.TabIndex = 2;
             this.tpgProject3.Text = "Project 3";
@@ -940,24 +952,24 @@
             this.cbxTeamRole3.Size = new System.Drawing.Size(334, 28);
             this.cbxTeamRole3.TabIndex = 88;
             // 
-            // tpgProfessionalContribution
+            // tpgDeveloperProfessionalContribution
             // 
-            this.tpgProfessionalContribution.Controls.Add(this.btnCancelProfessional);
-            this.tpgProfessionalContribution.Controls.Add(this.btnConfirmProfessional);
-            this.tpgProfessionalContribution.Controls.Add(this.grbProfessionalContribution);
-            this.tpgProfessionalContribution.Location = new System.Drawing.Point(4, 29);
-            this.tpgProfessionalContribution.Name = "tpgProfessionalContribution";
-            this.tpgProfessionalContribution.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tpgProfessionalContribution.Size = new System.Drawing.Size(1843, 655);
-            this.tpgProfessionalContribution.TabIndex = 1;
-            this.tpgProfessionalContribution.Text = "Professional contribution";
-            this.tpgProfessionalContribution.UseVisualStyleBackColor = true;
+            this.tpgDeveloperProfessionalContribution.Controls.Add(this.btnCancelProfessional);
+            this.tpgDeveloperProfessionalContribution.Controls.Add(this.btnConfirmProfessional);
+            this.tpgDeveloperProfessionalContribution.Controls.Add(this.grbProfessionalContribution);
+            this.tpgDeveloperProfessionalContribution.Location = new System.Drawing.Point(4, 29);
+            this.tpgDeveloperProfessionalContribution.Name = "tpgDeveloperProfessionalContribution";
+            this.tpgDeveloperProfessionalContribution.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgDeveloperProfessionalContribution.Size = new System.Drawing.Size(1843, 655);
+            this.tpgDeveloperProfessionalContribution.TabIndex = 1;
+            this.tpgDeveloperProfessionalContribution.Text = "Developer professional contribution";
+            this.tpgDeveloperProfessionalContribution.UseVisualStyleBackColor = true;
             // 
             // btnCancelProfessional
             // 
             this.btnCancelProfessional.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCancelProfessional.Location = new System.Drawing.Point(1062, 562);
-            this.btnCancelProfessional.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelProfessional.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelProfessional.Name = "btnCancelProfessional";
             this.btnCancelProfessional.Size = new System.Drawing.Size(190, 48);
             this.btnCancelProfessional.TabIndex = 65;
@@ -969,7 +981,7 @@
             // 
             this.btnConfirmProfessional.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnConfirmProfessional.Location = new System.Drawing.Point(568, 562);
-            this.btnConfirmProfessional.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmProfessional.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmProfessional.Name = "btnConfirmProfessional";
             this.btnConfirmProfessional.Size = new System.Drawing.Size(466, 48);
             this.btnConfirmProfessional.TabIndex = 64;
@@ -1157,18 +1169,18 @@
             this.label29.TabIndex = 0;
             this.label29.Text = "Master Programming Languages";
             // 
-            // tpgPersonalSkills
+            // tpgDeveloperPersonalSkills
             // 
-            this.tpgPersonalSkills.Controls.Add(this.grbPersonalSkills);
-            this.tpgPersonalSkills.Controls.Add(this.btnCancelPersonalSkills);
-            this.tpgPersonalSkills.Controls.Add(this.btnConfirmPersonalSkills);
-            this.tpgPersonalSkills.Location = new System.Drawing.Point(4, 29);
-            this.tpgPersonalSkills.Name = "tpgPersonalSkills";
-            this.tpgPersonalSkills.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tpgPersonalSkills.Size = new System.Drawing.Size(1843, 655);
-            this.tpgPersonalSkills.TabIndex = 2;
-            this.tpgPersonalSkills.Text = "Personal skills";
-            this.tpgPersonalSkills.UseVisualStyleBackColor = true;
+            this.tpgDeveloperPersonalSkills.Controls.Add(this.grbPersonalSkills);
+            this.tpgDeveloperPersonalSkills.Controls.Add(this.btnCancelPersonalSkills);
+            this.tpgDeveloperPersonalSkills.Controls.Add(this.btnConfirmPersonalSkills);
+            this.tpgDeveloperPersonalSkills.Location = new System.Drawing.Point(4, 29);
+            this.tpgDeveloperPersonalSkills.Name = "tpgDeveloperPersonalSkills";
+            this.tpgDeveloperPersonalSkills.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgDeveloperPersonalSkills.Size = new System.Drawing.Size(1843, 655);
+            this.tpgDeveloperPersonalSkills.TabIndex = 2;
+            this.tpgDeveloperPersonalSkills.Text = "Developer Personal skills";
+            this.tpgDeveloperPersonalSkills.UseVisualStyleBackColor = true;
             // 
             // grbPersonalSkills
             // 
@@ -1591,7 +1603,7 @@
             // 
             this.btnCancelPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCancelPersonalSkills.Location = new System.Drawing.Point(944, 593);
-            this.btnCancelPersonalSkills.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelPersonalSkills.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelPersonalSkills.Name = "btnCancelPersonalSkills";
             this.btnCancelPersonalSkills.Size = new System.Drawing.Size(128, 49);
             this.btnCancelPersonalSkills.TabIndex = 67;
@@ -1603,13 +1615,67 @@
             // 
             this.btnConfirmPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnConfirmPersonalSkills.Location = new System.Drawing.Point(614, 593);
-            this.btnConfirmPersonalSkills.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmPersonalSkills.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmPersonalSkills.Name = "btnConfirmPersonalSkills";
             this.btnConfirmPersonalSkills.Size = new System.Drawing.Size(310, 49);
             this.btnConfirmPersonalSkills.TabIndex = 66;
             this.btnConfirmPersonalSkills.Text = "CONFIRM";
             this.btnConfirmPersonalSkills.UseVisualStyleBackColor = true;
             this.btnConfirmPersonalSkills.Click += new System.EventHandler(this.btnConfirmPersonalSkills_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1843, 655);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Tester projects\' contributions";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(1843, 655);
+            this.tabPage2.TabIndex = 4;
+            this.tabPage2.Text = "Tester professional\' contributions";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1843, 655);
+            this.tabPage3.TabIndex = 5;
+            this.tabPage3.Text = "Tester personal skills";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1843, 655);
+            this.tabPage4.TabIndex = 6;
+            this.tabPage4.Text = "PM projects\' contributions";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1843, 655);
+            this.tabPage5.TabIndex = 7;
+            this.tabPage5.Text = "PM professional\' contributions";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 29);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1843, 655);
+            this.tabPage6.TabIndex = 8;
+            this.tabPage6.Text = "PM personal skills";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // DetailedJobKpiAssessmentForm
             // 
@@ -1627,7 +1693,7 @@
             this.grbGeneralInformation.PerformLayout();
             this.grbAssessmentinDetails.ResumeLayout(false);
             this.tclAssessmentInDetails.ResumeLayout(false);
-            this.tpgProjectsContribution.ResumeLayout(false);
+            this.tpgDeveloperProjectsContribution.ResumeLayout(false);
             this.tclProject.ResumeLayout(false);
             this.tpgProject1.ResumeLayout(false);
             this.grbProject1.ResumeLayout(false);
@@ -1638,14 +1704,14 @@
             this.tpgProject3.ResumeLayout(false);
             this.grbProject3.ResumeLayout(false);
             this.grbProject3.PerformLayout();
-            this.tpgProfessionalContribution.ResumeLayout(false);
+            this.tpgDeveloperProfessionalContribution.ResumeLayout(false);
             this.grbProfessionalContribution.ResumeLayout(false);
             this.grbBusinessDomains.ResumeLayout(false);
             this.grbBusinessDomains.PerformLayout();
             this.grbSoftwareDevelopment.ResumeLayout(false);
             this.grbHighSpecialty.ResumeLayout(false);
             this.grbHighSpecialty.PerformLayout();
-            this.tpgPersonalSkills.ResumeLayout(false);
+            this.tpgDeveloperPersonalSkills.ResumeLayout(false);
             this.grbPersonalSkills.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
@@ -1669,9 +1735,9 @@
         private System.Windows.Forms.GroupBox grbGeneralInformation;
         private System.Windows.Forms.GroupBox grbAssessmentinDetails;
         private System.Windows.Forms.TabControl tclAssessmentInDetails;
-        private System.Windows.Forms.TabPage tpgProjectsContribution;
-        private System.Windows.Forms.TabPage tpgProfessionalContribution;
-        private System.Windows.Forms.TabPage tpgPersonalSkills;
+        private System.Windows.Forms.TabPage tpgDeveloperProjectsContribution;
+        private System.Windows.Forms.TabPage tpgDeveloperProfessionalContribution;
+        private System.Windows.Forms.TabPage tpgDeveloperPersonalSkills;
         private System.Windows.Forms.TabControl tclProject;
         private System.Windows.Forms.TabPage tpgProject1;
         private System.Windows.Forms.TabPage tpgProject2;
@@ -1793,5 +1859,11 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.ComboBox cbxTimeManagement;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
     }
 }

@@ -15,12 +15,12 @@ using MyKPI.Entities.Assessment;
 
 namespace MyKPI.PersonalSkills.DAL
 {
-    public class PersonalSkillsDAL
+    public class DeveloperPersonalSkillsDAL
     {
         #region Add
         public bool Add(IPersonalSkills _personalSkills)
         {
-            var personalSkills = (_personalSkills as PersonalSkillsEntity);
+            var personalSkills = (_personalSkills as DeveloperPersonalSkillsEntity);
             string str = string.Empty;
             try
             {
@@ -76,7 +76,7 @@ namespace MyKPI.PersonalSkills.DAL
         #region Edit
         public bool Edit(IPersonalSkills _personalSkills, int ID)
         {
-            var personalSkills = (_personalSkills as PersonalSkillsEntity);
+            var personalSkills = (_personalSkills as DeveloperPersonalSkillsEntity);
             string str = string.Empty;
             try
             {

@@ -10,9 +10,9 @@ using MyKPI.Entities.Assessment;
 #endregion
 
 
-namespace MyKPI.Entities
+namespace MyKPI.Entities.Assessment
 {
-    public class PersonalSkillsEntity : IPersonalSkills
+    public class DeveloperPersonalSkillsEntity : IPersonalSkills
     {
         public int ID { get; set; }       
         public PersonalSkillsValue Leadership { get; set; }

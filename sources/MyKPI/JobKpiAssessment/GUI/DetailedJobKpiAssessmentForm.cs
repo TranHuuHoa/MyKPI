@@ -45,7 +45,7 @@ namespace MyKPI.JobKpiAssessment.GUI
         private JobKpiAssessmentBLL jobKpiAssessmentBLL = new JobKpiAssessmentBLL();                                 
         private DeveloperProjectContributionBLL developerProjectContributionBLL = new DeveloperProjectContributionBLL();
         private DeveloperProfessionalContributionBLL developerProfessionalContributionBLL = new DeveloperProfessionalContributionBLL();
-        private PersonalSkillsBLL personalSkillsBLL = new PersonalSkillsBLL();
+        private DeveloperPersonalSkillsBLL personalSkillsBLL = new DeveloperPersonalSkillsBLL();
         #endregion
 
         #region private functions
@@ -103,7 +103,7 @@ namespace MyKPI.JobKpiAssessment.GUI
                             break;
                         case 2:
                             jobKpiEntity.PersonalSkills = personalSkillsBLL.LoadPerJobKpiAssessmentID(jobKpiAssessmentID);
-                            var personalSkills = (jobKpiEntity.PersonalSkills as PersonalSkillsEntity);
+                            var personalSkills = (jobKpiEntity.PersonalSkills as DeveloperPersonalSkillsEntity);
 
                             loadPersonalSkillsTab(personalSkills);
                             break;
@@ -229,7 +229,7 @@ namespace MyKPI.JobKpiAssessment.GUI
             }          
         }
 
-        private void loadPersonalSkillsTab(PersonalSkillsEntity personalSkillsEntity)
+        private void loadPersonalSkillsTab(DeveloperPersonalSkillsEntity personalSkillsEntity)
         {
             if(personalSkillsState== FormState.preProcess)
             {
@@ -867,7 +867,7 @@ namespace MyKPI.JobKpiAssessment.GUI
             }
             else
             {
-                PersonalSkillsEntity personalSkillsEntity = new PersonalSkillsEntity();
+                DeveloperPersonalSkillsEntity personalSkillsEntity = new DeveloperPersonalSkillsEntity();
 
                 personalSkillsEntity.Leadership = (PersonalSkillsValue)cbxLeadership.SelectedItem;
                 personalSkillsEntity.Communication = (PersonalSkillsValue)cbxCommunication.SelectedItem;
