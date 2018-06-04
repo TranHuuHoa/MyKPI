@@ -76,4 +76,8 @@
     {
         NoExperience = 0,Fundamental = 1,Limited = 2 ,Intermediate = 3,Advance = 4,Expert = 5
     }
+    public enum PMRoleAndResponsibilityValue
+    {
+        NotResponsibility = 0 , WithFrequentSupport = 1 , WithLittleSupport = 2 , Independence =3
+    }
 }

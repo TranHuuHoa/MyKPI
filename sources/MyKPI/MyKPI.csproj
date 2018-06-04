@@ -141,6 +141,9 @@
     <Compile Include="Entities\Assessment\IPersonalSkill.cs" />
     <Compile Include="Entities\Assessment\DeveloperProjectContributionEntity.cs" />
     <Compile Include="Entities\Assessment\DeveloperPersonalSkillsEntity.cs" />
+    <Compile Include="Entities\Assessment\PMPersonalSkillsEntity.cs" />
+    <Compile Include="Entities\Assessment\PMProfessionalContributionEntity.cs" />
+    <Compile Include="Entities\Assessment\PMProjectContributionEntity.cs" />
     <Compile Include="Entities\EmployeeEntity.cs" />
     <Compile Include="Entities\JobKpiEntity.cs" />
     <Compile Include="Entities\ProjectEmployeeEntity.cs" />

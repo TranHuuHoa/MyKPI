@@ -5,5 +5,6 @@ namespace MyKPI.Entities.Assessment
 {
     public interface IProjectContribution
     {
+         
     }
 }
