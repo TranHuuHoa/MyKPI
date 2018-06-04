@@ -74,7 +74,7 @@ insert into tblJobKpiAssessment (EmployeeID,CreatedDate,RoleInAssessment, Status
 values (1,"2018-05-03",1,1);
 
 insert into tblJobKpiAssessment (EmployeeID,CreatedDate,RoleInAssessment, Status)
-values (2,"2018-05-03",2,1);
+values (2,"2018-05-03",0,1);
 
 insert into tblJobKpiAssessment (EmployeeID,CreatedDate,RoleInAssessment, Status)
 values (3,"2018-05-03",3,1);
@@ -110,5 +110,6 @@ insert into tblDeveloperPersonalSkills (Leadership,Communication,TimeManagement,
                                     Counselling,Teamwork,ObjectOrientedDesign,StructuredDesign,ArchitecturalPattern,
                                     DesignPattern,ObjectOrientedAnalysis,UML,ApplicationArchitectureDesign,ExternalDesignJP,DetailedDesign,JobKpiAssessmentID)
                                     values (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);
+							
 
 

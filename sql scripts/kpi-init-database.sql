@@ -122,3 +122,23 @@ JobKpiAssessmentID int,
 PRIMARY KEY (ID),
 FOREIGN KEY (JobKpiAssessmentID) REFERENCES tblJobKpiAssessment(ID) 
 );
+
+CREATE TABLE tblPMProjectContribution(
+ID int not null auto_increment,
+ProjectSeq int,
+ProjectID int,
+PMRoleAndResponsibility int,
+SofwareDevelopmentActivitites bool,
+Complexity_InternationalProject bool ,
+Complexity_GloballyAdvancedTechnologyProject bool ,
+Complexity_ComplicatedContractConditions bool,
+Complexity_ArchitectureRequirement bool,
+Complexity_SystemDesign bool,
+Complexity_ComplexApplicationRequirement bool,
+Complexity_ComplexProjectStructure bool,
+TeamSizeAverage int,
+PhaseDuration int,
+JobKpiAssessmentID int,
+PRIMARY KEY (ID),
+FOREIGN KEY (JobKpiAssessmentID) REFERENCES tblJobKpiAssessment(ID) 
+);

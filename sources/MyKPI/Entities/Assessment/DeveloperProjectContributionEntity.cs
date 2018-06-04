@@ -13,6 +13,7 @@ namespace MyKPI.Entities.Assessment
 {
     public class DeveloperProjectContributionEntity : IProjectContribution
     {
+
         public int ID { get; set; }
         public int ProjectSeq { get; set; }
         public ProjectEntity Project { get; set; }
