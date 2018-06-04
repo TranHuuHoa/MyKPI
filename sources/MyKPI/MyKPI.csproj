@@ -114,6 +114,7 @@
     <Compile Include="Common\Enum.cs" />
     <Compile Include="Common\ICommonDAL.cs" />
     <Compile Include="Common\ICommonEntity.cs" />
+    <Compile Include="Common\ProjectContributionEntity.cs" />
     <Compile Include="EmployeeManagment\BLL\EmployeeBLL.cs" />
     <Compile Include="EmployeeManagment\DAL\EmployeeDAL.cs" />
     <Compile Include="EmployeeManagment\GUI\DetailedEmployeeForm.cs">
