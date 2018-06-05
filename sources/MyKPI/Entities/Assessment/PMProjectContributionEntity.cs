@@ -13,10 +13,10 @@ namespace MyKPI.Entities.Assessment
 {
     public class PMProjectContributionEntity : IProjectContribution
     {
-        int ID { get; set; }
-        int ProjectSeq { get; set; }
-        ProjectEntity Project { get; set; }
-        JobKpiEntity JobKpiAssessment { get; set; }
+        public int ID { get; set; }
+        public int ProjectSeq { get; set; }
+        public ProjectEntity Project { get; set; }
+        public JobKpiEntity JobKpiAssessment { get; set; }
         public PMRoleAndResponsibilityValue PMRoleAndResponsibility { get; set; }
         public bool SofwareDevelopmentActivitites { get; set; }
         public bool Complexity_InternationalProject { get; set; }
@@ -24,8 +24,8 @@ namespace MyKPI.Entities.Assessment
         public bool Complexity_ComplicatedContractConditions { get; set; }
         public bool Complexity_ArchitectureRequirement { get; set; }
         public bool Complexity_SystemDesign { get; set; }
-        public bool Complexity_ComplexApplicationRequirement { get; set; }
-        public bool Complexity_ComplexProjectStructure { get; set; }
+        public bool Complexity_ApplicationRequirement { get; set; }
+        public bool Complexity_ProjectStructure { get; set; }
         public int TeamSizeAverage { get; set; }
         public int PhaseDuration { get; set; }
 

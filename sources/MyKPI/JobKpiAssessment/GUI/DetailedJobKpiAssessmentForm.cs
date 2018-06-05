@@ -79,7 +79,7 @@ namespace MyKPI.JobKpiAssessment.GUI
                     grbAssessmentinDetails.Enabled = true;
 
 
-                    switch (tclAssessmentInDetails.SelectedIndex)
+                    switch (txtTeamSize.SelectedIndex)
                     {
                         case 0:
                             switch (tclProject.SelectedIndex)
@@ -923,28 +923,40 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         #endregion
 
+        #region PMPMProjectContribution
+        private void btnComfirmPMProjectContribution_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelPMProjectContribution_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
         private void cbxRoleInAssessment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tclAssessmentInDetails.TabPages.Clear();
+            txtTeamSize.TabPages.Clear();
             switch (cbxRoleInAssessment.SelectedIndex)
             {
                 case (int)JobRankValue.ProjectManager:
-                    tclAssessmentInDetails.TabPages.Add(tabPage4);
-                    tclAssessmentInDetails.TabPages.Add(tabPage5);
-                    tclAssessmentInDetails.TabPages.Add(tabPage6);
+                    txtTeamSize.TabPages.Add(tabPage4);
+                    txtTeamSize.TabPages.Add(tabPage5);
+                    txtTeamSize.TabPages.Add(tabPage6);
                     break;
                 case (int)JobRankValue.Tester:
-                    tclAssessmentInDetails.TabPages.Add(tabPage1);
-                    tclAssessmentInDetails.TabPages.Add(tabPage2);
-                    tclAssessmentInDetails.TabPages.Add(tabPage3);
+                    txtTeamSize.TabPages.Add(tabPage1);
+                    txtTeamSize.TabPages.Add(tabPage2);
+                    txtTeamSize.TabPages.Add(tabPage3);
                     break;
                 case (int)JobRankValue.Developer:
-                    tclAssessmentInDetails.TabPages.Add(tpgDeveloperProjectsContribution);
-                    tclAssessmentInDetails.TabPages.Add(tpgDeveloperProfessionalContribution);
-                    tclAssessmentInDetails.TabPages.Add(tpgDeveloperPersonalSkills);
+                    txtTeamSize.TabPages.Add(tpgDeveloperProjectsContribution);
+                    txtTeamSize.TabPages.Add(tpgDeveloperProfessionalContribution);
+                    txtTeamSize.TabPages.Add(tpgDeveloperPersonalSkills);
                     break;
                 default:
-                    tclAssessmentInDetails.TabPages.Add(tabPage7);
+                    txtTeamSize.TabPages.Add(tabPage7);
                     break;
 
             }

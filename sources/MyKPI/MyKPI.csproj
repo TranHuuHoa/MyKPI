@@ -152,10 +152,16 @@
     <Compile Include="JobKpiAssessment\BLL\DeveloperProjectContributionBLL.cs" />
     <Compile Include="JobKpiAssessment\BLL\JobKpiAssessmentBLL.cs" />
     <Compile Include="JobKpiAssessment\BLL\DeveloperPersonalSkillsBLL.cs" />
+    <Compile Include="JobKpiAssessment\BLL\PMPersonalSkillsBLL.cs" />
+    <Compile Include="JobKpiAssessment\BLL\PMProfessionalContributionBLL.cs" />
+    <Compile Include="JobKpiAssessment\BLL\PMProjectContributionBLL.cs" />
     <Compile Include="JobKpiAssessment\DAL\DeveloperProfessionalContributionDAL.cs" />
     <Compile Include="JobKpiAssessment\DAL\DeveloperProjectContributionDAL.cs" />
     <Compile Include="JobKpiAssessment\DAL\JobKpiAssessmentDAL.cs" />
     <Compile Include="JobKpiAssessment\DAL\DeveloperPersonalSkillsDAL.cs" />
+    <Compile Include="JobKpiAssessment\DAL\PMPersonalSkillsDAL.cs" />
+    <Compile Include="JobKpiAssessment\DAL\PMProfessionalContributionDAL.cs" />
+    <Compile Include="JobKpiAssessment\DAL\PMProjectContributionDAL.cs" />
     <Compile Include="JobKpiAssessment\GUI\DetailedJobKpiAssessmentForm.cs">
       <SubType>Form</SubType>
     </Compile>

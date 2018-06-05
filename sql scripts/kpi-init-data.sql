@@ -105,11 +105,23 @@ MasterSofwareDevelopmentFramework,IntructorAtCompany,SharingAtWorkshop,DevelopTr
 ActivitesInComunity,DevelopsSubordinates,JobKpiAssessmentID)
 values (3,3,3,3,0,0,0,0,0,0,3);
 
-/*init data for Personal Skills */ 
+/*init data for Developer Personal Skills */ 
 insert into tblDeveloperPersonalSkills (Leadership,Communication,TimeManagement,
                                     Counselling,Teamwork,ObjectOrientedDesign,StructuredDesign,ArchitecturalPattern,
                                     DesignPattern,ObjectOrientedAnalysis,UML,ApplicationArchitectureDesign,ExternalDesignJP,DetailedDesign,JobKpiAssessmentID)
                                     values (1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);
 							
+/*init data for PMProjectContribution */
+insert into tblPMProjectContribution (ProjectSeq, ProjectID, PMRoleAndResponsibility, SofwareDevelopmentActivitites,
+ Complexity_InternationalProject, Complexity_GloballyAdvancedTechnologyProject, Complexity_ComplicatedContractConditions,
+ Complexity_ArchitectureRequirement,Complexity_SystemDesign,Complexity_ApplicationRequirement,Complexity_ProjectStructure,
+ TeamSizeAverage,PhaseDuration,JobKpiAssessmentID)
+values (1,1,1,1,1,1,1,1,1,1,1,1,1,1);
+
+insert into tblPMProjectContribution (ProjectSeq, ProjectID, PMRoleAndResponsibility, SofwareDevelopmentActivitites,
+ Complexity_InternationalProject, Complexity_GloballyAdvancedTechnologyProject, Complexity_ComplicatedContractConditions,
+ Complexity_ArchitectureRequirement,Complexity_SystemDesign,Complexity_ApplicationRequirement,Complexity_ProjectStructure,
+ TeamSizeAverage,PhaseDuration,JobKpiAssessmentID)
+values (2,2,2,2,2,2,2,2,2,2,2,2,2,2);
 
 
