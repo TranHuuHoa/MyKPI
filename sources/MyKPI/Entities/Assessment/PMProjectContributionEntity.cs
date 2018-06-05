@@ -11,12 +11,8 @@ using MyKPI.Common;
 
 namespace MyKPI.Entities.Assessment
 {
-    public class PMProjectContributionEntity : IProjectContribution
-    {
-        int ID { get; set; }
-        int ProjectSeq { get; set; }
-        ProjectEntity Project { get; set; }
-        JobKpiEntity JobKpiAssessment { get; set; }
+    public class PMProjectContributionEntity : ProjectContributionEntity, IProjectContribution
+    {      
         public PMRoleAndResponsibilityValue PMRoleAndResponsibility { get; set; }
         public bool SofwareDevelopmentActivitites { get; set; }
         public bool Complexity_InternationalProject { get; set; }
