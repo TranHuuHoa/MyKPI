@@ -11,16 +11,11 @@ using MyKPI.Common;
 
 namespace MyKPI.Entities.Assessment
 {
-    public class DeveloperProjectContributionEntity : IProjectContribution
-    {
-
-        public int ID { get; set; }
-        public int ProjectSeq { get; set; }
-        public ProjectEntity Project { get; set; }
+    public class DeveloperProjectContributionEntity : ProjectContributionEntity, IProjectContribution
+    {      
         public TeamRoleValue TeamRole { get; set; }
         public WorkingResultValue ImplementDesign { get; set; }
         public WorkingResultValue ImplementCode { get; set; }
-        public WorkingResultValue ImplementUnitTest { get; set; }
-        public JobKpiEntity JobKpiAssessment { get; set; }
+        public WorkingResultValue ImplementUnitTest { get; set; }        
     }
 }
