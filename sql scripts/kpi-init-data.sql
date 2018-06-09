@@ -8,7 +8,7 @@ truncate table tblProject;
 truncate table tblJobKpiAssessment;
 truncate table tblDeveloperProjectContribution;
 truncate table tblDeveloperProfessionalContribution;
-truncate table tblpersonalskills;
+truncate table tblDeveloperpersonalskills;
 SET FOREIGN_KEY_CHECKS = 1;
 
 /*init data for employee*/

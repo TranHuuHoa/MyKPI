@@ -61,9 +61,15 @@
             this.label53 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.txtPhaseDuration = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.cbxSofwareDevelopmentActivities = new System.Windows.Forms.ComboBox();
+            this.txtRoleAndResponsibility = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.tpgDeveloperProjectsContribution = new System.Windows.Forms.TabPage();
             this.btnProjectCancel = new System.Windows.Forms.Button();
@@ -188,12 +194,6 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label47 = new System.Windows.Forms.Label();
-            this.txtRoleAndResponsibility = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtPhaseDuration = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.cbxSofwareDevelopmentActivities = new System.Windows.Forms.ComboBox();
             this.grbGeneralInformation.SuspendLayout();
             this.grbAssessmentinDetails.SuspendLayout();
             this.txtTeamSize.SuspendLayout();
@@ -245,10 +245,8 @@
             this.grbGeneralInformation.Controls.Add(this.btnConfirm);
             this.grbGeneralInformation.Dock = System.Windows.Forms.DockStyle.Top;
             this.grbGeneralInformation.Location = new System.Drawing.Point(0, 0);
-            this.grbGeneralInformation.Margin = new System.Windows.Forms.Padding(2);
             this.grbGeneralInformation.Name = "grbGeneralInformation";
-            this.grbGeneralInformation.Padding = new System.Windows.Forms.Padding(2);
-            this.grbGeneralInformation.Size = new System.Drawing.Size(1048, 101);
+            this.grbGeneralInformation.Size = new System.Drawing.Size(1572, 155);
             this.grbGeneralInformation.TabIndex = 0;
             this.grbGeneralInformation.TabStop = false;
             this.grbGeneralInformation.Text = "General Information";
@@ -258,9 +256,10 @@
             this.cbxStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Location = new System.Drawing.Point(869, 21);
+            this.cbxStatus.Location = new System.Drawing.Point(1304, 32);
+            this.cbxStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(121, 21);
+            this.cbxStatus.Size = new System.Drawing.Size(180, 28);
             this.cbxStatus.TabIndex = 31;
             // 
             // cbxRoleInAssessment
@@ -268,9 +267,10 @@
             this.cbxRoleInAssessment.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxRoleInAssessment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxRoleInAssessment.FormattingEnabled = true;
-            this.cbxRoleInAssessment.Location = new System.Drawing.Point(365, 21);
+            this.cbxRoleInAssessment.Location = new System.Drawing.Point(548, 32);
+            this.cbxRoleInAssessment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxRoleInAssessment.Name = "cbxRoleInAssessment";
-            this.cbxRoleInAssessment.Size = new System.Drawing.Size(151, 21);
+            this.cbxRoleInAssessment.Size = new System.Drawing.Size(224, 28);
             this.cbxRoleInAssessment.TabIndex = 30;
             this.cbxRoleInAssessment.SelectedIndexChanged += new System.EventHandler(this.cbxRoleInAssessment_SelectedIndexChanged);
             // 
@@ -279,27 +279,28 @@
             this.cbxEmployee.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEmployee.FormattingEnabled = true;
-            this.cbxEmployee.Location = new System.Drawing.Point(11, 21);
+            this.cbxEmployee.Location = new System.Drawing.Point(16, 32);
+            this.cbxEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxEmployee.Name = "cbxEmployee";
-            this.cbxEmployee.Size = new System.Drawing.Size(224, 21);
+            this.cbxEmployee.Size = new System.Drawing.Size(334, 28);
             this.cbxEmployee.TabIndex = 29;
             // 
             // dtmCreatedDate
             // 
             this.dtmCreatedDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtmCreatedDate.Location = new System.Drawing.Point(606, 22);
+            this.dtmCreatedDate.Location = new System.Drawing.Point(909, 34);
+            this.dtmCreatedDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtmCreatedDate.Name = "dtmCreatedDate";
-            this.dtmCreatedDate.Size = new System.Drawing.Size(200, 20);
+            this.dtmCreatedDate.Size = new System.Drawing.Size(298, 26);
             this.dtmCreatedDate.TabIndex = 28;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(824, 24);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(1236, 37);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 27;
             this.label5.Text = "Status:";
             // 
@@ -307,10 +308,9 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(257, 24);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(386, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 13);
+            this.label4.Size = new System.Drawing.Size(156, 20);
             this.label4.TabIndex = 27;
             this.label4.Text = "Role In Assessment:";
             // 
@@ -318,10 +318,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(531, 24);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(796, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "CreatedDate:";
             // 
@@ -329,20 +328,18 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-81, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(-122, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Employee Name:";
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCancel.Location = new System.Drawing.Point(619, 60);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(928, 92);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(127, 23);
+            this.btnCancel.Size = new System.Drawing.Size(190, 35);
             this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -351,10 +348,9 @@
             // btnConfirm
             // 
             this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnConfirm.Location = new System.Drawing.Point(290, 60);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirm.Location = new System.Drawing.Point(435, 92);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(311, 23);
+            this.btnConfirm.Size = new System.Drawing.Size(466, 35);
             this.btnConfirm.TabIndex = 18;
             this.btnConfirm.Text = "CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -364,11 +360,9 @@
             // 
             this.grbAssessmentinDetails.Controls.Add(this.txtTeamSize);
             this.grbAssessmentinDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbAssessmentinDetails.Location = new System.Drawing.Point(0, 101);
-            this.grbAssessmentinDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.grbAssessmentinDetails.Location = new System.Drawing.Point(0, 155);
             this.grbAssessmentinDetails.Name = "grbAssessmentinDetails";
-            this.grbAssessmentinDetails.Padding = new System.Windows.Forms.Padding(2);
-            this.grbAssessmentinDetails.Size = new System.Drawing.Size(1048, 478);
+            this.grbAssessmentinDetails.Size = new System.Drawing.Size(1572, 736);
             this.grbAssessmentinDetails.TabIndex = 1;
             this.grbAssessmentinDetails.TabStop = false;
             this.grbAssessmentinDetails.Text = "Assessment in Details";
@@ -386,11 +380,10 @@
             this.txtTeamSize.Controls.Add(this.tabPage6);
             this.txtTeamSize.Controls.Add(this.tabPage7);
             this.txtTeamSize.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTeamSize.Location = new System.Drawing.Point(2, 15);
-            this.txtTeamSize.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTeamSize.Location = new System.Drawing.Point(3, 22);
             this.txtTeamSize.Name = "txtTeamSize";
             this.txtTeamSize.SelectedIndex = 0;
-            this.txtTeamSize.Size = new System.Drawing.Size(1044, 461);
+            this.txtTeamSize.Size = new System.Drawing.Size(1566, 711);
             this.txtTeamSize.TabIndex = 0;
             this.txtTeamSize.SelectedIndexChanged += new System.EventHandler(this.tclAssessmentInDetails_SelectedIndexChanged);
             // 
@@ -399,10 +392,9 @@
             this.tabPage4.Controls.Add(this.btnCancelPMProjectContribution);
             this.tabPage4.Controls.Add(this.btnComfirmPMProjectContribution);
             this.tabPage4.Controls.Add(this.grbPMProjectContribution);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1036, 435);
+            this.tabPage4.Size = new System.Drawing.Size(1558, 678);
             this.tabPage4.TabIndex = 6;
             this.tabPage4.Text = "PM projects\' contributions";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -410,10 +402,10 @@
             // btnCancelPMProjectContribution
             // 
             this.btnCancelPMProjectContribution.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCancelPMProjectContribution.Location = new System.Drawing.Point(579, 399);
-            this.btnCancelPMProjectContribution.Margin = new System.Windows.Forms.Padding(1);
+            this.btnCancelPMProjectContribution.Location = new System.Drawing.Point(868, 616);
+            this.btnCancelPMProjectContribution.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelPMProjectContribution.Name = "btnCancelPMProjectContribution";
-            this.btnCancelPMProjectContribution.Size = new System.Drawing.Size(85, 32);
+            this.btnCancelPMProjectContribution.Size = new System.Drawing.Size(128, 49);
             this.btnCancelPMProjectContribution.TabIndex = 69;
             this.btnCancelPMProjectContribution.Text = "CANCEL";
             this.btnCancelPMProjectContribution.UseVisualStyleBackColor = true;
@@ -422,10 +414,10 @@
             // btnComfirmPMProjectContribution
             // 
             this.btnComfirmPMProjectContribution.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnComfirmPMProjectContribution.Location = new System.Drawing.Point(359, 399);
-            this.btnComfirmPMProjectContribution.Margin = new System.Windows.Forms.Padding(1);
+            this.btnComfirmPMProjectContribution.Location = new System.Drawing.Point(538, 616);
+            this.btnComfirmPMProjectContribution.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnComfirmPMProjectContribution.Name = "btnComfirmPMProjectContribution";
-            this.btnComfirmPMProjectContribution.Size = new System.Drawing.Size(207, 32);
+            this.btnComfirmPMProjectContribution.Size = new System.Drawing.Size(310, 49);
             this.btnComfirmPMProjectContribution.TabIndex = 68;
             this.btnComfirmPMProjectContribution.Text = "CONFIRM";
             this.btnComfirmPMProjectContribution.UseVisualStyleBackColor = true;
@@ -439,9 +431,11 @@
             this.grbPMProjectContribution.Controls.Add(this.groupBox12);
             this.grbPMProjectContribution.Controls.Add(this.groupBox3);
             this.grbPMProjectContribution.Controls.Add(this.groupBox2);
-            this.grbPMProjectContribution.Location = new System.Drawing.Point(0, 2);
+            this.grbPMProjectContribution.Location = new System.Drawing.Point(0, 3);
+            this.grbPMProjectContribution.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grbPMProjectContribution.Name = "grbPMProjectContribution";
-            this.grbPMProjectContribution.Size = new System.Drawing.Size(1036, 373);
+            this.grbPMProjectContribution.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbPMProjectContribution.Size = new System.Drawing.Size(1554, 574);
             this.grbPMProjectContribution.TabIndex = 0;
             this.grbPMProjectContribution.TabStop = false;
             // 
@@ -463,9 +457,11 @@
             this.groupBox4.Controls.Add(this.label52);
             this.groupBox4.Controls.Add(this.label53);
             this.groupBox4.Controls.Add(this.comboBox6);
-            this.groupBox4.Location = new System.Drawing.Point(0, 67);
+            this.groupBox4.Location = new System.Drawing.Point(0, 103);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1043, 143);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Size = new System.Drawing.Size(1564, 220);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Complexity";
@@ -474,10 +470,9 @@
             // 
             this.label54.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(595, 29);
-            this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label54.Location = new System.Drawing.Point(892, 45);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(77, 13);
+            this.label54.Size = new System.Drawing.Size(116, 20);
             this.label54.TabIndex = 70;
             this.label54.Text = "System Design";
             // 
@@ -486,9 +481,10 @@
             this.comboBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(677, 26);
+            this.comboBox7.Location = new System.Drawing.Point(1016, 40);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(224, 21);
+            this.comboBox7.Size = new System.Drawing.Size(334, 28);
             this.comboBox7.TabIndex = 69;
             // 
             // comboBox8
@@ -496,19 +492,19 @@
             this.comboBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(677, 51);
+            this.comboBox8.Location = new System.Drawing.Point(1016, 78);
+            this.comboBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(224, 21);
+            this.comboBox8.Size = new System.Drawing.Size(334, 28);
             this.comboBox8.TabIndex = 72;
             // 
             // label55
             // 
             this.label55.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(547, 54);
-            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label55.Location = new System.Drawing.Point(820, 83);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(125, 13);
+            this.label55.Size = new System.Drawing.Size(187, 20);
             this.label55.TabIndex = 71;
             this.label55.Text = "Application Requirement:";
             // 
@@ -516,10 +512,9 @@
             // 
             this.label56.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(583, 81);
-            this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label56.Location = new System.Drawing.Point(874, 125);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(89, 13);
+            this.label56.Size = new System.Drawing.Size(132, 20);
             this.label56.TabIndex = 73;
             this.label56.Text = "Project Structure:";
             // 
@@ -528,19 +523,19 @@
             this.cbxProjectStructure.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxProjectStructure.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProjectStructure.FormattingEnabled = true;
-            this.cbxProjectStructure.Location = new System.Drawing.Point(677, 78);
+            this.cbxProjectStructure.Location = new System.Drawing.Point(1016, 120);
+            this.cbxProjectStructure.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxProjectStructure.Name = "cbxProjectStructure";
-            this.cbxProjectStructure.Size = new System.Drawing.Size(224, 21);
+            this.cbxProjectStructure.Size = new System.Drawing.Size(334, 28);
             this.cbxProjectStructure.TabIndex = 74;
             // 
             // label50
             // 
             this.label50.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(120, 29);
-            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label50.Location = new System.Drawing.Point(180, 45);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(104, 13);
+            this.label50.Size = new System.Drawing.Size(155, 20);
             this.label50.TabIndex = 62;
             this.label50.Text = "International Project:";
             // 
@@ -549,9 +544,10 @@
             this.cbxInternationalProject.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxInternationalProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxInternationalProject.FormattingEnabled = true;
-            this.cbxInternationalProject.Location = new System.Drawing.Point(229, 26);
+            this.cbxInternationalProject.Location = new System.Drawing.Point(344, 40);
+            this.cbxInternationalProject.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxInternationalProject.Name = "cbxInternationalProject";
-            this.cbxInternationalProject.Size = new System.Drawing.Size(224, 21);
+            this.cbxInternationalProject.Size = new System.Drawing.Size(334, 28);
             this.cbxInternationalProject.TabIndex = 61;
             // 
             // comboBox4
@@ -559,19 +555,19 @@
             this.comboBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(229, 51);
+            this.comboBox4.Location = new System.Drawing.Point(344, 78);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(224, 21);
+            this.comboBox4.Size = new System.Drawing.Size(334, 28);
             this.comboBox4.TabIndex = 64;
             // 
             // label51
             // 
             this.label51.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(30, 54);
-            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label51.Location = new System.Drawing.Point(45, 83);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(194, 13);
+            this.label51.Size = new System.Drawing.Size(282, 20);
             this.label51.TabIndex = 63;
             this.label51.Text = "Globally Advanced Technology Project:";
             // 
@@ -580,19 +576,19 @@
             this.cbxArchitectureRequirement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxArchitectureRequirement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxArchitectureRequirement.FormattingEnabled = true;
-            this.cbxArchitectureRequirement.Location = new System.Drawing.Point(229, 103);
+            this.cbxArchitectureRequirement.Location = new System.Drawing.Point(344, 158);
+            this.cbxArchitectureRequirement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxArchitectureRequirement.Name = "cbxArchitectureRequirement";
-            this.cbxArchitectureRequirement.Size = new System.Drawing.Size(224, 21);
+            this.cbxArchitectureRequirement.Size = new System.Drawing.Size(334, 28);
             this.cbxArchitectureRequirement.TabIndex = 66;
             // 
             // label52
             // 
             this.label52.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(94, 106);
-            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label52.Location = new System.Drawing.Point(141, 163);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(130, 13);
+            this.label52.Size = new System.Drawing.Size(195, 20);
             this.label52.TabIndex = 65;
             this.label52.Text = "Architecture Requirement:";
             // 
@@ -600,10 +596,9 @@
             // 
             this.label53.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(61, 81);
-            this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label53.Location = new System.Drawing.Point(92, 125);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(163, 13);
+            this.label53.Size = new System.Drawing.Size(245, 20);
             this.label53.TabIndex = 67;
             this.label53.Text = "Complicated Contract Conditions:";
             // 
@@ -612,9 +607,10 @@
             this.comboBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(229, 78);
+            this.comboBox6.Location = new System.Drawing.Point(344, 120);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(224, 21);
+            this.comboBox6.Size = new System.Drawing.Size(334, 28);
             this.comboBox6.TabIndex = 68;
             // 
             // groupBox12
@@ -623,12 +619,32 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox12.Controls.Add(this.txtPhaseDuration);
             this.groupBox12.Controls.Add(this.label57);
-            this.groupBox12.Location = new System.Drawing.Point(3, 282);
+            this.groupBox12.Location = new System.Drawing.Point(4, 434);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(1040, 60);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox12.Size = new System.Drawing.Size(1560, 92);
             this.groupBox12.TabIndex = 3;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Project/Phase Duration";
+            // 
+            // txtPhaseDuration
+            // 
+            this.txtPhaseDuration.Location = new System.Drawing.Point(210, 29);
+            this.txtPhaseDuration.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhaseDuration.Name = "txtPhaseDuration";
+            this.txtPhaseDuration.Size = new System.Drawing.Size(210, 26);
+            this.txtPhaseDuration.TabIndex = 60;
+            // 
+            // label57
+            // 
+            this.label57.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(78, 34);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(123, 20);
+            this.label57.TabIndex = 58;
+            this.label57.Text = "Phase Duration:";
             // 
             // groupBox3
             // 
@@ -636,21 +652,30 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.label48);
-            this.groupBox3.Location = new System.Drawing.Point(3, 216);
+            this.groupBox3.Location = new System.Drawing.Point(4, 332);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1036, 60);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(1554, 92);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Project/Phase Size";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(210, 34);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(210, 26);
+            this.textBox2.TabIndex = 60;
             // 
             // label48
             // 
             this.label48.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(75, 25);
-            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label48.Location = new System.Drawing.Point(112, 38);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(60, 13);
+            this.label48.Size = new System.Drawing.Size(88, 20);
             this.label48.TabIndex = 58;
             this.label48.Text = "Team Size:";
             // 
@@ -662,21 +687,51 @@
             this.groupBox2.Controls.Add(this.cbxSofwareDevelopmentActivities);
             this.groupBox2.Controls.Add(this.txtRoleAndResponsibility);
             this.groupBox2.Controls.Add(this.label49);
-            this.groupBox2.Location = new System.Drawing.Point(3, 1);
+            this.groupBox2.Location = new System.Drawing.Point(4, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1034, 60);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(1551, 92);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Responsibilities";
+            // 
+            // label58
+            // 
+            this.label58.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(92, 45);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(236, 20);
+            this.label58.TabIndex = 64;
+            this.label58.Text = "Sofware Development Activities:";
+            // 
+            // cbxSofwareDevelopmentActivities
+            // 
+            this.cbxSofwareDevelopmentActivities.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxSofwareDevelopmentActivities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSofwareDevelopmentActivities.FormattingEnabled = true;
+            this.cbxSofwareDevelopmentActivities.Location = new System.Drawing.Point(339, 40);
+            this.cbxSofwareDevelopmentActivities.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxSofwareDevelopmentActivities.Name = "cbxSofwareDevelopmentActivities";
+            this.cbxSofwareDevelopmentActivities.Size = new System.Drawing.Size(334, 28);
+            this.cbxSofwareDevelopmentActivities.TabIndex = 63;
+            // 
+            // txtRoleAndResponsibility
+            // 
+            this.txtRoleAndResponsibility.Location = new System.Drawing.Point(999, 40);
+            this.txtRoleAndResponsibility.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRoleAndResponsibility.Name = "txtRoleAndResponsibility";
+            this.txtRoleAndResponsibility.Size = new System.Drawing.Size(210, 26);
+            this.txtRoleAndResponsibility.TabIndex = 60;
             // 
             // label49
             // 
             this.label49.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(543, 29);
-            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label49.Location = new System.Drawing.Point(814, 45);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(118, 13);
+            this.label49.Size = new System.Drawing.Size(176, 20);
             this.label49.TabIndex = 59;
             this.label49.Text = "Role And Responsibility";
             // 
@@ -685,11 +740,10 @@
             this.tpgDeveloperProjectsContribution.Controls.Add(this.btnProjectCancel);
             this.tpgDeveloperProjectsContribution.Controls.Add(this.btnConfirmProject);
             this.tpgDeveloperProjectsContribution.Controls.Add(this.tclProject);
-            this.tpgDeveloperProjectsContribution.Location = new System.Drawing.Point(4, 22);
-            this.tpgDeveloperProjectsContribution.Margin = new System.Windows.Forms.Padding(2);
+            this.tpgDeveloperProjectsContribution.Location = new System.Drawing.Point(4, 29);
             this.tpgDeveloperProjectsContribution.Name = "tpgDeveloperProjectsContribution";
-            this.tpgDeveloperProjectsContribution.Padding = new System.Windows.Forms.Padding(1);
-            this.tpgDeveloperProjectsContribution.Size = new System.Drawing.Size(1036, 435);
+            this.tpgDeveloperProjectsContribution.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpgDeveloperProjectsContribution.Size = new System.Drawing.Size(1558, 678);
             this.tpgDeveloperProjectsContribution.TabIndex = 0;
             this.tpgDeveloperProjectsContribution.Text = "Developer projects\' contributions";
             this.tpgDeveloperProjectsContribution.UseVisualStyleBackColor = true;
@@ -697,10 +751,9 @@
             // btnProjectCancel
             // 
             this.btnProjectCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnProjectCancel.Location = new System.Drawing.Point(487, 263);
-            this.btnProjectCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProjectCancel.Location = new System.Drawing.Point(730, 407);
             this.btnProjectCancel.Name = "btnProjectCancel";
-            this.btnProjectCancel.Size = new System.Drawing.Size(127, 23);
+            this.btnProjectCancel.Size = new System.Drawing.Size(190, 35);
             this.btnProjectCancel.TabIndex = 17;
             this.btnProjectCancel.Text = "CANCEL";
             this.btnProjectCancel.UseVisualStyleBackColor = true;
@@ -709,10 +762,9 @@
             // btnConfirmProject
             // 
             this.btnConfirmProject.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnConfirmProject.Location = new System.Drawing.Point(157, 263);
-            this.btnConfirmProject.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirmProject.Location = new System.Drawing.Point(236, 407);
             this.btnConfirmProject.Name = "btnConfirmProject";
-            this.btnConfirmProject.Size = new System.Drawing.Size(311, 23);
+            this.btnConfirmProject.Size = new System.Drawing.Size(466, 35);
             this.btnConfirmProject.TabIndex = 16;
             this.btnConfirmProject.Text = "CONFIRM";
             this.btnConfirmProject.UseVisualStyleBackColor = true;
@@ -726,22 +778,20 @@
             this.tclProject.Controls.Add(this.tpgProject1);
             this.tclProject.Controls.Add(this.tpgProject2);
             this.tclProject.Controls.Add(this.tpgProject3);
-            this.tclProject.Location = new System.Drawing.Point(0, 4);
-            this.tclProject.Margin = new System.Windows.Forms.Padding(2);
+            this.tclProject.Location = new System.Drawing.Point(0, 6);
             this.tclProject.Name = "tclProject";
             this.tclProject.SelectedIndex = 0;
-            this.tclProject.Size = new System.Drawing.Size(1036, 257);
+            this.tclProject.Size = new System.Drawing.Size(1554, 397);
             this.tclProject.TabIndex = 0;
             this.tclProject.SelectedIndexChanged += new System.EventHandler(this.tclProject_SelectedIndexChanged);
             // 
             // tpgProject1
             // 
             this.tpgProject1.Controls.Add(this.grbProject1);
-            this.tpgProject1.Location = new System.Drawing.Point(4, 22);
-            this.tpgProject1.Margin = new System.Windows.Forms.Padding(2);
+            this.tpgProject1.Location = new System.Drawing.Point(4, 29);
             this.tpgProject1.Name = "tpgProject1";
-            this.tpgProject1.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgProject1.Size = new System.Drawing.Size(1028, 231);
+            this.tpgProject1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpgProject1.Size = new System.Drawing.Size(1546, 364);
             this.tpgProject1.TabIndex = 0;
             this.tpgProject1.Text = "Project 1";
             this.tpgProject1.UseVisualStyleBackColor = true;
@@ -766,11 +816,9 @@
             this.grbProject1.Controls.Add(this.label9);
             this.grbProject1.Controls.Add(this.label8);
             this.grbProject1.Controls.Add(this.cbxTeamRole1);
-            this.grbProject1.Location = new System.Drawing.Point(2, 2);
-            this.grbProject1.Margin = new System.Windows.Forms.Padding(2);
+            this.grbProject1.Location = new System.Drawing.Point(3, 3);
             this.grbProject1.Name = "grbProject1";
-            this.grbProject1.Padding = new System.Windows.Forms.Padding(2);
-            this.grbProject1.Size = new System.Drawing.Size(1026, 222);
+            this.grbProject1.Size = new System.Drawing.Size(1539, 342);
             this.grbProject1.TabIndex = 47;
             this.grbProject1.TabStop = false;
             // 
@@ -778,29 +826,28 @@
             // 
             this.cbxProject1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProject1.FormattingEnabled = true;
-            this.cbxProject1.Location = new System.Drawing.Point(95, 17);
+            this.cbxProject1.Location = new System.Drawing.Point(142, 26);
+            this.cbxProject1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxProject1.Name = "cbxProject1";
-            this.cbxProject1.Size = new System.Drawing.Size(224, 21);
+            this.cbxProject1.Size = new System.Drawing.Size(334, 28);
             this.cbxProject1.TabIndex = 32;
             this.cbxProject1.SelectedIndexChanged += new System.EventHandler(this.cbxProject1_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(346, 105);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(519, 162);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(104, 13);
+            this.label12.Size = new System.Drawing.Size(156, 20);
             this.label12.TabIndex = 45;
             this.label12.Text = "Implement Unit Test:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(26, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 32;
             this.label1.Text = "Project Name:";
             // 
@@ -808,36 +855,36 @@
             // 
             this.cbxImplementUnitTest1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxImplementUnitTest1.FormattingEnabled = true;
-            this.cbxImplementUnitTest1.Location = new System.Drawing.Point(450, 96);
+            this.cbxImplementUnitTest1.Location = new System.Drawing.Point(675, 148);
+            this.cbxImplementUnitTest1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxImplementUnitTest1.Name = "cbxImplementUnitTest1";
-            this.cbxImplementUnitTest1.Size = new System.Drawing.Size(224, 21);
+            this.cbxImplementUnitTest1.Size = new System.Drawing.Size(334, 28);
             this.cbxImplementUnitTest1.TabIndex = 46;
             // 
             // txtProjectCode1
             // 
             this.txtProjectCode1.Enabled = false;
-            this.txtProjectCode1.Location = new System.Drawing.Point(430, 18);
+            this.txtProjectCode1.Location = new System.Drawing.Point(645, 28);
+            this.txtProjectCode1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProjectCode1.Name = "txtProjectCode1";
-            this.txtProjectCode1.Size = new System.Drawing.Size(100, 20);
+            this.txtProjectCode1.Size = new System.Drawing.Size(148, 26);
             this.txtProjectCode1.TabIndex = 33;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 96);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(10, 148);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 13);
+            this.label11.Size = new System.Drawing.Size(130, 20);
             this.label11.TabIndex = 43;
             this.label11.Text = "Implement Code:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(354, 23);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(531, 35);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 13);
+            this.label6.Size = new System.Drawing.Size(104, 20);
             this.label6.TabIndex = 34;
             this.label6.Text = "Project Code:";
             // 
@@ -845,36 +892,36 @@
             // 
             this.cbxImplementCode1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxImplementCode1.FormattingEnabled = true;
-            this.cbxImplementCode1.Location = new System.Drawing.Point(95, 96);
+            this.cbxImplementCode1.Location = new System.Drawing.Point(142, 148);
+            this.cbxImplementCode1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxImplementCode1.Name = "cbxImplementCode1";
-            this.cbxImplementCode1.Size = new System.Drawing.Size(224, 21);
+            this.cbxImplementCode1.Size = new System.Drawing.Size(334, 28);
             this.cbxImplementCode1.TabIndex = 44;
             // 
             // txtStartedEnd1
             // 
             this.txtStartedEnd1.Enabled = false;
-            this.txtStartedEnd1.Location = new System.Drawing.Point(645, 20);
+            this.txtStartedEnd1.Location = new System.Drawing.Point(968, 31);
+            this.txtStartedEnd1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStartedEnd1.Name = "txtStartedEnd1";
-            this.txtStartedEnd1.Size = new System.Drawing.Size(250, 20);
+            this.txtStartedEnd1.Size = new System.Drawing.Size(373, 26);
             this.txtStartedEnd1.TabIndex = 35;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(354, 72);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(531, 111);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.Size = new System.Drawing.Size(142, 20);
             this.label10.TabIndex = 41;
             this.label10.Text = "Implement Design:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(567, 23);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(850, 35);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 13);
+            this.label7.Size = new System.Drawing.Size(108, 20);
             this.label7.TabIndex = 36;
             this.label7.Text = "Started - End:";
             // 
@@ -882,36 +929,36 @@
             // 
             this.cbxImplementDesign1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxImplementDesign1.FormattingEnabled = true;
-            this.cbxImplementDesign1.Location = new System.Drawing.Point(450, 70);
+            this.cbxImplementDesign1.Location = new System.Drawing.Point(675, 108);
+            this.cbxImplementDesign1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxImplementDesign1.Name = "cbxImplementDesign1";
-            this.cbxImplementDesign1.Size = new System.Drawing.Size(224, 21);
+            this.cbxImplementDesign1.Size = new System.Drawing.Size(334, 28);
             this.cbxImplementDesign1.TabIndex = 42;
             // 
             // txtScopeMM1
             // 
             this.txtScopeMM1.Enabled = false;
-            this.txtScopeMM1.Location = new System.Drawing.Point(966, 20);
+            this.txtScopeMM1.Location = new System.Drawing.Point(1449, 31);
+            this.txtScopeMM1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtScopeMM1.Name = "txtScopeMM1";
-            this.txtScopeMM1.Size = new System.Drawing.Size(100, 20);
+            this.txtScopeMM1.Size = new System.Drawing.Size(148, 26);
             this.txtScopeMM1.TabIndex = 37;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 70);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(44, 108);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.Size = new System.Drawing.Size(90, 20);
             this.label9.TabIndex = 39;
             this.label9.Text = "Team Role:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(899, 23);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(1348, 35);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.Size = new System.Drawing.Size(89, 20);
             this.label8.TabIndex = 38;
             this.label8.Text = "Scope MM:";
             // 
@@ -919,19 +966,19 @@
             // 
             this.cbxTeamRole1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTeamRole1.FormattingEnabled = true;
-            this.cbxTeamRole1.Location = new System.Drawing.Point(95, 66);
+            this.cbxTeamRole1.Location = new System.Drawing.Point(142, 102);
+            this.cbxTeamRole1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxTeamRole1.Name = "cbxTeamRole1";
-            this.cbxTeamRole1.Size = new System.Drawing.Size(224, 21);
+            this.cbxTeamRole1.Size = new System.Drawing.Size(334, 28);
             this.cbxTeamRole1.TabIndex = 40;
             // 
             // tpgProject2
             // 
             this.tpgProject2.Controls.Add(this.grbProject2);
-            this.tpgProject2.Location = new System.Drawing.Point(4, 22);
-            this.tpgProject2.Margin = new System.Windows.Forms.Padding(2);
+            this.tpgProject2.Location = new System.Drawing.Point(4, 29);
             this.tpgProject2.Name = "tpgProject2";
-            this.tpgProject2.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgProject2.Size = new System.Drawing.Size(1019, 231);
+            this.tpgProject2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpgProject2.Size = new System.Drawing.Size(1546, 362);
             this.tpgProject2.TabIndex = 1;
             this.tpgProject2.Text = "Project 2";
             this.tpgProject2.UseVisualStyleBackColor = true;
@@ -956,11 +1003,9 @@
             this.grbProject2.Controls.Add(this.label19);
             this.grbProject2.Controls.Add(this.label20);
             this.grbProject2.Controls.Add(this.cbxTeamRole2);
-            this.grbProject2.Location = new System.Drawing.Point(2, 2);
-            this.grbProject2.Margin = new System.Windows.Forms.Padding(2);
+            this.grbProject2.Location = new System.Drawing.Point(3, 3);
             this.grbProject2.Name = "grbProject2";
-            this.grbProject2.Padding = new System.Windows.Forms.Padding(2);
-            this.grbProject2.Size = new System.Drawing.Size(1016, 197);
+            this.grbProject2.Size = new System.Drawing.Size(1538, 303);
             this.grbProject2.TabIndex = 63;
             this.grbProject2.TabStop = false;
             // 
@@ -968,29 +1013,28 @@
             // 
             this.cbxProject2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProject2.FormattingEnabled = true;
-            this.cbxProject2.Location = new System.Drawing.Point(97, 18);
+            this.cbxProject2.Location = new System.Drawing.Point(146, 28);
+            this.cbxProject2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxProject2.Name = "cbxProject2";
-            this.cbxProject2.Size = new System.Drawing.Size(224, 21);
+            this.cbxProject2.Size = new System.Drawing.Size(334, 28);
             this.cbxProject2.TabIndex = 63;
             this.cbxProject2.SelectedIndexChanged += new System.EventHandler(this.cbxProject2_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(346, 105);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(519, 162);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 13);
+            this.label13.Size = new System.Drawing.Size(156, 20);
             this.label13.TabIndex = 77;
             this.label13.Text = "Implement Unit Test:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 23);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(26, 35);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 13);
+            this.label14.Size = new System.Drawing.Size(108, 20);
             this.label14.TabIndex = 64;
             this.label14.Text = "Project Name:";
             // 
@@ -998,36 +1042,36 @@
             // 
             this.cbxImplementUnitTest2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxImplementUnitTest2.FormattingEnabled = true;
-            this.cbxImplementUnitTest2.Location = new System.Drawing.Point(450, 96);
+            this.cbxImplementUnitTest2.Location = new System.Drawing.Point(675, 148);
+            this.cbxImplementUnitTest2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxImplementUnitTest2.Name = "cbxImplementUnitTest2";
-            this.cbxImplementUnitTest2.Size = new System.Drawing.Size(224, 21);
+            this.cbxImplementUnitTest2.Size = new System.Drawing.Size(334, 28);
             this.cbxImplementUnitTest2.TabIndex = 78;
             // 
             // txtProjectCode2
             // 
             this.txtProjectCode2.Enabled = false;
-            this.txtProjectCode2.Location = new System.Drawing.Point(430, 18);
+            this.txtProjectCode2.Location = new System.Drawing.Point(645, 28);
+            this.txtProjectCode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProjectCode2.Name = "txtProjectCode2";
-            this.txtProjectCode2.Size = new System.Drawing.Size(100, 20);
+            this.txtProjectCode2.Size = new System.Drawing.Size(148, 26);
             this.txtProjectCode2.TabIndex = 65;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(9, 96);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(14, 148);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(86, 13);
+            this.label15.Size = new System.Drawing.Size(130, 20);
             this.label15.TabIndex = 75;
             this.label15.Text = "Implement Code:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(354, 23);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(531, 35);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(71, 13);
+            this.label16.Size = new System.Drawing.Size(104, 20);
             this.label16.TabIndex = 66;
             this.label16.Text = "Project Code:";
             // 
@@ -1035,36 +1079,36 @@
             // 
             this.cbxImplementCode2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxImplementCode2.FormattingEnabled = true;
-            this.cbxImplementCode2.Location = new System.Drawing.Point(97, 96);
+            this.cbxImplementCode2.Location = new System.Drawing.Point(146, 148);
+            this.cbxImplementCode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxImplementCode2.Name = "cbxImplementCode2";
-            this.cbxImplementCode2.Size = new System.Drawing.Size(224, 21);
+            this.cbxImplementCode2.Size = new System.Drawing.Size(334, 28);
             this.cbxImplementCode2.TabIndex = 76;
             // 
             // txtStartedEnd2
             // 
             this.txtStartedEnd2.Enabled = false;
-            this.txtStartedEnd2.Location = new System.Drawing.Point(645, 20);
+            this.txtStartedEnd2.Location = new System.Drawing.Point(968, 31);
+            this.txtStartedEnd2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStartedEnd2.Name = "txtStartedEnd2";
-            this.txtStartedEnd2.Size = new System.Drawing.Size(250, 20);
+            this.txtStartedEnd2.Size = new System.Drawing.Size(373, 26);
             this.txtStartedEnd2.TabIndex = 67;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(354, 72);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(531, 111);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(94, 13);
+            this.label17.Size = new System.Drawing.Size(142, 20);
             this.label17.TabIndex = 73;
             this.label17.Text = "Implement Design:";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(569, 23);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(854, 35);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(72, 13);
+            this.label18.Size = new System.Drawing.Size(108, 20);
             this.label18.TabIndex = 68;
             this.label18.Text = "Started - End:";
             // 
@@ -1072,36 +1116,36 @@
             // 
             this.cbxImplementDesign2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxImplementDesign2.FormattingEnabled = true;
-            this.cbxImplementDesign2.Location = new System.Drawing.Point(450, 70);
+            this.cbxImplementDesign2.Location = new System.Drawing.Point(675, 108);
+            this.cbxImplementDesign2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxImplementDesign2.Name = "cbxImplementDesign2";
-            this.cbxImplementDesign2.Size = new System.Drawing.Size(224, 21);
+            this.cbxImplementDesign2.Size = new System.Drawing.Size(334, 28);
             this.cbxImplementDesign2.TabIndex = 74;
             // 
             // txtScopeMM2
             // 
             this.txtScopeMM2.Enabled = false;
-            this.txtScopeMM2.Location = new System.Drawing.Point(966, 20);
+            this.txtScopeMM2.Location = new System.Drawing.Point(1449, 31);
+            this.txtScopeMM2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtScopeMM2.Name = "txtScopeMM2";
-            this.txtScopeMM2.Size = new System.Drawing.Size(100, 20);
+            this.txtScopeMM2.Size = new System.Drawing.Size(148, 26);
             this.txtScopeMM2.TabIndex = 69;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(29, 70);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(44, 108);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 13);
+            this.label19.Size = new System.Drawing.Size(90, 20);
             this.label19.TabIndex = 71;
             this.label19.Text = "Team Role:";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(901, 23);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(1352, 35);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(62, 13);
+            this.label20.Size = new System.Drawing.Size(89, 20);
             this.label20.TabIndex = 70;
             this.label20.Text = "Scope MM:";
             // 
@@ -1109,19 +1153,19 @@
             // 
             this.cbxTeamRole2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTeamRole2.FormattingEnabled = true;
-            this.cbxTeamRole2.Location = new System.Drawing.Point(97, 66);
+            this.cbxTeamRole2.Location = new System.Drawing.Point(146, 102);
+            this.cbxTeamRole2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxTeamRole2.Name = "cbxTeamRole2";
-            this.cbxTeamRole2.Size = new System.Drawing.Size(224, 21);
+            this.cbxTeamRole2.Size = new System.Drawing.Size(334, 28);
             this.cbxTeamRole2.TabIndex = 72;
             // 
             // tpgProject3
             // 
             this.tpgProject3.Controls.Add(this.grbProject3);
-            this.tpgProject3.Location = new System.Drawing.Point(4, 22);
-            this.tpgProject3.Margin = new System.Windows.Forms.Padding(2);
+            this.tpgProject3.Location = new System.Drawing.Point(4, 29);
             this.tpgProject3.Name = "tpgProject3";
-            this.tpgProject3.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgProject3.Size = new System.Drawing.Size(1019, 231);
+            this.tpgProject3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpgProject3.Size = new System.Drawing.Size(1546, 362);
             this.tpgProject3.TabIndex = 2;
             this.tpgProject3.Text = "Project 3";
             this.tpgProject3.UseVisualStyleBackColor = true;
@@ -1145,11 +1189,9 @@
             this.grbProject3.Controls.Add(this.label28);
             this.grbProject3.Controls.Add(this.cbxTeamRole3);
             this.grbProject3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grbProject3.Location = new System.Drawing.Point(2, 2);
-            this.grbProject3.Margin = new System.Windows.Forms.Padding(2);
+            this.grbProject3.Location = new System.Drawing.Point(3, 3);
             this.grbProject3.Name = "grbProject3";
-            this.grbProject3.Padding = new System.Windows.Forms.Padding(2);
-            this.grbProject3.Size = new System.Drawing.Size(1015, 200);
+            this.grbProject3.Size = new System.Drawing.Size(1540, 308);
             this.grbProject3.TabIndex = 79;
             this.grbProject3.TabStop = false;
             // 
@@ -1157,29 +1199,28 @@
             // 
             this.cbxProject3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProject3.FormattingEnabled = true;
-            this.cbxProject3.Location = new System.Drawing.Point(97, 18);
+            this.cbxProject3.Location = new System.Drawing.Point(146, 28);
+            this.cbxProject3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxProject3.Name = "cbxProject3";
-            this.cbxProject3.Size = new System.Drawing.Size(224, 21);
+            this.cbxProject3.Size = new System.Drawing.Size(334, 28);
             this.cbxProject3.TabIndex = 79;
             this.cbxProject3.SelectedIndexChanged += new System.EventHandler(this.cbxProject3_SelectedIndexChanged);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(346, 105);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(519, 162);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(104, 13);
+            this.label21.Size = new System.Drawing.Size(156, 20);
             this.label21.TabIndex = 93;
             this.label21.Text = "Implement Unit Test:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(17, 23);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Location = new System.Drawing.Point(26, 35);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(74, 13);
+            this.label22.Size = new System.Drawing.Size(108, 20);
             this.label22.TabIndex = 80;
             this.label22.Text = "Project Name:";
             // 
@@ -1187,36 +1228,36 @@
             // 
             this.cbxImplementUnitTest3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxImplementUnitTest3.FormattingEnabled = true;
-            this.cbxImplementUnitTest3.Location = new System.Drawing.Point(450, 96);
+            this.cbxImplementUnitTest3.Location = new System.Drawing.Point(675, 148);
+            this.cbxImplementUnitTest3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxImplementUnitTest3.Name = "cbxImplementUnitTest3";
-            this.cbxImplementUnitTest3.Size = new System.Drawing.Size(224, 21);
+            this.cbxImplementUnitTest3.Size = new System.Drawing.Size(334, 28);
             this.cbxImplementUnitTest3.TabIndex = 94;
             // 
             // txtProjectCode3
             // 
             this.txtProjectCode3.Enabled = false;
-            this.txtProjectCode3.Location = new System.Drawing.Point(430, 18);
+            this.txtProjectCode3.Location = new System.Drawing.Point(645, 28);
+            this.txtProjectCode3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProjectCode3.Name = "txtProjectCode3";
-            this.txtProjectCode3.Size = new System.Drawing.Size(100, 20);
+            this.txtProjectCode3.Size = new System.Drawing.Size(148, 26);
             this.txtProjectCode3.TabIndex = 81;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(9, 96);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Location = new System.Drawing.Point(14, 148);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(86, 13);
+            this.label23.Size = new System.Drawing.Size(130, 20);
             this.label23.TabIndex = 91;
             this.label23.Text = "Implement Code:";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(354, 23);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Location = new System.Drawing.Point(531, 35);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(71, 13);
+            this.label24.Size = new System.Drawing.Size(104, 20);
             this.label24.TabIndex = 82;
             this.label24.Text = "Project Code:";
             // 
@@ -1224,36 +1265,36 @@
             // 
             this.cbxImplementCode3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxImplementCode3.FormattingEnabled = true;
-            this.cbxImplementCode3.Location = new System.Drawing.Point(97, 96);
+            this.cbxImplementCode3.Location = new System.Drawing.Point(146, 148);
+            this.cbxImplementCode3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxImplementCode3.Name = "cbxImplementCode3";
-            this.cbxImplementCode3.Size = new System.Drawing.Size(224, 21);
+            this.cbxImplementCode3.Size = new System.Drawing.Size(334, 28);
             this.cbxImplementCode3.TabIndex = 92;
             // 
             // txtStartedEnd3
             // 
             this.txtStartedEnd3.Enabled = false;
-            this.txtStartedEnd3.Location = new System.Drawing.Point(645, 20);
+            this.txtStartedEnd3.Location = new System.Drawing.Point(968, 31);
+            this.txtStartedEnd3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStartedEnd3.Name = "txtStartedEnd3";
-            this.txtStartedEnd3.Size = new System.Drawing.Size(250, 20);
+            this.txtStartedEnd3.Size = new System.Drawing.Size(373, 26);
             this.txtStartedEnd3.TabIndex = 83;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(354, 72);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Location = new System.Drawing.Point(531, 111);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(94, 13);
+            this.label25.Size = new System.Drawing.Size(142, 20);
             this.label25.TabIndex = 89;
             this.label25.Text = "Implement Design:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(569, 23);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Location = new System.Drawing.Point(854, 35);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(72, 13);
+            this.label26.Size = new System.Drawing.Size(108, 20);
             this.label26.TabIndex = 84;
             this.label26.Text = "Started - End:";
             // 
@@ -1261,36 +1302,36 @@
             // 
             this.cbxImplementDesign3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxImplementDesign3.FormattingEnabled = true;
-            this.cbxImplementDesign3.Location = new System.Drawing.Point(450, 70);
+            this.cbxImplementDesign3.Location = new System.Drawing.Point(675, 108);
+            this.cbxImplementDesign3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxImplementDesign3.Name = "cbxImplementDesign3";
-            this.cbxImplementDesign3.Size = new System.Drawing.Size(224, 21);
+            this.cbxImplementDesign3.Size = new System.Drawing.Size(334, 28);
             this.cbxImplementDesign3.TabIndex = 90;
             // 
             // txtScopeMM3
             // 
             this.txtScopeMM3.Enabled = false;
-            this.txtScopeMM3.Location = new System.Drawing.Point(966, 20);
+            this.txtScopeMM3.Location = new System.Drawing.Point(1449, 31);
+            this.txtScopeMM3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtScopeMM3.Name = "txtScopeMM3";
-            this.txtScopeMM3.Size = new System.Drawing.Size(100, 20);
+            this.txtScopeMM3.Size = new System.Drawing.Size(148, 26);
             this.txtScopeMM3.TabIndex = 85;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(29, 70);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Location = new System.Drawing.Point(44, 108);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(62, 13);
+            this.label27.Size = new System.Drawing.Size(90, 20);
             this.label27.TabIndex = 87;
             this.label27.Text = "Team Role:";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(901, 23);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Location = new System.Drawing.Point(1352, 35);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(62, 13);
+            this.label28.Size = new System.Drawing.Size(89, 20);
             this.label28.TabIndex = 86;
             this.label28.Text = "Scope MM:";
             // 
@@ -1298,9 +1339,10 @@
             // 
             this.cbxTeamRole3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTeamRole3.FormattingEnabled = true;
-            this.cbxTeamRole3.Location = new System.Drawing.Point(97, 66);
+            this.cbxTeamRole3.Location = new System.Drawing.Point(146, 102);
+            this.cbxTeamRole3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxTeamRole3.Name = "cbxTeamRole3";
-            this.cbxTeamRole3.Size = new System.Drawing.Size(224, 21);
+            this.cbxTeamRole3.Size = new System.Drawing.Size(334, 28);
             this.cbxTeamRole3.TabIndex = 88;
             // 
             // tpgDeveloperProfessionalContribution
@@ -1308,11 +1350,10 @@
             this.tpgDeveloperProfessionalContribution.Controls.Add(this.btnCancelProfessional);
             this.tpgDeveloperProfessionalContribution.Controls.Add(this.btnConfirmProfessional);
             this.tpgDeveloperProfessionalContribution.Controls.Add(this.grbProfessionalContribution);
-            this.tpgDeveloperProfessionalContribution.Location = new System.Drawing.Point(4, 22);
-            this.tpgDeveloperProfessionalContribution.Margin = new System.Windows.Forms.Padding(2);
+            this.tpgDeveloperProfessionalContribution.Location = new System.Drawing.Point(4, 29);
             this.tpgDeveloperProfessionalContribution.Name = "tpgDeveloperProfessionalContribution";
-            this.tpgDeveloperProfessionalContribution.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgDeveloperProfessionalContribution.Size = new System.Drawing.Size(1036, 435);
+            this.tpgDeveloperProfessionalContribution.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpgDeveloperProfessionalContribution.Size = new System.Drawing.Size(1558, 678);
             this.tpgDeveloperProfessionalContribution.TabIndex = 1;
             this.tpgDeveloperProfessionalContribution.Text = "Developer professional contribution";
             this.tpgDeveloperProfessionalContribution.UseVisualStyleBackColor = true;
@@ -1320,10 +1361,10 @@
             // btnCancelProfessional
             // 
             this.btnCancelProfessional.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCancelProfessional.Location = new System.Drawing.Point(694, 287);
-            this.btnCancelProfessional.Margin = new System.Windows.Forms.Padding(1);
+            this.btnCancelProfessional.Location = new System.Drawing.Point(1041, 444);
+            this.btnCancelProfessional.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelProfessional.Name = "btnCancelProfessional";
-            this.btnCancelProfessional.Size = new System.Drawing.Size(127, 31);
+            this.btnCancelProfessional.Size = new System.Drawing.Size(190, 48);
             this.btnCancelProfessional.TabIndex = 65;
             this.btnCancelProfessional.Text = "CANCEL";
             this.btnCancelProfessional.UseVisualStyleBackColor = true;
@@ -1332,10 +1373,10 @@
             // btnConfirmProfessional
             // 
             this.btnConfirmProfessional.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnConfirmProfessional.Location = new System.Drawing.Point(365, 287);
-            this.btnConfirmProfessional.Margin = new System.Windows.Forms.Padding(1);
+            this.btnConfirmProfessional.Location = new System.Drawing.Point(548, 444);
+            this.btnConfirmProfessional.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfirmProfessional.Name = "btnConfirmProfessional";
-            this.btnConfirmProfessional.Size = new System.Drawing.Size(311, 31);
+            this.btnConfirmProfessional.Size = new System.Drawing.Size(466, 48);
             this.btnConfirmProfessional.TabIndex = 64;
             this.btnConfirmProfessional.Text = "CONFIRM";
             this.btnConfirmProfessional.UseVisualStyleBackColor = true;
@@ -1348,11 +1389,9 @@
             this.grbProfessionalContribution.Controls.Add(this.grbBusinessDomains);
             this.grbProfessionalContribution.Controls.Add(this.grbSoftwareDevelopment);
             this.grbProfessionalContribution.Controls.Add(this.grbHighSpecialty);
-            this.grbProfessionalContribution.Location = new System.Drawing.Point(2, 2);
-            this.grbProfessionalContribution.Margin = new System.Windows.Forms.Padding(2);
+            this.grbProfessionalContribution.Location = new System.Drawing.Point(3, 3);
             this.grbProfessionalContribution.Name = "grbProfessionalContribution";
-            this.grbProfessionalContribution.Padding = new System.Windows.Forms.Padding(2);
-            this.grbProfessionalContribution.Size = new System.Drawing.Size(1183, 269);
+            this.grbProfessionalContribution.Size = new System.Drawing.Size(1774, 414);
             this.grbProfessionalContribution.TabIndex = 63;
             this.grbProfessionalContribution.TabStop = false;
             // 
@@ -1361,9 +1400,11 @@
             this.grbBusinessDomains.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grbBusinessDomains.Controls.Add(this.chkDevelopsSubordinates);
-            this.grbBusinessDomains.Location = new System.Drawing.Point(2, 187);
+            this.grbBusinessDomains.Location = new System.Drawing.Point(3, 288);
+            this.grbBusinessDomains.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grbBusinessDomains.Name = "grbBusinessDomains";
-            this.grbBusinessDomains.Size = new System.Drawing.Size(1195, 55);
+            this.grbBusinessDomains.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbBusinessDomains.Size = new System.Drawing.Size(1792, 85);
             this.grbBusinessDomains.TabIndex = 2;
             this.grbBusinessDomains.TabStop = false;
             this.grbBusinessDomains.Text = "Business Domains";
@@ -1371,9 +1412,10 @@
             // chkDevelopsSubordinates
             // 
             this.chkDevelopsSubordinates.AutoSize = true;
-            this.chkDevelopsSubordinates.Location = new System.Drawing.Point(6, 19);
+            this.chkDevelopsSubordinates.Location = new System.Drawing.Point(9, 29);
+            this.chkDevelopsSubordinates.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkDevelopsSubordinates.Name = "chkDevelopsSubordinates";
-            this.chkDevelopsSubordinates.Size = new System.Drawing.Size(134, 17);
+            this.chkDevelopsSubordinates.Size = new System.Drawing.Size(197, 24);
             this.chkDevelopsSubordinates.TabIndex = 0;
             this.chkDevelopsSubordinates.Text = "Develops subordinates";
             this.chkDevelopsSubordinates.UseVisualStyleBackColor = true;
@@ -1383,9 +1425,11 @@
             this.grbSoftwareDevelopment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grbSoftwareDevelopment.Controls.Add(this.lstSoftwareDevelopment);
-            this.grbSoftwareDevelopment.Location = new System.Drawing.Point(2, 67);
+            this.grbSoftwareDevelopment.Location = new System.Drawing.Point(3, 103);
+            this.grbSoftwareDevelopment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grbSoftwareDevelopment.Name = "grbSoftwareDevelopment";
-            this.grbSoftwareDevelopment.Size = new System.Drawing.Size(1195, 120);
+            this.grbSoftwareDevelopment.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbSoftwareDevelopment.Size = new System.Drawing.Size(1792, 185);
             this.grbSoftwareDevelopment.TabIndex = 1;
             this.grbSoftwareDevelopment.TabStop = false;
             this.grbSoftwareDevelopment.Text = "Software Development";
@@ -1403,9 +1447,10 @@
             "Submission of an Improvement Proposal and get approved by QA Department",
             "Activities in professional community such as academic society and committee (Pota" +
                 "to Tech Magazine,...)"});
-            this.lstSoftwareDevelopment.Location = new System.Drawing.Point(51, 18);
+            this.lstSoftwareDevelopment.Location = new System.Drawing.Point(76, 28);
+            this.lstSoftwareDevelopment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstSoftwareDevelopment.Name = "lstSoftwareDevelopment";
-            this.lstSoftwareDevelopment.Size = new System.Drawing.Size(1055, 64);
+            this.lstSoftwareDevelopment.Size = new System.Drawing.Size(1580, 88);
             this.lstSoftwareDevelopment.TabIndex = 0;
             // 
             // grbHighSpecialty
@@ -1420,9 +1465,11 @@
             this.grbHighSpecialty.Controls.Add(this.label30);
             this.grbHighSpecialty.Controls.Add(this.cbxMasterProgrammingLanguages);
             this.grbHighSpecialty.Controls.Add(this.label29);
-            this.grbHighSpecialty.Location = new System.Drawing.Point(2, 15);
+            this.grbHighSpecialty.Location = new System.Drawing.Point(3, 23);
+            this.grbHighSpecialty.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grbHighSpecialty.Name = "grbHighSpecialty";
-            this.grbHighSpecialty.Size = new System.Drawing.Size(1194, 52);
+            this.grbHighSpecialty.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbHighSpecialty.Size = new System.Drawing.Size(1791, 80);
             this.grbHighSpecialty.TabIndex = 0;
             this.grbHighSpecialty.TabStop = false;
             this.grbHighSpecialty.Text = "High Specialty";
@@ -1432,9 +1479,10 @@
             this.cbxMasterSofwareDevelopmentFramework.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxMasterSofwareDevelopmentFramework.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMasterSofwareDevelopmentFramework.FormattingEnabled = true;
-            this.cbxMasterSofwareDevelopmentFramework.Location = new System.Drawing.Point(1035, 24);
+            this.cbxMasterSofwareDevelopmentFramework.Location = new System.Drawing.Point(1552, 37);
+            this.cbxMasterSofwareDevelopmentFramework.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxMasterSofwareDevelopmentFramework.Name = "cbxMasterSofwareDevelopmentFramework";
-            this.cbxMasterSofwareDevelopmentFramework.Size = new System.Drawing.Size(123, 21);
+            this.cbxMasterSofwareDevelopmentFramework.Size = new System.Drawing.Size(182, 28);
             this.cbxMasterSofwareDevelopmentFramework.TabIndex = 33;
             // 
             // cbxMasterClientFramework
@@ -1442,18 +1490,20 @@
             this.cbxMasterClientFramework.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxMasterClientFramework.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMasterClientFramework.FormattingEnabled = true;
-            this.cbxMasterClientFramework.Location = new System.Drawing.Point(683, 23);
+            this.cbxMasterClientFramework.Location = new System.Drawing.Point(1024, 35);
+            this.cbxMasterClientFramework.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxMasterClientFramework.Name = "cbxMasterClientFramework";
-            this.cbxMasterClientFramework.Size = new System.Drawing.Size(116, 21);
+            this.cbxMasterClientFramework.Size = new System.Drawing.Size(172, 28);
             this.cbxMasterClientFramework.TabIndex = 33;
             // 
             // label32
             // 
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(827, 27);
+            this.label32.Location = new System.Drawing.Point(1240, 42);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(202, 13);
+            this.label32.Size = new System.Drawing.Size(302, 20);
             this.label32.TabIndex = 0;
             this.label32.Text = "Master Sofware Development Framework";
             // 
@@ -1461,9 +1511,10 @@
             // 
             this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(551, 26);
+            this.label31.Location = new System.Drawing.Point(826, 40);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(123, 13);
+            this.label31.Size = new System.Drawing.Size(185, 20);
             this.label31.TabIndex = 0;
             this.label31.Text = "Master Client Framework";
             // 
@@ -1472,18 +1523,20 @@
             this.cbxMasterUnitTesting.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxMasterUnitTesting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMasterUnitTesting.FormattingEnabled = true;
-            this.cbxMasterUnitTesting.Location = new System.Drawing.Point(417, 23);
+            this.cbxMasterUnitTesting.Location = new System.Drawing.Point(626, 35);
+            this.cbxMasterUnitTesting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxMasterUnitTesting.Name = "cbxMasterUnitTesting";
-            this.cbxMasterUnitTesting.Size = new System.Drawing.Size(111, 21);
+            this.cbxMasterUnitTesting.Size = new System.Drawing.Size(164, 28);
             this.cbxMasterUnitTesting.TabIndex = 33;
             // 
             // label30
             // 
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(312, 27);
+            this.label30.Location = new System.Drawing.Point(468, 42);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(99, 13);
+            this.label30.Size = new System.Drawing.Size(147, 20);
             this.label30.TabIndex = 0;
             this.label30.Text = "Master Unit Testing";
             // 
@@ -1492,18 +1545,20 @@
             this.cbxMasterProgrammingLanguages.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxMasterProgrammingLanguages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMasterProgrammingLanguages.FormattingEnabled = true;
-            this.cbxMasterProgrammingLanguages.Location = new System.Drawing.Point(166, 21);
+            this.cbxMasterProgrammingLanguages.Location = new System.Drawing.Point(249, 32);
+            this.cbxMasterProgrammingLanguages.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxMasterProgrammingLanguages.Name = "cbxMasterProgrammingLanguages";
-            this.cbxMasterProgrammingLanguages.Size = new System.Drawing.Size(122, 21);
+            this.cbxMasterProgrammingLanguages.Size = new System.Drawing.Size(181, 28);
             this.cbxMasterProgrammingLanguages.TabIndex = 33;
             // 
             // label29
             // 
             this.label29.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(1, 26);
+            this.label29.Location = new System.Drawing.Point(2, 40);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(159, 13);
+            this.label29.Size = new System.Drawing.Size(240, 20);
             this.label29.TabIndex = 0;
             this.label29.Text = "Master Programming Languages";
             // 
@@ -1512,11 +1567,10 @@
             this.tpgDeveloperPersonalSkills.Controls.Add(this.grbPersonalSkills);
             this.tpgDeveloperPersonalSkills.Controls.Add(this.btnCancelPersonalSkills);
             this.tpgDeveloperPersonalSkills.Controls.Add(this.btnConfirmPersonalSkills);
-            this.tpgDeveloperPersonalSkills.Location = new System.Drawing.Point(4, 22);
-            this.tpgDeveloperPersonalSkills.Margin = new System.Windows.Forms.Padding(2);
+            this.tpgDeveloperPersonalSkills.Location = new System.Drawing.Point(4, 29);
             this.tpgDeveloperPersonalSkills.Name = "tpgDeveloperPersonalSkills";
-            this.tpgDeveloperPersonalSkills.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgDeveloperPersonalSkills.Size = new System.Drawing.Size(1036, 435);
+            this.tpgDeveloperPersonalSkills.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpgDeveloperPersonalSkills.Size = new System.Drawing.Size(1558, 678);
             this.tpgDeveloperPersonalSkills.TabIndex = 2;
             this.tpgDeveloperPersonalSkills.Text = "Developer Personal skills";
             this.tpgDeveloperPersonalSkills.UseVisualStyleBackColor = true;
@@ -1528,9 +1582,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grbPersonalSkills.Controls.Add(this.groupBox6);
             this.grbPersonalSkills.Controls.Add(this.groupBox5);
-            this.grbPersonalSkills.Location = new System.Drawing.Point(6, 8);
+            this.grbPersonalSkills.Location = new System.Drawing.Point(9, 12);
+            this.grbPersonalSkills.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grbPersonalSkills.Name = "grbPersonalSkills";
-            this.grbPersonalSkills.Size = new System.Drawing.Size(1031, 342);
+            this.grbPersonalSkills.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbPersonalSkills.Size = new System.Drawing.Size(1546, 528);
             this.grbPersonalSkills.TabIndex = 68;
             this.grbPersonalSkills.TabStop = false;
             // 
@@ -1544,9 +1600,11 @@
             this.groupBox6.Controls.Add(this.groupBox9);
             this.groupBox6.Controls.Add(this.groupBox8);
             this.groupBox6.Controls.Add(this.groupBox7);
-            this.groupBox6.Location = new System.Drawing.Point(373, 0);
+            this.groupBox6.Location = new System.Drawing.Point(560, 0);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(667, 317);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox6.Size = new System.Drawing.Size(1000, 490);
             this.groupBox6.TabIndex = 65;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Skill Group: Software Design Methods";
@@ -1556,10 +1614,10 @@
             this.groupBox11.Controls.Add(this.label46);
             this.groupBox11.Controls.Add(this.cbxDetailedDesign);
             this.groupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox11.Location = new System.Drawing.Point(3, 284);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox11.Location = new System.Drawing.Point(4, 435);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(661, 30);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox11.Size = new System.Drawing.Size(992, 50);
             this.groupBox11.TabIndex = 4;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Low Level Design";
@@ -1568,10 +1626,9 @@
             // 
             this.label46.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(58, 27);
-            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label46.Location = new System.Drawing.Point(87, 42);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(82, 13);
+            this.label46.Size = new System.Drawing.Size(122, 20);
             this.label46.TabIndex = 48;
             this.label46.Text = "Detailed Design";
             // 
@@ -1580,10 +1637,9 @@
             this.cbxDetailedDesign.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxDetailedDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDetailedDesign.FormattingEnabled = true;
-            this.cbxDetailedDesign.Location = new System.Drawing.Point(159, 19);
-            this.cbxDetailedDesign.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxDetailedDesign.Location = new System.Drawing.Point(238, 29);
             this.cbxDetailedDesign.Name = "cbxDetailedDesign";
-            this.cbxDetailedDesign.Size = new System.Drawing.Size(158, 21);
+            this.cbxDetailedDesign.Size = new System.Drawing.Size(235, 28);
             this.cbxDetailedDesign.TabIndex = 47;
             // 
             // groupBox10
@@ -1593,9 +1649,11 @@
             this.groupBox10.Controls.Add(this.cbxExternalDesignJP);
             this.groupBox10.Controls.Add(this.label44);
             this.groupBox10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox10.Location = new System.Drawing.Point(3, 209);
+            this.groupBox10.Location = new System.Drawing.Point(4, 320);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(661, 75);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox10.Size = new System.Drawing.Size(992, 115);
             this.groupBox10.TabIndex = 3;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "High Level Design";
@@ -1604,10 +1662,9 @@
             // 
             this.label45.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(430, 18);
-            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label45.Location = new System.Drawing.Point(645, 28);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(111, 39);
+            this.label45.Size = new System.Drawing.Size(165, 60);
             this.label45.TabIndex = 48;
             this.label45.Text = "External Design/High \r\nLevel Design\r\n(in Japanese process)";
             // 
@@ -1616,10 +1673,9 @@
             this.cbxApplicationArchitectureDesign.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxApplicationArchitectureDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxApplicationArchitectureDesign.FormattingEnabled = true;
-            this.cbxApplicationArchitectureDesign.Location = new System.Drawing.Point(159, 32);
-            this.cbxApplicationArchitectureDesign.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxApplicationArchitectureDesign.Location = new System.Drawing.Point(238, 49);
             this.cbxApplicationArchitectureDesign.Name = "cbxApplicationArchitectureDesign";
-            this.cbxApplicationArchitectureDesign.Size = new System.Drawing.Size(158, 21);
+            this.cbxApplicationArchitectureDesign.Size = new System.Drawing.Size(235, 28);
             this.cbxApplicationArchitectureDesign.TabIndex = 47;
             // 
             // cbxExternalDesignJP
@@ -1627,20 +1683,18 @@
             this.cbxExternalDesignJP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxExternalDesignJP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxExternalDesignJP.FormattingEnabled = true;
-            this.cbxExternalDesignJP.Location = new System.Drawing.Point(545, 27);
-            this.cbxExternalDesignJP.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxExternalDesignJP.Location = new System.Drawing.Point(818, 42);
             this.cbxExternalDesignJP.Name = "cbxExternalDesignJP";
-            this.cbxExternalDesignJP.Size = new System.Drawing.Size(158, 21);
+            this.cbxExternalDesignJP.Size = new System.Drawing.Size(235, 28);
             this.cbxExternalDesignJP.TabIndex = 47;
             // 
             // label44
             // 
             this.label44.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(42, 27);
-            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label44.Location = new System.Drawing.Point(63, 42);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(100, 26);
+            this.label44.Size = new System.Drawing.Size(149, 40);
             this.label44.TabIndex = 48;
             this.label44.Text = "Application \r\nArchitecture Design";
             // 
@@ -1651,10 +1705,10 @@
             this.groupBox9.Controls.Add(this.label40);
             this.groupBox9.Controls.Add(this.cbxUml);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox9.Location = new System.Drawing.Point(3, 136);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Location = new System.Drawing.Point(4, 208);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(661, 73);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox9.Size = new System.Drawing.Size(992, 112);
             this.groupBox9.TabIndex = 2;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Object Oriented Development";
@@ -1663,10 +1717,9 @@
             // 
             this.label42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(511, 36);
-            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label42.Location = new System.Drawing.Point(766, 55);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(30, 13);
+            this.label42.Size = new System.Drawing.Size(43, 20);
             this.label42.TabIndex = 48;
             this.label42.Text = "UML";
             // 
@@ -1675,20 +1728,18 @@
             this.cbxObjectOrientedAnalysis.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxObjectOrientedAnalysis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxObjectOrientedAnalysis.FormattingEnabled = true;
-            this.cbxObjectOrientedAnalysis.Location = new System.Drawing.Point(159, 31);
-            this.cbxObjectOrientedAnalysis.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxObjectOrientedAnalysis.Location = new System.Drawing.Point(238, 48);
             this.cbxObjectOrientedAnalysis.Name = "cbxObjectOrientedAnalysis";
-            this.cbxObjectOrientedAnalysis.Size = new System.Drawing.Size(158, 21);
+            this.cbxObjectOrientedAnalysis.Size = new System.Drawing.Size(235, 28);
             this.cbxObjectOrientedAnalysis.TabIndex = 47;
             // 
             // label40
             // 
             this.label40.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(39, 26);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Location = new System.Drawing.Point(58, 40);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(102, 26);
+            this.label40.Size = new System.Drawing.Size(152, 40);
             this.label40.TabIndex = 48;
             this.label40.Text = "Object Oriented \r\nAnalysis and Design";
             // 
@@ -1697,10 +1748,9 @@
             this.cbxUml.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxUml.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxUml.FormattingEnabled = true;
-            this.cbxUml.Location = new System.Drawing.Point(545, 33);
-            this.cbxUml.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxUml.Location = new System.Drawing.Point(818, 51);
             this.cbxUml.Name = "cbxUml";
-            this.cbxUml.Size = new System.Drawing.Size(158, 21);
+            this.cbxUml.Size = new System.Drawing.Size(235, 28);
             this.cbxUml.TabIndex = 47;
             // 
             // groupBox8
@@ -1710,9 +1760,11 @@
             this.groupBox8.Controls.Add(this.cbxDesignPattern);
             this.groupBox8.Controls.Add(this.label35);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox8.Location = new System.Drawing.Point(3, 76);
+            this.groupBox8.Location = new System.Drawing.Point(4, 116);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(661, 60);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox8.Size = new System.Drawing.Size(992, 92);
             this.groupBox8.TabIndex = 1;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Patterns";
@@ -1721,10 +1773,9 @@
             // 
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(463, 28);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Location = new System.Drawing.Point(694, 43);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(77, 13);
+            this.label36.Size = new System.Drawing.Size(115, 20);
             this.label36.TabIndex = 48;
             this.label36.Text = "Design Pattern";
             // 
@@ -1733,10 +1784,9 @@
             this.cbxArchitecturalPattern.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxArchitecturalPattern.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxArchitecturalPattern.FormattingEnabled = true;
-            this.cbxArchitecturalPattern.Location = new System.Drawing.Point(159, 25);
-            this.cbxArchitecturalPattern.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxArchitecturalPattern.Location = new System.Drawing.Point(238, 38);
             this.cbxArchitecturalPattern.Name = "cbxArchitecturalPattern";
-            this.cbxArchitecturalPattern.Size = new System.Drawing.Size(158, 21);
+            this.cbxArchitecturalPattern.Size = new System.Drawing.Size(235, 28);
             this.cbxArchitecturalPattern.TabIndex = 47;
             // 
             // cbxDesignPattern
@@ -1744,20 +1794,18 @@
             this.cbxDesignPattern.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxDesignPattern.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDesignPattern.FormattingEnabled = true;
-            this.cbxDesignPattern.Location = new System.Drawing.Point(545, 25);
-            this.cbxDesignPattern.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxDesignPattern.Location = new System.Drawing.Point(818, 38);
             this.cbxDesignPattern.Name = "cbxDesignPattern";
-            this.cbxDesignPattern.Size = new System.Drawing.Size(158, 21);
+            this.cbxDesignPattern.Size = new System.Drawing.Size(235, 28);
             this.cbxDesignPattern.TabIndex = 47;
             // 
             // label35
             // 
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(42, 31);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label35.Location = new System.Drawing.Point(63, 48);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(103, 13);
+            this.label35.Size = new System.Drawing.Size(154, 20);
             this.label35.TabIndex = 48;
             this.label35.Text = "Architectural Pattern";
             // 
@@ -1768,10 +1816,10 @@
             this.groupBox7.Controls.Add(this.label33);
             this.groupBox7.Controls.Add(this.cbxObjectOrientedDesign);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox7.Location = new System.Drawing.Point(3, 16);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Location = new System.Drawing.Point(4, 24);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(661, 60);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox7.Size = new System.Drawing.Size(992, 92);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Design Methods";
@@ -1780,10 +1828,9 @@
             // 
             this.label34.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(449, 23);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Location = new System.Drawing.Point(674, 35);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(92, 13);
+            this.label34.Size = new System.Drawing.Size(138, 20);
             this.label34.TabIndex = 48;
             this.label34.Text = "Structured Design";
             // 
@@ -1792,20 +1839,18 @@
             this.cbxStructuredDesign.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxStructuredDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStructuredDesign.FormattingEnabled = true;
-            this.cbxStructuredDesign.Location = new System.Drawing.Point(545, 20);
-            this.cbxStructuredDesign.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxStructuredDesign.Location = new System.Drawing.Point(818, 31);
             this.cbxStructuredDesign.Name = "cbxStructuredDesign";
-            this.cbxStructuredDesign.Size = new System.Drawing.Size(158, 21);
+            this.cbxStructuredDesign.Size = new System.Drawing.Size(235, 28);
             this.cbxStructuredDesign.TabIndex = 47;
             // 
             // label33
             // 
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(7, 23);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Location = new System.Drawing.Point(10, 35);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(117, 13);
+            this.label33.Size = new System.Drawing.Size(174, 20);
             this.label33.TabIndex = 48;
             this.label33.Text = "Object Oriented Design";
             // 
@@ -1814,10 +1859,9 @@
             this.cbxObjectOrientedDesign.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxObjectOrientedDesign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxObjectOrientedDesign.FormattingEnabled = true;
-            this.cbxObjectOrientedDesign.Location = new System.Drawing.Point(159, 18);
-            this.cbxObjectOrientedDesign.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxObjectOrientedDesign.Location = new System.Drawing.Point(238, 28);
             this.cbxObjectOrientedDesign.Name = "cbxObjectOrientedDesign";
-            this.cbxObjectOrientedDesign.Size = new System.Drawing.Size(158, 21);
+            this.cbxObjectOrientedDesign.Size = new System.Drawing.Size(235, 28);
             this.cbxObjectOrientedDesign.TabIndex = 47;
             // 
             // groupBox5
@@ -1834,9 +1878,11 @@
             this.groupBox5.Controls.Add(this.label41);
             this.groupBox5.Controls.Add(this.label39);
             this.groupBox5.Controls.Add(this.cbxTimeManagement);
-            this.groupBox5.Location = new System.Drawing.Point(5, 0);
+            this.groupBox5.Location = new System.Drawing.Point(8, 0);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(366, 314);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox5.Size = new System.Drawing.Size(549, 485);
             this.groupBox5.TabIndex = 64;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Skill Group: Personal Skills";
@@ -1845,10 +1891,9 @@
             // 
             this.label38.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(55, 53);
-            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Location = new System.Drawing.Point(82, 82);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(62, 13);
+            this.label38.Size = new System.Drawing.Size(92, 20);
             this.label38.TabIndex = 48;
             this.label38.Text = "Leadership:";
             // 
@@ -1857,9 +1902,10 @@
             this.cbxLeadership.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxLeadership.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxLeadership.FormattingEnabled = true;
-            this.cbxLeadership.Location = new System.Drawing.Point(122, 50);
+            this.cbxLeadership.Location = new System.Drawing.Point(183, 77);
+            this.cbxLeadership.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxLeadership.Name = "cbxLeadership";
-            this.cbxLeadership.Size = new System.Drawing.Size(224, 21);
+            this.cbxLeadership.Size = new System.Drawing.Size(334, 28);
             this.cbxLeadership.TabIndex = 47;
             // 
             // cbxCommunication
@@ -1867,19 +1913,19 @@
             this.cbxCommunication.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxCommunication.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCommunication.FormattingEnabled = true;
-            this.cbxCommunication.Location = new System.Drawing.Point(122, 87);
+            this.cbxCommunication.Location = new System.Drawing.Point(183, 134);
+            this.cbxCommunication.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxCommunication.Name = "cbxCommunication";
-            this.cbxCommunication.Size = new System.Drawing.Size(224, 21);
+            this.cbxCommunication.Size = new System.Drawing.Size(334, 28);
             this.cbxCommunication.TabIndex = 56;
             // 
             // label37
             // 
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(57, 227);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Location = new System.Drawing.Point(86, 349);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(60, 13);
+            this.label37.Size = new System.Drawing.Size(86, 20);
             this.label37.TabIndex = 61;
             this.label37.Text = "Teamwork:";
             // 
@@ -1887,10 +1933,9 @@
             // 
             this.label43.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(35, 90);
-            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label43.Location = new System.Drawing.Point(52, 138);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(82, 13);
+            this.label43.Size = new System.Drawing.Size(123, 20);
             this.label43.TabIndex = 55;
             this.label43.Text = "Communication:";
             // 
@@ -1899,9 +1944,10 @@
             this.cbxCounselling.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxCounselling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCounselling.FormattingEnabled = true;
-            this.cbxCounselling.Location = new System.Drawing.Point(122, 174);
+            this.cbxCounselling.Location = new System.Drawing.Point(183, 268);
+            this.cbxCounselling.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxCounselling.Name = "cbxCounselling";
-            this.cbxCounselling.Size = new System.Drawing.Size(224, 21);
+            this.cbxCounselling.Size = new System.Drawing.Size(334, 28);
             this.cbxCounselling.TabIndex = 58;
             // 
             // cbxTeamwork
@@ -1909,19 +1955,19 @@
             this.cbxTeamwork.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxTeamwork.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTeamwork.FormattingEnabled = true;
-            this.cbxTeamwork.Location = new System.Drawing.Point(122, 224);
+            this.cbxTeamwork.Location = new System.Drawing.Point(183, 345);
+            this.cbxTeamwork.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxTeamwork.Name = "cbxTeamwork";
-            this.cbxTeamwork.Size = new System.Drawing.Size(224, 21);
+            this.cbxTeamwork.Size = new System.Drawing.Size(334, 28);
             this.cbxTeamwork.TabIndex = 62;
             // 
             // label41
             // 
             this.label41.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(53, 177);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Location = new System.Drawing.Point(80, 272);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(64, 13);
+            this.label41.Size = new System.Drawing.Size(95, 20);
             this.label41.TabIndex = 57;
             this.label41.Text = "Counselling:";
             // 
@@ -1929,10 +1975,9 @@
             // 
             this.label39.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(17, 131);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Location = new System.Drawing.Point(26, 202);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(98, 13);
+            this.label39.Size = new System.Drawing.Size(145, 20);
             this.label39.TabIndex = 59;
             this.label39.Text = "Time Management:";
             // 
@@ -1941,18 +1986,19 @@
             this.cbxTimeManagement.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxTimeManagement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTimeManagement.FormattingEnabled = true;
-            this.cbxTimeManagement.Location = new System.Drawing.Point(122, 128);
+            this.cbxTimeManagement.Location = new System.Drawing.Point(183, 197);
+            this.cbxTimeManagement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxTimeManagement.Name = "cbxTimeManagement";
-            this.cbxTimeManagement.Size = new System.Drawing.Size(224, 21);
+            this.cbxTimeManagement.Size = new System.Drawing.Size(334, 28);
             this.cbxTimeManagement.TabIndex = 60;
             // 
             // btnCancelPersonalSkills
             // 
             this.btnCancelPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCancelPersonalSkills.Location = new System.Drawing.Point(534, 354);
-            this.btnCancelPersonalSkills.Margin = new System.Windows.Forms.Padding(1);
+            this.btnCancelPersonalSkills.Location = new System.Drawing.Point(801, 547);
+            this.btnCancelPersonalSkills.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelPersonalSkills.Name = "btnCancelPersonalSkills";
-            this.btnCancelPersonalSkills.Size = new System.Drawing.Size(85, 32);
+            this.btnCancelPersonalSkills.Size = new System.Drawing.Size(128, 49);
             this.btnCancelPersonalSkills.TabIndex = 67;
             this.btnCancelPersonalSkills.Text = "CANCEL";
             this.btnCancelPersonalSkills.UseVisualStyleBackColor = true;
@@ -1961,10 +2007,10 @@
             // btnConfirmPersonalSkills
             // 
             this.btnConfirmPersonalSkills.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnConfirmPersonalSkills.Location = new System.Drawing.Point(314, 354);
-            this.btnConfirmPersonalSkills.Margin = new System.Windows.Forms.Padding(1);
+            this.btnConfirmPersonalSkills.Location = new System.Drawing.Point(471, 547);
+            this.btnConfirmPersonalSkills.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfirmPersonalSkills.Name = "btnConfirmPersonalSkills";
-            this.btnConfirmPersonalSkills.Size = new System.Drawing.Size(207, 32);
+            this.btnConfirmPersonalSkills.Size = new System.Drawing.Size(310, 49);
             this.btnConfirmPersonalSkills.TabIndex = 66;
             this.btnConfirmPersonalSkills.Text = "CONFIRM";
             this.btnConfirmPersonalSkills.UseVisualStyleBackColor = true;
@@ -1972,40 +2018,36 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1036, 435);
+            this.tabPage1.Size = new System.Drawing.Size(1558, 676);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Tester projects\' contributions";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1036, 435);
+            this.tabPage2.Size = new System.Drawing.Size(1558, 676);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Tester professional\' contributions";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1036, 435);
+            this.tabPage3.Size = new System.Drawing.Size(1558, 676);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Tester personal skills";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage5
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1036, 435);
+            this.tabPage5.Size = new System.Drawing.Size(1558, 676);
             this.tabPage5.TabIndex = 7;
             this.tabPage5.Text = "PM professional\' contributions";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -2013,19 +2055,22 @@
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.gridControl1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(4, 29);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1036, 435);
+            this.tabPage6.Size = new System.Drawing.Size(1558, 676);
             this.tabPage6.TabIndex = 8;
             this.tabPage6.Text = "PM personal skills";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(42, 42);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridControl1.Location = new System.Drawing.Point(63, 65);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1085, 200);
+            this.gridControl1.Size = new System.Drawing.Size(1628, 308);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -2038,9 +2083,10 @@
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.label47);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(4, 29);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1027, 435);
+            this.tabPage7.Size = new System.Drawing.Size(1558, 676);
             this.tabPage7.TabIndex = 9;
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
@@ -2049,73 +2095,20 @@
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.Color.Red;
-            this.label47.Location = new System.Drawing.Point(99, 129);
+            this.label47.Location = new System.Drawing.Point(148, 198);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(835, 63);
+            this.label47.Size = new System.Drawing.Size(1236, 91);
             this.label47.TabIndex = 0;
             this.label47.Text = "CURRENTLY NOT SUPPORTED";
             // 
-            // txtRoleAndResponsibility
-            // 
-            this.txtRoleAndResponsibility.Location = new System.Drawing.Point(666, 26);
-            this.txtRoleAndResponsibility.Name = "txtRoleAndResponsibility";
-            this.txtRoleAndResponsibility.Size = new System.Drawing.Size(141, 20);
-            this.txtRoleAndResponsibility.TabIndex = 60;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(140, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 20);
-            this.textBox2.TabIndex = 60;
-            // 
-            // txtPhaseDuration
-            // 
-            this.txtPhaseDuration.Location = new System.Drawing.Point(140, 19);
-            this.txtPhaseDuration.Name = "txtPhaseDuration";
-            this.txtPhaseDuration.Size = new System.Drawing.Size(141, 20);
-            this.txtPhaseDuration.TabIndex = 60;
-            // 
-            // label57
-            // 
-            this.label57.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(52, 22);
-            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(83, 13);
-            this.label57.TabIndex = 58;
-            this.label57.Text = "Phase Duration:";
-            // 
-            // label58
-            // 
-            this.label58.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(61, 29);
-            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(160, 13);
-            this.label58.TabIndex = 64;
-            this.label58.Text = "Sofware Development Activities:";
-            // 
-            // cbxSofwareDevelopmentActivities
-            // 
-            this.cbxSofwareDevelopmentActivities.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxSofwareDevelopmentActivities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxSofwareDevelopmentActivities.FormattingEnabled = true;
-            this.cbxSofwareDevelopmentActivities.Location = new System.Drawing.Point(226, 26);
-            this.cbxSofwareDevelopmentActivities.Name = "cbxSofwareDevelopmentActivities";
-            this.cbxSofwareDevelopmentActivities.Size = new System.Drawing.Size(224, 21);
-            this.cbxSofwareDevelopmentActivities.TabIndex = 63;
-            // 
             // DetailedJobKpiAssessmentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 579);
+            this.ClientSize = new System.Drawing.Size(1572, 891);
             this.Controls.Add(this.grbAssessmentinDetails);
             this.Controls.Add(this.grbGeneralInformation);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DetailedJobKpiAssessmentForm";
