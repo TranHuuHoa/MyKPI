@@ -1,5 +1,5 @@
 ﻿//========================================================================================================
-//  MyKPI - PersonalSkillsDAL
+//  MyKPI - DeveloperPersonalSkillsDAL
 // Change logs:
 // May 30 2018 - TrungTH - create
 //
@@ -13,7 +13,7 @@ using MyKPI.Entities;
 using MyKPI.Entities.Assessment;
 #endregion
 
-namespace MyKPI.PersonalSkills.DAL
+namespace MyKPI.DeveloperPersonalSkills.DAL
 {
     public class DeveloperPersonalSkillsDAL
     {

@@ -40,7 +40,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.grbAssessmentinDetails = new System.Windows.Forms.GroupBox();
-            this.txtTeamSize = new System.Windows.Forms.TabControl();
+            this.tclAssessmentInDetails = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnCancelPMProjectContribution = new System.Windows.Forms.Button();
             this.btnComfirmPMProjectContribution = new System.Windows.Forms.Button();
@@ -61,9 +61,15 @@
             this.label53 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.txtPhaseDuration = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTeamSize1 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.cbxSofwareDevelopmentActivities = new System.Windows.Forms.ComboBox();
+            this.txtRoleAndResponsibility = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.tpgDeveloperProjectsContribution = new System.Windows.Forms.TabPage();
             this.btnProjectCancel = new System.Windows.Forms.Button();
@@ -184,19 +190,11 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label47 = new System.Windows.Forms.Label();
-            this.txtRoleAndResponsibility = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtPhaseDuration = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.cbxSofwareDevelopmentActivities = new System.Windows.Forms.ComboBox();
             this.grbGeneralInformation.SuspendLayout();
             this.grbAssessmentinDetails.SuspendLayout();
-            this.txtTeamSize.SuspendLayout();
+            this.tclAssessmentInDetails.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.grbPMProjectContribution.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -225,9 +223,6 @@
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -362,7 +357,7 @@
             // 
             // grbAssessmentinDetails
             // 
-            this.grbAssessmentinDetails.Controls.Add(this.txtTeamSize);
+            this.grbAssessmentinDetails.Controls.Add(this.tclAssessmentInDetails);
             this.grbAssessmentinDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbAssessmentinDetails.Location = new System.Drawing.Point(0, 101);
             this.grbAssessmentinDetails.Margin = new System.Windows.Forms.Padding(2);
@@ -373,26 +368,26 @@
             this.grbAssessmentinDetails.TabStop = false;
             this.grbAssessmentinDetails.Text = "Assessment in Details";
             // 
-            // txtTeamSize
+            // tclAssessmentInDetails
             // 
-            this.txtTeamSize.Controls.Add(this.tabPage4);
-            this.txtTeamSize.Controls.Add(this.tpgDeveloperProjectsContribution);
-            this.txtTeamSize.Controls.Add(this.tpgDeveloperProfessionalContribution);
-            this.txtTeamSize.Controls.Add(this.tpgDeveloperPersonalSkills);
-            this.txtTeamSize.Controls.Add(this.tabPage1);
-            this.txtTeamSize.Controls.Add(this.tabPage2);
-            this.txtTeamSize.Controls.Add(this.tabPage3);
-            this.txtTeamSize.Controls.Add(this.tabPage5);
-            this.txtTeamSize.Controls.Add(this.tabPage6);
-            this.txtTeamSize.Controls.Add(this.tabPage7);
-            this.txtTeamSize.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTeamSize.Location = new System.Drawing.Point(2, 15);
-            this.txtTeamSize.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTeamSize.Name = "txtTeamSize";
-            this.txtTeamSize.SelectedIndex = 0;
-            this.txtTeamSize.Size = new System.Drawing.Size(1044, 461);
-            this.txtTeamSize.TabIndex = 0;
-            this.txtTeamSize.SelectedIndexChanged += new System.EventHandler(this.tclAssessmentInDetails_SelectedIndexChanged);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage4);
+            this.tclAssessmentInDetails.Controls.Add(this.tpgDeveloperProjectsContribution);
+            this.tclAssessmentInDetails.Controls.Add(this.tpgDeveloperProfessionalContribution);
+            this.tclAssessmentInDetails.Controls.Add(this.tpgDeveloperPersonalSkills);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage1);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage2);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage3);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage5);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage6);
+            this.tclAssessmentInDetails.Controls.Add(this.tabPage7);
+            this.tclAssessmentInDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tclAssessmentInDetails.Location = new System.Drawing.Point(2, 15);
+            this.tclAssessmentInDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.tclAssessmentInDetails.Name = "tclAssessmentInDetails";
+            this.tclAssessmentInDetails.SelectedIndex = 0;
+            this.tclAssessmentInDetails.Size = new System.Drawing.Size(1044, 461);
+            this.tclAssessmentInDetails.TabIndex = 0;
+            this.tclAssessmentInDetails.SelectedIndexChanged += new System.EventHandler(this.tclAssessmentInDetails_SelectedIndexChanged);
             // 
             // tabPage4
             // 
@@ -630,11 +625,30 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Project/Phase Duration";
             // 
+            // txtPhaseDuration
+            // 
+            this.txtPhaseDuration.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPhaseDuration.Location = new System.Drawing.Point(140, 19);
+            this.txtPhaseDuration.Name = "txtPhaseDuration";
+            this.txtPhaseDuration.Size = new System.Drawing.Size(141, 20);
+            this.txtPhaseDuration.TabIndex = 60;
+            // 
+            // label57
+            // 
+            this.label57.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(52, 22);
+            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(83, 13);
+            this.label57.TabIndex = 58;
+            this.label57.Text = "Phase Duration:";
+            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.txtTeamSize1);
             this.groupBox3.Controls.Add(this.label48);
             this.groupBox3.Location = new System.Drawing.Point(3, 216);
             this.groupBox3.Name = "groupBox3";
@@ -642,6 +656,14 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Project/Phase Size";
+            // 
+            // txtTeamSize1
+            // 
+            this.txtTeamSize1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTeamSize1.Location = new System.Drawing.Point(140, 22);
+            this.txtTeamSize1.Name = "txtTeamSize1";
+            this.txtTeamSize1.Size = new System.Drawing.Size(141, 20);
+            this.txtTeamSize1.TabIndex = 60;
             // 
             // label48
             // 
@@ -668,6 +690,35 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Responsibilities";
+            // 
+            // label58
+            // 
+            this.label58.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(61, 29);
+            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(160, 13);
+            this.label58.TabIndex = 64;
+            this.label58.Text = "Sofware Development Activities:";
+            // 
+            // cbxSofwareDevelopmentActivities
+            // 
+            this.cbxSofwareDevelopmentActivities.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxSofwareDevelopmentActivities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSofwareDevelopmentActivities.FormattingEnabled = true;
+            this.cbxSofwareDevelopmentActivities.Location = new System.Drawing.Point(226, 26);
+            this.cbxSofwareDevelopmentActivities.Name = "cbxSofwareDevelopmentActivities";
+            this.cbxSofwareDevelopmentActivities.Size = new System.Drawing.Size(224, 21);
+            this.cbxSofwareDevelopmentActivities.TabIndex = 63;
+            // 
+            // txtRoleAndResponsibility
+            // 
+            this.txtRoleAndResponsibility.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtRoleAndResponsibility.Location = new System.Drawing.Point(666, 26);
+            this.txtRoleAndResponsibility.Name = "txtRoleAndResponsibility";
+            this.txtRoleAndResponsibility.Size = new System.Drawing.Size(141, 20);
+            this.txtRoleAndResponsibility.TabIndex = 60;
             // 
             // label49
             // 
@@ -931,7 +982,7 @@
             this.tpgProject2.Margin = new System.Windows.Forms.Padding(2);
             this.tpgProject2.Name = "tpgProject2";
             this.tpgProject2.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgProject2.Size = new System.Drawing.Size(1019, 231);
+            this.tpgProject2.Size = new System.Drawing.Size(1028, 231);
             this.tpgProject2.TabIndex = 1;
             this.tpgProject2.Text = "Project 2";
             this.tpgProject2.UseVisualStyleBackColor = true;
@@ -960,7 +1011,7 @@
             this.grbProject2.Margin = new System.Windows.Forms.Padding(2);
             this.grbProject2.Name = "grbProject2";
             this.grbProject2.Padding = new System.Windows.Forms.Padding(2);
-            this.grbProject2.Size = new System.Drawing.Size(1016, 197);
+            this.grbProject2.Size = new System.Drawing.Size(1025, 197);
             this.grbProject2.TabIndex = 63;
             this.grbProject2.TabStop = false;
             // 
@@ -1121,7 +1172,7 @@
             this.tpgProject3.Margin = new System.Windows.Forms.Padding(2);
             this.tpgProject3.Name = "tpgProject3";
             this.tpgProject3.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgProject3.Size = new System.Drawing.Size(1019, 231);
+            this.tpgProject3.Size = new System.Drawing.Size(1028, 231);
             this.tpgProject3.TabIndex = 2;
             this.tpgProject3.Text = "Project 3";
             this.tpgProject3.UseVisualStyleBackColor = true;
@@ -1149,7 +1200,7 @@
             this.grbProject3.Margin = new System.Windows.Forms.Padding(2);
             this.grbProject3.Name = "grbProject3";
             this.grbProject3.Padding = new System.Windows.Forms.Padding(2);
-            this.grbProject3.Size = new System.Drawing.Size(1015, 200);
+            this.grbProject3.Size = new System.Drawing.Size(1024, 200);
             this.grbProject3.TabIndex = 79;
             this.grbProject3.TabStop = false;
             // 
@@ -2012,7 +2063,6 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.gridControl1);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1036, 435);
@@ -2020,27 +2070,12 @@
             this.tabPage6.Text = "PM personal skills";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // gridControl1
-            // 
-            this.gridControl1.Location = new System.Drawing.Point(42, 42);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1085, 200);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.label47);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1027, 435);
+            this.tabPage7.Size = new System.Drawing.Size(1036, 435);
             this.tabPage7.TabIndex = 9;
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
@@ -2054,59 +2089,6 @@
             this.label47.Size = new System.Drawing.Size(835, 63);
             this.label47.TabIndex = 0;
             this.label47.Text = "CURRENTLY NOT SUPPORTED";
-            // 
-            // txtRoleAndResponsibility
-            // 
-            this.txtRoleAndResponsibility.Location = new System.Drawing.Point(666, 26);
-            this.txtRoleAndResponsibility.Name = "txtRoleAndResponsibility";
-            this.txtRoleAndResponsibility.Size = new System.Drawing.Size(141, 20);
-            this.txtRoleAndResponsibility.TabIndex = 60;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(140, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 20);
-            this.textBox2.TabIndex = 60;
-            // 
-            // txtPhaseDuration
-            // 
-            this.txtPhaseDuration.Location = new System.Drawing.Point(140, 19);
-            this.txtPhaseDuration.Name = "txtPhaseDuration";
-            this.txtPhaseDuration.Size = new System.Drawing.Size(141, 20);
-            this.txtPhaseDuration.TabIndex = 60;
-            // 
-            // label57
-            // 
-            this.label57.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(52, 22);
-            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(83, 13);
-            this.label57.TabIndex = 58;
-            this.label57.Text = "Phase Duration:";
-            // 
-            // label58
-            // 
-            this.label58.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(61, 29);
-            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(160, 13);
-            this.label58.TabIndex = 64;
-            this.label58.Text = "Sofware Development Activities:";
-            // 
-            // cbxSofwareDevelopmentActivities
-            // 
-            this.cbxSofwareDevelopmentActivities.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbxSofwareDevelopmentActivities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxSofwareDevelopmentActivities.FormattingEnabled = true;
-            this.cbxSofwareDevelopmentActivities.Location = new System.Drawing.Point(226, 26);
-            this.cbxSofwareDevelopmentActivities.Name = "cbxSofwareDevelopmentActivities";
-            this.cbxSofwareDevelopmentActivities.Size = new System.Drawing.Size(224, 21);
-            this.cbxSofwareDevelopmentActivities.TabIndex = 63;
             // 
             // DetailedJobKpiAssessmentForm
             // 
@@ -2124,7 +2106,7 @@
             this.grbGeneralInformation.ResumeLayout(false);
             this.grbGeneralInformation.PerformLayout();
             this.grbAssessmentinDetails.ResumeLayout(false);
-            this.txtTeamSize.ResumeLayout(false);
+            this.tclAssessmentInDetails.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.grbPMProjectContribution.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -2168,9 +2150,6 @@
             this.groupBox7.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.ResumeLayout(false);
@@ -2181,7 +2160,7 @@
 
         private System.Windows.Forms.GroupBox grbGeneralInformation;
         private System.Windows.Forms.GroupBox grbAssessmentinDetails;
-        private System.Windows.Forms.TabControl txtTeamSize;
+        private System.Windows.Forms.TabControl tclAssessmentInDetails;
         private System.Windows.Forms.TabPage tpgDeveloperProjectsContribution;
         private System.Windows.Forms.TabPage tpgDeveloperProfessionalContribution;
         private System.Windows.Forms.TabPage tpgDeveloperPersonalSkills;
@@ -2314,8 +2293,6 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.Label label47;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Button btnCancelPMProjectContribution;
         private System.Windows.Forms.Button btnComfirmPMProjectContribution;
         private System.Windows.Forms.GroupBox grbPMProjectContribution;
@@ -2341,7 +2318,7 @@
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.TextBox txtPhaseDuration;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTeamSize1;
         private System.Windows.Forms.TextBox txtRoleAndResponsibility;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.ComboBox cbxSofwareDevelopmentActivities;

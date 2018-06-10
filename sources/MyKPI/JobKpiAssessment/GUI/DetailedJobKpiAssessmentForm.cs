@@ -15,7 +15,8 @@ using MyKPI.Entities;
 using MyKPI.Entities.Assessment;
 using MyKPI.JobKpiAssessment.BLL;
 using MyKPI.ProjectManagement.BLL;
-using MyKPI.PersonalSkills.BLL;
+using MyKPI.DeveloperPersonalSkills.BLL;
+using MyKPI.PMProjectContribution.BLL;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -29,23 +30,24 @@ namespace MyKPI.JobKpiAssessment.GUI
         private int jobKpiAssessmentID = 0;
         private int developerProjectContributionID = 0;
         private int developerProfessionalContributionID = 0;
-        private int personalSkillsID = 0;
+        private int developerPersonalSkillsID = 0;
+
 
         private DetailedFormMode detailedFormMode = DetailedFormMode.Add;
         private DetailedFormMode projectDetailedFormMode = DetailedFormMode.Add;
         private DetailedFormMode professionalDetailedFormMode = DetailedFormMode.Add;
-        private DetailedFormMode personalSkillsDetailedFormMode = DetailedFormMode.Add;
+        private DetailedFormMode developerPersonalSkillsDetailedFormMode = DetailedFormMode.Add;
 
         private FormState UpdateJobKpiAssessmentState = FormState.preProcess;
         private FormState developerProjectContributionState = FormState.preProcess;
         private FormState developerProfessionalContributionState = FormState.preProcess;
-        private FormState personalSkillsState = FormState.preProcess;
+        private FormState developerPersonalSkillsState = FormState.preProcess;
 
         private JobKpiEntity jobKpiEntity = new JobKpiEntity();
         private JobKpiAssessmentBLL jobKpiAssessmentBLL = new JobKpiAssessmentBLL();                                 
         private DeveloperProjectContributionBLL developerProjectContributionBLL = new DeveloperProjectContributionBLL();
         private DeveloperProfessionalContributionBLL developerProfessionalContributionBLL = new DeveloperProfessionalContributionBLL();
-        private DeveloperPersonalSkillsBLL personalSkillsBLL = new DeveloperPersonalSkillsBLL();
+        private DeveloperPersonalSkillsBLL developerPersonalSkillsBLL = new DeveloperPersonalSkillsBLL();
         #endregion
 
         #region private functions
@@ -55,7 +57,8 @@ namespace MyKPI.JobKpiAssessment.GUI
             InitializeComponent();
             InitCombobox();
             professionalContributionInitComboBox();
-            PersonalSkillsInitComboBox();
+            DeveloperPersonalSkillsInitComboBox();
+            PMProjectContributionInitComboBox();
         }
         private void load()
         {
@@ -79,7 +82,7 @@ namespace MyKPI.JobKpiAssessment.GUI
                     grbAssessmentinDetails.Enabled = true;
 
 
-                    switch (txtTeamSize.SelectedIndex)
+                    switch (tclAssessmentInDetails.SelectedIndex)
                     {
                         case 0:
                             switch (tclProject.SelectedIndex)
@@ -108,10 +111,10 @@ namespace MyKPI.JobKpiAssessment.GUI
                             loadPerProfessionalContributionTab(developerProfessionalContribution);
                             break;
                         case 2:
-                            jobKpiEntity.PersonalSkills = personalSkillsBLL.LoadPerJobKpiAssessmentID(jobKpiAssessmentID);
-                            var personalSkills = (jobKpiEntity.PersonalSkills as DeveloperPersonalSkillsEntity);
+                            jobKpiEntity.DeveloperPersonalSkills = developerPersonalSkillsBLL.LoadPerJobKpiAssessmentID(jobKpiAssessmentID);
+                            var developerPersonalSkills = (jobKpiEntity.DeveloperPersonalSkills as DeveloperPersonalSkillsEntity);
 
-                            loadPersonalSkillsTab(personalSkills);
+                            loadDeveloperPersonalSkillsTab(developerPersonalSkills);
                             break;
                     }
 
@@ -235,38 +238,38 @@ namespace MyKPI.JobKpiAssessment.GUI
             }          
         }
 
-        private void loadPersonalSkillsTab(DeveloperPersonalSkillsEntity personalSkillsEntity)
+        private void loadDeveloperPersonalSkillsTab(DeveloperPersonalSkillsEntity developerPersonalSkillsEntity)
         {
-            if(personalSkillsState== FormState.preProcess)
+            if(developerPersonalSkillsState== FormState.preProcess)
             {
                 grbPersonalSkills.Enabled = false;
 
-                if(personalSkillsEntity != null)
+                if(developerPersonalSkillsEntity != null)
                 {
-                    personalSkillsDetailedFormMode = DetailedFormMode.Update;
-                    PersonalSkillsInitComboBox();
-                    personalSkillsID = personalSkillsEntity.ID;
-                    cbxLeadership.SelectedItem = personalSkillsEntity.Leadership;
-                    cbxCommunication.SelectedItem = personalSkillsEntity.Communication;
-                    cbxTimeManagement.SelectedItem = personalSkillsEntity.TimeManagement;
-                    cbxCounselling.SelectedItem = personalSkillsEntity.Counselling;
-                    cbxTeamwork.SelectedItem = personalSkillsEntity.Teamwork;
-                    cbxObjectOrientedDesign.SelectedItem = personalSkillsEntity.ObjectOrientedDesign;
-                    cbxStructuredDesign.SelectedItem = personalSkillsEntity.StructuredDesign;
-                    cbxArchitecturalPattern.SelectedItem = personalSkillsEntity.ArchitecturalPattern;
-                    cbxDesignPattern.SelectedItem = personalSkillsEntity.DesignPattern;
-                    cbxObjectOrientedAnalysis.SelectedItem = personalSkillsEntity.ObjectOrientedAnalysis;
-                    cbxUml.SelectedItem = personalSkillsEntity.UML;
-                    cbxApplicationArchitectureDesign.SelectedItem = personalSkillsEntity.ApplicationArchitectureDesign;
-                    cbxExternalDesignJP.SelectedItem = personalSkillsEntity.ExternalDesignJP;
-                    cbxDetailedDesign.SelectedItem = personalSkillsEntity.DetailedDesign;                   
+                    developerPersonalSkillsDetailedFormMode = DetailedFormMode.Update;
+                    DeveloperPersonalSkillsInitComboBox();
+                    developerPersonalSkillsID = developerPersonalSkillsEntity.ID;
+                    cbxLeadership.SelectedItem = developerPersonalSkillsEntity.Leadership;
+                    cbxCommunication.SelectedItem = developerPersonalSkillsEntity.Communication;
+                    cbxTimeManagement.SelectedItem = developerPersonalSkillsEntity.TimeManagement;
+                    cbxCounselling.SelectedItem = developerPersonalSkillsEntity.Counselling;
+                    cbxTeamwork.SelectedItem = developerPersonalSkillsEntity.Teamwork;
+                    cbxObjectOrientedDesign.SelectedItem = developerPersonalSkillsEntity.ObjectOrientedDesign;
+                    cbxStructuredDesign.SelectedItem = developerPersonalSkillsEntity.StructuredDesign;
+                    cbxArchitecturalPattern.SelectedItem = developerPersonalSkillsEntity.ArchitecturalPattern;
+                    cbxDesignPattern.SelectedItem = developerPersonalSkillsEntity.DesignPattern;
+                    cbxObjectOrientedAnalysis.SelectedItem = developerPersonalSkillsEntity.ObjectOrientedAnalysis;
+                    cbxUml.SelectedItem = developerPersonalSkillsEntity.UML;
+                    cbxApplicationArchitectureDesign.SelectedItem = developerPersonalSkillsEntity.ApplicationArchitectureDesign;
+                    cbxExternalDesignJP.SelectedItem = developerPersonalSkillsEntity.ExternalDesignJP;
+                    cbxDetailedDesign.SelectedItem = developerPersonalSkillsEntity.DetailedDesign;                   
                     btnConfirmPersonalSkills.Text = "EDIT";
                     btnCancelPersonalSkills.Text = "EXIT";
                 }
                 else
                 {
-                    personalSkillsDetailedFormMode = DetailedFormMode.Add;
-                    personalSkillsClearCommboBox(); 
+                    developerPersonalSkillsDetailedFormMode = DetailedFormMode.Add;
+                    developerPersonalSkillsClearCommboBox(); 
                     btnConfirmPersonalSkills.Text = "ADD";
                     btnCancelPersonalSkills.Text = "EXIT";
                 }
@@ -275,31 +278,31 @@ namespace MyKPI.JobKpiAssessment.GUI
             else
             {
                 grbPersonalSkills.Enabled = true;
-                PersonalSkillsInitComboBox();
+                DeveloperPersonalSkillsInitComboBox();
 
-                if (personalSkillsEntity != null)
+                if (developerPersonalSkillsEntity != null)
                 {
-                    personalSkillsDetailedFormMode = DetailedFormMode.Update;
-                    PersonalSkillsInitComboBox();
-                    personalSkillsID = personalSkillsEntity.ID;
-                    cbxLeadership.SelectedItem = personalSkillsEntity.Leadership;
-                    cbxCommunication.SelectedItem = personalSkillsEntity.Communication;
-                    cbxTimeManagement.SelectedItem = personalSkillsEntity.TimeManagement;
-                    cbxCounselling.SelectedItem = personalSkillsEntity.Counselling;
-                    cbxTeamwork.SelectedItem = personalSkillsEntity.Teamwork;
-                    cbxObjectOrientedDesign.SelectedItem = personalSkillsEntity.ObjectOrientedDesign;
-                    cbxStructuredDesign.SelectedItem = personalSkillsEntity.StructuredDesign;
-                    cbxArchitecturalPattern.SelectedItem = personalSkillsEntity.ArchitecturalPattern;
-                    cbxDesignPattern.SelectedItem = personalSkillsEntity.DesignPattern;
-                    cbxObjectOrientedAnalysis.SelectedItem = personalSkillsEntity.ObjectOrientedAnalysis;
-                    cbxUml.SelectedItem = personalSkillsEntity.UML;
-                    cbxApplicationArchitectureDesign.SelectedItem = personalSkillsEntity.ApplicationArchitectureDesign;
-                    cbxExternalDesignJP.SelectedItem = personalSkillsEntity.ExternalDesignJP;
-                    cbxDetailedDesign.SelectedItem = personalSkillsEntity.DetailedDesign;
+                    developerPersonalSkillsDetailedFormMode = DetailedFormMode.Update;
+                    DeveloperPersonalSkillsInitComboBox();
+                    developerPersonalSkillsID = developerPersonalSkillsEntity.ID;
+                    cbxLeadership.SelectedItem = developerPersonalSkillsEntity.Leadership;
+                    cbxCommunication.SelectedItem = developerPersonalSkillsEntity.Communication;
+                    cbxTimeManagement.SelectedItem = developerPersonalSkillsEntity.TimeManagement;
+                    cbxCounselling.SelectedItem = developerPersonalSkillsEntity.Counselling;
+                    cbxTeamwork.SelectedItem = developerPersonalSkillsEntity.Teamwork;
+                    cbxObjectOrientedDesign.SelectedItem = developerPersonalSkillsEntity.ObjectOrientedDesign;
+                    cbxStructuredDesign.SelectedItem = developerPersonalSkillsEntity.StructuredDesign;
+                    cbxArchitecturalPattern.SelectedItem = developerPersonalSkillsEntity.ArchitecturalPattern;
+                    cbxDesignPattern.SelectedItem = developerPersonalSkillsEntity.DesignPattern;
+                    cbxObjectOrientedAnalysis.SelectedItem = developerPersonalSkillsEntity.ObjectOrientedAnalysis;
+                    cbxUml.SelectedItem = developerPersonalSkillsEntity.UML;
+                    cbxApplicationArchitectureDesign.SelectedItem = developerPersonalSkillsEntity.ApplicationArchitectureDesign;
+                    cbxExternalDesignJP.SelectedItem = developerPersonalSkillsEntity.ExternalDesignJP;
+                    cbxDetailedDesign.SelectedItem = developerPersonalSkillsEntity.DetailedDesign;
                 }
                 else
                 {
-                    personalSkillsDetailedFormMode = DetailedFormMode.Add;
+                    developerPersonalSkillsDetailedFormMode = DetailedFormMode.Add;
                 }
 
                 grbGeneralInformation.Enabled = false;
@@ -728,7 +731,7 @@ namespace MyKPI.JobKpiAssessment.GUI
         #endregion
 
         #region Personal Skill
-        private void personalSkillsClearCommboBox()
+        private void developerPersonalSkillsClearCommboBox()
         {
             cbxLeadership.Items.Clear();
             cbxCommunication.Items.Clear();
@@ -748,9 +751,9 @@ namespace MyKPI.JobKpiAssessment.GUI
             cbxDetailedDesign.Items.Clear();
 
         }
-        private void PersonalSkillsInitComboBox()
+        private void DeveloperPersonalSkillsInitComboBox()
         {
-            personalSkillsClearCommboBox();
+            developerPersonalSkillsClearCommboBox();
             cbxLeadership.Items.Add(PersonalSkillsValue.NoExperience);
             cbxLeadership.Items.Add(PersonalSkillsValue.Fundamental);
             cbxLeadership.Items.Add(PersonalSkillsValue.Limited);
@@ -867,55 +870,55 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         private void btnConfirmPersonalSkills_Click(object sender, EventArgs e)
         {
-            if(personalSkillsState == FormState.preProcess)
+            if(developerPersonalSkillsState == FormState.preProcess)
             {
-                personalSkillsState = FormState.Process;
+                developerPersonalSkillsState = FormState.Process;
             }
             else
             {
-                DeveloperPersonalSkillsEntity personalSkillsEntity = new DeveloperPersonalSkillsEntity();
+                DeveloperPersonalSkillsEntity developerPersonalSkillsEntity = new DeveloperPersonalSkillsEntity();
 
-                personalSkillsEntity.Leadership = (PersonalSkillsValue)cbxLeadership.SelectedItem;
-                personalSkillsEntity.Communication = (PersonalSkillsValue)cbxCommunication.SelectedItem;
-                personalSkillsEntity.TimeManagement = (PersonalSkillsValue)cbxTimeManagement.SelectedItem;
-                personalSkillsEntity.Counselling = (PersonalSkillsValue)cbxCounselling.SelectedItem;
-                personalSkillsEntity.Teamwork = (PersonalSkillsValue)cbxTeamwork.SelectedItem;
-                personalSkillsEntity.ObjectOrientedDesign = (PersonalSkillsValue)cbxObjectOrientedDesign.SelectedItem;
-                personalSkillsEntity.StructuredDesign = (PersonalSkillsValue)cbxStructuredDesign.SelectedItem;
-                personalSkillsEntity.ArchitecturalPattern = (PersonalSkillsValue)cbxArchitecturalPattern.SelectedItem;
-                personalSkillsEntity.DesignPattern = (PersonalSkillsValue)cbxDesignPattern.SelectedItem;
-                personalSkillsEntity.ObjectOrientedAnalysis = (PersonalSkillsValue)cbxObjectOrientedAnalysis.SelectedItem;
-                personalSkillsEntity.UML = (PersonalSkillsValue)cbxUml.SelectedItem;
-                personalSkillsEntity.ApplicationArchitectureDesign = (PersonalSkillsValue)cbxApplicationArchitectureDesign.SelectedItem;
-                personalSkillsEntity.ExternalDesignJP = (PersonalSkillsValue)cbxExternalDesignJP.SelectedItem;
-                personalSkillsEntity.DetailedDesign = (PersonalSkillsValue)cbxDetailedDesign.SelectedItem;
+                developerPersonalSkillsEntity.Leadership = (PersonalSkillsValue)cbxLeadership.SelectedItem;
+                developerPersonalSkillsEntity.Communication = (PersonalSkillsValue)cbxCommunication.SelectedItem;
+                developerPersonalSkillsEntity.TimeManagement = (PersonalSkillsValue)cbxTimeManagement.SelectedItem;
+                developerPersonalSkillsEntity.Counselling = (PersonalSkillsValue)cbxCounselling.SelectedItem;
+                developerPersonalSkillsEntity.Teamwork = (PersonalSkillsValue)cbxTeamwork.SelectedItem;
+                developerPersonalSkillsEntity.ObjectOrientedDesign = (PersonalSkillsValue)cbxObjectOrientedDesign.SelectedItem;
+                developerPersonalSkillsEntity.StructuredDesign = (PersonalSkillsValue)cbxStructuredDesign.SelectedItem;
+                developerPersonalSkillsEntity.ArchitecturalPattern = (PersonalSkillsValue)cbxArchitecturalPattern.SelectedItem;
+                developerPersonalSkillsEntity.DesignPattern = (PersonalSkillsValue)cbxDesignPattern.SelectedItem;
+                developerPersonalSkillsEntity.ObjectOrientedAnalysis = (PersonalSkillsValue)cbxObjectOrientedAnalysis.SelectedItem;
+                developerPersonalSkillsEntity.UML = (PersonalSkillsValue)cbxUml.SelectedItem;
+                developerPersonalSkillsEntity.ApplicationArchitectureDesign = (PersonalSkillsValue)cbxApplicationArchitectureDesign.SelectedItem;
+                developerPersonalSkillsEntity.ExternalDesignJP = (PersonalSkillsValue)cbxExternalDesignJP.SelectedItem;
+                developerPersonalSkillsEntity.DetailedDesign = (PersonalSkillsValue)cbxDetailedDesign.SelectedItem;
 
 
                 var jobKpiEntity = new JobKpiEntity();
                 jobKpiEntity.ID = jobKpiAssessmentID;
-                personalSkillsEntity.JobKpiAssessment = jobKpiEntity;
-                if (personalSkillsDetailedFormMode == DetailedFormMode.Add)
+                developerPersonalSkillsEntity.JobKpiAssessment = jobKpiEntity;
+                if (developerPersonalSkillsDetailedFormMode == DetailedFormMode.Add)
                 {
-                    personalSkillsBLL.AddPersonalSkills(personalSkillsEntity);
+                    developerPersonalSkillsBLL.AddDeveloperPersonalSkills(developerPersonalSkillsEntity);
                 }
                 else
                 {
-                    personalSkillsBLL.EditPersonalSkills(personalSkillsEntity, personalSkillsID);
+                    developerPersonalSkillsBLL.EditDeveloperPersonalSkills(developerPersonalSkillsEntity, developerPersonalSkillsID);
                 }
-                personalSkillsState = FormState.preProcess;
+                developerPersonalSkillsState = FormState.preProcess;
             }
             load();
         }
 
         private void btnCancelPersonalSkills_Click(object sender, EventArgs e)
         {
-            if (personalSkillsState == FormState.preProcess)
+            if (developerPersonalSkillsState == FormState.preProcess)
             {
                 this.Close();
             }
             else
             {
-                personalSkillsState = FormState.preProcess;
+                developerPersonalSkillsState = FormState.preProcess;
                 load();
             }
         }
@@ -923,7 +926,32 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         #endregion
 
-        #region PMPMProjectContribution
+        #region PMProjectContribution
+        private void pmProjectContributionClearCommboBox()
+        {
+            cbxLeadership.Items.Clear();
+            cbxCommunication.Items.Clear();
+            cbxTimeManagement.Items.Clear();
+            cbxCounselling.Items.Clear();
+            cbxTeamwork.Items.Clear();
+            cbxObjectOrientedDesign.Items.Clear();
+            cbxStructuredDesign.Items.Clear();
+            cbxArchitecturalPattern.Items.Clear();
+            cbxDesignPattern.Items.Clear();
+            cbxObjectOrientedAnalysis.Items.Clear();
+            cbxUml.Items.Clear();
+            cbxApplicationArchitectureDesign.Items.Clear();
+            cbxExternalDesignJP.Items.Clear();
+            cbxExternalDesignJP.Items.Clear();
+            cbxExternalDesignJP.Items.Clear();
+            cbxDetailedDesign.Items.Clear();
+
+        }
+        private void PMProjectContributionInitComboBox()
+        {
+            pmProjectContributionClearCommboBox();
+
+        }
         private void btnComfirmPMProjectContribution_Click(object sender, EventArgs e)
         {
 
@@ -937,26 +965,26 @@ namespace MyKPI.JobKpiAssessment.GUI
 
         private void cbxRoleInAssessment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtTeamSize.TabPages.Clear();
+            tclAssessmentInDetails.TabPages.Clear();
             switch (cbxRoleInAssessment.SelectedIndex)
             {
                 case (int)JobRankValue.ProjectManager:
-                    txtTeamSize.TabPages.Add(tabPage4);
-                    txtTeamSize.TabPages.Add(tabPage5);
-                    txtTeamSize.TabPages.Add(tabPage6);
+                    tclAssessmentInDetails.TabPages.Add(tabPage4);
+                    tclAssessmentInDetails.TabPages.Add(tabPage5);
+                    tclAssessmentInDetails.TabPages.Add(tabPage6);
                     break;
                 case (int)JobRankValue.Tester:
-                    txtTeamSize.TabPages.Add(tabPage1);
-                    txtTeamSize.TabPages.Add(tabPage2);
-                    txtTeamSize.TabPages.Add(tabPage3);
+                    tclAssessmentInDetails.TabPages.Add(tabPage1);
+                    tclAssessmentInDetails.TabPages.Add(tabPage2);
+                    tclAssessmentInDetails.TabPages.Add(tabPage3);
                     break;
                 case (int)JobRankValue.Developer:
-                    txtTeamSize.TabPages.Add(tpgDeveloperProjectsContribution);
-                    txtTeamSize.TabPages.Add(tpgDeveloperProfessionalContribution);
-                    txtTeamSize.TabPages.Add(tpgDeveloperPersonalSkills);
+                    tclAssessmentInDetails.TabPages.Add(tpgDeveloperProjectsContribution);
+                    tclAssessmentInDetails.TabPages.Add(tpgDeveloperProfessionalContribution);
+                    tclAssessmentInDetails.TabPages.Add(tpgDeveloperPersonalSkills);
                     break;
                 default:
-                    txtTeamSize.TabPages.Add(tabPage7);
+                    tclAssessmentInDetails.TabPages.Add(tabPage7);
                     break;
 
             }

@@ -1,5 +1,5 @@
 ﻿//======================================================================================================
-//  MyKPI - PersonalSkillsBLL
+//  MyKPI - DeveloperPersonalSkillsBLL
 // Change logs:
 // May 30 2018 - TrungTH - create
 //
@@ -7,38 +7,38 @@
 #region using
 using System.Data;
 using MyKPI.Entities.Assessment;
-using MyKPI.PersonalSkills.DAL;
+using MyKPI.DeveloperPersonalSkills.DAL;
 using MyKPI.Common;
 using MyKPI.Entities;
 #endregion
 
-namespace MyKPI.PersonalSkills.BLL
+namespace MyKPI.DeveloperPersonalSkills.BLL
 {
     public class DeveloperPersonalSkillsBLL
     {
-        DeveloperPersonalSkillsDAL personalSkillsDAL;
+        DeveloperPersonalSkillsDAL developerPersonalSkillsDAL;
         public DeveloperPersonalSkillsBLL()
         {
-            personalSkillsDAL = new DeveloperPersonalSkillsDAL();
+            developerPersonalSkillsDAL = new DeveloperPersonalSkillsDAL();
         }
-        public void AddPersonalSkills(DeveloperPersonalSkillsEntity _personalSkills)
+        public void AddDeveloperPersonalSkills(DeveloperPersonalSkillsEntity _developerPersonalSkills)
         {
-            personalSkillsDAL.Add(_personalSkills);
-        }
-
-       public void EditPersonalSkills(DeveloperPersonalSkillsEntity _personalSkills,int ID)
-        {
-            personalSkillsDAL.Edit(_personalSkills, ID);
+            developerPersonalSkillsDAL.Add(_developerPersonalSkills);
         }
 
-        public void DeletePersonalSkills(int ID)
+       public void EditDeveloperPersonalSkills(DeveloperPersonalSkillsEntity _developerPersonalSkills,int ID)
         {
-            personalSkillsDAL.Delete(ID);
+            developerPersonalSkillsDAL.Edit(_developerPersonalSkills, ID);
+        }
+
+        public void DeleteDeveloperPersonalSkills(int ID)
+        {
+            developerPersonalSkillsDAL.Delete(ID);
         }
 
         public DeveloperPersonalSkillsEntity LoadPerJobKpiAssessmentID(int JobKpiAssessmentID)
         {
-            DataTable dataTable = personalSkillsDAL.Load(JobKpiAssessmentID);
+            DataTable dataTable = developerPersonalSkillsDAL.Load(JobKpiAssessmentID);
             if (dataTable.Rows.Count == 0) return null;
 
             DeveloperPersonalSkillsEntity DeveloperPersonalSkillsEntity = new DeveloperPersonalSkillsEntity();
