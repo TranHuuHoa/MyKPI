@@ -70,18 +70,13 @@ namespace MyKPI.JobKpiAssessment.GUI
             else
             {
                 grbAssessmentinDetails.Visible = true;
-               
-
-                
-
+                             
                 if (UpdateJobKpiAssessmentState == FormState.preProcess)
                 {
                     enableGeneralInformation(false);
                     btnConfirm.Text = "UPDATE JOB KPI GENERAL INFORMATION";
                     btnCancel.Text = "EXIT";
                     grbAssessmentinDetails.Enabled = true;
-
-
                     switch (tclAssessmentInDetails.SelectedIndex)
                     {
                         case 0:
@@ -116,9 +111,7 @@ namespace MyKPI.JobKpiAssessment.GUI
 
                             loadDeveloperPersonalSkillsTab(developerPersonalSkills);
                             break;
-                    }
-
-                    
+                    }                   
                 }
                 else
                 {
@@ -979,9 +972,11 @@ namespace MyKPI.JobKpiAssessment.GUI
                     tclAssessmentInDetails.TabPages.Add(tabPage3);
                     break;
                 case (int)JobRankValue.Developer:
+                    tclAssessmentInDetails.TabPages.Add(tabPage8);
                     tclAssessmentInDetails.TabPages.Add(tpgDeveloperProjectsContribution);
                     tclAssessmentInDetails.TabPages.Add(tpgDeveloperProfessionalContribution);
                     tclAssessmentInDetails.TabPages.Add(tpgDeveloperPersonalSkills);
+                   
                     break;
                 default:
                     tclAssessmentInDetails.TabPages.Add(tabPage7);
